@@ -1,0 +1,243 @@
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csi.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csi.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.AppContext.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Collections.Immutable.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.IO.FileSystem.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Reflection.Metadata.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\VBCSCompiler.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\VBCSCompiler.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Antlr3.Runtime.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.SqlServer.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.Web.Infrastructure.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Newtonsoft.Json.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Helpers.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Mvc.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Optimization.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Razor.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Deployment.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Razor.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\WebGrease.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.SqlServer.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Helpers.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Mvc.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Optimization.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Razor.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Deployment.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Razor.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Newtonsoft.Json.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Antlr3.Runtime.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csproj.CoreCompileInputs.cache
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csproj.CopyComplete
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csprojAssemblyReference.cache
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Suite.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Suite.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Suite.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\csc.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\csc.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\csc.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\csi.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\csi.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.AppContext.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.Collections.Immutable.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.IO.FileSystem.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\System.Reflection.Metadata.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\vbc.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\vbc.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\vbc.rsp
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\VBCSCompiler.exe
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\roslyn\VBCSCompiler.exe.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Antlr3.Runtime.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\EntityFramework.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\EntityFramework.SqlServer.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Microsoft.Web.Infrastructure.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloAlmacenes.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloComunicaciones.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloEconomia.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloProduccion.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloTransporte.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Newtonsoft.Json.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Helpers.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Mvc.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Optimization.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Razor.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.Deployment.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.Razor.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\WebGrease.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloAlmacenes.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloAlmacenes.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloComunicaciones.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloComunicaciones.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloEconomia.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloEconomia.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloProduccion.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloProduccion.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloTransporte.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\ModuloTransporte.dll.config
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\EntityFramework.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\EntityFramework.SqlServer.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Helpers.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Mvc.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Optimization.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.Razor.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.Deployment.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Web.WebPages.Razor.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Newtonsoft.Json.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Antlr3.Runtime.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\obj\Release\Suite.csprojAssemblyReference.cache
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\obj\Release\Suite.csproj.CoreCompileInputs.cache
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\obj\Release\Suite.csproj.CopyComplete
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\obj\Release\Suite.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite migue\Suite\obj\Release\Suite.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.dll
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.pdb
+D:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Suite.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.exe
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.exe.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csc.rsp
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csi.exe
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\csi.rsp
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.AppContext.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Collections.Immutable.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.IO.FileSystem.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\System.Reflection.Metadata.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.exe
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.exe.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\vbc.rsp
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\VBCSCompiler.exe
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\roslyn\VBCSCompiler.exe.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Antlr3.Runtime.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.SqlServer.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.Web.Infrastructure.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Newtonsoft.Json.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Helpers.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Mvc.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Optimization.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Razor.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Deployment.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Razor.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\WebGrease.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloAlmacenes.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloComunicaciones.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloEconomia.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloProduccion.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloRecHumanos.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\ModuloTransporte.dll.config
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\EntityFramework.SqlServer.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Helpers.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Mvc.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Optimization.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.Razor.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Deployment.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Web.WebPages.Razor.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Newtonsoft.Json.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Antlr3.Runtime.pdb
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csprojAssemblyReference.cache
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csproj.CoreCompileInputs.cache
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.csproj.CopyComplete
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.dll
+E:\Proyectos de la Empresa\01 En Desarrollo\Suite\Suite\Suite\obj\Release\Suite.pdb

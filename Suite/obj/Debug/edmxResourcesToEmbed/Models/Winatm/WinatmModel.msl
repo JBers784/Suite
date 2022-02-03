@@ -1,0 +1,2590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlmacenesModelStoreContainer" CdmEntityContainer="AlmacenesEntities">
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="AlmacenesModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="AlmacenesModel.Store.fx_cierreDoc" FunctionImportName="fx_cierreDoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.fx_cierreDoc_Result">
+          <ScalarProperty Name="Mov_NoDoc" ColumnName="Mov_NoDoc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol" FunctionName="AlmacenesModel.Store.dt_addtosourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol_u" FunctionName="AlmacenesModel.Store.dt_addtosourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject" FunctionName="AlmacenesModel.Store.dt_adduserobject" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject_vcs" FunctionName="AlmacenesModel.Store.dt_adduserobject_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject" FunctionName="AlmacenesModel.Store.dt_checkinobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject_u" FunctionName="AlmacenesModel.Store.dt_checkinobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject" FunctionName="AlmacenesModel.Store.dt_checkoutobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject_u" FunctionName="AlmacenesModel.Store.dt_checkoutobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror" FunctionName="AlmacenesModel.Store.dt_displayoaerror" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror_u" FunctionName="AlmacenesModel.Store.dt_displayoaerror_u" />
+    <FunctionImportMapping FunctionImportName="dt_droppropertiesbyid" FunctionName="AlmacenesModel.Store.dt_droppropertiesbyid" />
+    <FunctionImportMapping FunctionImportName="dt_dropuserobjectbyid" FunctionName="AlmacenesModel.Store.dt_dropuserobjectbyid" />
+    <FunctionImportMapping FunctionImportName="dt_generateansiname" FunctionName="AlmacenesModel.Store.dt_generateansiname" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop" FunctionName="AlmacenesModel.Store.dt_getobjwithprop" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop_u" FunctionName="AlmacenesModel.Store.dt_getobjwithprop_u" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid" FunctionName="AlmacenesModel.Store.dt_getpropertiesbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.dt_getpropertiesbyid_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_u" FunctionName="AlmacenesModel.Store.dt_getpropertiesbyid_u">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.dt_getpropertiesbyid_u_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs" FunctionName="AlmacenesModel.Store.dt_getpropertiesbyid_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs_u" FunctionName="AlmacenesModel.Store.dt_getpropertiesbyid_vcs_u" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol" FunctionName="AlmacenesModel.Store.dt_isundersourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol_u" FunctionName="AlmacenesModel.Store.dt_isundersourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_removefromsourcecontrol" FunctionName="AlmacenesModel.Store.dt_removefromsourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid" FunctionName="AlmacenesModel.Store.dt_setpropertybyid" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid_u" FunctionName="AlmacenesModel.Store.dt_setpropertybyid_u" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams" FunctionName="AlmacenesModel.Store.dt_validateloginparams" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams_u" FunctionName="AlmacenesModel.Store.dt_validateloginparams_u" />
+    <FunctionImportMapping FunctionImportName="dt_vcsenabled" FunctionName="AlmacenesModel.Store.dt_vcsenabled" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp006" FunctionName="AlmacenesModel.Store.dt_verstamp006" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp007" FunctionName="AlmacenesModel.Store.dt_verstamp007" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout" FunctionName="AlmacenesModel.Store.dt_whocheckedout" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout_u" FunctionName="AlmacenesModel.Store.dt_whocheckedout_u" />
+    <FunctionImportMapping FunctionImportName="inserta_producto" FunctionName="AlmacenesModel.Store.inserta_producto" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AlmacenesModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AlmacenesModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AlmacenesModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AlmacenesModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AlmacenesModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AlmacenesModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="ver_distribucion_productos" FunctionName="AlmacenesModel.Store.ver_distribucion_productos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_distribucion_productos_Result">
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="nombreccosto" ColumnName="nombreccosto" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_prod_distri_ccostos" FunctionName="AlmacenesModel.Store.ver_prod_distri_ccostos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_prod_distri_ccostos_Result">
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="dispalm" ColumnName="dispalm" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="dispcc" ColumnName="dispcc" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="Ccosto_Descrip" ColumnName="Ccosto_Descrip" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_siscont" FunctionName="AlmacenesModel.Store.ver_siscont" />
+    <FunctionImportMapping FunctionImportName="ver_siscont_consumo_doc" FunctionName="AlmacenesModel.Store.ver_siscont_consumo_doc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_siscont_consumo_doc_Result">
+          <ScalarProperty Name="TrsFechDocumento" ColumnName="TrsFechDocumento" />
+          <ScalarProperty Name="TrsNoDocumento" ColumnName="TrsNoDocumento" />
+          <ScalarProperty Name="TrsImporteDCMN" ColumnName="TrsImporteDCMN" />
+          <ScalarProperty Name="TrsImporteDCMLC" ColumnName="TrsImporteDCMLC" />
+          <ScalarProperty Name="NomAlmCod" ColumnName="NomAlmCod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_siscont_consumos" FunctionName="AlmacenesModel.Store.ver_siscont_consumos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_siscont_consumos_Result">
+          <ScalarProperty Name="ProduCodigo" ColumnName="ProduCodigo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ExMovImportMN" ColumnName="ExMovImportMN" />
+          <ScalarProperty Name="ExMovImportMLC" ColumnName="ExMovImportMLC" />
+          <ScalarProperty Name="ExMovFechaUltimoMov" ColumnName="ExMovFechaUltimoMov" />
+          <ScalarProperty Name="ExMovExitenciaProdAlm" ColumnName="ExMovExitenciaProdAlm" />
+          <ScalarProperty Name="ExMovCantidadFisica" ColumnName="ExMovCantidadFisica" />
+          <ScalarProperty Name="NomAlmDescrip" ColumnName="NomAlmDescrip" />
+          <ScalarProperty Name="NomAlmCod" ColumnName="NomAlmCod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_siscont_informe" FunctionName="AlmacenesModel.Store.ver_siscont_informe" />
+    <FunctionImportMapping FunctionImportName="ver_siscont_inmovil" FunctionName="AlmacenesModel.Store.ver_siscont_inmovil">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_siscont_inmovil_Result">
+          <ScalarProperty Name="ProduCodigo" ColumnName="ProduCodigo" />
+          <ScalarProperty Name="ProduDescrip" ColumnName="ProduDescrip" />
+          <ScalarProperty Name="ProduPrecioMN" ColumnName="ProduPrecioMN" />
+          <ScalarProperty Name="ProduPrecioMLC" ColumnName="ProduPrecioMLC" />
+          <ScalarProperty Name="ExMovCantidadFisica" ColumnName="ExMovCantidadFisica" />
+          <ScalarProperty Name="EXMOVFECHAULTIMOMOV" ColumnName="EXMOVFECHAULTIMOMOV" />
+          <ScalarProperty Name="NomAlmDescrip" ColumnName="NomAlmDescrip" />
+          <ScalarProperty Name="UMedDescrip" ColumnName="UMedDescrip" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_siscont_suministrador" FunctionName="AlmacenesModel.Store.ver_siscont_suministrador">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_siscont_suministrador_Result">
+          <ScalarProperty Name="CliCodigo" ColumnName="CliCodigo" />
+          <ScalarProperty Name="CliDescripcion" ColumnName="CliDescripcion" />
+          <ScalarProperty Name="CliDireccion" ColumnName="CliDireccion" />
+          <ScalarProperty Name="CliTelefono" ColumnName="CliTelefono" />
+          <ScalarProperty Name="CliActivo" ColumnName="CliActivo" />
+          <ScalarProperty Name="CliUI" ColumnName="CliUI" />
+          <ScalarProperty Name="CliFechaModif" ColumnName="CliFechaModif" />
+          <ScalarProperty Name="CliSeg" ColumnName="CliSeg" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_siscont_transacciones" FunctionName="AlmacenesModel.Store.ver_siscont_transacciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenesModel.ver_siscont_transacciones_Result">
+          <ScalarProperty Name="ProduCodigo" ColumnName="ProduCodigo" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Ajustes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Ajustes">
+        <MappingFragment StoreEntitySet="Ajustes">
+          <ScalarProperty Name="Prelacion" ColumnName="Prelacion" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ConcepAjuste_Id" ColumnName="ConcepAjuste_Id" />
+          <ScalarProperty Name="Ajuste_Comentarios" ColumnName="Ajuste_Comentarios" />
+          <ScalarProperty Name="Ajuste_Estado" ColumnName="Ajuste_Estado" />
+          <ScalarProperty Name="Ajuste_fecha" ColumnName="Ajuste_fecha" />
+          <ScalarProperty Name="Ajuste_Doc" ColumnName="Ajuste_Doc" />
+          <ScalarProperty Name="Ajuste_Id" ColumnName="Ajuste_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Almacenes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Almacenes">
+        <MappingFragment StoreEntitySet="Almacenes">
+          <ScalarProperty Name="Almacen_Transfent" ColumnName="Almacen_Transfent" />
+          <ScalarProperty Name="Almacen_Ept" ColumnName="Almacen_Ept" />
+          <ScalarProperty Name="Almacen_Tds" ColumnName="Almacen_Tds" />
+          <ScalarProperty Name="Almacen_Tde" ColumnName="Almacen_Tde" />
+          <ScalarProperty Name="Almacen_SeExporta" ColumnName="Almacen_SeExporta" />
+          <ScalarProperty Name="Almacen_Osal" ColumnName="Almacen_Osal" />
+          <ScalarProperty Name="Almacen_Oent" ColumnName="Almacen_Oent" />
+          <ScalarProperty Name="Almacen_Fsiscont" ColumnName="Almacen_Fsiscont" />
+          <ScalarProperty Name="Almacen_Prelacion_ante" ColumnName="Almacen_Prelacion_ante" />
+          <ScalarProperty Name="Almacen_Prelacion" ColumnName="Almacen_Prelacion" />
+          <ScalarProperty Name="Almacen_PreFactura" ColumnName="Almacen_PreFactura" />
+          <ScalarProperty Name="Almacen_EsOcioso" ColumnName="Almacen_EsOcioso" />
+          <ScalarProperty Name="Almacen_ValDev" ColumnName="Almacen_ValDev" />
+          <ScalarProperty Name="Almacen_ValSal" ColumnName="Almacen_ValSal" />
+          <ScalarProperty Name="Almacen_Recepcion" ColumnName="Almacen_Recepcion" />
+          <ScalarProperty Name="Almacen_Reclamacion" ColumnName="Almacen_Reclamacion" />
+          <ScalarProperty Name="Almacen_Ajustes" ColumnName="Almacen_Ajustes" />
+          <ScalarProperty Name="Almacen_Tranferencias" ColumnName="Almacen_Tranferencias" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="Cliente_Cuenta" ColumnName="Cliente_Cuenta" />
+          <ScalarProperty Name="Cliente_Direccion" ColumnName="Cliente_Direccion" />
+          <ScalarProperty Name="Cliente_Nombre" ColumnName="Cliente_Nombre" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conceptos_Ajustes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Conceptos_Ajustes">
+        <MappingFragment StoreEntitySet="Conceptos_Ajustes">
+          <ScalarProperty Name="ConcepAjuste_IdS5" ColumnName="ConcepAjuste_IdS5" />
+          <ScalarProperty Name="ConcepAjuste_Descrip" ColumnName="ConcepAjuste_Descrip" />
+          <ScalarProperty Name="ConcepAjuste_Id" ColumnName="ConcepAjuste_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Ajustes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_Ajustes">
+        <MappingFragment StoreEntitySet="Detalle_Ajustes">
+          <ScalarProperty Name="DetAjus_Tarjeta" ColumnName="DetAjus_Tarjeta" />
+          <ScalarProperty Name="DetAjus_Existencia" ColumnName="DetAjus_Existencia" />
+          <ScalarProperty Name="DetAjus_Cantidad" ColumnName="DetAjus_Cantidad" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Ajuste_Id" ColumnName="Ajuste_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Prerecepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_Prerecepcion">
+        <MappingFragment StoreEntitySet="Detalle_Prerecepcion">
+          <ScalarProperty Name="DetPre_id" ColumnName="DetPre_id" />
+          <ScalarProperty Name="Prerec_Conteo" ColumnName="Prerec_Conteo" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Prerec_Precio" ColumnName="Prerec_Precio" />
+          <ScalarProperty Name="Prerec_Um" ColumnName="Prerec_Um" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Prerecepcion_Nuevo">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_Prerecepcion_Nuevo">
+        <MappingFragment StoreEntitySet="Detalle_Prerecepcion_Nuevo">
+          <ScalarProperty Name="Prerec_Conteo" ColumnName="Prerec_Conteo" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Prerec_Precio" ColumnName="Prerec_Precio" />
+          <ScalarProperty Name="Prerec_Um" ColumnName="Prerec_Um" />
+          <ScalarProperty Name="Codprod" ColumnName="Codprod" />
+          <ScalarProperty Name="Detalle_id" ColumnName="Detalle_id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_RecAlm">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_RecAlm">
+        <MappingFragment StoreEntitySet="Detalle_RecAlm">
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_RecAlm_Temporal">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_RecAlm_Temporal">
+        <MappingFragment StoreEntitySet="Detalle_RecAlm_Temporal">
+          <ScalarProperty Name="DetRecalm_ImporteUSD" ColumnName="DetRecalm_ImporteUSD" />
+          <ScalarProperty Name="DetRecalm_ImporteMNC" ColumnName="DetRecalm_ImporteMNC" />
+          <ScalarProperty Name="DetRecalm_Existencia" ColumnName="DetRecalm_Existencia" />
+          <ScalarProperty Name="DetRecalm_Cantidad" ColumnName="DetRecalm_Cantidad" />
+          <ScalarProperty Name="DetRecalm_PrecioMNC" ColumnName="DetRecalm_PrecioMNC" />
+          <ScalarProperty Name="DetRecalm_PrecioUSD" ColumnName="DetRecalm_PrecioUSD" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Recepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_Recepcion">
+        <MappingFragment StoreEntitySet="Detalle_Recepcion">
+          <ScalarProperty Name="Prelacion" ColumnName="Prelacion" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Transferencias">
+      <EntityTypeMapping TypeName="AlmacenesModel.Detalle_Transferencias">
+        <MappingFragment StoreEntitySet="Detalle_Transferencias">
+          <ScalarProperty Name="DetTransf_Tarjeta" ColumnName="DetTransf_Tarjeta" />
+          <ScalarProperty Name="DetTransf_ExisteSal" ColumnName="DetTransf_ExisteSal" />
+          <ScalarProperty Name="DetTransf_ExisteEnt" ColumnName="DetTransf_ExisteEnt" />
+          <ScalarProperty Name="DetTransf_Cantidad" ColumnName="DetTransf_Cantidad" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Trasnf_Id" ColumnName="Trasnf_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetDevoluciones">
+      <EntityTypeMapping TypeName="AlmacenesModel.DetDevoluciones">
+        <MappingFragment StoreEntitySet="DetDevoluciones">
+          <ScalarProperty Name="detDev_ExistTarjeta" ColumnName="detDev_ExistTarjeta" />
+          <ScalarProperty Name="detDev_ExistAntes" ColumnName="detDev_ExistAntes" />
+          <ScalarProperty Name="detDev_Cantidad" ColumnName="detDev_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Dev_Id" ColumnName="Dev_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetFacturas">
+      <EntityTypeMapping TypeName="AlmacenesModel.DetFacturas">
+        <MappingFragment StoreEntitySet="DetFacturas">
+          <ScalarProperty Name="Venta_Precio" ColumnName="Venta_Precio" />
+          <ScalarProperty Name="Venta_Cantidad" ColumnName="Venta_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetReclamacion">
+      <EntityTypeMapping TypeName="AlmacenesModel.DetReclamacion">
+        <MappingFragment StoreEntitySet="DetReclamacion">
+          <ScalarProperty Name="DetRec_Cantidad" ColumnName="DetRec_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="Rec_Id" ColumnName="Rec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetSalAlm">
+      <EntityTypeMapping TypeName="AlmacenesModel.DetSalAlm">
+        <MappingFragment StoreEntitySet="DetSalAlm">
+          <ScalarProperty Name="SalAlm_PrecioMNC" ColumnName="SalAlm_PrecioMNC" />
+          <ScalarProperty Name="SalAlm_PrecioUSD" ColumnName="SalAlm_PrecioUSD" />
+          <ScalarProperty Name="SalAlm_CantDispDev" ColumnName="SalAlm_CantDispDev" />
+          <ScalarProperty Name="SalAlm_CantDevTmp" ColumnName="SalAlm_CantDevTmp" />
+          <ScalarProperty Name="SalAlm_ExistTarjeta" ColumnName="SalAlm_ExistTarjeta" />
+          <ScalarProperty Name="SalAlm_ExistAntes" ColumnName="SalAlm_ExistAntes" />
+          <ScalarProperty Name="SalAlm_Precio" ColumnName="SalAlm_Precio" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistDetRecepcion_Ccostos">
+      <EntityTypeMapping TypeName="AlmacenesModel.DistDetRecepcion_Ccostos">
+        <MappingFragment StoreEntitySet="DistDetRecepcion_Ccostos">
+          <ScalarProperty Name="DDRecepCC_Cantidad" ColumnName="DDRecepCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistProd_CCosto">
+      <EntityTypeMapping TypeName="AlmacenesModel.DistProd_CCosto">
+        <MappingFragment StoreEntitySet="DistProd_CCosto">
+          <ScalarProperty Name="DprodCC_FechaAsig" ColumnName="DprodCC_FechaAsig" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EspecificoProductos">
+      <EntityTypeMapping TypeName="AlmacenesModel.EspecificoProductos">
+        <MappingFragment StoreEntitySet="EspecificoProductos">
+          <ScalarProperty Name="Especifico_Id" ColumnName="Especifico_Id" />
+          <ScalarProperty Name="Especifico_descrip" ColumnName="Especifico_descrip" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Id" ColumnName="SubGProd_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_Recepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Estado_Recepcion">
+        <MappingFragment StoreEntitySet="Estado_Recepcion">
+          <ScalarProperty Name="ERecepcion_Aplicada" ColumnName="ERecepcion_Aplicada" />
+          <ScalarProperty Name="ERecepcion_Anulada" ColumnName="ERecepcion_Anulada" />
+          <ScalarProperty Name="ERecepcion_Reclama" ColumnName="ERecepcion_Reclama" />
+          <ScalarProperty Name="ERecepcion_Distribuir" ColumnName="ERecepcion_Distribuir" />
+          <ScalarProperty Name="ERecepcion_Calcula" ColumnName="ERecepcion_Calcula" />
+          <ScalarProperty Name="prerec_id" ColumnName="prerec_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="AlmacenesModel.Facturas">
+        <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="CliCodigo" ColumnName="CliCodigo" />
+          <ScalarProperty Name="Fact_Observ" ColumnName="Fact_Observ" />
+          <ScalarProperty Name="TGasto_id" ColumnName="TGasto_id" />
+          <ScalarProperty Name="Fact_Cheque" ColumnName="Fact_Cheque" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="TPago_Id" ColumnName="TPago_Id" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+          <ScalarProperty Name="Fact_Fecha" ColumnName="Fact_Fecha" />
+          <ScalarProperty Name="Fact_NoDoc" ColumnName="Fact_NoDoc" />
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONES_SUBC">
+      <EntityTypeMapping TypeName="AlmacenesModel.FUNCIONES_SUBC">
+        <MappingFragment StoreEntitySet="FUNCIONES_SUBC">
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="INDICE" ColumnName="INDICE" />
+          <ScalarProperty Name="SUBCONJ" ColumnName="SUBCONJ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenericoProductos">
+      <EntityTypeMapping TypeName="AlmacenesModel.GenericoProductos">
+        <MappingFragment StoreEntitySet="GenericoProductos">
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="Seccion_Id" ColumnName="Seccion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historico_Precios">
+      <EntityTypeMapping TypeName="AlmacenesModel.Historico_Precios">
+        <MappingFragment StoreEntitySet="Historico_Precios">
+          <ScalarProperty Name="HistPrecio_FechaCero" ColumnName="HistPrecio_FechaCero" />
+          <ScalarProperty Name="HistPrecio_PrecioMnc" ColumnName="HistPrecio_PrecioMnc" />
+          <ScalarProperty Name="HistPrecio_PrecioUsd" ColumnName="HistPrecio_PrecioUsd" />
+          <ScalarProperty Name="HistPrecio_Id" ColumnName="HistPrecio_Id" />
+          <ScalarProperty Name="HistPrecio_Valor" ColumnName="HistPrecio_Valor" />
+          <ScalarProperty Name="HistPrecio_FechaEntrada" ColumnName="HistPrecio_FechaEntrada" />
+          <ScalarProperty Name="HistPrecio_Ir" ColumnName="HistPrecio_Ir" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LimitesProductos">
+      <EntityTypeMapping TypeName="AlmacenesModel.LimitesProductos">
+        <MappingFragment StoreEntitySet="LimitesProductos">
+          <ScalarProperty Name="LimiteP_ptoReorden" ColumnName="LimiteP_ptoReorden" />
+          <ScalarProperty Name="LimiteP_minimo" ColumnName="LimiteP_minimo" />
+          <ScalarProperty Name="LimiteP_maximo" ColumnName="LimiteP_maximo" />
+          <ScalarProperty Name="mProducto_id" ColumnName="mProducto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maximos_Minimos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Maximos_Minimos">
+        <MappingFragment StoreEntitySet="Maximos_Minimos">
+          <ScalarProperty Name="MaxMin_InvExceso" ColumnName="MaxMin_InvExceso" />
+          <ScalarProperty Name="MaxMin_InvOptimo" ColumnName="MaxMin_InvOptimo" />
+          <ScalarProperty Name="MaxMin_PtoReorden" ColumnName="MaxMin_PtoReorden" />
+          <ScalarProperty Name="MaxMin_Maximo" ColumnName="MaxMin_Maximo" />
+          <ScalarProperty Name="MaxMin_Minimo" ColumnName="MaxMin_Minimo" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimiento_Productos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Movimiento_Productos">
+        <MappingFragment StoreEntitySet="Movimiento_Productos">
+          <ScalarProperty Name="Mov_HostName" ColumnName="Mov_HostName" />
+          <ScalarProperty Name="Mov_Ot" ColumnName="Mov_Ot" />
+          <ScalarProperty Name="Mov_ccosto" ColumnName="Mov_ccosto" />
+          <ScalarProperty Name="Mov_PrecioUsd" ColumnName="Mov_PrecioUsd" />
+          <ScalarProperty Name="Mov_PrecioMnc" ColumnName="Mov_PrecioMnc" />
+          <ScalarProperty Name="Mov_Id" ColumnName="Mov_Id" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Mov_Existencia" ColumnName="Mov_Existencia" />
+          <ScalarProperty Name="Mov_Precio" ColumnName="Mov_Precio" />
+          <ScalarProperty Name="Mov_Cantidad" ColumnName="Mov_Cantidad" />
+          <ScalarProperty Name="TipoMov_Id" ColumnName="TipoMov_Id" />
+          <ScalarProperty Name="Mov_Fecha" ColumnName="Mov_Fecha" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Mov_NoDoc" ColumnName="Mov_NoDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Almacenes">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Almacenes">
+        <MappingFragment StoreEntitySet="Mundo_Almacenes">
+          <ScalarProperty Name="Almacen_id" ColumnName="Almacen_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Importe_Inicio">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Importe_Inicio">
+        <MappingFragment StoreEntitySet="Mundo_Importe_Inicio">
+          <ScalarProperty Name="MInicio_Id" ColumnName="MInicio_Id" />
+          <ScalarProperty Name="MInicio_ImporteCUC" ColumnName="MInicio_ImporteCUC" />
+          <ScalarProperty Name="MInicio_ImporteCUP" ColumnName="MInicio_ImporteCUP" />
+          <ScalarProperty Name="MInicio_FechaFecha" ColumnName="MInicio_FechaFecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Medidas">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Medidas">
+        <MappingFragment StoreEntitySet="Mundo_Medidas">
+          <ScalarProperty Name="Mmedida_descrip" ColumnName="Mmedida_descrip" />
+          <ScalarProperty Name="Mmedida_id" ColumnName="Mmedida_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Productos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Productos">
+        <MappingFragment StoreEntitySet="Mundo_Productos">
+          <ScalarProperty Name="mProducto_Sensible" ColumnName="mProducto_Sensible" />
+          <ScalarProperty Name="CIcuIdCuenta" ColumnName="CIcuIdCuenta" />
+          <ScalarProperty Name="mProducto_ElemtoMd" ColumnName="mProducto_ElemtoMd" />
+          <ScalarProperty Name="mProducto_ElemtoMn" ColumnName="mProducto_ElemtoMn" />
+          <ScalarProperty Name="mProducto_PrecioMd" ColumnName="mProducto_PrecioMd" />
+          <ScalarProperty Name="mProducto_PrecioMn" ColumnName="mProducto_PrecioMn" />
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Id" ColumnName="Especifico_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Vence">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Vence">
+        <MappingFragment StoreEntitySet="Mundo_Vence">
+          <ScalarProperty Name="Lote_cantidad" ColumnName="Lote_cantidad" />
+          <ScalarProperty Name="Lote_Fcaduca" ColumnName="Lote_Fcaduca" />
+          <ScalarProperty Name="Lote_Fecha" ColumnName="Lote_Fecha" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Lote_Id" ColumnName="Lote_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operadoras_Almacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.Operadoras_Almacen">
+        <MappingFragment StoreEntitySet="Operadoras_Almacen">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operadores">
+      <EntityTypeMapping TypeName="AlmacenesModel.Operadores">
+        <MappingFragment StoreEntitySet="Operadores">
+          <ScalarProperty Name="opera_ccosto" ColumnName="opera_ccosto" />
+          <ScalarProperty Name="opera_tipo" ColumnName="opera_tipo" />
+          <ScalarProperty Name="opera_admon" ColumnName="opera_admon" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Actividades">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_Actividades">
+        <MappingFragment StoreEntitySet="PC_Actividades">
+          <ScalarProperty Name="Actividad_Descrip" ColumnName="Actividad_Descrip" />
+          <ScalarProperty Name="Actividad_id" ColumnName="Actividad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Balancistas">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_Balancistas">
+        <MappingFragment StoreEntitySet="PC_Balancistas">
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="ccosto" ColumnName="ccosto" />
+          <ScalarProperty Name="Balanc_desc" ColumnName="Balanc_desc" />
+          <ScalarProperty Name="Balanc_Login" ColumnName="Balanc_Login" />
+          <ScalarProperty Name="Balanc_id" ColumnName="Balanc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_ClasificacionP">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_ClasificacionP">
+        <MappingFragment StoreEntitySet="PC_ClasificacionP">
+          <ScalarProperty Name="DescClasifP" ColumnName="DescClasifP" />
+          <ScalarProperty Name="CodClasifP" ColumnName="CodClasifP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_DemandaPAlmacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_DemandaPAlmacen">
+        <MappingFragment StoreEntitySet="PC_DemandaPAlmacen">
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="balancista_id" ColumnName="balancista_id" />
+          <ScalarProperty Name="prodalm_id" ColumnName="prodalm_id" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_DemandaPNoAlmacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_DemandaPNoAlmacen">
+        <MappingFragment StoreEntitySet="PC_DemandaPNoAlmacen">
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="Desc_Prod" ColumnName="Desc_Prod" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="Balancista_id" ColumnName="Balancista_id" />
+          <ScalarProperty Name="ProdAlm_id" ColumnName="ProdAlm_id" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Extraplan">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_Extraplan">
+        <MappingFragment StoreEntitySet="PC_Extraplan">
+          <ScalarProperty Name="Balanc_Id" ColumnName="Balanc_Id" />
+          <ScalarProperty Name="CodTCompras" ColumnName="CodTCompras" />
+          <ScalarProperty Name="Cod_805" ColumnName="Cod_805" />
+          <ScalarProperty Name="Cod_Compras" ColumnName="Cod_Compras" />
+          <ScalarProperty Name="Cod_Gastos" ColumnName="Cod_Gastos" />
+          <ScalarProperty Name="IFinal_Cant" ColumnName="IFinal_Cant" />
+          <ScalarProperty Name="ICons_Cant" ColumnName="ICons_Cant" />
+          <ScalarProperty Name="IComp_Cant" ColumnName="IComp_Cant" />
+          <ScalarProperty Name="Iinic_Cant" ColumnName="Iinic_Cant" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_FechaVencimiento">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_FechaVencimiento">
+        <MappingFragment StoreEntitySet="PC_FechaVencimiento">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Inversiones">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_Inversiones">
+        <MappingFragment StoreEntitySet="PC_Inversiones">
+          <ScalarProperty Name="CodTCompras" ColumnName="CodTCompras" />
+          <ScalarProperty Name="Cod_Compras" ColumnName="Cod_Compras" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="CtaCcosto" ColumnName="CtaCcosto" />
+          <ScalarProperty Name="Cod_805" ColumnName="Cod_805" />
+          <ScalarProperty Name="Cod_Gastos" ColumnName="Cod_Gastos" />
+          <ScalarProperty Name="Tope" ColumnName="Tope" />
+          <ScalarProperty Name="Tri4" ColumnName="Tri4" />
+          <ScalarProperty Name="Tri3" ColumnName="Tri3" />
+          <ScalarProperty Name="Tri2" ColumnName="Tri2" />
+          <ScalarProperty Name="Tri1" ColumnName="Tri1" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="IFinal_Cant" ColumnName="IFinal_Cant" />
+          <ScalarProperty Name="ICons_Cant" ColumnName="ICons_Cant" />
+          <ScalarProperty Name="IComp_Cant" ColumnName="IComp_Cant" />
+          <ScalarProperty Name="IInic_Cant" ColumnName="IInic_Cant" />
+          <ScalarProperty Name="ProdAlm_id" ColumnName="ProdAlm_id" />
+          <ScalarProperty Name="Balanc_id" ColumnName="Balanc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_PlanCompras">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_PlanCompras">
+        <MappingFragment StoreEntitySet="PC_PlanCompras">
+          <ScalarProperty Name="CodTCompra" ColumnName="CodTCompra" />
+          <ScalarProperty Name="Cod_Compras" ColumnName="Cod_Compras" />
+          <ScalarProperty Name="Cod_805" ColumnName="Cod_805" />
+          <ScalarProperty Name="Cod_Gastos" ColumnName="Cod_Gastos" />
+          <ScalarProperty Name="Tope" ColumnName="Tope" />
+          <ScalarProperty Name="Tri4" ColumnName="Tri4" />
+          <ScalarProperty Name="Tri3" ColumnName="Tri3" />
+          <ScalarProperty Name="Tri2" ColumnName="Tri2" />
+          <ScalarProperty Name="Tri1" ColumnName="Tri1" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="IFinal_Cant" ColumnName="IFinal_Cant" />
+          <ScalarProperty Name="ICons_Cant" ColumnName="ICons_Cant" />
+          <ScalarProperty Name="IComp_Cant" ColumnName="IComp_Cant" />
+          <ScalarProperty Name="IInic_Cant" ColumnName="IInic_Cant" />
+          <ScalarProperty Name="ProdAlm_id" ColumnName="ProdAlm_id" />
+          <ScalarProperty Name="Balanc_id" ColumnName="Balanc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_TipoCompras">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_TipoCompras">
+        <MappingFragment StoreEntitySet="PC_TipoCompras">
+          <ScalarProperty Name="DescTCompra" ColumnName="DescTCompra" />
+          <ScalarProperty Name="CodTCompra" ColumnName="CodTCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prerecepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Prerecepcion">
+        <MappingFragment StoreEntitySet="Prerecepcion">
+          <ScalarProperty Name="Prerec_Añofactura" ColumnName="Prerec_Añofactura" />
+          <ScalarProperty Name="Prerec_Inversion" ColumnName="Prerec_Inversion" />
+          <ScalarProperty Name="Prerec_Estado" ColumnName="Prerec_Estado" />
+          <ScalarProperty Name="Prerec_EconId" ColumnName="Prerec_EconId" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="transp_Id" ColumnName="transp_Id" />
+          <ScalarProperty Name="Prerec_Fiado" ColumnName="Prerec_Fiado" />
+          <ScalarProperty Name="Prerec_Transferencia" ColumnName="Prerec_Transferencia" />
+          <ScalarProperty Name="Prerec_ChequeMnc" ColumnName="Prerec_ChequeMnc" />
+          <ScalarProperty Name="Prerec_ChequeUsd" ColumnName="Prerec_ChequeUsd" />
+          <ScalarProperty Name="Prerec_Factura" ColumnName="Prerec_Factura" />
+          <ScalarProperty Name="Prerec_Fecha" ColumnName="Prerec_Fecha" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_Almacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.Productos_Almacen">
+        <MappingFragment StoreEntitySet="Productos_Almacen">
+          <ScalarProperty Name="ProdAlm_CicloReap" ColumnName="ProdAlm_CicloReap" />
+          <ScalarProperty Name="ProdAlm_NoActivo" ColumnName="ProdAlm_NoActivo" />
+          <ScalarProperty Name="ProdAlm_NormaConsumo" ColumnName="ProdAlm_NormaConsumo" />
+          <ScalarProperty Name="ProdAlm_CodClasifP" ColumnName="ProdAlm_CodClasifP" />
+          <ScalarProperty Name="ProdAlm_SubElmd" ColumnName="ProdAlm_SubElmd" />
+          <ScalarProperty Name="ProdAlm_Subelmn" ColumnName="ProdAlm_Subelmn" />
+          <ScalarProperty Name="ProdAlm_precmd" ColumnName="ProdAlm_precmd" />
+          <ScalarProperty Name="ProdAlm_precmn" ColumnName="ProdAlm_precmn" />
+          <ScalarProperty Name="Actividad_id" ColumnName="Actividad_id" />
+          <ScalarProperty Name="ProdAlm_FechaAct" ColumnName="ProdAlm_FechaAct" />
+          <ScalarProperty Name="Balancista_id" ColumnName="Balancista_id" />
+          <ScalarProperty Name="ProdAlm_Casilla" ColumnName="ProdAlm_Casilla" />
+          <ScalarProperty Name="ProdAlm_Estante" ColumnName="ProdAlm_Estante" />
+          <ScalarProperty Name="Prodalm_Seccion" ColumnName="Prodalm_Seccion" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Recepcion">
+        <MappingFragment StoreEntitySet="Recepcion">
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="Recepcion_Recargo" ColumnName="Recepcion_Recargo" />
+          <ScalarProperty Name="Recepcion_Descuento" ColumnName="Recepcion_Descuento" />
+          <ScalarProperty Name="Recepcion_Porciento" ColumnName="Recepcion_Porciento" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recepcion_anulada">
+      <EntityTypeMapping TypeName="AlmacenesModel.Recepcion_anulada">
+        <MappingFragment StoreEntitySet="Recepcion_anulada">
+          <ScalarProperty Name="Opera_id" ColumnName="Opera_id" />
+          <ScalarProperty Name="RAnu_Fecha" ColumnName="RAnu_Fecha" />
+          <ScalarProperty Name="IR_Fecha" ColumnName="IR_Fecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="IR_No" ColumnName="IR_No" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reclamacion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Reclamacion">
+        <MappingFragment StoreEntitySet="Reclamacion">
+          <ScalarProperty Name="Rec_Estado" ColumnName="Rec_Estado" />
+          <ScalarProperty Name="Rec_Fecha" ColumnName="Rec_Fecha" />
+          <ScalarProperty Name="TipoRec_Id" ColumnName="TipoRec_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Rec_NoReclamacion" ColumnName="Rec_NoReclamacion" />
+          <ScalarProperty Name="Rec_Id" ColumnName="Rec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelProdTipos">
+      <EntityTypeMapping TypeName="AlmacenesModel.RelProdTipos">
+        <MappingFragment StoreEntitySet="RelProdTipos">
+          <ScalarProperty Name="Actividad_id" ColumnName="Actividad_id" />
+          <ScalarProperty Name="TipoProd_Id" ColumnName="TipoProd_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalAlm_Factura">
+      <EntityTypeMapping TypeName="AlmacenesModel.SalAlm_Factura">
+        <MappingFragment StoreEntitySet="SalAlm_Factura">
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeccionProductos">
+      <EntityTypeMapping TypeName="AlmacenesModel.SeccionProductos">
+        <MappingFragment StoreEntitySet="SeccionProductos">
+          <ScalarProperty Name="Seccion_Descrip" ColumnName="Seccion_Descrip" />
+          <ScalarProperty Name="Seccion_Id" ColumnName="Seccion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubGenericosProductos">
+      <EntityTypeMapping TypeName="AlmacenesModel.SubGenericosProductos">
+        <MappingFragment StoreEntitySet="SubGenericosProductos">
+          <ScalarProperty Name="SubGProd_Id" ColumnName="SubGProd_Id" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suministradores">
+      <EntityTypeMapping TypeName="AlmacenesModel.Suministradores">
+        <MappingFragment StoreEntitySet="Suministradores">
+          <ScalarProperty Name="Suministrador_Reeup" ColumnName="Suministrador_Reeup" />
+          <ScalarProperty Name="Suministrador_Cuenta" ColumnName="Suministrador_Cuenta" />
+          <ScalarProperty Name="Suministrador_Direccion" ColumnName="Suministrador_Direccion" />
+          <ScalarProperty Name="Suministrador_NoActivo" ColumnName="Suministrador_NoActivo" />
+          <ScalarProperty Name="Suministrador_moneda" ColumnName="Suministrador_moneda" />
+          <ScalarProperty Name="Suministrador_Codigo" ColumnName="Suministrador_Codigo" />
+          <ScalarProperty Name="Suministrador_Descrip" ColumnName="Suministrador_Descrip" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Surtidos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Surtidos">
+        <MappingFragment StoreEntitySet="Surtidos">
+          <ScalarProperty Name="surtido_id" ColumnName="surtido_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AlmacenesModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_factura">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipo_factura">
+        <MappingFragment StoreEntitySet="Tipo_factura">
+          <ScalarProperty Name="TipoFact_Desc" ColumnName="TipoFact_Desc" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Gastos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipo_Gastos">
+        <MappingFragment StoreEntitySet="Tipo_Gastos">
+          <ScalarProperty Name="TGasto_Porciento" ColumnName="TGasto_Porciento" />
+          <ScalarProperty Name="TGasto_Nombre" ColumnName="TGasto_Nombre" />
+          <ScalarProperty Name="TGasto_id" ColumnName="TGasto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_pago">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipo_pago">
+        <MappingFragment StoreEntitySet="Tipo_pago">
+          <ScalarProperty Name="TPago_Desc" ColumnName="TPago_Desc" />
+          <ScalarProperty Name="TPago_Id" ColumnName="TPago_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Reclamacion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipo_Reclamacion">
+        <MappingFragment StoreEntitySet="Tipo_Reclamacion">
+          <ScalarProperty Name="TipoRec_Desc" ColumnName="TipoRec_Desc" />
+          <ScalarProperty Name="TipoRec_Id" ColumnName="TipoRec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Movimientos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipos_Movimientos">
+        <MappingFragment StoreEntitySet="Tipos_Movimientos">
+          <ScalarProperty Name="TipoMov_activo" ColumnName="TipoMov_activo" />
+          <ScalarProperty Name="TipoMov_Descrip" ColumnName="TipoMov_Descrip" />
+          <ScalarProperty Name="TipoMov_Id" ColumnName="TipoMov_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Productos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Tipos_Productos">
+        <MappingFragment StoreEntitySet="Tipos_Productos">
+          <ScalarProperty Name="TipoProd_Descrip" ColumnName="TipoProd_Descrip" />
+          <ScalarProperty Name="TipoProd_Id" ColumnName="TipoProd_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transportistas">
+      <EntityTypeMapping TypeName="AlmacenesModel.Transportistas">
+        <MappingFragment StoreEntitySet="Transportistas">
+          <ScalarProperty Name="transp_Chapa" ColumnName="transp_Chapa" />
+          <ScalarProperty Name="transp_CI" ColumnName="transp_CI" />
+          <ScalarProperty Name="transp_Chofer" ColumnName="transp_Chofer" />
+          <ScalarProperty Name="transp_Id" ColumnName="transp_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTORI">
+      <EntityTypeMapping TypeName="AlmacenesModel.AUTORI">
+        <MappingFragment StoreEntitySet="AUTORI">
+          <ScalarProperty Name="MODIFICADO" ColumnName="MODIFICADO" />
+          <ScalarProperty Name="ULT_ACCESO" ColumnName="ULT_ACCESO" />
+          <ScalarProperty Name="PASS_ORA" ColumnName="PASS_ORA" />
+          <ScalarProperty Name="USER_ORA" ColumnName="USER_ORA" />
+          <ScalarProperty Name="COD_PER" ColumnName="COD_PER" />
+          <ScalarProperty Name="COD_APLI" ColumnName="COD_APLI" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGO">
+      <EntityTypeMapping TypeName="AlmacenesModel.CATALOGO">
+        <MappingFragment StoreEntitySet="CATALOGO">
+          <ScalarProperty Name="MODIFICADO" ColumnName="MODIFICADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONES">
+      <EntityTypeMapping TypeName="AlmacenesModel.FUNCIONES">
+        <MappingFragment StoreEntitySet="FUNCIONES">
+          <ScalarProperty Name="MODIFICADO" ColumnName="MODIFICADO" />
+          <ScalarProperty Name="INDICE" ColumnName="INDICE" />
+          <ScalarProperty Name="FUNCION" ColumnName="FUNCION" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="COD_APLI" ColumnName="COD_APLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERFILES">
+      <EntityTypeMapping TypeName="AlmacenesModel.PERFILES">
+        <MappingFragment StoreEntitySet="PERFILES">
+          <ScalarProperty Name="MODIFICADO" ColumnName="MODIFICADO" />
+          <ScalarProperty Name="DES_PER" ColumnName="DES_PER" />
+          <ScalarProperty Name="PERFIL" ColumnName="PERFIL" />
+          <ScalarProperty Name="COD_PER" ColumnName="COD_PER" />
+          <ScalarProperty Name="COD_APLI" ColumnName="COD_APLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCONJUNTOS">
+      <EntityTypeMapping TypeName="AlmacenesModel.SUBCONJUNTOS">
+        <MappingFragment StoreEntitySet="SUBCONJUNTOS">
+          <ScalarProperty Name="APLICACION" ColumnName="APLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="AlmacenesModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="MODIFICADO" ColumnName="MODIFICADO" />
+          <ScalarProperty Name="DEPART" ColumnName="DEPART" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PASS_WORD" ColumnName="PASS_WORD" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asignaciones">
+      <EntityTypeMapping TypeName="AlmacenesModel.Asignaciones">
+        <MappingFragment StoreEntitySet="Asignaciones">
+          <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+          <ScalarProperty Name="Ctaccosto" ColumnName="Ctaccosto" />
+          <ScalarProperty Name="Prodalm_id" ColumnName="Prodalm_id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionesSS">
+      <EntityTypeMapping TypeName="AlmacenesModel.AsignacionesSS">
+        <MappingFragment StoreEntitySet="AsignacionesSS">
+          <ScalarProperty Name="Terminal_id" ColumnName="Terminal_id" />
+          <ScalarProperty Name="Workstation" ColumnName="Workstation" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="operacion" ColumnName="operacion" />
+          <ScalarProperty Name="ctaccosto" ColumnName="ctaccosto" />
+          <ScalarProperty Name="prodalm_id" ColumnName="prodalm_id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha_Asignacion" ColumnName="Fecha_Asignacion" />
+          <ScalarProperty Name="login" ColumnName="login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciclo_Reapro">
+      <EntityTypeMapping TypeName="AlmacenesModel.Ciclo_Reapro">
+        <MappingFragment StoreEntitySet="Ciclo_Reapro">
+          <ScalarProperty Name="Ciclo_Id" ColumnName="Ciclo_Id" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+          <ScalarProperty Name="Norma" ColumnName="Norma" />
+          <ScalarProperty Name="Um" ColumnName="Um" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mproducto_id" ColumnName="mproducto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciloted">
+      <EntityTypeMapping TypeName="AlmacenesModel.ciloted">
+        <MappingFragment StoreEntitySet="ciloted">
+          <ScalarProperty Name="ciloted_id" ColumnName="ciloted_id" />
+          <ScalarProperty Name="notrans" ColumnName="notrans" />
+          <ScalarProperty Name="um" ColumnName="um" />
+          <ScalarProperty Name="imp_md" ColumnName="imp_md" />
+          <ScalarProperty Name="imp_mn" ColumnName="imp_mn" />
+          <ScalarProperty Name="ccosto" ColumnName="ccosto" />
+          <ScalarProperty Name="casilla" ColumnName="casilla" />
+          <ScalarProperty Name="estante" ColumnName="estante" />
+          <ScalarProperty Name="seccion" ColumnName="seccion" />
+          <ScalarProperty Name="orden_pre" ColumnName="orden_pre" />
+          <ScalarProperty Name="imp_fact" ColumnName="imp_fact" />
+          <ScalarProperty Name="f_doc" ColumnName="f_doc" />
+          <ScalarProperty Name="emp_sum" ColumnName="emp_sum" />
+          <ScalarProperty Name="cond_fac" ColumnName="cond_fac" />
+          <ScalarProperty Name="cod_almr" ColumnName="cod_almr" />
+          <ScalarProperty Name="cant_alm" ColumnName="cant_alm" />
+          <ScalarProperty Name="cant_ent" ColumnName="cant_ent" />
+          <ScalarProperty Name="cod_prod" ColumnName="cod_prod" />
+          <ScalarProperty Name="no_doc" ColumnName="no_doc" />
+          <ScalarProperty Name="cod_alm" ColumnName="cod_alm" />
+          <ScalarProperty Name="clave_op" ColumnName="clave_op" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciprod_dup">
+      <EntityTypeMapping TypeName="AlmacenesModel.ciprod_dup">
+        <MappingFragment StoreEntitySet="ciprod_dup">
+          <ScalarProperty Name="cant_um" ColumnName="cant_um" />
+          <ScalarProperty Name="cod_prod" ColumnName="cod_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciproda">
+      <EntityTypeMapping TypeName="AlmacenesModel.ciproda">
+        <MappingFragment StoreEntitySet="ciproda">
+          <ScalarProperty Name="Descipcion" ColumnName="Descipcion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="um_alm" ColumnName="um_alm" />
+          <ScalarProperty Name="Cod_prod" ColumnName="Cod_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciprodAA">
+      <EntityTypeMapping TypeName="AlmacenesModel.ciprodAA">
+        <MappingFragment StoreEntitySet="ciprodAA">
+          <ScalarProperty Name="Descipcion" ColumnName="Descipcion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="um_alm" ColumnName="um_alm" />
+          <ScalarProperty Name="Cod_prod" ColumnName="Cod_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciprodwk2">
+      <EntityTypeMapping TypeName="AlmacenesModel.ciprodwk2">
+        <MappingFragment StoreEntitySet="ciprodwk2">
+          <ScalarProperty Name="Prec_md" ColumnName="Prec_md" />
+          <ScalarProperty Name="Prec_mn" ColumnName="Prec_mn" />
+          <ScalarProperty Name="desc_prod" ColumnName="desc_prod" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="um_alm" ColumnName="um_alm" />
+          <ScalarProperty Name="cod_prod" ColumnName="cod_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cod_alm">
+      <EntityTypeMapping TypeName="AlmacenesModel.cod_alm">
+        <MappingFragment StoreEntitySet="cod_alm">
+          <ScalarProperty Name="vs" ColumnName="vs" />
+          <ScalarProperty Name="reclama" ColumnName="reclama" />
+          <ScalarProperty Name="prelac" ColumnName="prelac" />
+          <ScalarProperty Name="ajustes" ColumnName="ajustes" />
+          <ScalarProperty Name="devolu" ColumnName="devolu" />
+          <ScalarProperty Name="tran_sal" ColumnName="tran_sal" />
+          <ScalarProperty Name="tran_ent" ColumnName="tran_ent" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cod_emsu">
+      <EntityTypeMapping TypeName="AlmacenesModel.cod_emsu">
+        <MappingFragment StoreEntitySet="cod_emsu">
+          <ScalarProperty Name="cod_eco" ColumnName="cod_eco" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cod_prod">
+      <EntityTypeMapping TypeName="AlmacenesModel.cod_prod">
+        <MappingFragment StoreEntitySet="cod_prod">
+          <ScalarProperty Name="insumo" ColumnName="insumo" />
+          <ScalarProperty Name="prior" ColumnName="prior" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="exist" ColumnName="exist" />
+          <ScalarProperty Name="pu" ColumnName="pu" />
+          <ScalarProperty Name="umalm" ColumnName="umalm" />
+          <ScalarProperty Name="minimo" ColumnName="minimo" />
+          <ScalarProperty Name="maximo" ColumnName="maximo" />
+          <ScalarProperty Name="pto_reo" ColumnName="pto_reo" />
+          <ScalarProperty Name="casilla" ColumnName="casilla" />
+          <ScalarProperty Name="estante" ColumnName="estante" />
+          <ScalarProperty Name="seccion" ColumnName="seccion" />
+          <ScalarProperty Name="codalm" ColumnName="codalm" />
+          <ScalarProperty Name="nc" ColumnName="nc" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="cantpredes" ColumnName="cantpredes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Control_Plan_Compras">
+      <EntityTypeMapping TypeName="AlmacenesModel.Control_Plan_Compras">
+        <MappingFragment StoreEntitySet="Control_Plan_Compras">
+          <ScalarProperty Name="Control_id" ColumnName="Control_id" />
+          <ScalarProperty Name="Control_Res_Inv" ColumnName="Control_Res_Inv" />
+          <ScalarProperty Name="Control_Res_Ope" ColumnName="Control_Res_Ope" />
+          <ScalarProperty Name="Control_ecost" ColumnName="Control_ecost" />
+          <ScalarProperty Name="Control_Aba_Inv" ColumnName="Control_Aba_Inv" />
+          <ScalarProperty Name="Control_Aba_Ope" ColumnName="Control_Aba_Ope" />
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cpmaecli">
+      <EntityTypeMapping TypeName="AlmacenesModel.cpmaecli">
+        <MappingFragment StoreEntitySet="cpmaecli">
+          <ScalarProperty Name="des_clie" ColumnName="des_clie" />
+          <ScalarProperty Name="cod_clie" ColumnName="cod_clie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devoluciones">
+      <EntityTypeMapping TypeName="AlmacenesModel.Devoluciones">
+        <MappingFragment StoreEntitySet="Devoluciones">
+          <ScalarProperty Name="Prelacion" ColumnName="Prelacion" />
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+          <ScalarProperty Name="Dev_Fecha" ColumnName="Dev_Fecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Dev_NoDev" ColumnName="Dev_NoDev" />
+          <ScalarProperty Name="Dev_Id" ColumnName="Dev_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entradas_Almacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.Entradas_Almacen">
+        <MappingFragment StoreEntitySet="Entradas_Almacen">
+          <ScalarProperty Name="Ent" ColumnName="Ent" />
+          <ScalarProperty Name="Ccosto_id" ColumnName="Ccosto_id" />
+          <ScalarProperty Name="EntAlm_fecha" ColumnName="EntAlm_fecha" />
+          <ScalarProperty Name="Almacen_id" ColumnName="Almacen_id" />
+          <ScalarProperty Name="mProducto_id" ColumnName="mProducto_id" />
+          <ScalarProperty Name="EntAlm_ir" ColumnName="EntAlm_ir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="especif">
+      <EntityTypeMapping TypeName="AlmacenesModel.especif">
+        <MappingFragment StoreEntitySet="especif">
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="cod_sge" ColumnName="cod_sge" />
+          <ScalarProperty Name="cod_gen" ColumnName="cod_gen" />
+          <ScalarProperty Name="cod_esp" ColumnName="cod_esp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="generico">
+      <EntityTypeMapping TypeName="AlmacenesModel.generico">
+        <MappingFragment StoreEntitySet="generico">
+          <ScalarProperty Name="cod_sec" ColumnName="cod_sec" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="cod_gen" ColumnName="cod_gen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genericoelemento">
+      <EntityTypeMapping TypeName="AlmacenesModel.Genericoelemento">
+        <MappingFragment StoreEntitySet="Genericoelemento">
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="codelem" ColumnName="codelem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mundo_Intervalo">
+      <EntityTypeMapping TypeName="AlmacenesModel.Mundo_Intervalo">
+        <MappingFragment StoreEntitySet="Mundo_Intervalo">
+          <ScalarProperty Name="Inter_Id" ColumnName="Inter_Id" />
+          <ScalarProperty Name="ImpCUP" ColumnName="ImpCUP" />
+          <ScalarProperty Name="ImpCUC" ColumnName="ImpCUC" />
+          <ScalarProperty Name="PrecioCUP" ColumnName="PrecioCUP" />
+          <ScalarProperty Name="PrecioCUC" ColumnName="PrecioCUC" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="FEntrada" ColumnName="FEntrada" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_ProdNOAlmacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_ProdNOAlmacen">
+        <MappingFragment StoreEntitySet="PC_ProdNOAlmacen">
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="Balancista_id" ColumnName="Balancista_id" />
+          <ScalarProperty Name="Desc_prod" ColumnName="Desc_prod" />
+          <ScalarProperty Name="ProdAlm_id" ColumnName="ProdAlm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC_Usuarios">
+      <EntityTypeMapping TypeName="AlmacenesModel.PC_Usuarios">
+        <MappingFragment StoreEntitySet="PC_Usuarios">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="precios">
+      <EntityTypeMapping TypeName="AlmacenesModel.precios">
+        <MappingFragment StoreEntitySet="precios">
+          <ScalarProperty Name="ir" ColumnName="ir" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreciosSiscont">
+      <EntityTypeMapping TypeName="AlmacenesModel.PreciosSiscont">
+        <MappingFragment StoreEntitySet="PreciosSiscont">
+          <ScalarProperty Name="subel_md" ColumnName="subel_md" />
+          <ScalarProperty Name="subel_mn" ColumnName="subel_mn" />
+          <ScalarProperty Name="cod_aux" ColumnName="cod_aux" />
+          <ScalarProperty Name="prec_md" ColumnName="prec_md" />
+          <ScalarProperty Name="prec_mn" ColumnName="prec_mn" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="um_alm" ColumnName="um_alm" />
+          <ScalarProperty Name="des_prod" ColumnName="des_prod" />
+          <ScalarProperty Name="scta_inv" ColumnName="scta_inv" />
+          <ScalarProperty Name="cta_inv" ColumnName="cta_inv" />
+          <ScalarProperty Name="cod_prod" ColumnName="cod_prod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="procenco">
+      <EntityTypeMapping TypeName="AlmacenesModel.procenco">
+        <MappingFragment StoreEntitySet="procenco">
+          <ScalarProperty Name="cantpred" ColumnName="cantpred" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="codcencos" ColumnName="codcencos" />
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="prerec" ColumnName="prerec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salidas_Almacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.Salidas_Almacen">
+        <MappingFragment StoreEntitySet="Salidas_Almacen">
+          <ScalarProperty Name="CtaCCostoN" ColumnName="CtaCCostoN" />
+          <ScalarProperty Name="Prelacion" ColumnName="Prelacion" />
+          <ScalarProperty Name="SalAlm_Estado" ColumnName="SalAlm_Estado" />
+          <ScalarProperty Name="opera_id" ColumnName="opera_id" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+          <ScalarProperty Name="SalAlm_id" ColumnName="SalAlm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salidas_Temp">
+      <EntityTypeMapping TypeName="AlmacenesModel.Salidas_Temp">
+        <MappingFragment StoreEntitySet="Salidas_Temp">
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="FechaDesp" ColumnName="FechaDesp" />
+          <ScalarProperty Name="SalAlm_NoVs" ColumnName="SalAlm_NoVs" />
+          <ScalarProperty Name="almacen_id" ColumnName="almacen_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seccion">
+      <EntityTypeMapping TypeName="AlmacenesModel.seccion">
+        <MappingFragment StoreEntitySet="seccion">
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="cod_sec" ColumnName="cod_sec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sub_gen">
+      <EntityTypeMapping TypeName="AlmacenesModel.sub_gen">
+        <MappingFragment StoreEntitySet="sub_gen">
+          <ScalarProperty Name="cod_gen" ColumnName="cod_gen" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+          <ScalarProperty Name="cod_sge" ColumnName="cod_sge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transferencias">
+      <EntityTypeMapping TypeName="AlmacenesModel.Transferencias">
+        <MappingFragment StoreEntitySet="Transferencias">
+          <ScalarProperty Name="Transf_DocEnt" ColumnName="Transf_DocEnt" />
+          <ScalarProperty Name="Prelacion" ColumnName="Prelacion" />
+          <ScalarProperty Name="Transf_Opera_Id" ColumnName="Transf_Opera_Id" />
+          <ScalarProperty Name="Transf_Comentarios" ColumnName="Transf_Comentarios" />
+          <ScalarProperty Name="Transf_Estado" ColumnName="Transf_Estado" />
+          <ScalarProperty Name="Transf_AlmEnt" ColumnName="Transf_AlmEnt" />
+          <ScalarProperty Name="Transf_AlmSal" ColumnName="Transf_AlmSal" />
+          <ScalarProperty Name="Transf_Fecha" ColumnName="Transf_Fecha" />
+          <ScalarProperty Name="Transf_Doc" ColumnName="Transf_Doc" />
+          <ScalarProperty Name="Transf_id" ColumnName="Transf_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transp">
+      <EntityTypeMapping TypeName="AlmacenesModel.transp">
+        <MappingFragment StoreEntitySet="transp">
+          <ScalarProperty Name="carnet" ColumnName="carnet" />
+          <ScalarProperty Name="transporta" ColumnName="transporta" />
+          <ScalarProperty Name="chapa" ColumnName="chapa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uno">
+      <EntityTypeMapping TypeName="AlmacenesModel.uno">
+        <MappingFragment StoreEntitySet="uno">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="prodalm_existencia" ColumnName="prodalm_existencia" />
+          <ScalarProperty Name="prodalm_id" ColumnName="prodalm_id" />
+          <ScalarProperty Name="salalm_id" ColumnName="salalm_id" />
+          <ScalarProperty Name="tipoprod_id" ColumnName="tipoprod_id" />
+          <ScalarProperty Name="cantdev" ColumnName="cantdev" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="cliente_id" ColumnName="cliente_id" />
+          <ScalarProperty Name="ccosto_Id" ColumnName="ccosto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Detalle_Salidas_prod_almacen">
+      <EntityTypeMapping TypeName="AlmacenesModel.C_Detalle_Salidas_prod_almacen">
+        <MappingFragment StoreEntitySet="_Detalle Salidas prod almacen">
+          <ScalarProperty Name="SalAlm_Precio" ColumnName="SalAlm_Precio" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="almacenesdeoperadoras">
+      <EntityTypeMapping TypeName="AlmacenesModel.almacenesdeoperadoras">
+        <MappingFragment StoreEntitySet="almacenesdeoperadoras">
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arreglaautomotriz">
+      <EntityTypeMapping TypeName="AlmacenesModel.arreglaautomotriz">
+        <MappingFragment StoreEntitySet="arreglaautomotriz">
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arreglo_de_precio_par_un_IR_determinado">
+      <EntityTypeMapping TypeName="AlmacenesModel.Arreglo_de_precio_par_un_IR_determinado">
+        <MappingFragment StoreEntitySet="Arreglo de precio par un IR determinado">
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="borrarecepcion">
+      <EntityTypeMapping TypeName="AlmacenesModel.borrarecepcion">
+        <MappingFragment StoreEntitySet="borrarecepcion">
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calculomn">
+      <EntityTypeMapping TypeName="AlmacenesModel.calculomn">
+        <MappingFragment StoreEntitySet="calculomn">
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConformacionDelProducto">
+      <EntityTypeMapping TypeName="AlmacenesModel.ConformacionDelProducto">
+        <MappingFragment StoreEntitySet="ConformacionDelProducto">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consulta_con_like">
+      <EntityTypeMapping TypeName="AlmacenesModel.Consulta_con_like">
+        <MappingFragment StoreEntitySet="Consulta con like">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distribucion">
+      <EntityTypeMapping TypeName="AlmacenesModel.Distribucion">
+        <MappingFragment StoreEntitySet="Distribucion">
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Id" ColumnName="SubGProd_Id" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="los_almacenes_de_operadoras">
+      <EntityTypeMapping TypeName="AlmacenesModel.los_almacenes_de_operadoras">
+        <MappingFragment StoreEntitySet="los_almacenes_de_operadoras">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mira_movimientos">
+      <EntityTypeMapping TypeName="AlmacenesModel.mira_movimientos">
+        <MappingFragment StoreEntitySet="mira_movimientos">
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="TipoMov_Descrip" ColumnName="TipoMov_Descrip" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Mov_Existencia" ColumnName="Mov_Existencia" />
+          <ScalarProperty Name="Mov_Precio" ColumnName="Mov_Precio" />
+          <ScalarProperty Name="Mov_Cantidad" ColumnName="Mov_Cantidad" />
+          <ScalarProperty Name="Mov_Fecha" ColumnName="Mov_Fecha" />
+          <ScalarProperty Name="Mov_NoDoc" ColumnName="Mov_NoDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mira_salidas_facturas">
+      <EntityTypeMapping TypeName="AlmacenesModel.mira_salidas_facturas">
+        <MappingFragment StoreEntitySet="mira_salidas_facturas">
+          <ScalarProperty Name="Fact_Observ" ColumnName="Fact_Observ" />
+          <ScalarProperty Name="TGasto_id" ColumnName="TGasto_id" />
+          <ScalarProperty Name="Fact_Cheque" ColumnName="Fact_Cheque" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="TPago_Id" ColumnName="TPago_Id" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+          <ScalarProperty Name="Fact_Fecha" ColumnName="Fact_Fecha" />
+          <ScalarProperty Name="Fact_NoDoc" ColumnName="Fact_NoDoc" />
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mirar_pre_y_recepciones">
+      <EntityTypeMapping TypeName="AlmacenesModel.mirar_pre_y_recepciones">
+        <MappingFragment StoreEntitySet="mirar_pre_y_recepciones">
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mirar_precios">
+      <EntityTypeMapping TypeName="AlmacenesModel.mirar_precios">
+        <MappingFragment StoreEntitySet="mirar_precios">
+          <ScalarProperty Name="HistPrecio_Valor" ColumnName="HistPrecio_Valor" />
+          <ScalarProperty Name="HistPrecio_FechaEntrada" ColumnName="HistPrecio_FechaEntrada" />
+          <ScalarProperty Name="HistPrecio_Ir" ColumnName="HistPrecio_Ir" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mirar_salidas">
+      <EntityTypeMapping TypeName="AlmacenesModel.mirar_salidas">
+        <MappingFragment StoreEntitySet="mirar_salidas">
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="ProdAlm_Casilla" ColumnName="ProdAlm_Casilla" />
+          <ScalarProperty Name="ProdAlm_Estante" ColumnName="ProdAlm_Estante" />
+          <ScalarProperty Name="Prodalm_Seccion" ColumnName="Prodalm_Seccion" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Almacen_ValSal" ColumnName="Almacen_ValSal" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="SalAlm_CantDispDev" ColumnName="SalAlm_CantDispDev" />
+          <ScalarProperty Name="SalAlm_CantDevTmp" ColumnName="SalAlm_CantDevTmp" />
+          <ScalarProperty Name="SalAlm_ExistTarjeta" ColumnName="SalAlm_ExistTarjeta" />
+          <ScalarProperty Name="SalAlm_ExistAntes" ColumnName="SalAlm_ExistAntes" />
+          <ScalarProperty Name="SalAlm_Precio" ColumnName="SalAlm_Precio" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+          <ScalarProperty Name="SalAlm_id" ColumnName="SalAlm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mirar_si_reclamacion">
+      <EntityTypeMapping TypeName="AlmacenesModel.mirar_si_reclamacion">
+        <MappingFragment StoreEntitySet="mirar_si_reclamacion">
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Rec_Estado" ColumnName="Rec_Estado" />
+          <ScalarProperty Name="Rec_NoReclamacion" ColumnName="Rec_NoReclamacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mirar_transf_almacenes">
+      <EntityTypeMapping TypeName="AlmacenesModel.mirar_transf_almacenes">
+        <MappingFragment StoreEntitySet="mirar_transf_almacenes">
+          <ScalarProperty Name="AlmEnt" ColumnName="AlmEnt" />
+          <ScalarProperty Name="AlmSal" ColumnName="AlmSal" />
+          <ScalarProperty Name="Transf_Fecha" ColumnName="Transf_Fecha" />
+          <ScalarProperty Name="Transf_Doc" ColumnName="Transf_Doc" />
+          <ScalarProperty Name="Transf_id" ColumnName="Transf_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operadores_almacenes">
+      <EntityTypeMapping TypeName="AlmacenesModel.operadores_almacenes">
+        <MappingFragment StoreEntitySet="operadores_almacenes">
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Predespachos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Predespachos">
+        <MappingFragment StoreEntitySet="Predespachos">
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prerec_recepcion_completa">
+      <EntityTypeMapping TypeName="AlmacenesModel.prerec_recepcion_completa">
+        <MappingFragment StoreEntitySet="prerec_recepcion_completa">
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="ProdAlm_Casilla" ColumnName="ProdAlm_Casilla" />
+          <ScalarProperty Name="ProdAlm_Estante" ColumnName="ProdAlm_Estante" />
+          <ScalarProperty Name="Prodalm_Seccion" ColumnName="Prodalm_Seccion" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="Recepcion_Recargo" ColumnName="Recepcion_Recargo" />
+          <ScalarProperty Name="Recepcion_Descuento" ColumnName="Recepcion_Descuento" />
+          <ScalarProperty Name="Recepcion_Porciento" ColumnName="Recepcion_Porciento" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="transp_Chapa" ColumnName="transp_Chapa" />
+          <ScalarProperty Name="transp_CI" ColumnName="transp_CI" />
+          <ScalarProperty Name="transp_Chofer" ColumnName="transp_Chofer" />
+          <ScalarProperty Name="Suministrador_Descrip" ColumnName="Suministrador_Descrip" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+          <ScalarProperty Name="Prerec_EconId" ColumnName="Prerec_EconId" />
+          <ScalarProperty Name="Prerec_Fiado" ColumnName="Prerec_Fiado" />
+          <ScalarProperty Name="Prerec_Transferencia" ColumnName="Prerec_Transferencia" />
+          <ScalarProperty Name="Prerec_ChequeMnc" ColumnName="Prerec_ChequeMnc" />
+          <ScalarProperty Name="Prerec_ChequeUsd" ColumnName="Prerec_ChequeUsd" />
+          <ScalarProperty Name="Prerec_Factura" ColumnName="Prerec_Factura" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrerecepcionCompleta">
+      <EntityTypeMapping TypeName="AlmacenesModel.PrerecepcionCompleta">
+        <MappingFragment StoreEntitySet="PrerecepcionCompleta">
+          <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+          <ScalarProperty Name="SubGProd_Id" ColumnName="SubGProd_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Id" ColumnName="Especifico_Id" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="ProdAlm_Casilla" ColumnName="ProdAlm_Casilla" />
+          <ScalarProperty Name="ProdAlm_Estante" ColumnName="ProdAlm_Estante" />
+          <ScalarProperty Name="Prodalm_Seccion" ColumnName="Prodalm_Seccion" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Almacen_Recepcion" ColumnName="Almacen_Recepcion" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="transp_Chapa" ColumnName="transp_Chapa" />
+          <ScalarProperty Name="transp_CI" ColumnName="transp_CI" />
+          <ScalarProperty Name="transp_Chofer" ColumnName="transp_Chofer" />
+          <ScalarProperty Name="transp_Id" ColumnName="transp_Id" />
+          <ScalarProperty Name="Suministrador_Descrip" ColumnName="Suministrador_Descrip" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+          <ScalarProperty Name="Prerec_Conteo" ColumnName="Prerec_Conteo" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Prerec_Precio" ColumnName="Prerec_Precio" />
+          <ScalarProperty Name="Prerec_Um" ColumnName="Prerec_Um" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Prerec_Estado" ColumnName="Prerec_Estado" />
+          <ScalarProperty Name="Prerec_EconId" ColumnName="Prerec_EconId" />
+          <ScalarProperty Name="Prerec_Fiado" ColumnName="Prerec_Fiado" />
+          <ScalarProperty Name="Prerec_Transferencia" ColumnName="Prerec_Transferencia" />
+          <ScalarProperty Name="Prerec_ChequeMnc" ColumnName="Prerec_ChequeMnc" />
+          <ScalarProperty Name="Prerec_ChequeUsd" ColumnName="Prerec_ChequeUsd" />
+          <ScalarProperty Name="Prerec_Factura" ColumnName="Prerec_Factura" />
+          <ScalarProperty Name="Prerec_Fecha" ColumnName="Prerec_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_sin_movimientos">
+      <EntityTypeMapping TypeName="AlmacenesModel.Productos_sin_movimientos">
+        <MappingFragment StoreEntitySet="Productos_sin_movimientos">
+          <ScalarProperty Name="Mov_Cantidad" ColumnName="Mov_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sql_Prerec_Recep">
+      <EntityTypeMapping TypeName="AlmacenesModel.sql_Prerec_Recep">
+        <MappingFragment StoreEntitySet="sql_Prerec_Recep">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="Prerec_Conteo" ColumnName="Prerec_Conteo" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Prerec_Estado" ColumnName="Prerec_Estado" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toda_transferencia">
+      <EntityTypeMapping TypeName="AlmacenesModel.toda_transferencia">
+        <MappingFragment StoreEntitySet="toda_transferencia">
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_descrip" ColumnName="Especifico_descrip" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetTransf_Tarjeta" ColumnName="DetTransf_Tarjeta" />
+          <ScalarProperty Name="DetTransf_ExisteSal" ColumnName="DetTransf_ExisteSal" />
+          <ScalarProperty Name="DetTransf_ExisteEnt" ColumnName="DetTransf_ExisteEnt" />
+          <ScalarProperty Name="DetTransf_Cantidad" ColumnName="DetTransf_Cantidad" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Transf_Opera_Id" ColumnName="Transf_Opera_Id" />
+          <ScalarProperty Name="Transf_Comentarios" ColumnName="Transf_Comentarios" />
+          <ScalarProperty Name="Transf_Estado" ColumnName="Transf_Estado" />
+          <ScalarProperty Name="Transf_AlmEnt" ColumnName="Transf_AlmEnt" />
+          <ScalarProperty Name="Transf_AlmSal" ColumnName="Transf_AlmSal" />
+          <ScalarProperty Name="Transf_Fecha" ColumnName="Transf_Fecha" />
+          <ScalarProperty Name="Transf_Doc" ColumnName="Transf_Doc" />
+          <ScalarProperty Name="Transf_id" ColumnName="Transf_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilizarLike">
+      <EntityTypeMapping TypeName="AlmacenesModel.utilizarLike">
+        <MappingFragment StoreEntitySet="utilizarLike">
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ver_Almacenes_producto">
+      <EntityTypeMapping TypeName="AlmacenesModel.Ver_Almacenes_producto">
+        <MappingFragment StoreEntitySet="Ver_Almacenes_producto">
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ver_Balancista_cero">
+      <EntityTypeMapping TypeName="AlmacenesModel.Ver_Balancista_cero">
+        <MappingFragment StoreEntitySet="Ver_Balancista_cero">
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_codigos_productos">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_codigos_productos">
+        <MappingFragment StoreEntitySet="ver_codigos_productos">
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_codProdAlm">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_codProdAlm">
+        <MappingFragment StoreEntitySet="ver_codProdAlm">
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ver_CuentaSubcuentaSicont">
+      <EntityTypeMapping TypeName="AlmacenesModel.Ver_CuentaSubcuentaSicont">
+        <MappingFragment StoreEntitySet="Ver_CuentaSubcuentaSicont">
+          <ScalarProperty Name="COMPLETO" ColumnName="COMPLETO" />
+          <ScalarProperty Name="ClCuDescripcion" ColumnName="ClCuDescripcion" />
+          <ScalarProperty Name="ClCuSubcuenta" ColumnName="ClCuSubcuenta" />
+          <ScalarProperty Name="ClCuCuenta" ColumnName="ClCuCuenta" />
+          <ScalarProperty Name="ClcuIDCuenta" ColumnName="ClcuIDCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_facturación">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_facturación">
+        <MappingFragment StoreEntitySet="ver_facturación">
+          <ScalarProperty Name="TGasto_Porciento" ColumnName="TGasto_Porciento" />
+          <ScalarProperty Name="TGasto_Nombre" ColumnName="TGasto_Nombre" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="TPago_Desc" ColumnName="TPago_Desc" />
+          <ScalarProperty Name="Cliente_Cuenta" ColumnName="Cliente_Cuenta" />
+          <ScalarProperty Name="Cliente_Direccion" ColumnName="Cliente_Direccion" />
+          <ScalarProperty Name="Cliente_Nombre" ColumnName="Cliente_Nombre" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Venta_Precio" ColumnName="Venta_Precio" />
+          <ScalarProperty Name="Venta_Cantidad" ColumnName="Venta_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Fact_Observ" ColumnName="Fact_Observ" />
+          <ScalarProperty Name="TGasto_id" ColumnName="TGasto_id" />
+          <ScalarProperty Name="Fact_Cheque" ColumnName="Fact_Cheque" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="TPago_Id" ColumnName="TPago_Id" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+          <ScalarProperty Name="Fact_Fecha" ColumnName="Fact_Fecha" />
+          <ScalarProperty Name="Fact_NoDoc" ColumnName="Fact_NoDoc" />
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VER_LA_PRUEBA">
+      <EntityTypeMapping TypeName="AlmacenesModel.VER_LA_PRUEBA">
+        <MappingFragment StoreEntitySet="VER_LA_PRUEBA">
+          <ScalarProperty Name="Expr33" ColumnName="Expr33" />
+          <ScalarProperty Name="Expr32" ColumnName="Expr32" />
+          <ScalarProperty Name="Expr31" ColumnName="Expr31" />
+          <ScalarProperty Name="Expr30" ColumnName="Expr30" />
+          <ScalarProperty Name="Expr29" ColumnName="Expr29" />
+          <ScalarProperty Name="Expr28" ColumnName="Expr28" />
+          <ScalarProperty Name="Expr27" ColumnName="Expr27" />
+          <ScalarProperty Name="Expr26" ColumnName="Expr26" />
+          <ScalarProperty Name="Expr25" ColumnName="Expr25" />
+          <ScalarProperty Name="Expr24" ColumnName="Expr24" />
+          <ScalarProperty Name="Expr23" ColumnName="Expr23" />
+          <ScalarProperty Name="Expr22" ColumnName="Expr22" />
+          <ScalarProperty Name="Expr21" ColumnName="Expr21" />
+          <ScalarProperty Name="Expr20" ColumnName="Expr20" />
+          <ScalarProperty Name="Expr19" ColumnName="Expr19" />
+          <ScalarProperty Name="Expr18" ColumnName="Expr18" />
+          <ScalarProperty Name="Expr17" ColumnName="Expr17" />
+          <ScalarProperty Name="Expr16" ColumnName="Expr16" />
+          <ScalarProperty Name="Expr15" ColumnName="Expr15" />
+          <ScalarProperty Name="Expr14" ColumnName="Expr14" />
+          <ScalarProperty Name="Expr11" ColumnName="Expr11" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="Expr13" ColumnName="Expr13" />
+          <ScalarProperty Name="Expr12" ColumnName="Expr12" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr10" ColumnName="Expr10" />
+          <ScalarProperty Name="Expr9" ColumnName="Expr9" />
+          <ScalarProperty Name="Expr8" ColumnName="Expr8" />
+          <ScalarProperty Name="Expr7" ColumnName="Expr7" />
+          <ScalarProperty Name="Expr6" ColumnName="Expr6" />
+          <ScalarProperty Name="Expr5" ColumnName="Expr5" />
+          <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_lo_facturado">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_lo_facturado">
+        <MappingFragment StoreEntitySet="ver_lo_facturado">
+          <ScalarProperty Name="Fact_Observ" ColumnName="Fact_Observ" />
+          <ScalarProperty Name="TGasto_id" ColumnName="TGasto_id" />
+          <ScalarProperty Name="Fact_Cheque" ColumnName="Fact_Cheque" />
+          <ScalarProperty Name="Venta_Precio" ColumnName="Venta_Precio" />
+          <ScalarProperty Name="Venta_Cantidad" ColumnName="Venta_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+          <ScalarProperty Name="Fact_Fecha" ColumnName="Fact_Fecha" />
+          <ScalarProperty Name="Fact_NoDoc" ColumnName="Fact_NoDoc" />
+          <ScalarProperty Name="Fact_Id" ColumnName="Fact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_mundoProducto_tarjeta">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_mundoProducto_tarjeta">
+        <MappingFragment StoreEntitySet="ver_mundoProducto_tarjeta">
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_descrip" ColumnName="Especifico_descrip" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_Precios_Siscont">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_Precios_Siscont">
+        <MappingFragment StoreEntitySet="ver_Precios_Siscont">
+          <ScalarProperty Name="ProduFechaModif" ColumnName="ProduFechaModif" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="ProduPrecioMLC" ColumnName="ProduPrecioMLC" />
+          <ScalarProperty Name="ProduPrecioMN" ColumnName="ProduPrecioMN" />
+          <ScalarProperty Name="ProduDescrip" ColumnName="ProduDescrip" />
+          <ScalarProperty Name="ProduCodigo" ColumnName="ProduCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_prerec_sumin">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_prerec_sumin">
+        <MappingFragment StoreEntitySet="ver_prerec_sumin">
+          <ScalarProperty Name="Suministrador_Descrip" ColumnName="Suministrador_Descrip" />
+          <ScalarProperty Name="Cod_Sum" ColumnName="Cod_Sum" />
+          <ScalarProperty Name="Prerec_Estado" ColumnName="Prerec_Estado" />
+          <ScalarProperty Name="Prerec_EconId" ColumnName="Prerec_EconId" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="transp_Id" ColumnName="transp_Id" />
+          <ScalarProperty Name="Prerec_Fiado" ColumnName="Prerec_Fiado" />
+          <ScalarProperty Name="Prerec_Transferencia" ColumnName="Prerec_Transferencia" />
+          <ScalarProperty Name="Prerec_ChequeMnc" ColumnName="Prerec_ChequeMnc" />
+          <ScalarProperty Name="Prerec_ChequeUsd" ColumnName="Prerec_ChequeUsd" />
+          <ScalarProperty Name="Prerec_Factura" ColumnName="Prerec_Factura" />
+          <ScalarProperty Name="Prerec_Fecha" ColumnName="Prerec_Fecha" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_recepcion_completaporprerec">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_recepcion_completaporprerec">
+        <MappingFragment StoreEntitySet="ver_recepcion_completaporprerec">
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="Recepcion_Recargo" ColumnName="Recepcion_Recargo" />
+          <ScalarProperty Name="Recepcion_Descuento" ColumnName="Recepcion_Descuento" />
+          <ScalarProperty Name="Recepcion_Porciento" ColumnName="Recepcion_Porciento" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_recepcionporidentity">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_recepcionporidentity">
+        <MappingFragment StoreEntitySet="ver_recepcionporidentity">
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Recepcion_Recargo" ColumnName="Recepcion_Recargo" />
+          <ScalarProperty Name="Recepcion_Descuento" ColumnName="Recepcion_Descuento" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_si_recepcion_doble">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_si_recepcion_doble">
+        <MappingFragment StoreEntitySet="ver_si_recepcion_doble">
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="DetRecAlm_Id" ColumnName="DetRecAlm_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="TipoFact_Id" ColumnName="TipoFact_Id" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ver_transferencias">
+      <EntityTypeMapping TypeName="AlmacenesModel.ver_transferencias">
+        <MappingFragment StoreEntitySet="ver_transferencias">
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_descrip" ColumnName="Especifico_descrip" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="Almacen_Tranferencias" ColumnName="Almacen_Tranferencias" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="TipoMov_Descrip" ColumnName="TipoMov_Descrip" />
+          <ScalarProperty Name="Opera_login" ColumnName="Opera_login" />
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Mov_Existencia" ColumnName="Mov_Existencia" />
+          <ScalarProperty Name="Mov_Precio" ColumnName="Mov_Precio" />
+          <ScalarProperty Name="Mov_Cantidad" ColumnName="Mov_Cantidad" />
+          <ScalarProperty Name="TipoMov_Id" ColumnName="TipoMov_Id" />
+          <ScalarProperty Name="Mov_Fecha" ColumnName="Mov_Fecha" />
+          <ScalarProperty Name="Mov_NoDoc" ColumnName="Mov_NoDoc" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_Casilla" ColumnName="ProdAlm_Casilla" />
+          <ScalarProperty Name="ProdAlm_Estante" ColumnName="ProdAlm_Estante" />
+          <ScalarProperty Name="Prodalm_Seccion" ColumnName="Prodalm_Seccion" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="DetTransf_Tarjeta" ColumnName="DetTransf_Tarjeta" />
+          <ScalarProperty Name="DetTransf_ExisteSal" ColumnName="DetTransf_ExisteSal" />
+          <ScalarProperty Name="DetTransf_ExisteEnt" ColumnName="DetTransf_ExisteEnt" />
+          <ScalarProperty Name="DetTransf_Cantidad" ColumnName="DetTransf_Cantidad" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Transf_Comentarios" ColumnName="Transf_Comentarios" />
+          <ScalarProperty Name="Transf_Estado" ColumnName="Transf_Estado" />
+          <ScalarProperty Name="Transf_AlmEnt" ColumnName="Transf_AlmEnt" />
+          <ScalarProperty Name="Transf_AlmSal" ColumnName="Transf_AlmSal" />
+          <ScalarProperty Name="Transf_Fecha" ColumnName="Transf_Fecha" />
+          <ScalarProperty Name="Transf_Doc" ColumnName="Transf_Doc" />
+          <ScalarProperty Name="Transf_id" ColumnName="Transf_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="verccostodistribucion">
+      <EntityTypeMapping TypeName="AlmacenesModel.verccostodistribucion">
+        <MappingFragment StoreEntitySet="verccostodistribucion">
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vercodigos">
+      <EntityTypeMapping TypeName="AlmacenesModel.vercodigos">
+        <MappingFragment StoreEntitySet="vercodigos">
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_descrip" ColumnName="Especifico_descrip" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Descrip" ColumnName="SubGProd_Descrip" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Descrip" ColumnName="Generico_Descrip" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="verprerecepciones">
+      <EntityTypeMapping TypeName="AlmacenesModel.verprerecepciones">
+        <MappingFragment StoreEntitySet="verprerecepciones">
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Prerec_Precio" ColumnName="Prerec_Precio" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Prerec_Transferencia" ColumnName="Prerec_Transferencia" />
+          <ScalarProperty Name="Prerec_ChequeMnc" ColumnName="Prerec_ChequeMnc" />
+          <ScalarProperty Name="Prerec_ChequeUsd" ColumnName="Prerec_ChequeUsd" />
+          <ScalarProperty Name="Prerec_Fecha" ColumnName="Prerec_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="versurtidosdisponibles">
+      <EntityTypeMapping TypeName="AlmacenesModel.versurtidosdisponibles">
+        <MappingFragment StoreEntitySet="versurtidosdisponibles">
+          <ScalarProperty Name="mProducto_FechaAlta" ColumnName="mProducto_FechaAlta" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Id" ColumnName="Especifico_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW1">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW1">
+        <MappingFragment StoreEntitySet="VIEW1">
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="mProducto_Status" ColumnName="mProducto_Status" />
+          <ScalarProperty Name="Almacen_Descrip" ColumnName="Almacen_Descrip" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="TipoProd_Id" ColumnName="TipoProd_Id" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW10">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW10">
+        <MappingFragment StoreEntitySet="VIEW10">
+          <ScalarProperty Name="Almacen_Ajustes" ColumnName="Almacen_Ajustes" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW11">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW11">
+        <MappingFragment StoreEntitySet="VIEW11">
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW12">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW12">
+        <MappingFragment StoreEntitySet="VIEW12">
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW13">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW13">
+        <MappingFragment StoreEntitySet="VIEW13">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="Recepcion_Recargo" ColumnName="Recepcion_Recargo" />
+          <ScalarProperty Name="Recepcion_Descuento" ColumnName="Recepcion_Descuento" />
+          <ScalarProperty Name="Recepcion_Porciento" ColumnName="Recepcion_Porciento" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+          <ScalarProperty Name="Recepcion_Id" ColumnName="Recepcion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW14">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW14">
+        <MappingFragment StoreEntitySet="VIEW14">
+          <ScalarProperty Name="Opera_Nombre" ColumnName="Opera_Nombre" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="transp_Chofer" ColumnName="transp_Chofer" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Suministrador_Descrip" ColumnName="Suministrador_Descrip" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Prerec_Estado" ColumnName="Prerec_Estado" />
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="transp_Id" ColumnName="transp_Id" />
+          <ScalarProperty Name="Prerec_Factura" ColumnName="Prerec_Factura" />
+          <ScalarProperty Name="Prerec_Fecha" ColumnName="Prerec_Fecha" />
+          <ScalarProperty Name="Suministrador_Id" ColumnName="Suministrador_Id" />
+          <ScalarProperty Name="Prerec_Id" ColumnName="Prerec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW15">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW15">
+        <MappingFragment StoreEntitySet="VIEW15">
+          <ScalarProperty Name="SalAlm_Precio" ColumnName="SalAlm_Precio" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="ProdAlm_Control" ColumnName="ProdAlm_Control" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW16">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW16">
+        <MappingFragment StoreEntitySet="VIEW16">
+          <ScalarProperty Name="DetRecAlm_Existencia" ColumnName="DetRecAlm_Existencia" />
+          <ScalarProperty Name="Prerec_Precio" ColumnName="Prerec_Precio" />
+          <ScalarProperty Name="DetRecAlm_importeusd" ColumnName="DetRecAlm_importeusd" />
+          <ScalarProperty Name="DetRecAlm_importemnc" ColumnName="DetRecAlm_importemnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioMnc" ColumnName="DetRecAlm_PrecioMnc" />
+          <ScalarProperty Name="DetRecAlm_PrecioUsd" ColumnName="DetRecAlm_PrecioUsd" />
+          <ScalarProperty Name="Prerec_Conteo" ColumnName="Prerec_Conteo" />
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="Recepcion_Fecha" ColumnName="Recepcion_Fecha" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRecep_IR" ColumnName="DetRecep_IR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW17">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW17">
+        <MappingFragment StoreEntitySet="VIEW17">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_CantDispDev" ColumnName="SalAlm_CantDispDev" />
+          <ScalarProperty Name="SalAlm_CantDevTmp" ColumnName="SalAlm_CantDevTmp" />
+          <ScalarProperty Name="SalAlm_ExistTarjeta" ColumnName="SalAlm_ExistTarjeta" />
+          <ScalarProperty Name="SalAlm_ExistAntes" ColumnName="SalAlm_ExistAntes" />
+          <ScalarProperty Name="SalAlm_Precio" ColumnName="SalAlm_Precio" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW18">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW18">
+        <MappingFragment StoreEntitySet="VIEW18">
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW19">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW19">
+        <MappingFragment StoreEntitySet="VIEW19">
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Consumidor" ColumnName="Consumidor" />
+          <ScalarProperty Name="ProdPort" ColumnName="ProdPort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW2">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW2">
+        <MappingFragment StoreEntitySet="VIEW2">
+          <ScalarProperty Name="Expr7" ColumnName="Expr7" />
+          <ScalarProperty Name="Expr6" ColumnName="Expr6" />
+          <ScalarProperty Name="Expr5" ColumnName="Expr5" />
+          <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW20">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW20">
+        <MappingFragment StoreEntitySet="VIEW20">
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW21">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW21">
+        <MappingFragment StoreEntitySet="VIEW21">
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW22">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW22">
+        <MappingFragment StoreEntitySet="VIEW22">
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="SalAlm_PrecioMNC" ColumnName="SalAlm_PrecioMNC" />
+          <ScalarProperty Name="SalAlm_PrecioUSD" ColumnName="SalAlm_PrecioUSD" />
+          <ScalarProperty Name="SalAlm_Cantidad" ColumnName="SalAlm_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Almacen_Id" ColumnName="Almacen_Id" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW3">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW3">
+        <MappingFragment StoreEntitySet="VIEW3">
+          <ScalarProperty Name="Prerec_Cantidad" ColumnName="Prerec_Cantidad" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW4">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW4">
+        <MappingFragment StoreEntitySet="VIEW4">
+          <ScalarProperty Name="Rec_Id" ColumnName="Rec_Id" />
+          <ScalarProperty Name="Rec_Fecha" ColumnName="Rec_Fecha" />
+          <ScalarProperty Name="Rec_NoReclamacion" ColumnName="Rec_NoReclamacion" />
+          <ScalarProperty Name="TipoRec_Desc" ColumnName="TipoRec_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW5">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW5">
+        <MappingFragment StoreEntitySet="VIEW5">
+          <ScalarProperty Name="ImpMN" ColumnName="ImpMN" />
+          <ScalarProperty Name="ImpUSD" ColumnName="ImpUSD" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="Descprod" ColumnName="Descprod" />
+          <ScalarProperty Name="CodProd" ColumnName="CodProd" />
+          <ScalarProperty Name="Rec_Id" ColumnName="Rec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW6">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW6">
+        <MappingFragment StoreEntitySet="VIEW6">
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Recepcion_Estado" ColumnName="Recepcion_Estado" />
+          <ScalarProperty Name="DetRecAlm_Cantidad" ColumnName="DetRecAlm_Cantidad" />
+          <ScalarProperty Name="DetRec_Cantidad" ColumnName="DetRec_Cantidad" />
+          <ScalarProperty Name="Rec_Estado" ColumnName="Rec_Estado" />
+          <ScalarProperty Name="Rec_NoReclamacion" ColumnName="Rec_NoReclamacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW7">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW7">
+        <MappingFragment StoreEntitySet="VIEW7">
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Rec_Estado" ColumnName="Rec_Estado" />
+          <ScalarProperty Name="Rec_Fecha" ColumnName="Rec_Fecha" />
+          <ScalarProperty Name="TipoRec_Id" ColumnName="TipoRec_Id" />
+          <ScalarProperty Name="DetRecep_Id" ColumnName="DetRecep_Id" />
+          <ScalarProperty Name="Rec_NoReclamacion" ColumnName="Rec_NoReclamacion" />
+          <ScalarProperty Name="Rec_Id" ColumnName="Rec_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW8">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW8">
+        <MappingFragment StoreEntitySet="VIEW8">
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="DetAjus_Cantidad" ColumnName="DetAjus_Cantidad" />
+          <ScalarProperty Name="Ajuste_Estado" ColumnName="Ajuste_Estado" />
+          <ScalarProperty Name="Ajuste_Id" ColumnName="Ajuste_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW9">
+      <EntityTypeMapping TypeName="AlmacenesModel.VIEW9">
+        <MappingFragment StoreEntitySet="VIEW9">
+          <ScalarProperty Name="Opera_Id" ColumnName="Opera_Id" />
+          <ScalarProperty Name="Mov_Existencia" ColumnName="Mov_Existencia" />
+          <ScalarProperty Name="Mov_Precio" ColumnName="Mov_Precio" />
+          <ScalarProperty Name="Mov_Cantidad" ColumnName="Mov_Cantidad" />
+          <ScalarProperty Name="TipoMov_Id" ColumnName="TipoMov_Id" />
+          <ScalarProperty Name="Mov_Fecha" ColumnName="Mov_Fecha" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+          <ScalarProperty Name="Mov_NoDoc" ColumnName="Mov_NoDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vistaajustes">
+      <EntityTypeMapping TypeName="AlmacenesModel.vistaajustes">
+        <MappingFragment StoreEntitySet="vistaajustes">
+          <ScalarProperty Name="mProducto_Precio" ColumnName="mProducto_Precio" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Um" ColumnName="ProdAlm_Um" />
+          <ScalarProperty Name="mProducto_Descrip" ColumnName="mProducto_Descrip" />
+          <ScalarProperty Name="mProducto_Surtido" ColumnName="mProducto_Surtido" />
+          <ScalarProperty Name="Especifico_Codigo" ColumnName="Especifico_Codigo" />
+          <ScalarProperty Name="SubGProd_Codigo" ColumnName="SubGProd_Codigo" />
+          <ScalarProperty Name="Generico_Id" ColumnName="Generico_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VistaDistribucion">
+      <EntityTypeMapping TypeName="AlmacenesModel.VistaDistribucion">
+        <MappingFragment StoreEntitySet="VistaDistribucion">
+          <ScalarProperty Name="DProdCC_CantPred" ColumnName="DProdCC_CantPred" />
+          <ScalarProperty Name="DProdCC_Cantidad" ColumnName="DProdCC_Cantidad" />
+          <ScalarProperty Name="CtaCCosto" ColumnName="CtaCCosto" />
+          <ScalarProperty Name="ProdAlm_CantPred" ColumnName="ProdAlm_CantPred" />
+          <ScalarProperty Name="ProdAlm_Existencia" ColumnName="ProdAlm_Existencia" />
+          <ScalarProperty Name="ProdAlm_Id" ColumnName="ProdAlm_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,161 @@
+﻿@model IEnumerable<ModuloEconomia.WebPGSiscont1_Result>
+
+@{
+    ViewBag.Title = "Subelementos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Subelementos", "Economia", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="ccostos" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Desglose real de gastos por Subelementos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+
+        <table class="table table-striped table-hover">
+            <tr style=" font-weight:bold ">
+                <th>
+                    <span style="color:black"> Código </span>
+                </th>
+                <th>
+                    <span style="color:black"> Descripción </span>
+                </th>
+                <th>
+                    <span style="color:black"> Total Período </span>
+                </th>
+                <th>
+                    <span style="color:black"> Total Acumulado </span>
+                </th>
+            </tr>
+            @{
+
+                decimal subtP = 0, subtA = 0, totP = 0, totA = 0;
+                for (int i = 1; i < 10; i++)
+                {
+
+                    foreach (var item in Model)
+                    {
+                        if (i.ToString() == item.elemento[0].ToString())
+                        {
+                            subtA += (decimal)item.acumulado; subtP += (decimal)item.mes;
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.elemento)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SubelDescrip)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.mes)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.acumulado)
+                                </td>
+
+                            </tr>
+                        }
+                        else
+                        {
+                            if ((subtA + subtP) == 0)
+                            {
+                                //break;
+                            }
+                            else
+                            {
+                                <tr style=" font-weight:bold ">
+                                    <td></td>
+                                    <td>
+                                        <span style="color:black"> Total Elemento  </span>
+                                    </td>
+                                    <td>
+                                        <span style="color:black"> @subtP </span>
+                                    </td>
+                                    <td>
+                                        <span style="color:black"> @subtA </span>
+                                    </td>
+
+                                </tr>
+
+                            }
+                            totA += subtA;
+                            totP += subtP;
+                            subtP = 0; subtA = 0;
+                        }
+
+                    }
+                }
+                <tr style=" font-weight:bold ">
+                    <td></td>
+                    <td>
+                        <span style="color:black"> Total </span>
+                    </td>
+                    <td>
+                        <span style="color:black"> @totP </span>
+                    </td>
+                    <td>
+                        <span style="color:black"> @totA </span>
+                    </td>
+
+                </tr>
+            }
+
+
+        </table>
+    }
+}
+
+
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../Economia/SearchCC'
+            });
+        });
+    </script>
+}

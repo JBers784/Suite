@@ -1,0 +1,3377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SisProdModelStoreContainer" CdmEntityContainer="SisProdEntities">
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="SisProdModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="SisProdModel.Store.PozosFondo_Datos" FunctionImportName="PozosFondo_Datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.PozosFondo_Datos_Result">
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="DiasAct" ColumnName="DiasAct" />
+          <ScalarProperty Name="HPlanAct" ColumnName="HPlanAct" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="DiasIna" ColumnName="DiasIna" />
+          <ScalarProperty Name="HPlanIna" ColumnName="HPlanIna" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="SisProdModel.Store.PozosFondo_Lista" FunctionImportName="PozosFondo_Lista">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.PozosFondo_Lista_Result">
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol" FunctionName="SisProdModel.Store.dt_addtosourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol_u" FunctionName="SisProdModel.Store.dt_addtosourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject" FunctionName="SisProdModel.Store.dt_adduserobject" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject_vcs" FunctionName="SisProdModel.Store.dt_adduserobject_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject" FunctionName="SisProdModel.Store.dt_checkinobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject_u" FunctionName="SisProdModel.Store.dt_checkinobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject" FunctionName="SisProdModel.Store.dt_checkoutobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject_u" FunctionName="SisProdModel.Store.dt_checkoutobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror" FunctionName="SisProdModel.Store.dt_displayoaerror" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror_u" FunctionName="SisProdModel.Store.dt_displayoaerror_u" />
+    <FunctionImportMapping FunctionImportName="dt_droppropertiesbyid" FunctionName="SisProdModel.Store.dt_droppropertiesbyid" />
+    <FunctionImportMapping FunctionImportName="dt_dropuserobjectbyid" FunctionName="SisProdModel.Store.dt_dropuserobjectbyid" />
+    <FunctionImportMapping FunctionImportName="dt_generateansiname" FunctionName="SisProdModel.Store.dt_generateansiname" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop" FunctionName="SisProdModel.Store.dt_getobjwithprop" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop_u" FunctionName="SisProdModel.Store.dt_getobjwithprop_u" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid" FunctionName="SisProdModel.Store.dt_getpropertiesbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.dt_getpropertiesbyid_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_u" FunctionName="SisProdModel.Store.dt_getpropertiesbyid_u">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.dt_getpropertiesbyid_u_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs" FunctionName="SisProdModel.Store.dt_getpropertiesbyid_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs_u" FunctionName="SisProdModel.Store.dt_getpropertiesbyid_vcs_u" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol" FunctionName="SisProdModel.Store.dt_isundersourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol_u" FunctionName="SisProdModel.Store.dt_isundersourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_removefromsourcecontrol" FunctionName="SisProdModel.Store.dt_removefromsourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid" FunctionName="SisProdModel.Store.dt_setpropertybyid" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid_u" FunctionName="SisProdModel.Store.dt_setpropertybyid_u" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams" FunctionName="SisProdModel.Store.dt_validateloginparams" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams_u" FunctionName="SisProdModel.Store.dt_validateloginparams_u" />
+    <FunctionImportMapping FunctionImportName="dt_vcsenabled" FunctionName="SisProdModel.Store.dt_vcsenabled" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp006" FunctionName="SisProdModel.Store.dt_verstamp006" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp007" FunctionName="SisProdModel.Store.dt_verstamp007" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout" FunctionName="SisProdModel.Store.dt_whocheckedout" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout_u" FunctionName="SisProdModel.Store.dt_whocheckedout_u" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SisProdModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SisProdModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SisProdModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SisProdModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SisProdModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SisProdModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SisProdModel.Store.sp_renamediagram" />
+    <EntitySetMapping Name="AfectTaller">
+      <EntityTypeMapping TypeName="SisProdModel.AfectTaller">
+        <MappingFragment StoreEntitySet="AfectTaller">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdLugar" ColumnName="IdLugar" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectUnidadesGeneradoras">
+      <EntityTypeMapping TypeName="SisProdModel.AfectUnidadesGeneradoras">
+        <MappingFragment StoreEntitySet="AfectUnidadesGeneradoras">
+          <ScalarProperty Name="MWhAfect" ColumnName="MWhAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosColectores">
+      <EntityTypeMapping TypeName="SisProdModel.CentrosColectores">
+        <MappingFragment StoreEntitySet="CentrosColectores">
+          <ScalarProperty Name="Inyeccion" ColumnName="Inyeccion" />
+          <ScalarProperty Name="Circulaciones" ColumnName="Circulaciones" />
+          <ScalarProperty Name="KGas" ColumnName="KGas" />
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="PetBomb" ColumnName="PetBomb" />
+          <ScalarProperty Name="TMed" ColumnName="TMed" />
+          <ScalarProperty Name="PSep" ColumnName="PSep" />
+          <ScalarProperty Name="NFinal" ColumnName="NFinal" />
+          <ScalarProperty Name="QgCalc" ColumnName="QgCalc" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="QfCalc" ColumnName="QfCalc" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Choques">
+      <EntityTypeMapping TypeName="SisProdModel.Choques">
+        <MappingFragment StoreEntitySet="Choques">
+          <ScalarProperty Name="Choque" ColumnName="Choque" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Pozo_Nombre" ColumnName="Pozo_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectAdmin">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectAdmin">
+        <MappingFragment StoreEntitySet="CodAfectAdmin">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectCalderas">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectCalderas">
+        <MappingFragment StoreEntitySet="CodAfectCalderas">
+          <ScalarProperty Name="IdTipoAfect" ColumnName="IdTipoAfect" />
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectCentrosMedicion">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectCentrosMedicion">
+        <MappingFragment StoreEntitySet="CodAfectCentrosMedicion">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectEquipos">
+        <MappingFragment StoreEntitySet="CodAfectEquipos">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectGasometros">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectGasometros">
+        <MappingFragment StoreEntitySet="CodAfectGasometros">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectGeneracion">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectGeneracion">
+        <MappingFragment StoreEntitySet="CodAfectGeneracion">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectPozos">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectPozos">
+        <MappingFragment StoreEntitySet="CodAfectPozos">
+          <ScalarProperty Name="Deshabilitada" ColumnName="Deshabilitada" />
+          <ScalarProperty Name="IdGrupoAfect" ColumnName="IdGrupoAfect" />
+          <ScalarProperty Name="CodAfectAdmin" ColumnName="CodAfectAdmin" />
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectPtoIny">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectPtoIny">
+        <MappingFragment StoreEntitySet="CodAfectPtoIny">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="IdAfect" ColumnName="IdAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectPtoInyPozos">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectPtoInyPozos">
+        <MappingFragment StoreEntitySet="CodAfectPtoInyPozos">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="IdAfect" ColumnName="IdAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAfectTaller">
+      <EntityTypeMapping TypeName="SisProdModel.CodAfectTaller">
+        <MappingFragment StoreEntitySet="CodAfectTaller">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodAreasPozos">
+      <EntityTypeMapping TypeName="SisProdModel.CodAreasPozos">
+        <MappingFragment StoreEntitySet="CodAreasPozos">
+          <ScalarProperty Name="CodYacim" ColumnName="CodYacim" />
+          <ScalarProperty Name="DescArea" ColumnName="DescArea" />
+          <ScalarProperty Name="CodArea" ColumnName="CodArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodBloques">
+      <EntityTypeMapping TypeName="SisProdModel.CodBloques">
+        <MappingFragment StoreEntitySet="CodBloques">
+          <ScalarProperty Name="DescBloque" ColumnName="DescBloque" />
+          <ScalarProperty Name="IdBloque" ColumnName="IdBloque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodBuques">
+      <EntityTypeMapping TypeName="SisProdModel.CodBuques">
+        <MappingFragment StoreEntitySet="CodBuques">
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="DescBuque" ColumnName="DescBuque" />
+          <ScalarProperty Name="IdBuque" ColumnName="IdBuque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCalderas">
+      <EntityTypeMapping TypeName="SisProdModel.CodCalderas">
+        <MappingFragment StoreEntitySet="CodCalderas">
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="DescCaldera" ColumnName="DescCaldera" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCategPozos">
+      <EntityTypeMapping TypeName="SisProdModel.CodCategPozos">
+        <MappingFragment StoreEntitySet="CodCategPozos">
+          <ScalarProperty Name="DescCategoria" ColumnName="DescCategoria" />
+          <ScalarProperty Name="CodCategoria" ColumnName="CodCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCausasLiq">
+      <EntityTypeMapping TypeName="SisProdModel.CodCausasLiq">
+        <MappingFragment StoreEntitySet="CodCausasLiq">
+          <ScalarProperty Name="DescCausa" ColumnName="DescCausa" />
+          <ScalarProperty Name="CodCausa" ColumnName="CodCausa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCentrosColectores">
+      <EntityTypeMapping TypeName="SisProdModel.CodCentrosColectores">
+        <MappingFragment StoreEntitySet="CodCentrosColectores">
+          <ScalarProperty Name="DescCentro" ColumnName="DescCentro" />
+          <ScalarProperty Name="CodCentro" ColumnName="CodCentro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCentrosMedicion">
+      <EntityTypeMapping TypeName="SisProdModel.CodCentrosMedicion">
+        <MappingFragment StoreEntitySet="CodCentrosMedicion">
+          <ScalarProperty Name="IdCC" ColumnName="IdCC" />
+          <ScalarProperty Name="DescCentro" ColumnName="DescCentro" />
+          <ScalarProperty Name="IdCentro" ColumnName="IdCentro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCias">
+      <EntityTypeMapping TypeName="SisProdModel.CodCias">
+        <MappingFragment StoreEntitySet="CodCias">
+          <ScalarProperty Name="DescCia" ColumnName="DescCia" />
+          <ScalarProperty Name="IdCia" ColumnName="IdCia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodCiclosProd">
+      <EntityTypeMapping TypeName="SisProdModel.CodCiclosProd">
+        <MappingFragment StoreEntitySet="CodCiclosProd">
+          <ScalarProperty Name="DescCiclo" ColumnName="DescCiclo" />
+          <ScalarProperty Name="CodCiclo" ColumnName="CodCiclo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodContratos">
+      <EntityTypeMapping TypeName="SisProdModel.CodContratos">
+        <MappingFragment StoreEntitySet="CodContratos">
+          <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+          <ScalarProperty Name="DescContrato" ColumnName="DescContrato" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodDestinos">
+      <EntityTypeMapping TypeName="SisProdModel.CodDestinos">
+        <MappingFragment StoreEntitySet="CodDestinos">
+          <ScalarProperty Name="CodCentral" ColumnName="CodCentral" />
+          <ScalarProperty Name="CodProvincia" ColumnName="CodProvincia" />
+          <ScalarProperty Name="FactorConsumo" ColumnName="FactorConsumo" />
+          <ScalarProperty Name="CodTipoDestino" ColumnName="CodTipoDestino" />
+          <ScalarProperty Name="DescDestino" ColumnName="DescDestino" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodDinamografias">
+      <EntityTypeMapping TypeName="SisProdModel.CodDinamografias">
+        <MappingFragment StoreEntitySet="CodDinamografias">
+          <ScalarProperty Name="DescDinam" ColumnName="DescDinam" />
+          <ScalarProperty Name="CodDinam" ColumnName="CodDinam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.CodEquipos">
+        <MappingFragment StoreEntitySet="CodEquipos">
+          <ScalarProperty Name="IdTipoEquipo" ColumnName="IdTipoEquipo" />
+          <ScalarProperty Name="DescEquipo" ColumnName="DescEquipo" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodEstRebomb">
+      <EntityTypeMapping TypeName="SisProdModel.CodEstRebomb">
+        <MappingFragment StoreEntitySet="CodEstRebomb">
+          <ScalarProperty Name="DescEstRebomb" ColumnName="DescEstRebomb" />
+          <ScalarProperty Name="IdEstRebomb" ColumnName="IdEstRebomb" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodFlareYacim">
+      <EntityTypeMapping TypeName="SisProdModel.CodFlareYacim">
+        <MappingFragment StoreEntitySet="CodFlareYacim">
+          <ScalarProperty Name="IdYacimGas" ColumnName="IdYacimGas" />
+          <ScalarProperty Name="DescFlareYacim" ColumnName="DescFlareYacim" />
+          <ScalarProperty Name="IdFlareYacim" ColumnName="IdFlareYacim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodGasometros">
+      <EntityTypeMapping TypeName="SisProdModel.CodGasometros">
+        <MappingFragment StoreEntitySet="CodGasometros">
+          <ScalarProperty Name="IdPtoMedGas" ColumnName="IdPtoMedGas" />
+          <ScalarProperty Name="DescGasom" ColumnName="DescGasom" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodGrupoAfect">
+      <EntityTypeMapping TypeName="SisProdModel.CodGrupoAfect">
+        <MappingFragment StoreEntitySet="CodGrupoAfect">
+          <ScalarProperty Name="DescGrupoAfect" ColumnName="DescGrupoAfect" />
+          <ScalarProperty Name="IdGrupoAfect" ColumnName="IdGrupoAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodGruposNoAsociados">
+      <EntityTypeMapping TypeName="SisProdModel.CodGruposNoAsociados">
+        <MappingFragment StoreEntitySet="CodGruposNoAsociados">
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodifMezclaSta">
+      <EntityTypeMapping TypeName="SisProdModel.CodifMezclaSta">
+        <MappingFragment StoreEntitySet="CodifMezclaSta">
+          <ScalarProperty Name="PorcMezcla" ColumnName="PorcMezcla" />
+          <ScalarProperty Name="IdSta" ColumnName="IdSta" />
+          <ScalarProperty Name="IdMezcla" ColumnName="IdMezcla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodifSrv">
+      <EntityTypeMapping TypeName="SisProdModel.CodifSrv">
+        <MappingFragment StoreEntitySet="CodifSrv">
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="DescSrv" ColumnName="DescSrv" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodifSta">
+      <EntityTypeMapping TypeName="SisProdModel.CodifSta">
+        <MappingFragment StoreEntitySet="CodifSta">
+          <ScalarProperty Name="TipoSta" ColumnName="TipoSta" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="DescSta" ColumnName="DescSta" />
+          <ScalarProperty Name="IdSta" ColumnName="IdSta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodInstalaciones">
+      <EntityTypeMapping TypeName="SisProdModel.CodInstalaciones">
+        <MappingFragment StoreEntitySet="CodInstalaciones">
+          <ScalarProperty Name="IdUEB" ColumnName="IdUEB" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CodTaller" ColumnName="CodTaller" />
+          <ScalarProperty Name="CodTipoInstalacion" ColumnName="CodTipoInstalacion" />
+          <ScalarProperty Name="DescInstalacion" ColumnName="DescInstalacion" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodLugAfect">
+      <EntityTypeMapping TypeName="SisProdModel.CodLugAfect">
+        <MappingFragment StoreEntitySet="CodLugAfect">
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="DescLugar" ColumnName="DescLugar" />
+          <ScalarProperty Name="IdLugar" ColumnName="IdLugar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodMetodosProd">
+      <EntityTypeMapping TypeName="SisProdModel.CodMetodosProd">
+        <MappingFragment StoreEntitySet="CodMetodosProd">
+          <ScalarProperty Name="DescMetodo" ColumnName="DescMetodo" />
+          <ScalarProperty Name="CodMetodo" ColumnName="CodMetodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodObservaciones">
+      <EntityTypeMapping TypeName="SisProdModel.CodObservaciones">
+        <MappingFragment StoreEntitySet="CodObservaciones">
+          <ScalarProperty Name="DescontarValor" ColumnName="DescontarValor" />
+          <ScalarProperty Name="IndicarValor" ColumnName="IndicarValor" />
+          <ScalarProperty Name="DescObserv" ColumnName="DescObserv" />
+          <ScalarProperty Name="CodObserv" ColumnName="CodObserv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodOperadores">
+      <EntityTypeMapping TypeName="SisProdModel.CodOperadores">
+        <MappingFragment StoreEntitySet="CodOperadores">
+          <ScalarProperty Name="CodCentral" ColumnName="CodCentral" />
+          <ScalarProperty Name="DescOperador" ColumnName="DescOperador" />
+          <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPailas">
+      <EntityTypeMapping TypeName="SisProdModel.CodPailas">
+        <MappingFragment StoreEntitySet="CodPailas">
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="DescPaila" ColumnName="DescPaila" />
+          <ScalarProperty Name="CodPaila" ColumnName="CodPaila" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPozosIny">
+      <EntityTypeMapping TypeName="SisProdModel.CodPozosIny">
+        <MappingFragment StoreEntitySet="CodPozosIny">
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodProdPlantasGas">
+      <EntityTypeMapping TypeName="SisProdModel.CodProdPlantasGas">
+        <MappingFragment StoreEntitySet="CodProdPlantasGas">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodProductos">
+      <EntityTypeMapping TypeName="SisProdModel.CodProductos">
+        <MappingFragment StoreEntitySet="CodProductos">
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="IdTipoProducto" ColumnName="IdTipoProducto" />
+          <ScalarProperty Name="DescProducto" ColumnName="DescProducto" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodProductosGas">
+      <EntityTypeMapping TypeName="SisProdModel.CodProductosGas">
+        <MappingFragment StoreEntitySet="CodProductosGas">
+          <ScalarProperty Name="DescProducto" ColumnName="DescProducto" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodProvincias">
+      <EntityTypeMapping TypeName="SisProdModel.CodProvincias">
+        <MappingFragment StoreEntitySet="CodProvincias">
+          <ScalarProperty Name="DescProvincia" ColumnName="DescProvincia" />
+          <ScalarProperty Name="CodProvincia" ColumnName="CodProvincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPtoMedGas">
+      <EntityTypeMapping TypeName="SisProdModel.CodPtoMedGas">
+        <MappingFragment StoreEntitySet="CodPtoMedGas">
+          <ScalarProperty Name="IdPtoMed" ColumnName="IdPtoMed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPtoSumSrv">
+      <EntityTypeMapping TypeName="SisProdModel.CodPtoSumSrv">
+        <MappingFragment StoreEntitySet="CodPtoSumSrv">
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPtoSumSta">
+      <EntityTypeMapping TypeName="SisProdModel.CodPtoSumSta">
+        <MappingFragment StoreEntitySet="CodPtoSumSta">
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodSrv">
+      <EntityTypeMapping TypeName="SisProdModel.CodSrv">
+        <MappingFragment StoreEntitySet="CodSrv">
+          <ScalarProperty Name="CodCUP" ColumnName="CodCUP" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="DescSrv" ColumnName="DescSrv" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodSta">
+      <EntityTypeMapping TypeName="SisProdModel.CodSta">
+        <MappingFragment StoreEntitySet="CodSta">
+          <ScalarProperty Name="CodCUP" ColumnName="CodCUP" />
+          <ScalarProperty Name="UM" ColumnName="UM" />
+          <ScalarProperty Name="Concentracion" ColumnName="Concentracion" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="DescSta" ColumnName="DescSta" />
+          <ScalarProperty Name="IdSta" ColumnName="IdSta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTanques">
+      <EntityTypeMapping TypeName="SisProdModel.CodTanques">
+        <MappingFragment StoreEntitySet="CodTanques">
+          <ScalarProperty Name="CodCUP" ColumnName="CodCUP" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdTipoTanque" ColumnName="IdTipoTanque" />
+          <ScalarProperty Name="Piano" ColumnName="Piano" />
+          <ScalarProperty Name="Llenado" ColumnName="Llenado" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Tanque" ColumnName="Tanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTanquesDiluente">
+      <EntityTypeMapping TypeName="SisProdModel.CodTanquesDiluente">
+        <MappingFragment StoreEntitySet="CodTanquesDiluente">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Tanque" ColumnName="Tanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoAfectCald">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoAfectCald">
+        <MappingFragment StoreEntitySet="CodTipoAfectCald">
+          <ScalarProperty Name="DescTipoAfect" ColumnName="DescTipoAfect" />
+          <ScalarProperty Name="IdTipoAfect" ColumnName="IdTipoAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoDestinos">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoDestinos">
+        <MappingFragment StoreEntitySet="CodTipoDestinos">
+          <ScalarProperty Name="DescTipoDestino" ColumnName="DescTipoDestino" />
+          <ScalarProperty Name="CodTipoDestino" ColumnName="CodTipoDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoEquipos">
+        <MappingFragment StoreEntitySet="CodTipoEquipos">
+          <ScalarProperty Name="DescTipoEquipo" ColumnName="DescTipoEquipo" />
+          <ScalarProperty Name="IdTipoEquipo" ColumnName="IdTipoEquipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoInstalacion">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoInstalacion">
+        <MappingFragment StoreEntitySet="CodTipoInstalacion">
+          <ScalarProperty Name="DescTipoInstalacion" ColumnName="DescTipoInstalacion" />
+          <ScalarProperty Name="CodTipoInstalacion1" ColumnName="CodTipoInstalacion" />
+          <ScalarProperty Name="IdTipoInstalacion" ColumnName="IdTipoInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoPozos">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoPozos">
+        <MappingFragment StoreEntitySet="CodTipoPozos">
+          <ScalarProperty Name="DescTipoPozo" ColumnName="DescTipoPozo" />
+          <ScalarProperty Name="CodTipoPozo" ColumnName="CodTipoPozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoProductos">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoProductos">
+        <MappingFragment StoreEntitySet="CodTipoProductos">
+          <ScalarProperty Name="DescTipoProducto" ColumnName="DescTipoProducto" />
+          <ScalarProperty Name="IdTipoProducto" ColumnName="IdTipoProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTiposContrato">
+      <EntityTypeMapping TypeName="SisProdModel.CodTiposContrato">
+        <MappingFragment StoreEntitySet="CodTiposContrato">
+          <ScalarProperty Name="DescTipo" ColumnName="DescTipo" />
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodTipoTanques">
+      <EntityTypeMapping TypeName="SisProdModel.CodTipoTanques">
+        <MappingFragment StoreEntitySet="CodTipoTanques">
+          <ScalarProperty Name="DescTipoTanque" ColumnName="DescTipoTanque" />
+          <ScalarProperty Name="IdTipoTanque" ColumnName="IdTipoTanque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodUnidades">
+      <EntityTypeMapping TypeName="SisProdModel.CodUnidades">
+        <MappingFragment StoreEntitySet="CodUnidades">
+          <ScalarProperty Name="DescUnidad" ColumnName="DescUnidad" />
+          <ScalarProperty Name="IdUnidad" ColumnName="IdUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodValvulasCorte">
+      <EntityTypeMapping TypeName="SisProdModel.CodValvulasCorte">
+        <MappingFragment StoreEntitySet="CodValvulasCorte">
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="DescValvula" ColumnName="DescValvula" />
+          <ScalarProperty Name="IdValvula" ColumnName="IdValvula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodYacimGas">
+      <EntityTypeMapping TypeName="SisProdModel.CodYacimGas">
+        <MappingFragment StoreEntitySet="CodYacimGas">
+          <ScalarProperty Name="DescYacim" ColumnName="DescYacim" />
+          <ScalarProperty Name="IdYacimGas" ColumnName="IdYacimGas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodYacimientos">
+      <EntityTypeMapping TypeName="SisProdModel.CodYacimientos">
+        <MappingFragment StoreEntitySet="CodYacimientos">
+          <ScalarProperty Name="DescYacim" ColumnName="DescYacim" />
+          <ScalarProperty Name="CodYacim" ColumnName="CodYacim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigTrasiegoGas">
+      <EntityTypeMapping TypeName="SisProdModel.ConfigTrasiegoGas">
+        <MappingFragment StoreEntitySet="ConfigTrasiegoGas">
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="IdOrigen" ColumnName="IdOrigen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigTrasiegosAguaI">
+      <EntityTypeMapping TypeName="SisProdModel.ConfigTrasiegosAguaI">
+        <MappingFragment StoreEntitySet="ConfigTrasiegosAguaI">
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="IdOrigen" ColumnName="IdOrigen" />
+          <ScalarProperty Name="IdTrasiego" ColumnName="IdTrasiego" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigTrasiegosInstalac">
+      <EntityTypeMapping TypeName="SisProdModel.ConfigTrasiegosInstalac">
+        <MappingFragment StoreEntitySet="ConfigTrasiegosInstalac">
+          <ScalarProperty Name="TipoTrasiego" ColumnName="TipoTrasiego" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="IdOrigen" ColumnName="IdOrigen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigTrasiegosPozos">
+      <EntityTypeMapping TypeName="SisProdModel.ConfigTrasiegosPozos">
+        <MappingFragment StoreEntitySet="ConfigTrasiegosPozos">
+          <ScalarProperty Name="TipoTrasiego" ColumnName="TipoTrasiego" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigYacimGas">
+      <EntityTypeMapping TypeName="SisProdModel.ConfigYacimGas">
+        <MappingFragment StoreEntitySet="ConfigYacimGas">
+          <ScalarProperty Name="Conformacion" ColumnName="Conformacion" />
+          <ScalarProperty Name="YacimCC" ColumnName="YacimCC" />
+          <ScalarProperty Name="IdYacimGas" ColumnName="IdYacimGas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContratosCias">
+      <EntityTypeMapping TypeName="SisProdModel.ContratosCias">
+        <MappingFragment StoreEntitySet="ContratosCias">
+          <ScalarProperty Name="IdTipoContrato" ColumnName="IdTipoContrato" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaIni" ColumnName="FechaIni" />
+          <ScalarProperty Name="IdBloque" ColumnName="IdBloque" />
+          <ScalarProperty Name="IdCia" ColumnName="IdCia" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosEmpresa">
+      <EntityTypeMapping TypeName="SisProdModel.DatosEmpresa">
+        <MappingFragment StoreEntitySet="DatosEmpresa">
+          <ScalarProperty Name="CodCentral" ColumnName="CodCentral" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosFlareYacim">
+      <EntityTypeMapping TypeName="SisProdModel.DatosFlareYacim">
+        <MappingFragment StoreEntitySet="DatosFlareYacim">
+          <ScalarProperty Name="GasFlereado" ColumnName="GasFlereado" />
+          <ScalarProperty Name="IdFlareYacim" ColumnName="IdFlareYacim" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosGasNoAsociado">
+      <EntityTypeMapping TypeName="SisProdModel.DatosGasNoAsociado">
+        <MappingFragment StoreEntitySet="DatosGasNoAsociado">
+          <ScalarProperty Name="Flare" ColumnName="Flare" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosLaboratorio">
+      <EntityTypeMapping TypeName="SisProdModel.DatosLaboratorio">
+        <MappingFragment StoreEntitySet="DatosLaboratorio">
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosPlantasGas">
+      <EntityTypeMapping TypeName="SisProdModel.DatosPlantasGas">
+        <MappingFragment StoreEntitySet="DatosPlantasGas">
+          <ScalarProperty Name="FlujAminas" ColumnName="FlujAminas" />
+          <ScalarProperty Name="RecibidoPlanta" ColumnName="RecibidoPlanta" />
+          <ScalarProperty Name="EntregadoPlanta" ColumnName="EntregadoPlanta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosRegimen">
+      <EntityTypeMapping TypeName="SisProdModel.DatosRegimen">
+        <MappingFragment StoreEntitySet="DatosRegimen">
+          <ScalarProperty Name="FechaEntr" ColumnName="FechaEntr" />
+          <ScalarProperty Name="Calendario" ColumnName="Calendario" />
+          <ScalarProperty Name="DiasPT" ColumnName="DiasPT" />
+          <ScalarProperty Name="Tempdt" ColumnName="Tempdt" />
+          <ScalarProperty Name="Tempdp" ColumnName="Tempdp" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="Diastrab" ColumnName="Diastrab" />
+          <ScalarProperty Name="Diaspar" ColumnName="Diaspar" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosUEB">
+      <EntityTypeMapping TypeName="SisProdModel.DatosUEB">
+        <MappingFragment StoreEntitySet="DatosUEB">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+          <ScalarProperty Name="UEB" ColumnName="UEB" />
+          <ScalarProperty Name="IdUEB" ColumnName="IdUEB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosUnidadesGeneradoras">
+      <EntityTypeMapping TypeName="SisProdModel.DatosUnidadesGeneradoras">
+        <MappingFragment StoreEntitySet="DatosUnidadesGeneradoras">
+          <ScalarProperty Name="MWhGenerados" ColumnName="MWhGenerados" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiarioSTA">
+      <EntityTypeMapping TypeName="SisProdModel.DiarioSTA">
+        <MappingFragment StoreEntitySet="DiarioSTA">
+          <ScalarProperty Name="PetBomb" ColumnName="PetBomb" />
+          <ScalarProperty Name="Litros" ColumnName="Litros" />
+          <ScalarProperty Name="Concent" ColumnName="Concent" />
+          <ScalarProperty Name="IdSta" ColumnName="IdSta" />
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Energas">
+      <EntityTypeMapping TypeName="SisProdModel.Energas">
+        <MappingFragment StoreEntitySet="Energas">
+          <ScalarProperty Name="Certificada" ColumnName="Certificada" />
+          <ScalarProperty Name="CoefAj" ColumnName="CoefAj" />
+          <ScalarProperty Name="Erronea" ColumnName="Erronea" />
+          <ScalarProperty Name="ProblTecn" ColumnName="ProblTecn" />
+          <ScalarProperty Name="Flare" ColumnName="Flare" />
+          <ScalarProperty Name="MedGasCalc" ColumnName="MedGasCalc" />
+          <ScalarProperty Name="MedGas" ColumnName="MedGas" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstRebomb">
+      <EntityTypeMapping TypeName="SisProdModel.EstRebomb">
+        <MappingFragment StoreEntitySet="EstRebomb">
+          <ScalarProperty Name="NFinal" ColumnName="NFinal" />
+          <ScalarProperty Name="PetBombTon" ColumnName="PetBombTon" />
+          <ScalarProperty Name="PetBombm3" ColumnName="PetBombm3" />
+          <ScalarProperty Name="IdEr" ColumnName="IdEr" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FluidosIny">
+      <EntityTypeMapping TypeName="SisProdModel.FluidosIny">
+        <MappingFragment StoreEntitySet="FluidosIny">
+          <ScalarProperty Name="TipoFluido_Id" ColumnName="TipoFluido_Id" />
+          <ScalarProperty Name="Fluido_Desc" ColumnName="Fluido_Desc" />
+          <ScalarProperty Name="Fluido_Id" ColumnName="Fluido_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gas_Afect">
+      <EntityTypeMapping TypeName="SisProdModel.Gas_Afect">
+        <MappingFragment StoreEntitySet="Gas_Afect">
+          <ScalarProperty Name="QgPerdM3" ColumnName="QgPerdM3" />
+          <ScalarProperty Name="HorasPerd" ColumnName="HorasPerd" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gas_CodAfect">
+      <EntityTypeMapping TypeName="SisProdModel.Gas_CodAfect">
+        <MappingFragment StoreEntitySet="Gas_CodAfect">
+          <ScalarProperty Name="DescAfect" ColumnName="DescAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gas_DatosProd">
+      <EntityTypeMapping TypeName="SisProdModel.Gas_DatosProd">
+        <MappingFragment StoreEntitySet="Gas_DatosProd">
+          <ScalarProperty Name="Flare" ColumnName="Flare" />
+          <ScalarProperty Name="GasLimpio" ColumnName="GasLimpio" />
+          <ScalarProperty Name="TotalEnergas" ColumnName="TotalEnergas" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicCalidad">
+      <EntityTypeMapping TypeName="SisProdModel.IndicCalidad">
+        <MappingFragment StoreEntitySet="IndicCalidad">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Um" ColumnName="Um" />
+          <ScalarProperty Name="Indic_desc" ColumnName="Indic_desc" />
+          <ScalarProperty Name="Indic_id" ColumnName="Indic_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicCalidad_Contrato">
+      <EntityTypeMapping TypeName="SisProdModel.IndicCalidad_Contrato">
+        <MappingFragment StoreEntitySet="IndicCalidad_Contrato">
+          <ScalarProperty Name="Cota" ColumnName="Cota" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Indic_id" ColumnName="Indic_id" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicCalidad_Usuarios">
+      <EntityTypeMapping TypeName="SisProdModel.IndicCalidad_Usuarios">
+        <MappingFragment StoreEntitySet="IndicCalidad_Usuarios">
+          <ScalarProperty Name="Nivel4" ColumnName="Nivel4" />
+          <ScalarProperty Name="Nivel3" ColumnName="Nivel3" />
+          <ScalarProperty Name="Nivel2" ColumnName="Nivel2" />
+          <ScalarProperty Name="Nivel1" ColumnName="Nivel1" />
+          <ScalarProperty Name="DescUsuario" ColumnName="DescUsuario" />
+          <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventarios">
+      <EntityTypeMapping TypeName="SisProdModel.Inventarios">
+        <MappingFragment StoreEntitySet="Inventarios">
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Viscosidad" ColumnName="Viscosidad" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Existm3" ColumnName="Existm3" />
+          <ScalarProperty Name="IdTanque" ColumnName="IdTanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvQf">
+      <EntityTypeMapping TypeName="SisProdModel.InvQf">
+        <MappingFragment StoreEntitySet="InvQf">
+          <ScalarProperty Name="Casing" ColumnName="Casing" />
+          <ScalarProperty Name="PSep" ColumnName="PSep" />
+          <ScalarProperty Name="TMed" ColumnName="TMed" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvQg">
+      <EntityTypeMapping TypeName="SisProdModel.InvQg">
+        <MappingFragment StoreEntitySet="InvQg">
+          <ScalarProperty Name="Estimada" ColumnName="Estimada" />
+          <ScalarProperty Name="Casing" ColumnName="Casing" />
+          <ScalarProperty Name="PSep" ColumnName="PSep" />
+          <ScalarProperty Name="TMed" ColumnName="TMed" />
+          <ScalarProperty Name="Rgp" ColumnName="Rgp" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InyeccFluidos">
+      <EntityTypeMapping TypeName="SisProdModel.InyeccFluidos">
+        <MappingFragment StoreEntitySet="InyeccFluidos">
+          <ScalarProperty Name="Inyector_Id" ColumnName="Inyector_Id" />
+          <ScalarProperty Name="Temp_Iny" ColumnName="Temp_Iny" />
+          <ScalarProperty Name="Pres_Iny" ColumnName="Pres_Iny" />
+          <ScalarProperty Name="Qf_Iny" ColumnName="Qf_Iny" />
+          <ScalarProperty Name="TMed_Iny" ColumnName="TMed_Iny" />
+          <ScalarProperty Name="Fluido_Id" ColumnName="Fluido_Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Pozo_Nombre" ColumnName="Pozo_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inyectores">
+      <EntityTypeMapping TypeName="SisProdModel.Inyectores">
+        <MappingFragment StoreEntitySet="Inyectores">
+          <ScalarProperty Name="Inyector_Desc" ColumnName="Inyector_Desc" />
+          <ScalarProperty Name="Inyector_Id" ColumnName="Inyector_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Niveles">
+      <EntityTypeMapping TypeName="SisProdModel.Niveles">
+        <MappingFragment StoreEntitySet="Niveles">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="TipoNivel_Id" ColumnName="TipoNivel_Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Pozo_Nombre" ColumnName="Pozo_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperActuales">
+      <EntityTypeMapping TypeName="SisProdModel.OperActuales">
+        <MappingFragment StoreEntitySet="OperActuales">
+          <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParamSES">
+      <EntityTypeMapping TypeName="SisProdModel.ParamSES">
+        <MappingFragment StoreEntitySet="ParamSES">
+          <ScalarProperty Name="PSep" ColumnName="PSep" />
+          <ScalarProperty Name="TempSalPet" ColumnName="TempSalPet" />
+          <ScalarProperty Name="TempEntPet" ColumnName="TempEntPet" />
+          <ScalarProperty Name="PresEntPet" ColumnName="PresEntPet" />
+          <ScalarProperty Name="PresEntVapor" ColumnName="PresEntVapor" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParamTHD">
+      <EntityTypeMapping TypeName="SisProdModel.ParamTHD">
+        <MappingFragment StoreEntitySet="ParamTHD">
+          <ScalarProperty Name="ViscSal" ColumnName="ViscSal" />
+          <ScalarProperty Name="ViscEnt" ColumnName="ViscEnt" />
+          <ScalarProperty Name="BswSal" ColumnName="BswSal" />
+          <ScalarProperty Name="BswEnt" ColumnName="BswEnt" />
+          <ScalarProperty Name="TempSal" ColumnName="TempSal" />
+          <ScalarProperty Name="TempEnt" ColumnName="TempEnt" />
+          <ScalarProperty Name="TempColAgua" ColumnName="TempColAgua" />
+          <ScalarProperty Name="ColAgua" ColumnName="ColAgua" />
+          <ScalarProperty Name="IdTanque" ColumnName="IdTanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiario_Majagua">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiario_Majagua">
+        <MappingFragment StoreEntitySet="ParteDiario_Majagua">
+          <ScalarProperty Name="VentasPetrTon" ColumnName="VentasPetrTon" />
+          <ScalarProperty Name="EntGasm3" ColumnName="EntGasm3" />
+          <ScalarProperty Name="ProdPetrTonN" ColumnName="ProdPetrTonN" />
+          <ScalarProperty Name="ProdPetrTonT" ColumnName="ProdPetrTonT" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiarioCalderas">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiarioCalderas">
+        <MappingFragment StoreEntitySet="ParteDiarioCalderas">
+          <ScalarProperty Name="Afect" ColumnName="Afect" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiarioEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiarioEquipos">
+        <MappingFragment StoreEntitySet="ParteDiarioEquipos">
+          <ScalarProperty Name="Afect" ColumnName="Afect" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiarioGasom">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiarioGasom">
+        <MappingFragment StoreEntitySet="ParteDiarioGasom">
+          <ScalarProperty Name="Afect" ColumnName="Afect" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiarioPozos">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiarioPozos">
+        <MappingFragment StoreEntitySet="ParteDiarioPozos">
+          <ScalarProperty Name="VGas" ColumnName="VGas" />
+          <ScalarProperty Name="VAsf" ColumnName="VAsf" />
+          <ScalarProperty Name="Observ" ColumnName="Observ" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="NFinal" ColumnName="NFinal" />
+          <ScalarProperty Name="PSep" ColumnName="PSep" />
+          <ScalarProperty Name="TMed" ColumnName="TMed" />
+          <ScalarProperty Name="Afect" ColumnName="Afect" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Pc" ColumnName="Pc" />
+          <ScalarProperty Name="Pt" ColumnName="Pt" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanAfectAdmin">
+      <EntityTypeMapping TypeName="SisProdModel.PlanAfectAdmin">
+        <MappingFragment StoreEntitySet="PlanAfectAdmin">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="CompAfect" ColumnName="CompAfect" />
+          <ScalarProperty Name="PlanAfect" ColumnName="PlanAfect" />
+          <ScalarProperty Name="CodAfectAdmin" ColumnName="CodAfectAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanAfectPozos">
+      <EntityTypeMapping TypeName="SisProdModel.PlanAfectPozos">
+        <MappingFragment StoreEntitySet="PlanAfectPozos">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="CompAfect" ColumnName="CompAfect" />
+          <ScalarProperty Name="PlanAfect" ColumnName="PlanAfect" />
+          <ScalarProperty Name="IdGrupoAfect" ColumnName="IdGrupoAfect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanDosificacion">
+      <EntityTypeMapping TypeName="SisProdModel.PlanDosificacion">
+        <MappingFragment StoreEntitySet="PlanDosificacion">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Plan" ColumnName="Plan" />
+          <ScalarProperty Name="IdSustancia" ColumnName="IdSustancia" />
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+          <ScalarProperty Name="Indicador" ColumnName="Indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanIncPozos">
+      <EntityTypeMapping TypeName="SisProdModel.PlanIncPozos">
+        <MappingFragment StoreEntitySet="PlanIncPozos">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanProd">
+      <EntityTypeMapping TypeName="SisProdModel.PlanProd">
+        <MappingFragment StoreEntitySet="PlanProd">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanProd_Majagua">
+      <EntityTypeMapping TypeName="SisProdModel.PlanProd_Majagua">
+        <MappingFragment StoreEntitySet="PlanProd_Majagua">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanProdPozos">
+      <EntityTypeMapping TypeName="SisProdModel.PlanProdPozos">
+        <MappingFragment StoreEntitySet="PlanProdPozos">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+          <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+          <ScalarProperty Name="CodMetodo" ColumnName="CodMetodo" />
+          <ScalarProperty Name="CodTipoPozo" ColumnName="CodTipoPozo" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanSolventes">
+      <EntityTypeMapping TypeName="SisProdModel.PlanSolventes">
+        <MappingFragment StoreEntitySet="PlanSolventes">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="CodTipoPozo" ColumnName="CodTipoPozo" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanVGas">
+      <EntityTypeMapping TypeName="SisProdModel.PlanVGas">
+        <MappingFragment StoreEntitySet="PlanVGas">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanVPet">
+      <EntityTypeMapping TypeName="SisProdModel.PlanVPet">
+        <MappingFragment StoreEntitySet="PlanVPet">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozosContratos">
+      <EntityTypeMapping TypeName="SisProdModel.PozosContratos">
+        <MappingFragment StoreEntitySet="PozosContratos">
+          <ScalarProperty Name="PozoContrato" ColumnName="PozoContrato" />
+          <ScalarProperty Name="PorcProd" ColumnName="PorcProd" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaIni" ColumnName="FechaIni" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozosCupetCias">
+      <EntityTypeMapping TypeName="SisProdModel.PozosCupetCias">
+        <MappingFragment StoreEntitySet="PozosCupetCias">
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+          <ScalarProperty Name="PorcProd" ColumnName="PorcProd" />
+          <ScalarProperty Name="PozoCia" ColumnName="PozoCia" />
+          <ScalarProperty Name="PozoCupet" ColumnName="PozoCupet" />
+          <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="IdDenom" ColumnName="IdDenom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Presiones">
+      <EntityTypeMapping TypeName="SisProdModel.Presiones">
+        <MappingFragment StoreEntitySet="Presiones">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="TipoPresion_Id" ColumnName="TipoPresion_Id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Pozo_Nombre" ColumnName="Pozo_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdBase">
+      <EntityTypeMapping TypeName="SisProdModel.ProdBase">
+        <MappingFragment StoreEntitySet="ProdBase">
+          <ScalarProperty Name="merma" ColumnName="merma" />
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPlantasGas">
+      <EntityTypeMapping TypeName="SisProdModel.ProdPlantasGas">
+        <MappingFragment StoreEntitySet="ProdPlantasGas">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPozos">
+      <EntityTypeMapping TypeName="SisProdModel.ProdPozos">
+        <MappingFragment StoreEntitySet="ProdPozos">
+          <ScalarProperty Name="CMed" ColumnName="CMed" />
+          <ScalarProperty Name="Observ" ColumnName="Observ" />
+          <ScalarProperty Name="Pc" ColumnName="Pc" />
+          <ScalarProperty Name="Pt" ColumnName="Pt" />
+          <ScalarProperty Name="Tras" ColumnName="Tras" />
+          <ScalarProperty Name="NFinal" ColumnName="NFinal" />
+          <ScalarProperty Name="Debe" ColumnName="Debe" />
+          <ScalarProperty Name="Paga" ColumnName="Paga" />
+          <ScalarProperty Name="Circulacion" ColumnName="Circulacion" />
+          <ScalarProperty Name="Pbase" ColumnName="Pbase" />
+          <ScalarProperty Name="Rgp" ColumnName="Rgp" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="TtProd" ColumnName="TtProd" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="HPlan" ColumnName="HPlan" />
+          <ScalarProperty Name="Conectado" ColumnName="Conectado" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyAfect">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyAfect">
+        <MappingFragment StoreEntitySet="PtoInyAfect">
+          <ScalarProperty Name="HorasAfect" ColumnName="HorasAfect" />
+          <ScalarProperty Name="IdAfect" ColumnName="IdAfect" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyAfectEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyAfectEquipos">
+        <MappingFragment StoreEntitySet="PtoInyAfectEquipos">
+          <ScalarProperty Name="HorasAfect" ColumnName="HorasAfect" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyAfectPozos">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyAfectPozos">
+        <MappingFragment StoreEntitySet="PtoInyAfectPozos">
+          <ScalarProperty Name="HorasAfect" ColumnName="HorasAfect" />
+          <ScalarProperty Name="IdAfect" ColumnName="IdAfect" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyParam">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyParam">
+        <MappingFragment StoreEntitySet="PtoInyParam">
+          <ScalarProperty Name="PresIny" ColumnName="PresIny" />
+          <ScalarProperty Name="TempIny" ColumnName="TempIny" />
+          <ScalarProperty Name="HorasIny" ColumnName="HorasIny" />
+          <ScalarProperty Name="AguaIny" ColumnName="AguaIny" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyPozos">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyPozos">
+        <MappingFragment StoreEntitySet="PtoInyPozos">
+          <ScalarProperty Name="PresIny" ColumnName="PresIny" />
+          <ScalarProperty Name="TempIny" ColumnName="TempIny" />
+          <ScalarProperty Name="TtIny" ColumnName="TtIny" />
+          <ScalarProperty Name="AguaIny" ColumnName="AguaIny" />
+          <ScalarProperty Name="IdViaIny" ColumnName="IdViaIny" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyTanques">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyTanques">
+        <MappingFragment StoreEntitySet="PtoInyTanques">
+          <ScalarProperty Name="PetRecup" ColumnName="PetRecup" />
+          <ScalarProperty Name="Existm3" ColumnName="Existm3" />
+          <ScalarProperty Name="Tanque" ColumnName="Tanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtoInyTtEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.PtoInyTtEquipos">
+        <MappingFragment StoreEntitySet="PtoInyTtEquipos">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecupGanancias">
+      <EntityTypeMapping TypeName="SisProdModel.RecupGanancias">
+        <MappingFragment StoreEntitySet="RecupGanancias">
+          <ScalarProperty Name="GananciaCia" ColumnName="GananciaCia" />
+          <ScalarProperty Name="GananciaCupet" ColumnName="GananciaCupet" />
+          <ScalarProperty Name="Recuperacion" ColumnName="Recuperacion" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolesApp">
+      <EntityTypeMapping TypeName="SisProdModel.RolesApp">
+        <MappingFragment StoreEntitySet="RolesApp">
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Srv">
+      <EntityTypeMapping TypeName="SisProdModel.Srv">
+        <MappingFragment StoreEntitySet="Srv">
+          <ScalarProperty Name="mio" ColumnName="mio" />
+          <ScalarProperty Name="Dosif" ColumnName="Dosif" />
+          <ScalarProperty Name="PorcSust" ColumnName="PorcSust" />
+          <ScalarProperty Name="Exist" ColumnName="Exist" />
+          <ScalarProperty Name="Mb" ColumnName="Mb" />
+          <ScalarProperty Name="Mr" ColumnName="Mr" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Srv_Diario">
+      <EntityTypeMapping TypeName="SisProdModel.Srv_Diario">
+        <MappingFragment StoreEntitySet="Srv_Diario">
+          <ScalarProperty Name="FluidoBomb" ColumnName="FluidoBomb" />
+          <ScalarProperty Name="SustBomb" ColumnName="SustBomb" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sta">
+      <EntityTypeMapping TypeName="SisProdModel.Sta">
+        <MappingFragment StoreEntitySet="Sta">
+          <ScalarProperty Name="Gramos" ColumnName="Gramos" />
+          <ScalarProperty Name="Litros" ColumnName="Litros" />
+          <ScalarProperty Name="IdSta" ColumnName="IdSta" />
+          <ScalarProperty Name="IdPtoSum" ColumnName="IdPtoSum" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SisProdModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tanques">
+      <EntityTypeMapping TypeName="SisProdModel.Tanques">
+        <MappingFragment StoreEntitySet="Tanques">
+          <ScalarProperty Name="FondoAgregton" ColumnName="FondoAgregton" />
+          <ScalarProperty Name="FondoAgregm3" ColumnName="FondoAgregm3" />
+          <ScalarProperty Name="FondoExtraton" ColumnName="FondoExtraton" />
+          <ScalarProperty Name="FondoExtram3" ColumnName="FondoExtram3" />
+          <ScalarProperty Name="PetRecupton" ColumnName="PetRecupton" />
+          <ScalarProperty Name="PetRecupm3" ColumnName="PetRecupm3" />
+          <ScalarProperty Name="Ventaston" ColumnName="Ventaston" />
+          <ScalarProperty Name="Ventasm3" ColumnName="Ventasm3" />
+          <ScalarProperty Name="AguaDrenton" ColumnName="AguaDrenton" />
+          <ScalarProperty Name="AguaDrenm3" ColumnName="AguaDrenm3" />
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Existton" ColumnName="Existton" />
+          <ScalarProperty Name="Existm3" ColumnName="Existm3" />
+          <ScalarProperty Name="IdTanque" ColumnName="IdTanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TanquesDinam">
+      <EntityTypeMapping TypeName="SisProdModel.TanquesDinam">
+        <MappingFragment StoreEntitySet="TanquesDinam">
+          <ScalarProperty Name="ViscSal" ColumnName="ViscSal" />
+          <ScalarProperty Name="ViscEnt" ColumnName="ViscEnt" />
+          <ScalarProperty Name="BswSal" ColumnName="BswSal" />
+          <ScalarProperty Name="BswEnt" ColumnName="BswEnt" />
+          <ScalarProperty Name="TempSal" ColumnName="TempSal" />
+          <ScalarProperty Name="TempEnt" ColumnName="TempEnt" />
+          <ScalarProperty Name="TempColAgua" ColumnName="TempColAgua" />
+          <ScalarProperty Name="ColAgua" ColumnName="ColAgua" />
+          <ScalarProperty Name="IdTanque" ColumnName="IdTanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoFluidosIny">
+      <EntityTypeMapping TypeName="SisProdModel.TipoFluidosIny">
+        <MappingFragment StoreEntitySet="TipoFluidosIny">
+          <ScalarProperty Name="TipoFluido_Desc" ColumnName="TipoFluido_Desc" />
+          <ScalarProperty Name="TipoFluido_Id" ColumnName="TipoFluido_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoNiveles">
+      <EntityTypeMapping TypeName="SisProdModel.TipoNiveles">
+        <MappingFragment StoreEntitySet="TipoNiveles">
+          <ScalarProperty Name="TipoNivel_Desc" ColumnName="TipoNivel_Desc" />
+          <ScalarProperty Name="TipoNivel_Id" ColumnName="TipoNivel_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPresiones">
+      <EntityTypeMapping TypeName="SisProdModel.TipoPresiones">
+        <MappingFragment StoreEntitySet="TipoPresiones">
+          <ScalarProperty Name="TipoPresion_Desc" ColumnName="TipoPresion_Desc" />
+          <ScalarProperty Name="TipoPresion_Id" ColumnName="TipoPresion_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposTrasiego">
+      <EntityTypeMapping TypeName="SisProdModel.TiposTrasiego">
+        <MappingFragment StoreEntitySet="TiposTrasiego">
+          <ScalarProperty Name="DescTipo" ColumnName="DescTipo" />
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrasiegoOleoducto">
+      <EntityTypeMapping TypeName="SisProdModel.TrasiegoOleoducto">
+        <MappingFragment StoreEntitySet="TrasiegoOleoducto">
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Trasiegoton" ColumnName="Trasiegoton" />
+          <ScalarProperty Name="Trasiegom3" ColumnName="Trasiegom3" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="IdOrigen" ColumnName="IdOrigen" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrasiegoPailas">
+      <EntityTypeMapping TypeName="SisProdModel.TrasiegoPailas">
+        <MappingFragment StoreEntitySet="TrasiegoPailas">
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Trasiegoton" ColumnName="Trasiegoton" />
+          <ScalarProperty Name="Trasiegom3" ColumnName="Trasiegom3" />
+          <ScalarProperty Name="Conduce" ColumnName="Conduce" />
+          <ScalarProperty Name="IdPaila" ColumnName="IdPaila" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="IdOrigen" ColumnName="IdOrigen" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrasiegosAguaI">
+      <EntityTypeMapping TypeName="SisProdModel.TrasiegosAguaI">
+        <MappingFragment StoreEntitySet="TrasiegosAguaI">
+          <ScalarProperty Name="Trasiegom3" ColumnName="Trasiegom3" />
+          <ScalarProperty Name="IdTrasiego" ColumnName="IdTrasiego" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtCentrosMedicion">
+      <EntityTypeMapping TypeName="SisProdModel.TtCentrosMedicion">
+        <MappingFragment StoreEntitySet="TtCentrosMedicion">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdCentro" ColumnName="IdCentro" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SisProdModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IdPtoIny" ColumnName="IdPtoIny" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="IdPtoMedGas" ColumnName="IdPtoMedGas" />
+          <ScalarProperty Name="IdGasod" ColumnName="IdGasod" />
+          <ScalarProperty Name="IdEstRebomb" ColumnName="IdEstRebomb" />
+          <ScalarProperty Name="IdPtoSumSta" ColumnName="IdPtoSumSta" />
+          <ScalarProperty Name="IdPtoSumSrv" ColumnName="IdPtoSumSrv" />
+          <ScalarProperty Name="IdCCPozos" ColumnName="IdCCPozos" />
+          <ScalarProperty Name="IdCC" ColumnName="IdCC" />
+          <ScalarProperty Name="Nivel35" ColumnName="Nivel35" />
+          <ScalarProperty Name="Nivel34" ColumnName="Nivel34" />
+          <ScalarProperty Name="Nivel33" ColumnName="Nivel33" />
+          <ScalarProperty Name="Nivel32" ColumnName="Nivel32" />
+          <ScalarProperty Name="Nivel31" ColumnName="Nivel31" />
+          <ScalarProperty Name="Nivel30" ColumnName="Nivel30" />
+          <ScalarProperty Name="Nivel29" ColumnName="Nivel29" />
+          <ScalarProperty Name="Nivel28" ColumnName="Nivel28" />
+          <ScalarProperty Name="Nivel27" ColumnName="Nivel27" />
+          <ScalarProperty Name="Nivel24" ColumnName="Nivel24" />
+          <ScalarProperty Name="Nivel23" ColumnName="Nivel23" />
+          <ScalarProperty Name="Nivel22" ColumnName="Nivel22" />
+          <ScalarProperty Name="Nivel21" ColumnName="Nivel21" />
+          <ScalarProperty Name="Nivel19" ColumnName="Nivel19" />
+          <ScalarProperty Name="Nivel18" ColumnName="Nivel18" />
+          <ScalarProperty Name="Nivel17" ColumnName="Nivel17" />
+          <ScalarProperty Name="Nivel16" ColumnName="Nivel16" />
+          <ScalarProperty Name="Nivel15" ColumnName="Nivel15" />
+          <ScalarProperty Name="Nivel13" ColumnName="Nivel13" />
+          <ScalarProperty Name="Nivel12" ColumnName="Nivel12" />
+          <ScalarProperty Name="Nivel11" ColumnName="Nivel11" />
+          <ScalarProperty Name="Nivel10" ColumnName="Nivel10" />
+          <ScalarProperty Name="Nivel9" ColumnName="Nivel9" />
+          <ScalarProperty Name="Nivel8" ColumnName="Nivel8" />
+          <ScalarProperty Name="Nivel7" ColumnName="Nivel7" />
+          <ScalarProperty Name="Nivel6" ColumnName="Nivel6" />
+          <ScalarProperty Name="Nivel5" ColumnName="Nivel5" />
+          <ScalarProperty Name="Nivel4" ColumnName="Nivel4" />
+          <ScalarProperty Name="Nivel3" ColumnName="Nivel3" />
+          <ScalarProperty Name="Nivel2" ColumnName="Nivel2" />
+          <ScalarProperty Name="Nivel1" ColumnName="Nivel1" />
+          <ScalarProperty Name="DescUsuario" ColumnName="DescUsuario" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosApp">
+      <EntityTypeMapping TypeName="SisProdModel.UsuariosApp">
+        <MappingFragment StoreEntitySet="UsuariosApp">
+          <ScalarProperty Name="DescUsuario" ColumnName="DescUsuario" />
+          <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VGasDulce">
+      <EntityTypeMapping TypeName="SisProdModel.VGasDulce">
+        <MappingFragment StoreEntitySet="VGasDulce">
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VGasGasod">
+      <EntityTypeMapping TypeName="SisProdModel.VGasGasod">
+        <MappingFragment StoreEntitySet="VGasGasod">
+          <ScalarProperty Name="FueraServicio" ColumnName="FueraServicio" />
+          <ScalarProperty Name="Certificada" ColumnName="Certificada" />
+          <ScalarProperty Name="CoefAj" ColumnName="CoefAj" />
+          <ScalarProperty Name="ProblTecn" ColumnName="ProblTecn" />
+          <ScalarProperty Name="Flare" ColumnName="Flare" />
+          <ScalarProperty Name="VentaCalcm3" ColumnName="VentaCalcm3" />
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="IdGasod" ColumnName="IdGasod" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VGasPozos">
+      <EntityTypeMapping TypeName="SisProdModel.VGasPozos">
+        <MappingFragment StoreEntitySet="VGasPozos">
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectAdmin">
+      <EntityTypeMapping TypeName="SisProdModel.AfectAdmin">
+        <MappingFragment StoreEntitySet="AfectAdmin">
+          <ScalarProperty Name="PetrPerdidoTon" ColumnName="PetrPerdidoTon" />
+          <ScalarProperty Name="PetrPerdidoM3" ColumnName="PetrPerdidoM3" />
+          <ScalarProperty Name="FluidoPerdido" ColumnName="FluidoPerdido" />
+          <ScalarProperty Name="HorasPerdidas" ColumnName="HorasPerdidas" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="CodAfectAdmin" ColumnName="CodAfectAdmin" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectAdminMes">
+      <EntityTypeMapping TypeName="SisProdModel.AfectAdminMes">
+        <MappingFragment StoreEntitySet="AfectAdminMes">
+          <ScalarProperty Name="PetrPerdidoTon" ColumnName="PetrPerdidoTon" />
+          <ScalarProperty Name="PetrPerdidoM3" ColumnName="PetrPerdidoM3" />
+          <ScalarProperty Name="PetrKePerdido" ColumnName="PetrKePerdido" />
+          <ScalarProperty Name="FluidoPerdido" ColumnName="FluidoPerdido" />
+          <ScalarProperty Name="HorasPerdidasFA" ColumnName="HorasPerdidasFA" />
+          <ScalarProperty Name="HorasPerdidas" ColumnName="HorasPerdidas" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectCalderas">
+      <EntityTypeMapping TypeName="SisProdModel.AfectCalderas">
+        <MappingFragment StoreEntitySet="AfectCalderas">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectCalderasMes">
+      <EntityTypeMapping TypeName="SisProdModel.AfectCalderasMes">
+        <MappingFragment StoreEntitySet="AfectCalderasMes">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectCentrosMedicion">
+      <EntityTypeMapping TypeName="SisProdModel.AfectCentrosMedicion">
+        <MappingFragment StoreEntitySet="AfectCentrosMedicion">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdCentro" ColumnName="IdCentro" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.AfectEquipos">
+        <MappingFragment StoreEntitySet="AfectEquipos">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectEquiposMes">
+      <EntityTypeMapping TypeName="SisProdModel.AfectEquiposMes">
+        <MappingFragment StoreEntitySet="AfectEquiposMes">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectGasometros">
+      <EntityTypeMapping TypeName="SisProdModel.AfectGasometros">
+        <MappingFragment StoreEntitySet="AfectGasometros">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectGasomMes">
+      <EntityTypeMapping TypeName="SisProdModel.AfectGasomMes">
+        <MappingFragment StoreEntitySet="AfectGasomMes">
+          <ScalarProperty Name="Hp" ColumnName="Hp" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectPozos">
+      <EntityTypeMapping TypeName="SisProdModel.AfectPozos">
+        <MappingFragment StoreEntitySet="AfectPozos">
+          <ScalarProperty Name="GasPerdidoM3" ColumnName="GasPerdidoM3" />
+          <ScalarProperty Name="PetrPerdidoTon" ColumnName="PetrPerdidoTon" />
+          <ScalarProperty Name="PetrPerdidoM3" ColumnName="PetrPerdidoM3" />
+          <ScalarProperty Name="FluidoPerdido" ColumnName="FluidoPerdido" />
+          <ScalarProperty Name="HorasPerdidas" ColumnName="HorasPerdidas" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AfectPozosMes">
+      <EntityTypeMapping TypeName="SisProdModel.AfectPozosMes">
+        <MappingFragment StoreEntitySet="AfectPozosMes">
+          <ScalarProperty Name="PetrPerdidoTon" ColumnName="PetrPerdidoTon" />
+          <ScalarProperty Name="PetrPerdidoM3" ColumnName="PetrPerdidoM3" />
+          <ScalarProperty Name="PetrKePerdido" ColumnName="PetrKePerdido" />
+          <ScalarProperty Name="FluidoPerdido" ColumnName="FluidoPerdido" />
+          <ScalarProperty Name="HorasPerdidasFA" ColumnName="HorasPerdidasFA" />
+          <ScalarProperty Name="HorasPerdidas" ColumnName="HorasPerdidas" />
+          <ScalarProperty Name="CodAfect" ColumnName="CodAfect" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="App_Roles">
+      <EntityTypeMapping TypeName="SisProdModel.App_Roles">
+        <MappingFragment StoreEntitySet="App_Roles">
+          <ScalarProperty Name="DescRol" ColumnName="DescRol" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="App_Usuarios">
+      <EntityTypeMapping TypeName="SisProdModel.App_Usuarios">
+        <MappingFragment StoreEntitySet="App_Usuarios">
+          <ScalarProperty Name="Baja" ColumnName="Baja" />
+          <ScalarProperty Name="Alta" ColumnName="Alta" />
+          <ScalarProperty Name="DescUsuario" ColumnName="DescUsuario" />
+          <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="App_UsuariosRoles">
+      <EntityTypeMapping TypeName="SisProdModel.App_UsuariosRoles">
+        <MappingFragment StoreEntitySet="App_UsuariosRoles">
+          <ScalarProperty Name="Acceso" ColumnName="Acceso" />
+          <ScalarProperty Name="IdInstalac" ColumnName="IdInstalac" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BuquesTransito">
+      <EntityTypeMapping TypeName="SisProdModel.BuquesTransito">
+        <MappingFragment StoreEntitySet="BuquesTransito">
+          <ScalarProperty Name="TerminaCargar" ColumnName="TerminaCargar" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="Ventaton" ColumnName="Ventaton" />
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="IdBuque" ColumnName="IdBuque" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosColectoresMes">
+      <EntityTypeMapping TypeName="SisProdModel.CentrosColectoresMes">
+        <MappingFragment StoreEntitySet="CentrosColectoresMes">
+          <ScalarProperty Name="KEnergas" ColumnName="KEnergas" />
+          <ScalarProperty Name="Kaj" ColumnName="Kaj" />
+          <ScalarProperty Name="Ke" ColumnName="Ke" />
+          <ScalarProperty Name="KGas" ColumnName="KGas" />
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="HorasPlan" ColumnName="HorasPlan" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="PozosTrab" ColumnName="PozosTrab" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Qpton" ColumnName="Qpton" />
+          <ScalarProperty Name="Qp" ColumnName="Qp" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosColectoresYacim">
+      <EntityTypeMapping TypeName="SisProdModel.CentrosColectoresYacim">
+        <MappingFragment StoreEntitySet="CentrosColectoresYacim">
+          <ScalarProperty Name="Kaj" ColumnName="Kaj" />
+          <ScalarProperty Name="Ke" ColumnName="Ke" />
+          <ScalarProperty Name="KGas" ColumnName="KGas" />
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="HorasPlan" ColumnName="HorasPlan" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="PozosTrab" ColumnName="PozosTrab" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Qpton" ColumnName="Qpton" />
+          <ScalarProperty Name="Qp" ColumnName="Qp" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cierremensualrecol">
+      <EntityTypeMapping TypeName="SisProdModel.cierremensualrecol">
+        <MappingFragment StoreEntitySet="cierremensualrecol">
+          <ScalarProperty Name="instalac" ColumnName="instalac" />
+          <ScalarProperty Name="porcaño" ColumnName="porcaño" />
+          <ScalarProperty Name="realaño" ColumnName="realaño" />
+          <ScalarProperty Name="planaño" ColumnName="planaño" />
+          <ScalarProperty Name="porcmes" ColumnName="porcmes" />
+          <ScalarProperty Name="realmes" ColumnName="realmes" />
+          <ScalarProperty Name="planmes" ColumnName="planmes" />
+          <ScalarProperty Name="um" ColumnName="um" />
+          <ScalarProperty Name="indicador" ColumnName="indicador" />
+          <ScalarProperty Name="nogrupo" ColumnName="nogrupo" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="numgrupo" ColumnName="numgrupo" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cierresemanal">
+      <EntityTypeMapping TypeName="SisProdModel.cierresemanal">
+        <MappingFragment StoreEntitySet="cierresemanal">
+          <ScalarProperty Name="valorano" ColumnName="valorano" />
+          <ScalarProperty Name="valormes" ColumnName="valormes" />
+          <ScalarProperty Name="valorsem" ColumnName="valorsem" />
+          <ScalarProperty Name="valordia" ColumnName="valordia" />
+          <ScalarProperty Name="um" ColumnName="um" />
+          <ScalarProperty Name="indicador" ColumnName="indicador" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="semana" ColumnName="semana" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodPozosNoAsociados">
+      <EntityTypeMapping TypeName="SisProdModel.CodPozosNoAsociados">
+        <MappingFragment StoreEntitySet="CodPozosNoAsociados">
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsumoGasoil">
+      <EntityTypeMapping TypeName="SisProdModel.ConsumoGasoil">
+        <MappingFragment StoreEntitySet="ConsumoGasoil">
+          <ScalarProperty Name="consumo" ColumnName="consumo" />
+          <ScalarProperty Name="entrada" ColumnName="entrada" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datosbuqueterm">
+      <EntityTypeMapping TypeName="SisProdModel.datosbuqueterm">
+        <MappingFragment StoreEntitySet="datosbuqueterm">
+          <ScalarProperty Name="hterminac" ColumnName="hterminac" />
+          <ScalarProperty Name="fterminac" ColumnName="fterminac" />
+          <ScalarProperty Name="hcomienzo" ColumnName="hcomienzo" />
+          <ScalarProperty Name="fcomienzo" ColumnName="fcomienzo" />
+          <ScalarProperty Name="hatraque" ColumnName="hatraque" />
+          <ScalarProperty Name="fatraque" ColumnName="fatraque" />
+          <ScalarProperty Name="sales" ColumnName="sales" />
+          <ScalarProperty Name="viscosidad" ColumnName="viscosidad" />
+          <ScalarProperty Name="lastre" ColumnName="lastre" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="densidad" ColumnName="densidad" />
+          <ScalarProperty Name="porcazufre" ColumnName="porcazufre" />
+          <ScalarProperty Name="api" ColumnName="api" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="bswdest" ColumnName="bswdest" />
+          <ScalarProperty Name="bswcent" ColumnName="bswcent" />
+          <ScalarProperty Name="ventaton" ColumnName="ventaton" />
+          <ScalarProperty Name="ventam3" ColumnName="ventam3" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="buque" ColumnName="buque" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosInteres">
+      <EntityTypeMapping TypeName="SisProdModel.DatosInteres">
+        <MappingFragment StoreEntitySet="DatosInteres">
+          <ScalarProperty Name="Datos" ColumnName="Datos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosValvulasCorte">
+      <EntityTypeMapping TypeName="SisProdModel.DatosValvulasCorte">
+        <MappingFragment StoreEntitySet="DatosValvulasCorte">
+          <ScalarProperty Name="voltaje" ColumnName="voltaje" />
+          <ScalarProperty Name="presion" ColumnName="presion" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="valvula" ColumnName="valvula" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgafectadmin">
+      <EntityTypeMapping TypeName="SisProdModel.desgafectadmin">
+        <MappingFragment StoreEntitySet="desgafectadmin">
+          <ScalarProperty Name="prodperdm3" ColumnName="prodperdm3" />
+          <ScalarProperty Name="prodperdton" ColumnName="prodperdton" />
+          <ScalarProperty Name="prodperdida" ColumnName="prodperdida" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgafectgasom">
+      <EntityTypeMapping TypeName="SisProdModel.desgafectgasom">
+        <MappingFragment StoreEntitySet="desgafectgasom">
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="codafect" ColumnName="codafect" />
+          <ScalarProperty Name="codgasom" ColumnName="codgasom" />
+          <ScalarProperty Name="ptomed" ColumnName="ptomed" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgafectpozos">
+      <EntityTypeMapping TypeName="SisProdModel.desgafectpozos">
+        <MappingFragment StoreEntitySet="desgafectpozos">
+          <ScalarProperty Name="prodperdm3" ColumnName="prodperdm3" />
+          <ScalarProperty Name="prodperdton" ColumnName="prodperdton" />
+          <ScalarProperty Name="prodperdida" ColumnName="prodperdida" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgcentroscolectores">
+      <EntityTypeMapping TypeName="SisProdModel.desgcentroscolectores">
+        <MappingFragment StoreEntitySet="desgcentroscolectores">
+          <ScalarProperty Name="inyeccion" ColumnName="inyeccion" />
+          <ScalarProperty Name="circulacio" ColumnName="circulacio" />
+          <ScalarProperty Name="kgas" ColumnName="kgas" />
+          <ScalarProperty Name="kfluido" ColumnName="kfluido" />
+          <ScalarProperty Name="petbomb" ColumnName="petbomb" />
+          <ScalarProperty Name="tmed" ColumnName="tmed" />
+          <ScalarProperty Name="psep" ColumnName="psep" />
+          <ScalarProperty Name="nfinal" ColumnName="nfinal" />
+          <ScalarProperty Name="qgcalc" ColumnName="qgcalc" />
+          <ScalarProperty Name="qg" ColumnName="qg" />
+          <ScalarProperty Name="qfcalc" ColumnName="qfcalc" />
+          <ScalarProperty Name="qf" ColumnName="qf" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgdatospozos">
+      <EntityTypeMapping TypeName="SisProdModel.desgdatospozos">
+        <MappingFragment StoreEntitySet="desgdatospozos">
+          <ScalarProperty Name="ciclo" ColumnName="ciclo" />
+          <ScalarProperty Name="hplan" ColumnName="hplan" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgestrebomb">
+      <EntityTypeMapping TypeName="SisProdModel.desgestrebomb">
+        <MappingFragment StoreEntitySet="desgestrebomb">
+          <ScalarProperty Name="nfinal" ColumnName="nfinal" />
+          <ScalarProperty Name="petbombt" ColumnName="petbombt" />
+          <ScalarProperty Name="petbombm3" ColumnName="petbombm3" />
+          <ScalarProperty Name="coder" ColumnName="coder" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesgloseAfect">
+      <EntityTypeMapping TypeName="SisProdModel.DesgloseAfect">
+        <MappingFragment StoreEntitySet="DesgloseAfect">
+          <ScalarProperty Name="AfectAdmin" ColumnName="AfectAdmin" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgprodpozos">
+      <EntityTypeMapping TypeName="SisProdModel.desgprodpozos">
+        <MappingFragment StoreEntitySet="desgprodpozos">
+          <ScalarProperty Name="rgp" ColumnName="rgp" />
+          <ScalarProperty Name="qg" ColumnName="qg" />
+          <ScalarProperty Name="bsw" ColumnName="bsw" />
+          <ScalarProperty Name="ttprod" ColumnName="ttprod" />
+          <ScalarProperty Name="tt" ColumnName="tt" />
+          <ScalarProperty Name="qf" ColumnName="qf" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgsrv">
+      <EntityTypeMapping TypeName="SisProdModel.desgsrv">
+        <MappingFragment StoreEntitySet="desgsrv">
+          <ScalarProperty Name="dosif" ColumnName="dosif" />
+          <ScalarProperty Name="diesel" ColumnName="diesel" />
+          <ScalarProperty Name="exist" ColumnName="exist" />
+          <ScalarProperty Name="mb" ColumnName="mb" />
+          <ScalarProperty Name="mr" ColumnName="mr" />
+          <ScalarProperty Name="codsrv" ColumnName="codsrv" />
+          <ScalarProperty Name="codptosum" ColumnName="codptosum" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgsta">
+      <EntityTypeMapping TypeName="SisProdModel.desgsta">
+        <MappingFragment StoreEntitySet="desgsta">
+          <ScalarProperty Name="gramos" ColumnName="gramos" />
+          <ScalarProperty Name="litros" ColumnName="litros" />
+          <ScalarProperty Name="codsta" ColumnName="codsta" />
+          <ScalarProperty Name="codptosum" ColumnName="codptosum" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgttgasom">
+      <EntityTypeMapping TypeName="SisProdModel.desgttgasom">
+        <MappingFragment StoreEntitySet="desgttgasom">
+          <ScalarProperty Name="tt" ColumnName="tt" />
+          <ScalarProperty Name="codgasom" ColumnName="codgasom" />
+          <ScalarProperty Name="ptomed" ColumnName="ptomed" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgvgas">
+      <EntityTypeMapping TypeName="SisProdModel.desgvgas">
+        <MappingFragment StoreEntitySet="desgvgas">
+          <ScalarProperty Name="venta" ColumnName="venta" />
+          <ScalarProperty Name="coddest" ColumnName="coddest" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="desgvpet">
+      <EntityTypeMapping TypeName="SisProdModel.desgvpet">
+        <MappingFragment StoreEntitySet="desgvpet">
+          <ScalarProperty Name="venta" ColumnName="venta" />
+          <ScalarProperty Name="coddest" ColumnName="coddest" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="existf">
+      <EntityTypeMapping TypeName="SisProdModel.existf">
+        <MappingFragment StoreEntitySet="existf">
+          <ScalarProperty Name="exist" ColumnName="exist" />
+          <ScalarProperty Name="instalac" ColumnName="instalac" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fecha">
+      <EntityTypeMapping TypeName="SisProdModel.Fecha">
+        <MappingFragment StoreEntitySet="Fecha">
+          <ScalarProperty Name="VerReportes" ColumnName="VerReportes" />
+          <ScalarProperty Name="FueCalculado" ColumnName="FueCalculado" />
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+          <ScalarProperty Name="Calculado" ColumnName="Calculado" />
+          <ScalarProperty Name="FechaSist" ColumnName="FechaSist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="firmas">
+      <EntityTypeMapping TypeName="SisProdModel.firmas">
+        <MappingFragment StoreEntitySet="firmas">
+          <ScalarProperty Name="cargo2" ColumnName="cargo2" />
+          <ScalarProperty Name="ident2" ColumnName="ident2" />
+          <ScalarProperty Name="cargo1" ColumnName="cargo1" />
+          <ScalarProperty Name="ident1" ColumnName="ident1" />
+          <ScalarProperty Name="idtabla" ColumnName="idtabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FondoPozos">
+      <EntityTypeMapping TypeName="SisProdModel.FondoPozos">
+        <MappingFragment StoreEntitySet="FondoPozos">
+          <ScalarProperty Name="CMed" ColumnName="CMed" />
+          <ScalarProperty Name="Conectado" ColumnName="Conectado" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="PozoViejo" ColumnName="PozoViejo" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="TipoPet" ColumnName="TipoPet" />
+          <ScalarProperty Name="TipoMedGas" ColumnName="TipoMedGas" />
+          <ScalarProperty Name="EntPet" ColumnName="EntPet" />
+          <ScalarProperty Name="EntGas" ColumnName="EntGas" />
+          <ScalarProperty Name="Regimen" ColumnName="Regimen" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+          <ScalarProperty Name="TipoPozo" ColumnName="TipoPozo" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Propietario" ColumnName="Propietario" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FondoPozosMes">
+      <EntityTypeMapping TypeName="SisProdModel.FondoPozosMes">
+        <MappingFragment StoreEntitySet="FondoPozosMes">
+          <ScalarProperty Name="Horasplan" ColumnName="Horasplan" />
+          <ScalarProperty Name="Horastrab" ColumnName="Horastrab" />
+          <ScalarProperty Name="CicloMetodo" ColumnName="CicloMetodo" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="IdFondo" ColumnName="IdFondo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FondoPozosYacim">
+      <EntityTypeMapping TypeName="SisProdModel.FondoPozosYacim">
+        <MappingFragment StoreEntitySet="FondoPozosYacim">
+          <ScalarProperty Name="CMed" ColumnName="CMed" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="PozoViejo" ColumnName="PozoViejo" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="TipoPet" ColumnName="TipoPet" />
+          <ScalarProperty Name="TipoMedGas" ColumnName="TipoMedGas" />
+          <ScalarProperty Name="EntPet" ColumnName="EntPet" />
+          <ScalarProperty Name="EntGas" ColumnName="EntGas" />
+          <ScalarProperty Name="Regimen" ColumnName="Regimen" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+          <ScalarProperty Name="TipoPozo" ColumnName="TipoPozo" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Propietario" ColumnName="Propietario" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histafectadmin">
+      <EntityTypeMapping TypeName="SisProdModel.histafectadmin">
+        <MappingFragment StoreEntitySet="histafectadmin">
+          <ScalarProperty Name="prodperdid" ColumnName="prodperdid" />
+          <ScalarProperty Name="hpfa" ColumnName="hpfa" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="codafect" ColumnName="codafect" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histafectgasom">
+      <EntityTypeMapping TypeName="SisProdModel.histafectgasom">
+        <MappingFragment StoreEntitySet="histafectgasom">
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="afect" ColumnName="afect" />
+          <ScalarProperty Name="gasom" ColumnName="gasom" />
+          <ScalarProperty Name="ptomed" ColumnName="ptomed" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histafectpozos">
+      <EntityTypeMapping TypeName="SisProdModel.histafectpozos">
+        <MappingFragment StoreEntitySet="histafectpozos">
+          <ScalarProperty Name="prodkeperd" ColumnName="prodkeperd" />
+          <ScalarProperty Name="prodperdid" ColumnName="prodperdid" />
+          <ScalarProperty Name="hpfa" ColumnName="hpfa" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="codafect" ColumnName="codafect" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histbsw">
+      <EntityTypeMapping TypeName="SisProdModel.histbsw">
+        <MappingFragment StoreEntitySet="histbsw">
+          <ScalarProperty Name="tecleado" ColumnName="tecleado" />
+          <ScalarProperty Name="bsw" ColumnName="bsw" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histcentroscolectores">
+      <EntityTypeMapping TypeName="SisProdModel.histcentroscolectores">
+        <MappingFragment StoreEntitySet="histcentroscolectores">
+          <ScalarProperty Name="ke" ColumnName="ke" />
+          <ScalarProperty Name="kgas" ColumnName="kgas" />
+          <ScalarProperty Name="kfluido" ColumnName="kfluido" />
+          <ScalarProperty Name="horasplan" ColumnName="horasplan" />
+          <ScalarProperty Name="horastrab" ColumnName="horastrab" />
+          <ScalarProperty Name="pozostrab" ColumnName="pozostrab" />
+          <ScalarProperty Name="qg" ColumnName="qg" />
+          <ScalarProperty Name="qp" ColumnName="qp" />
+          <ScalarProperty Name="qf" ColumnName="qf" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histfondopozos">
+      <EntityTypeMapping TypeName="SisProdModel.histfondopozos">
+        <MappingFragment StoreEntitySet="histfondopozos">
+          <ScalarProperty Name="horasplan" ColumnName="horasplan" />
+          <ScalarProperty Name="horastrab" ColumnName="horastrab" />
+          <ScalarProperty Name="metodo" ColumnName="metodo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="ciclo" ColumnName="ciclo" />
+          <ScalarProperty Name="prodfund" ColumnName="prodfund" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplanafec">
+      <EntityTypeMapping TypeName="SisProdModel.histplanafec">
+        <MappingFragment StoreEntitySet="histplanafec">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="comp" ColumnName="comp" />
+          <ScalarProperty Name="plan" ColumnName="plan" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplanafecadmin">
+      <EntityTypeMapping TypeName="SisProdModel.histplanafecadmin">
+        <MappingFragment StoreEntitySet="histplanafecadmin">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="plan" ColumnName="plan" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplancc">
+      <EntityTypeMapping TypeName="SisProdModel.histplancc">
+        <MappingFragment StoreEntitySet="histplancc">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="trim4" ColumnName="trim4" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="trim3" ColumnName="trim3" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="trim2" ColumnName="trim2" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="trim1" ColumnName="trim1" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplaninc">
+      <EntityTypeMapping TypeName="SisProdModel.histplaninc">
+        <MappingFragment StoreEntitySet="histplaninc">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="trim4" ColumnName="trim4" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="trim3" ColumnName="trim3" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="trim2" ColumnName="trim2" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="trim1" ColumnName="trim1" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="indic" ColumnName="indic" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplanprod">
+      <EntityTypeMapping TypeName="SisProdModel.histplanprod">
+        <MappingFragment StoreEntitySet="histplanprod">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="trim4" ColumnName="trim4" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="trim3" ColumnName="trim3" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="trim2" ColumnName="trim2" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="trim1" ColumnName="trim1" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="indic" ColumnName="indic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplanvgas">
+      <EntityTypeMapping TypeName="SisProdModel.histplanvgas">
+        <MappingFragment StoreEntitySet="histplanvgas">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="trim4" ColumnName="trim4" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="trim3" ColumnName="trim3" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="trim2" ColumnName="trim2" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="trim1" ColumnName="trim1" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histplanvpet">
+      <EntityTypeMapping TypeName="SisProdModel.histplanvpet">
+        <MappingFragment StoreEntitySet="histplanvpet">
+          <ScalarProperty Name="anno" ColumnName="anno" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="trim4" ColumnName="trim4" />
+          <ScalarProperty Name="dic" ColumnName="dic" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="trim3" ColumnName="trim3" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ago" ColumnName="ago" />
+          <ScalarProperty Name="jul" ColumnName="jul" />
+          <ScalarProperty Name="trim2" ColumnName="trim2" />
+          <ScalarProperty Name="jun" ColumnName="jun" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="trim1" ColumnName="trim1" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="ene" ColumnName="ene" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histproddia">
+      <EntityTypeMapping TypeName="SisProdModel.histproddia">
+        <MappingFragment StoreEntitySet="histproddia">
+          <ScalarProperty Name="pronostico" ColumnName="pronostico" />
+          <ScalarProperty Name="kum" ColumnName="kum" />
+          <ScalarProperty Name="ku" ColumnName="ku" />
+          <ScalarProperty Name="kem" ColumnName="kem" />
+          <ScalarProperty Name="ke" ColumnName="ke" />
+          <ScalarProperty Name="horasafecm" ColumnName="horasafecm" />
+          <ScalarProperty Name="horasafec" ColumnName="horasafec" />
+          <ScalarProperty Name="horastrabm" ColumnName="horastrabm" />
+          <ScalarProperty Name="horastrab" ColumnName="horastrab" />
+          <ScalarProperty Name="pozinam" ColumnName="pozinam" />
+          <ScalarProperty Name="pozinad" ColumnName="pozinad" />
+          <ScalarProperty Name="pozactm" ColumnName="pozactm" />
+          <ScalarProperty Name="pozactd" ColumnName="pozactd" />
+          <ScalarProperty Name="trascampo" ColumnName="trascampo" />
+          <ScalarProperty Name="fluidcampo" ColumnName="fluidcampo" />
+          <ScalarProperty Name="prodca" ColumnName="prodca" />
+          <ScalarProperty Name="prodcm" ColumnName="prodcm" />
+          <ScalarProperty Name="prodcd" ColumnName="prodcd" />
+          <ScalarProperty Name="metra" ColumnName="metra" />
+          <ScalarProperty Name="metrm" ColumnName="metrm" />
+          <ScalarProperty Name="metrd" ColumnName="metrd" />
+          <ScalarProperty Name="entgasa" ColumnName="entgasa" />
+          <ScalarProperty Name="entgasm" ColumnName="entgasm" />
+          <ScalarProperty Name="entgasd" ColumnName="entgasd" />
+          <ScalarProperty Name="vcampoa" ColumnName="vcampoa" />
+          <ScalarProperty Name="vcampom" ColumnName="vcampom" />
+          <ScalarProperty Name="vcampod" ColumnName="vcampod" />
+          <ScalarProperty Name="prodbata" ColumnName="prodbata" />
+          <ScalarProperty Name="prodbatm" ColumnName="prodbatm" />
+          <ScalarProperty Name="prodbatd" ColumnName="prodbatd" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histprodpozos">
+      <EntityTypeMapping TypeName="SisProdModel.histprodpozos">
+        <MappingFragment StoreEntitySet="histprodpozos">
+          <ScalarProperty Name="kprodemp" ColumnName="kprodemp" />
+          <ScalarProperty Name="kgas" ColumnName="kgas" />
+          <ScalarProperty Name="kfluido" ColumnName="kfluido" />
+          <ScalarProperty Name="incr" ColumnName="incr" />
+          <ScalarProperty Name="pbase" ColumnName="pbase" />
+          <ScalarProperty Name="horasplan" ColumnName="horasplan" />
+          <ScalarProperty Name="horastrab" ColumnName="horastrab" />
+          <ScalarProperty Name="ciclo" ColumnName="ciclo" />
+          <ScalarProperty Name="densidad" ColumnName="densidad" />
+          <ScalarProperty Name="bsw" ColumnName="bsw" />
+          <ScalarProperty Name="rgp" ColumnName="rgp" />
+          <ScalarProperty Name="agua" ColumnName="agua" />
+          <ScalarProperty Name="qg" ColumnName="qg" />
+          <ScalarProperty Name="qpton" ColumnName="qpton" />
+          <ScalarProperty Name="qp" ColumnName="qp" />
+          <ScalarProperty Name="qf" ColumnName="qf" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histptc">
+      <EntityTypeMapping TypeName="SisProdModel.histptc">
+        <MappingFragment StoreEntitySet="histptc">
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="pt" ColumnName="pt" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histqf">
+      <EntityTypeMapping TypeName="SisProdModel.histqf">
+        <MappingFragment StoreEntitySet="histqf">
+          <ScalarProperty Name="psep" ColumnName="psep" />
+          <ScalarProperty Name="tmed" ColumnName="tmed" />
+          <ScalarProperty Name="qf" ColumnName="qf" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histqg">
+      <EntityTypeMapping TypeName="SisProdModel.histqg">
+        <MappingFragment StoreEntitySet="histqg">
+          <ScalarProperty Name="psep" ColumnName="psep" />
+          <ScalarProperty Name="tmed" ColumnName="tmed" />
+          <ScalarProperty Name="rgp" ColumnName="rgp" />
+          <ScalarProperty Name="qg" ColumnName="qg" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histttgasom">
+      <EntityTypeMapping TypeName="SisProdModel.histttgasom">
+        <MappingFragment StoreEntitySet="histttgasom">
+          <ScalarProperty Name="tt" ColumnName="tt" />
+          <ScalarProperty Name="gasom" ColumnName="gasom" />
+          <ScalarProperty Name="ptomed" ColumnName="ptomed" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histvgas">
+      <EntityTypeMapping TypeName="SisProdModel.histvgas">
+        <MappingFragment StoreEntitySet="histvgas">
+          <ScalarProperty Name="venta" ColumnName="venta" />
+          <ScalarProperty Name="coddest" ColumnName="coddest" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histvpet">
+      <EntityTypeMapping TypeName="SisProdModel.histvpet">
+        <MappingFragment StoreEntitySet="histvpet">
+          <ScalarProperty Name="ventaext" ColumnName="ventaext" />
+          <ScalarProperty Name="ventabat" ColumnName="ventabat" />
+          <ScalarProperty Name="coddest" ColumnName="coddest" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicadoresCierre">
+      <EntityTypeMapping TypeName="SisProdModel.IndicadoresCierre">
+        <MappingFragment StoreEntitySet="IndicadoresCierre">
+          <ScalarProperty Name="PorcAcum" ColumnName="PorcAcum" />
+          <ScalarProperty Name="RealAcum" ColumnName="RealAcum" />
+          <ScalarProperty Name="PlanAcum" ColumnName="PlanAcum" />
+          <ScalarProperty Name="PorcMes" ColumnName="PorcMes" />
+          <ScalarProperty Name="RealMes" ColumnName="RealMes" />
+          <ScalarProperty Name="PlanMes" ColumnName="PlanMes" />
+          <ScalarProperty Name="Um" ColumnName="Um" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Subgrupo" ColumnName="Subgrupo" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicadoresCierre_Migue_">
+      <EntityTypeMapping TypeName="SisProdModel.IndicadoresCierre_Migue_">
+        <MappingFragment StoreEntitySet="IndicadoresCierre(Migue)">
+          <ScalarProperty Name="PorcAcum" ColumnName="PorcAcum" />
+          <ScalarProperty Name="RealAcum" ColumnName="RealAcum" />
+          <ScalarProperty Name="PlanAcum" ColumnName="PlanAcum" />
+          <ScalarProperty Name="PorcMes" ColumnName="PorcMes" />
+          <ScalarProperty Name="RealMes" ColumnName="RealMes" />
+          <ScalarProperty Name="PlanMes" ColumnName="PlanMes" />
+          <ScalarProperty Name="Um" ColumnName="Um" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Subgrupo" ColumnName="Subgrupo" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicCalculo">
+      <EntityTypeMapping TypeName="SisProdModel.IndicCalculo">
+        <MappingFragment StoreEntitySet="IndicCalculo">
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+          <ScalarProperty Name="InfOper" ColumnName="InfOper" />
+          <ScalarProperty Name="InfMensual" ColumnName="InfMensual" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndicCalculoCierre">
+      <EntityTypeMapping TypeName="SisProdModel.IndicCalculoCierre">
+        <MappingFragment StoreEntitySet="IndicCalculoCierre">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="indicmtto">
+      <EntityTypeMapping TypeName="SisProdModel.indicmtto">
+        <MappingFragment StoreEntitySet="indicmtto">
+          <ScalarProperty Name="gastosmtto" ColumnName="gastosmtto" />
+          <ScalarProperty Name="costounit" ColumnName="costounit" />
+          <ScalarProperty Name="tiempomtto" ColumnName="tiempomtto" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsumosRecol">
+      <EntityTypeMapping TypeName="SisProdModel.InsumosRecol">
+        <MappingFragment StoreEntitySet="InsumosRecol">
+          <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+          <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvBsw">
+      <EntityTypeMapping TypeName="SisProdModel.InvBsw">
+        <MappingFragment StoreEntitySet="InvBsw">
+          <ScalarProperty Name="Excluir" ColumnName="Excluir" />
+          <ScalarProperty Name="Tecleado" ColumnName="Tecleado" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invptc">
+      <EntityTypeMapping TypeName="SisProdModel.invptc">
+        <MappingFragment StoreEntitySet="invptc">
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="pt" ColumnName="pt" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParamInfMensual">
+      <EntityTypeMapping TypeName="SisProdModel.ParamInfMensual">
+        <MappingFragment StoreEntitySet="ParamInfMensual">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Parametro" ColumnName="Parametro" />
+          <ScalarProperty Name="FechaInforme" ColumnName="FechaInforme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParteDiarioCMed">
+      <EntityTypeMapping TypeName="SisProdModel.ParteDiarioCMed">
+        <MappingFragment StoreEntitySet="ParteDiarioCMed">
+          <ScalarProperty Name="Afect" ColumnName="Afect" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdCentro" ColumnName="IdCentro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParticipContratos">
+      <EntityTypeMapping TypeName="SisProdModel.ParticipContratos">
+        <MappingFragment StoreEntitySet="ParticipContratos">
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaIni" ColumnName="FechaIni" />
+          <ScalarProperty Name="GananciaCia" ColumnName="GananciaCia" />
+          <ScalarProperty Name="GananciaCupet" ColumnName="GananciaCupet" />
+          <ScalarProperty Name="RecupGastos" ColumnName="RecupGastos" />
+          <ScalarProperty Name="IdContrato" ColumnName="IdContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pdatospozos">
+      <EntityTypeMapping TypeName="SisProdModel.pdatospozos">
+        <MappingFragment StoreEntitySet="pdatospozos">
+          <ScalarProperty Name="ciclo" ColumnName="ciclo" />
+          <ScalarProperty Name="hplan" ColumnName="hplan" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="pozo" ColumnName="pozo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanEntGas">
+      <EntityTypeMapping TypeName="SisProdModel.PlanEntGas">
+        <MappingFragment StoreEntitySet="PlanEntGas">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Indic" ColumnName="Indic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanIncrementos">
+      <EntityTypeMapping TypeName="SisProdModel.PlanIncrementos">
+        <MappingFragment StoreEntitySet="PlanIncrementos">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="IdObjetivo" ColumnName="IdObjetivo" />
+          <ScalarProperty Name="IdOperador" ColumnName="IdOperador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanProdCC">
+      <EntityTypeMapping TypeName="SisProdModel.PlanProdCC">
+        <MappingFragment StoreEntitySet="PlanProdCC">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanSolvMezcla">
+      <EntityTypeMapping TypeName="SisProdModel.PlanSolvMezcla">
+        <MappingFragment StoreEntitySet="PlanSolvMezcla">
+          <ScalarProperty Name="Anno" ColumnName="Anno" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Dic" ColumnName="Dic" />
+          <ScalarProperty Name="Nov" ColumnName="Nov" />
+          <ScalarProperty Name="Oct" ColumnName="Oct" />
+          <ScalarProperty Name="Sep" ColumnName="Sep" />
+          <ScalarProperty Name="Ago" ColumnName="Ago" />
+          <ScalarProperty Name="Jul" ColumnName="Jul" />
+          <ScalarProperty Name="Jun" ColumnName="Jun" />
+          <ScalarProperty Name="May" ColumnName="May" />
+          <ScalarProperty Name="Abr" ColumnName="Abr" />
+          <ScalarProperty Name="Mar" ColumnName="Mar" />
+          <ScalarProperty Name="Feb" ColumnName="Feb" />
+          <ScalarProperty Name="Ene" ColumnName="Ene" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozosA">
+      <EntityTypeMapping TypeName="SisProdModel.PozosA">
+        <MappingFragment StoreEntitySet="PozosA">
+          <ScalarProperty Name="HPlan" ColumnName="HPlan" />
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="DiasIna" ColumnName="DiasIna" />
+          <ScalarProperty Name="DiasAct" ColumnName="DiasAct" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdDia">
+      <EntityTypeMapping TypeName="SisProdModel.ProdDia">
+        <MappingFragment StoreEntitySet="ProdDia">
+          <ScalarProperty Name="DifTaller" ColumnName="DifTaller" />
+          <ScalarProperty Name="ProdRecup" ColumnName="ProdRecup" />
+          <ScalarProperty Name="ProdNegIni" ColumnName="ProdNegIni" />
+          <ScalarProperty Name="ProdNeg" ColumnName="ProdNeg" />
+          <ScalarProperty Name="Pronostico" ColumnName="Pronostico" />
+          <ScalarProperty Name="KaA" ColumnName="KaA" />
+          <ScalarProperty Name="KaM" ColumnName="KaM" />
+          <ScalarProperty Name="KaD" ColumnName="KaD" />
+          <ScalarProperty Name="KuA" ColumnName="KuA" />
+          <ScalarProperty Name="KuM" ColumnName="KuM" />
+          <ScalarProperty Name="KuD" ColumnName="KuD" />
+          <ScalarProperty Name="KeA" ColumnName="KeA" />
+          <ScalarProperty Name="KeM" ColumnName="KeM" />
+          <ScalarProperty Name="KeD" ColumnName="KeD" />
+          <ScalarProperty Name="HorasAfecA" ColumnName="HorasAfecA" />
+          <ScalarProperty Name="HorasAfecM" ColumnName="HorasAfecM" />
+          <ScalarProperty Name="HorasAfecD" ColumnName="HorasAfecD" />
+          <ScalarProperty Name="HorasTrabA" ColumnName="HorasTrabA" />
+          <ScalarProperty Name="HorasTrabM" ColumnName="HorasTrabM" />
+          <ScalarProperty Name="HorasTrabD" ColumnName="HorasTrabD" />
+          <ScalarProperty Name="PozInaA" ColumnName="PozInaA" />
+          <ScalarProperty Name="PozInaM" ColumnName="PozInaM" />
+          <ScalarProperty Name="PozInaD" ColumnName="PozInaD" />
+          <ScalarProperty Name="PozActA" ColumnName="PozActA" />
+          <ScalarProperty Name="PozActM" ColumnName="PozActM" />
+          <ScalarProperty Name="PozActD" ColumnName="PozActD" />
+          <ScalarProperty Name="TrasCampoSinDiluente" ColumnName="TrasCampoSinDiluente" />
+          <ScalarProperty Name="TrasCampoConDiluente" ColumnName="TrasCampoConDiluente" />
+          <ScalarProperty Name="FluidoCampo" ColumnName="FluidoCampo" />
+          <ScalarProperty Name="ProdCampoA" ColumnName="ProdCampoA" />
+          <ScalarProperty Name="ProdCampoM" ColumnName="ProdCampoM" />
+          <ScalarProperty Name="ProdCampoD" ColumnName="ProdCampoD" />
+          <ScalarProperty Name="EntGasA" ColumnName="EntGasA" />
+          <ScalarProperty Name="EntGasM" ColumnName="EntGasM" />
+          <ScalarProperty Name="EntGasD" ColumnName="EntGasD" />
+          <ScalarProperty Name="VCampoA" ColumnName="VCampoA" />
+          <ScalarProperty Name="VCampoM" ColumnName="VCampoM" />
+          <ScalarProperty Name="VCampoD" ColumnName="VCampoD" />
+          <ScalarProperty Name="ProdBatA" ColumnName="ProdBatA" />
+          <ScalarProperty Name="ProdBatM" ColumnName="ProdBatM" />
+          <ScalarProperty Name="ProdBatD" ColumnName="ProdBatD" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prodmens">
+      <EntityTypeMapping TypeName="SisProdModel.prodmens">
+        <MappingFragment StoreEntitySet="prodmens">
+          <ScalarProperty Name="btranmact" ColumnName="btranmact" />
+          <ScalarProperty Name="codmant" ColumnName="codmant" />
+          <ScalarProperty Name="btranmant" ColumnName="btranmant" />
+          <ScalarProperty Name="varacal" ColumnName="varacal" />
+          <ScalarProperty Name="lastre" ColumnName="lastre" />
+          <ScalarProperty Name="inyecpoz" ColumnName="inyecpoz" />
+          <ScalarProperty Name="indcvapor" ColumnName="indcvapor" />
+          <ScalarProperty Name="indcfor" ColumnName="indcfor" />
+          <ScalarProperty Name="indcsal" ColumnName="indcsal" />
+          <ScalarProperty Name="indcele" ColumnName="indcele" />
+          <ScalarProperty Name="aguat" ColumnName="aguat" />
+          <ScalarProperty Name="aguac" ColumnName="aguac" />
+          <ScalarProperty Name="convapor" ColumnName="convapor" />
+          <ScalarProperty Name="congasoil" ColumnName="congasoil" />
+          <ScalarProperty Name="conelect" ColumnName="conelect" />
+          <ScalarProperty Name="petcald" ColumnName="petcald" />
+          <ScalarProperty Name="cform680" ColumnName="cform680" />
+          <ScalarProperty Name="cformula" ColumnName="cformula" />
+          <ScalarProperty Name="csal" ColumnName="csal" />
+          <ScalarProperty Name="pbcebca" ColumnName="pbcebca" />
+          <ScalarProperty Name="bomc4" ColumnName="bomc4" />
+          <ScalarProperty Name="bomc3" ColumnName="bomc3" />
+          <ScalarProperty Name="entoleo" ColumnName="entoleo" />
+          <ScalarProperty Name="ventam2" ColumnName="ventam2" />
+          <ScalarProperty Name="bswp" ColumnName="bswp" />
+          <ScalarProperty Name="venta" ColumnName="venta" />
+          <ScalarProperty Name="entbcasc" ColumnName="entbcasc" />
+          <ScalarProperty Name="entbcacc" ColumnName="entbcacc" />
+          <ScalarProperty Name="prodpet" ColumnName="prodpet" />
+          <ScalarProperty Name="aguad" ColumnName="aguad" />
+          <ScalarProperty Name="bswent" ColumnName="bswent" />
+          <ScalarProperty Name="existfin" ColumnName="existfin" />
+          <ScalarProperty Name="petrecup" ColumnName="petrecup" />
+          <ScalarProperty Name="aguavpi" ColumnName="aguavpi" />
+          <ScalarProperty Name="bombpi" ColumnName="bombpi" />
+          <ScalarProperty Name="petscal" ColumnName="petscal" />
+          <ScalarProperty Name="petcal" ColumnName="petcal" />
+          <ScalarProperty Name="pettratce" ColumnName="pettratce" />
+          <ScalarProperty Name="petrecp" ColumnName="petrecp" />
+          <ScalarProperty Name="pettrat" ColumnName="pettrat" />
+          <ScalarProperty Name="liqrec" ColumnName="liqrec" />
+          <ScalarProperty Name="existin" ColumnName="existin" />
+          <ScalarProperty Name="instalac" ColumnName="instalac" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="año" ColumnName="año" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPozosCierre">
+      <EntityTypeMapping TypeName="SisProdModel.ProdPozosCierre">
+        <MappingFragment StoreEntitySet="ProdPozosCierre">
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="HorasPlan" ColumnName="HorasPlan" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="API" ColumnName="API" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Qpm3" ColumnName="Qpm3" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="Conectado" ColumnName="Conectado" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPozosMes">
+      <EntityTypeMapping TypeName="SisProdModel.ProdPozosMes">
+        <MappingFragment StoreEntitySet="ProdPozosMes">
+          <ScalarProperty Name="KEnergas" ColumnName="KEnergas" />
+          <ScalarProperty Name="KProdEmp" ColumnName="KProdEmp" />
+          <ScalarProperty Name="KGas" ColumnName="KGas" />
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="Incr" ColumnName="Incr" />
+          <ScalarProperty Name="PBase" ColumnName="PBase" />
+          <ScalarProperty Name="HorasPlan" ColumnName="HorasPlan" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Rgp" ColumnName="Rgp" />
+          <ScalarProperty Name="Agua" ColumnName="Agua" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Qpton" ColumnName="Qpton" />
+          <ScalarProperty Name="Qp" ColumnName="Qp" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="Conectado" ColumnName="Conectado" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPozosYacim">
+      <EntityTypeMapping TypeName="SisProdModel.ProdPozosYacim">
+        <MappingFragment StoreEntitySet="ProdPozosYacim">
+          <ScalarProperty Name="KProdEmp" ColumnName="KProdEmp" />
+          <ScalarProperty Name="KGas" ColumnName="KGas" />
+          <ScalarProperty Name="KFluido" ColumnName="KFluido" />
+          <ScalarProperty Name="Incr" ColumnName="Incr" />
+          <ScalarProperty Name="PBase" ColumnName="PBase" />
+          <ScalarProperty Name="HorasPlan" ColumnName="HorasPlan" />
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Rgp" ColumnName="Rgp" />
+          <ScalarProperty Name="Agua" ColumnName="Agua" />
+          <ScalarProperty Name="Qg" ColumnName="Qg" />
+          <ScalarProperty Name="Qpton" ColumnName="Qpton" />
+          <ScalarProperty Name="Qp" ColumnName="Qp" />
+          <ScalarProperty Name="Qf" ColumnName="Qf" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="ProdFund" ColumnName="ProdFund" />
+          <ScalarProperty Name="CColector" ColumnName="CColector" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegOperaciones">
+      <EntityTypeMapping TypeName="SisProdModel.RegOperaciones">
+        <MappingFragment StoreEntitySet="RegOperaciones">
+          <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resultados">
+      <EntityTypeMapping TypeName="SisProdModel.Resultados">
+        <MappingFragment StoreEntitySet="Resultados">
+          <ScalarProperty Name="PetRecupTon" ColumnName="PetRecupTon" />
+          <ScalarProperty Name="PetRecupM3" ColumnName="PetRecupM3" />
+          <ScalarProperty Name="FondoAgregTon" ColumnName="FondoAgregTon" />
+          <ScalarProperty Name="FondoAgregM3" ColumnName="FondoAgregM3" />
+          <ScalarProperty Name="FondoExtraTon" ColumnName="FondoExtraTon" />
+          <ScalarProperty Name="FondoExtraM3" ColumnName="FondoExtraM3" />
+          <ScalarProperty Name="ProdTeoricaTon" ColumnName="ProdTeoricaTon" />
+          <ScalarProperty Name="AguaDrenTon" ColumnName="AguaDrenTon" />
+          <ScalarProperty Name="AguaDrenM3" ColumnName="AguaDrenM3" />
+          <ScalarProperty Name="CapacOperacional" ColumnName="CapacOperacional" />
+          <ScalarProperty Name="PetCalidad" ColumnName="PetCalidad" />
+          <ScalarProperty Name="TonPailas" ColumnName="TonPailas" />
+          <ScalarProperty Name="ProdTon" ColumnName="ProdTon" />
+          <ScalarProperty Name="ProdM3" ColumnName="ProdM3" />
+          <ScalarProperty Name="FluidoEntradaTon" ColumnName="FluidoEntradaTon" />
+          <ScalarProperty Name="FluidoEntradaM3" ColumnName="FluidoEntradaM3" />
+          <ScalarProperty Name="TrasiegoOleoductoTon" ColumnName="TrasiegoOleoductoTon" />
+          <ScalarProperty Name="TrasiegoOleoductoM3" ColumnName="TrasiegoOleoductoM3" />
+          <ScalarProperty Name="TrasiegoPailaTon" ColumnName="TrasiegoPailaTon" />
+          <ScalarProperty Name="TrasiegoPailaM3" ColumnName="TrasiegoPailaM3" />
+          <ScalarProperty Name="ExistTon" ColumnName="ExistTon" />
+          <ScalarProperty Name="ExistM3" ColumnName="ExistM3" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIU">
+      <EntityTypeMapping TypeName="SisProdModel.SIU">
+        <MappingFragment StoreEntitySet="SIU">
+          <ScalarProperty Name="UM_Nombre" ColumnName="UM_Nombre" />
+          <ScalarProperty Name="UM_Simbolo" ColumnName="UM_Simbolo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="submayorcald">
+      <EntityTypeMapping TypeName="SisProdModel.submayorcald">
+        <MappingFragment StoreEntitySet="submayorcald">
+          <ScalarProperty Name="horafmant" ColumnName="horafmant" />
+          <ScalarProperty Name="hormant" ColumnName="hormant" />
+          <ScalarProperty Name="acumhorta" ColumnName="acumhorta" />
+          <ScalarProperty Name="acumhort" ColumnName="acumhort" />
+          <ScalarProperty Name="caldera" ColumnName="caldera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TabApiDensidad">
+      <EntityTypeMapping TypeName="SisProdModel.TabApiDensidad">
+        <MappingFragment StoreEntitySet="TabApiDensidad">
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Api" ColumnName="Api" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla1">
+      <EntityTypeMapping TypeName="SisProdModel.Tabla1">
+        <MappingFragment StoreEntitySet="Tabla1">
+          <ScalarProperty Name="Campo" ColumnName="Campo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla2">
+      <EntityTypeMapping TypeName="SisProdModel.Tabla2">
+        <MappingFragment StoreEntitySet="Tabla2">
+          <ScalarProperty Name="Campo" ColumnName="Campo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TanquesSolvente">
+      <EntityTypeMapping TypeName="SisProdModel.TanquesSolvente">
+        <MappingFragment StoreEntitySet="TanquesSolvente">
+          <ScalarProperty Name="Temperatura" ColumnName="Temperatura" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="IdSrv" ColumnName="IdSrv" />
+          <ScalarProperty Name="IdTanque" ColumnName="IdTanque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TareasPriorizadas">
+      <EntityTypeMapping TypeName="SisProdModel.TareasPriorizadas">
+        <MappingFragment StoreEntitySet="TareasPriorizadas">
+          <ScalarProperty Name="Tareas" ColumnName="Tareas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrasiegoPozos">
+      <EntityTypeMapping TypeName="SisProdModel.TrasiegoPozos">
+        <MappingFragment StoreEntitySet="TrasiegoPozos">
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="API" ColumnName="API" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Trasiegoton" ColumnName="Trasiegoton" />
+          <ScalarProperty Name="Trasiegom3" ColumnName="Trasiegom3" />
+          <ScalarProperty Name="Conduce" ColumnName="Conduce" />
+          <ScalarProperty Name="IdPaila" ColumnName="IdPaila" />
+          <ScalarProperty Name="IdDestino" ColumnName="IdDestino" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtCalderas">
+      <EntityTypeMapping TypeName="SisProdModel.TtCalderas">
+        <MappingFragment StoreEntitySet="TtCalderas">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtCalderasMes">
+      <EntityTypeMapping TypeName="SisProdModel.TtCalderasMes">
+        <MappingFragment StoreEntitySet="TtCalderasMes">
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="IdCaldera" ColumnName="IdCaldera" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtEquipos">
+      <EntityTypeMapping TypeName="SisProdModel.TtEquipos">
+        <MappingFragment StoreEntitySet="TtEquipos">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtEquiposMes">
+      <EntityTypeMapping TypeName="SisProdModel.TtEquiposMes">
+        <MappingFragment StoreEntitySet="TtEquiposMes">
+          <ScalarProperty Name="HorasTrab" ColumnName="HorasTrab" />
+          <ScalarProperty Name="IdEquipo" ColumnName="IdEquipo" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtGasometros">
+      <EntityTypeMapping TypeName="SisProdModel.TtGasometros">
+        <MappingFragment StoreEntitySet="TtGasometros">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TtGasomMes">
+      <EntityTypeMapping TypeName="SisProdModel.TtGasomMes">
+        <MappingFragment StoreEntitySet="TtGasomMes">
+          <ScalarProperty Name="Tt" ColumnName="Tt" />
+          <ScalarProperty Name="IdGasom" ColumnName="IdGasom" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VGasMes">
+      <EntityTypeMapping TypeName="SisProdModel.VGasMes">
+        <MappingFragment StoreEntitySet="VGasMes">
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPetBuques">
+      <EntityTypeMapping TypeName="SisProdModel.VPetBuques">
+        <MappingFragment StoreEntitySet="VPetBuques">
+          <ScalarProperty Name="FechaTerm" ColumnName="FechaTerm" />
+          <ScalarProperty Name="BswVenta" ColumnName="BswVenta" />
+          <ScalarProperty Name="Ventaton" ColumnName="Ventaton" />
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="IdBuque" ColumnName="IdBuque" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPetInstalac">
+      <EntityTypeMapping TypeName="SisProdModel.VPetInstalac">
+        <MappingFragment StoreEntitySet="VPetInstalac">
+          <ScalarProperty Name="Sales" ColumnName="Sales" />
+          <ScalarProperty Name="Viscosidad" ColumnName="Viscosidad" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="PorcAzufre" ColumnName="PorcAzufre" />
+          <ScalarProperty Name="API" ColumnName="API" />
+          <ScalarProperty Name="Temperatura" ColumnName="Temperatura" />
+          <ScalarProperty Name="BswDest" ColumnName="BswDest" />
+          <ScalarProperty Name="BswCent" ColumnName="BswCent" />
+          <ScalarProperty Name="Ventaton" ColumnName="Ventaton" />
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPetMes">
+      <EntityTypeMapping TypeName="SisProdModel.VPetMes">
+        <MappingFragment StoreEntitySet="VPetMes">
+          <ScalarProperty Name="VentaExt" ColumnName="VentaExt" />
+          <ScalarProperty Name="VentaBat" ColumnName="VentaBat" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPetPailas">
+      <EntityTypeMapping TypeName="SisProdModel.VPetPailas">
+        <MappingFragment StoreEntitySet="VPetPailas">
+          <ScalarProperty Name="Densidad" ColumnName="Densidad" />
+          <ScalarProperty Name="Api" ColumnName="Api" />
+          <ScalarProperty Name="Bsw" ColumnName="Bsw" />
+          <ScalarProperty Name="Ventaton" ColumnName="Ventaton" />
+          <ScalarProperty Name="Ventam3" ColumnName="Ventam3" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Conduce" ColumnName="Conduce" />
+          <ScalarProperty Name="IdPaila" ColumnName="IdPaila" />
+          <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPetPozos">
+      <EntityTypeMapping TypeName="SisProdModel.VPetPozos">
+        <MappingFragment StoreEntitySet="VPetPozos">
+          <ScalarProperty Name="VentaTon" ColumnName="VentaTon" />
+          <ScalarProperty Name="CodDestino" ColumnName="CodDestino" />
+          <ScalarProperty Name="Pozo" ColumnName="Pozo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosInstalac" TypeName="SisProdModel.UsuariosInstalac" StoreEntitySet="UsuariosInstalac">
+      <EndProperty Name="UsuariosApp">
+        <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+      </EndProperty>
+      <EndProperty Name="CodInstalaciones">
+        <ScalarProperty Name="IdInstalacion" ColumnName="IdInstalacion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosRoles" TypeName="SisProdModel.UsuariosRoles" StoreEntitySet="UsuariosRoles">
+      <EndProperty Name="UsuariosApp">
+        <ScalarProperty Name="LoginUsuario" ColumnName="LoginUsuario" />
+      </EndProperty>
+      <EndProperty Name="RolesApp">
+        <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

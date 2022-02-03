@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="54662a5c8ad24afaaaecd9c0a4732ba0" Name="Diagram1" ZoomLevel="13">
+        <EntityTypeShape EntityType="SisProdModel.AfectTaller" Width="1.5" PointX="28" PointY="19.375" />
+        <EntityTypeShape EntityType="SisProdModel.AfectUnidadesGeneradoras" Width="1.5" PointX="8.25" PointY="21.375" />
+        <EntityTypeShape EntityType="SisProdModel.CentrosColectores" Width="1.5" PointX="18.75" PointY="30.25" />
+        <EntityTypeShape EntityType="SisProdModel.Choques" Width="1.5" PointX="7.75" PointY="10.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectAdmin" Width="1.5" PointX="7.75" PointY="1.125" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectCalderas" Width="1.5" PointX="34" PointY="25.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectCentrosMedicion" Width="1.5" PointX="13.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectEquipos" Width="1.5" PointX="26.75" PointY="30.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectGasometros" Width="1.5" PointX="15.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectGeneracion" Width="1.5" PointX="6" PointY="15.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectPozos" Width="1.5" PointX="10" PointY="4" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectPtoIny" Width="1.5" PointX="30.75" PointY="6.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectPtoInyPozos" Width="1.5" PointX="23.75" PointY="2.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodAfectTaller" Width="1.5" PointX="25.75" PointY="22.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodAreasPozos" Width="1.5" PointX="17.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodBloques" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="SisProdModel.CodBuques" Width="1.5" PointX="12" PointY="43.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodCalderas" Width="1.5" PointX="30.75" PointY="22.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodCategPozos" Width="1.5" PointX="13.75" PointY="4.875" />
+        <EntityTypeShape EntityType="SisProdModel.CodCausasLiq" Width="1.5" PointX="18.75" PointY="15.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodCentrosColectores" Width="1.5" PointX="13.75" PointY="21.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodCentrosMedicion" Width="1.5" PointX="25.75" PointY="6.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodCias" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodCiclosProd" Width="1.5" PointX="13.75" PointY="13.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodContratos" Width="1.5" PointX="16" PointY="14.125" />
+        <EntityTypeShape EntityType="SisProdModel.CodDestinos" Width="1.5" PointX="9" PointY="13.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodDinamografias" Width="1.5" PointX="15.75" PointY="21.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodEquipos" Width="1.5" PointX="28" PointY="2.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodEstRebomb" Width="1.5" PointX="0.75" PointY="29.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodFlareYacim" Width="1.5" PointX="5.75" PointY="33.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodGasometros" Width="1.5" PointX="30.75" PointY="19.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodGrupoAfect" Width="1.5" PointX="7.75" PointY="4.125" />
+        <EntityTypeShape EntityType="SisProdModel.CodGruposNoAsociados" Width="1.5" PointX="21" PointY="6.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodifMezclaSta" Width="1.5" PointX="5" PointY="11.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodifSrv" Width="1.5" PointX="2.75" PointY="29.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodifSta" Width="1.5" PointX="2.75" PointY="7.875" />
+        <EntityTypeShape EntityType="SisProdModel.CodInstalaciones" Width="1.5" PointX="3" PointY="20" />
+        <EntityTypeShape EntityType="SisProdModel.CodLugAfect" Width="1.5" PointX="25.75" PointY="19.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodMetodosProd" Width="1.5" PointX="27.75" PointY="23.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodObservaciones" Width="1.5" PointX="20.75" PointY="33.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodOperadores" Width="1.5" PointX="13.75" PointY="7.875" />
+        <EntityTypeShape EntityType="SisProdModel.CodPailas" Width="1.5" PointX="9" PointY="30.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodPozosIny" Width="1.5" PointX="20.75" PointY="9.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodProdPlantasGas" Width="1.5" PointX="5.25" PointY="26.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodProductos" Width="1.5" PointX="3" PointY="16.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodProductosGas" Width="1.5" PointX="3" PointY="26.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodProvincias" Width="1.5" PointX="31.75" PointY="28.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodPtoMedGas" Width="1.5" PointX="0.75" PointY="14.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodPtoSumSrv" Width="1.5" PointX="31.75" PointY="31.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodPtoSumSta" Width="1.5" PointX="2.75" PointY="11.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodSrv" Width="1.5" PointX="13.75" PointY="26.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodSta" Width="1.5" PointX="28.75" PointY="9.375" />
+        <EntityTypeShape EntityType="SisProdModel.CodTanques" Width="1.5" PointX="21.75" PointY="28.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodTanquesDiluente" Width="1.5" PointX="16.75" PointY="27.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoAfectCald" Width="1.5" PointX="31.75" PointY="25.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoDestinos" Width="1.5" PointX="31.75" PointY="33.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoEquipos" Width="1.5" PointX="25.75" PointY="2.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoInstalacion" Width="1.5" PointX="0.75" PointY="21.5" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoPozos" Width="1.5" PointX="13.75" PointY="11.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoProductos" Width="1.5" PointX="0.75" PointY="16.625" />
+        <EntityTypeShape EntityType="SisProdModel.CodTiposContrato" Width="1.5" PointX="0.75" PointY="6.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodTipoTanques" Width="1.5" PointX="32.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodUnidades" Width="1.5" PointX="32.75" PointY="13.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodValvulasCorte" Width="1.5" PointX="32.75" PointY="16.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodYacimGas" Width="1.5" PointX="18.75" PointY="5" />
+        <EntityTypeShape EntityType="SisProdModel.CodYacimientos" Width="1.5" PointX="26.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.ConfigTrasiegoGas" Width="1.5" PointX="5.25" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.ConfigTrasiegosAguaI" Width="1.5" PointX="23" PointY="15.75" />
+        <EntityTypeShape EntityType="SisProdModel.ConfigTrasiegosInstalac" Width="1.5" PointX="5.25" PointY="48.125" />
+        <EntityTypeShape EntityType="SisProdModel.ConfigTrasiegosPozos" Width="1.5" PointX="26.75" PointY="26.125" />
+        <EntityTypeShape EntityType="SisProdModel.ConfigYacimGas" Width="1.5" PointX="21" PointY="2.625" />
+        <EntityTypeShape EntityType="SisProdModel.ContratosCias" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="SisProdModel.DatosEmpresa" Width="1.5" PointX="28.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosFlareYacim" Width="1.5" PointX="8" PointY="33.375" />
+        <EntityTypeShape EntityType="SisProdModel.DatosGasNoAsociado" Width="1.5" PointX="23.25" PointY="5.125" />
+        <EntityTypeShape EntityType="SisProdModel.DatosLaboratorio" Width="1.5" PointX="33.75" PointY="9.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosPlantasGas" Width="1.5" PointX="33.75" PointY="28.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosRegimen" Width="1.5" PointX="33.75" PointY="31.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosUEB" Width="1.5" PointX="33.75" PointY="35.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosUnidadesGeneradoras" Width="1.5" PointX="5.25" PointY="45.625" />
+        <EntityTypeShape EntityType="SisProdModel.DiarioSTA" Width="1.5" PointX="5" PointY="7.875" />
+        <EntityTypeShape EntityType="SisProdModel.Energas" Width="1.5" PointX="34.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.EstRebomb" Width="1.5" PointX="0.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.FluidosIny" Width="1.5" PointX="21" PointY="21.875" />
+        <EntityTypeShape EntityType="SisProdModel.Gas_Afect" Width="1.5" PointX="3" PointY="33.375" />
+        <EntityTypeShape EntityType="SisProdModel.Gas_CodAfect" Width="1.5" PointX="0.75" PointY="33.5" />
+        <EntityTypeShape EntityType="SisProdModel.Gas_DatosProd" Width="1.5" PointX="2.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicCalidad" Width="1.5" PointX="4.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicCalidad_Contrato" Width="1.5" PointX="6.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicCalidad_Usuarios" Width="1.5" PointX="34.75" PointY="12.25" />
+        <EntityTypeShape EntityType="SisProdModel.Inventarios" Width="1.5" PointX="34.75" PointY="15.25" />
+        <EntityTypeShape EntityType="SisProdModel.InvQf" Width="1.5" PointX="13.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.InvQg" Width="1.5" PointX="15.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.InyeccFluidos" Width="1.5" PointX="23.25" PointY="21.375" />
+        <EntityTypeShape EntityType="SisProdModel.Inyectores" Width="1.5" PointX="21" PointY="19.125" />
+        <EntityTypeShape EntityType="SisProdModel.Niveles" Width="1.5" PointX="30" PointY="16.375" />
+        <EntityTypeShape EntityType="SisProdModel.OperActuales" Width="1.5" PointX="5.25" PointY="50.875" />
+        <EntityTypeShape EntityType="SisProdModel.ParamSES" Width="1.5" PointX="17.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.ParamTHD" Width="1.5" PointX="5.25" PointY="21.875" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiario_Majagua" Width="1.5" PointX="19.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiarioCalderas" Width="1.5" PointX="33" PointY="22.375" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiarioEquipos" Width="1.5" PointX="30.25" PointY="2.5" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiarioGasom" Width="1.5" PointX="33" PointY="19.375" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiarioPozos" Width="1.5" PointX="21.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanAfectAdmin" Width="1.5" PointX="10" PointY="49.75" />
+        <EntityTypeShape EntityType="SisProdModel.PlanAfectPozos" Width="1.5" PointX="10" PointY="7.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanDosificacion" Width="1.5" PointX="23.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanIncPozos" Width="1.5" PointX="30.75" PointY="36.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanProd" Width="1.5" PointX="35.75" PointY="6.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanProd_Majagua" Width="1.5" PointX="35.75" PointY="19.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanProdPozos" Width="1.5" PointX="25.75" PointY="37.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanSolventes" Width="1.5" PointX="16" PointY="30.75" />
+        <EntityTypeShape EntityType="SisProdModel.PlanVGas" Width="1.5" PointX="11.25" PointY="28.625" />
+        <EntityTypeShape EntityType="SisProdModel.PlanVPet" Width="1.5" PointX="11.25" PointY="38.5" />
+        <EntityTypeShape EntityType="SisProdModel.PozosContratos" Width="1.5" PointX="35.75" PointY="28.25" />
+        <EntityTypeShape EntityType="SisProdModel.PozosCupetCias" Width="1.5" PointX="18.25" PointY="10.625" />
+        <EntityTypeShape EntityType="SisProdModel.Presiones" Width="1.5" PointX="30" PointY="13.375" />
+        <EntityTypeShape EntityType="SisProdModel.ProdBase" Width="1.5" PointX="27.75" PointY="37.25" />
+        <EntityTypeShape EntityType="SisProdModel.ProdPlantasGas" Width="1.5" PointX="7.5" PointY="27.375" />
+        <EntityTypeShape EntityType="SisProdModel.ProdPozos" Width="1.5" PointX="35.75" PointY="31.25" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyAfect" Width="1.5" PointX="33" PointY="6.375" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyAfectEquipos" Width="1.5" PointX="29" PointY="30.375" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyAfectPozos" Width="1.5" PointX="26" PointY="9.25" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyParam" Width="1.5" PointX="36.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyPozos" Width="1.5" PointX="23" PointY="12" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyTanques" Width="1.5" PointX="36.75" PointY="11.25" />
+        <EntityTypeShape EntityType="SisProdModel.PtoInyTtEquipos" Width="1.5" PointX="36.75" PointY="14.25" />
+        <EntityTypeShape EntityType="SisProdModel.RecupGanancias" Width="1.5" PointX="18.25" PointY="17.75" />
+        <EntityTypeShape EntityType="SisProdModel.RolesApp" Width="1.5" PointX="6" PointY="30.625" />
+        <EntityTypeShape EntityType="SisProdModel.Srv" Width="1.5" PointX="16" PointY="23.625" />
+        <EntityTypeShape EntityType="SisProdModel.Srv_Diario" Width="1.5" PointX="36.75" PointY="24.25" />
+        <EntityTypeShape EntityType="SisProdModel.Sta" Width="1.5" PointX="31" PointY="9.5" />
+        <EntityTypeShape EntityType="SisProdModel.sysdiagrams" Width="1.5" PointX="32.75" PointY="38.25" />
+        <EntityTypeShape EntityType="SisProdModel.Tanques" Width="1.5" PointX="24" PointY="25.75" />
+        <EntityTypeShape EntityType="SisProdModel.TanquesDinam" Width="1.5" PointX="24" PointY="31.125" />
+        <EntityTypeShape EntityType="SisProdModel.TipoFluidosIny" Width="1.5" PointX="18.75" PointY="22.125" />
+        <EntityTypeShape EntityType="SisProdModel.TipoNiveles" Width="1.5" PointX="27.75" PointY="16.5" />
+        <EntityTypeShape EntityType="SisProdModel.TipoPresiones" Width="1.5" PointX="27.75" PointY="13.5" />
+        <EntityTypeShape EntityType="SisProdModel.TiposTrasiego" Width="1.5" PointX="20.75" PointY="12.5" />
+        <EntityTypeShape EntityType="SisProdModel.TrasiegoOleoducto" Width="1.5" PointX="34.75" PointY="38.25" />
+        <EntityTypeShape EntityType="SisProdModel.TrasiegoPailas" Width="1.5" PointX="36.75" PointY="38.25" />
+        <EntityTypeShape EntityType="SisProdModel.TrasiegosAguaI" Width="1.5" PointX="25.25" PointY="16" />
+        <EntityTypeShape EntityType="SisProdModel.TtCentrosMedicion" Width="1.5" PointX="0.75" PointY="39.25" />
+        <EntityTypeShape EntityType="SisProdModel.Usuarios" Width="1.5" PointX="17.75" PointY="39.25" />
+        <EntityTypeShape EntityType="SisProdModel.UsuariosApp" Width="1.5" PointX="8.25" PointY="24.5" />
+        <EntityTypeShape EntityType="SisProdModel.VGasDulce" Width="1.5" PointX="8.25" PointY="18.375" />
+        <EntityTypeShape EntityType="SisProdModel.VGasGasod" Width="1.5" PointX="11.25" PointY="10.5" />
+        <EntityTypeShape EntityType="SisProdModel.VGasPozos" Width="1.5" PointX="11.25" PointY="0.75" />
+        <EntityTypeShape EntityType="SisProdModel.AfectAdmin" Width="1.5" PointX="10" PointY="46.5" />
+        <EntityTypeShape EntityType="SisProdModel.AfectAdminMes" Width="1.5" PointX="2.75" PointY="39.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectCalderas" Width="1.5" PointX="37.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectCalderasMes" Width="1.5" PointX="4.75" PointY="39.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectCentrosMedicion" Width="1.5" PointX="37.75" PointY="8.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectEquipos" Width="1.5" PointX="6.75" PointY="39.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectEquiposMes" Width="1.5" PointX="37.75" PointY="17.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectGasometros" Width="1.5" PointX="37.75" PointY="20.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectGasomMes" Width="1.5" PointX="37.75" PointY="27.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectPozos" Width="1.5" PointX="37.75" PointY="30.25" />
+        <EntityTypeShape EntityType="SisProdModel.AfectPozosMes" Width="1.5" PointX="37.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.App_Roles" Width="1.5" PointX="38.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.App_Usuarios" Width="1.5" PointX="38.75" PointY="11.25" />
+        <EntityTypeShape EntityType="SisProdModel.App_UsuariosRoles" Width="1.5" PointX="38.75" PointY="14.25" />
+        <EntityTypeShape EntityType="SisProdModel.BuquesTransito" Width="1.5" PointX="14.25" PointY="17" />
+        <EntityTypeShape EntityType="SisProdModel.CentrosColectoresMes" Width="1.5" PointX="14.75" PointY="40.25" />
+        <EntityTypeShape EntityType="SisProdModel.CentrosColectoresYacim" Width="1.5" PointX="38.75" PointY="38.25" />
+        <EntityTypeShape EntityType="SisProdModel.cierremensualrecol" Width="1.5" PointX="39.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.cierresemanal" Width="1.5" PointX="38.75" PointY="23.25" />
+        <EntityTypeShape EntityType="SisProdModel.CodPozosNoAsociados" Width="1.5" PointX="23.25" PointY="7.625" />
+        <EntityTypeShape EntityType="SisProdModel.ConsumoGasoil" Width="1.5" PointX="39.75" PointY="17.25" />
+        <EntityTypeShape EntityType="SisProdModel.datosbuqueterm" Width="1.5" PointX="19.75" PointY="41.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosInteres" Width="1.5" PointX="39.75" PointY="20.25" />
+        <EntityTypeShape EntityType="SisProdModel.DatosValvulasCorte" Width="1.5" PointX="21.75" PointY="41.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgafectadmin" Width="1.5" PointX="39.75" PointY="27.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgafectgasom" Width="1.5" PointX="39.75" PointY="31.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgafectpozos" Width="1.5" PointX="29.75" PointY="41.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgcentroscolectores" Width="1.5" PointX="31.75" PointY="41.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgdatospozos" Width="1.5" PointX="39.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgestrebomb" Width="1.5" PointX="40.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.DesgloseAfect" Width="1.5" PointX="7.75" PointY="42.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgprodpozos" Width="1.5" PointX="40.75" PointY="10.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgsrv" Width="1.5" PointX="40.75" PointY="22.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgsta" Width="1.5" PointX="40.75" PointY="14.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgttgasom" Width="1.5" PointX="33.75" PointY="42.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgvgas" Width="1.5" PointX="40.75" PointY="37.25" />
+        <EntityTypeShape EntityType="SisProdModel.desgvpet" Width="1.5" PointX="35.75" PointY="42.25" />
+        <EntityTypeShape EntityType="SisProdModel.existf" Width="1.5" PointX="40.75" PointY="40.25" />
+        <EntityTypeShape EntityType="SisProdModel.Fecha" Width="1.5" PointX="0.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.firmas" Width="1.5" PointX="41.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.FondoPozos" Width="1.5" PointX="16" PointY="6.25" />
+        <EntityTypeShape EntityType="SisProdModel.FondoPozosMes" Width="1.5" PointX="41.75" PointY="17.25" />
+        <EntityTypeShape EntityType="SisProdModel.FondoPozosYacim" Width="1.5" PointX="23.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histafectadmin" Width="1.5" PointX="41.75" PointY="26.25" />
+        <EntityTypeShape EntityType="SisProdModel.histafectgasom" Width="1.5" PointX="25.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histafectpozos" Width="1.5" PointX="41.75" PointY="30.25" />
+        <EntityTypeShape EntityType="SisProdModel.histbsw" Width="1.5" PointX="41.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.histcentroscolectores" Width="1.5" PointX="37.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histfondopozos" Width="1.5" PointX="39.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplanafec" Width="1.5" PointX="41.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplanafecadmin" Width="1.5" PointX="42.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplancc" Width="1.5" PointX="42.75" PointY="8.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplaninc" Width="1.5" PointX="42.75" PointY="37.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplanprod" Width="1.5" PointX="43.75" PointY="14.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplanvgas" Width="1.5" PointX="14.75" PointY="45.25" />
+        <EntityTypeShape EntityType="SisProdModel.histplanvpet" Width="1.5" PointX="43.75" PointY="20.25" />
+        <EntityTypeShape EntityType="SisProdModel.histproddia" Width="1.5" PointX="43.75" PointY="26.25" />
+        <EntityTypeShape EntityType="SisProdModel.histprodpozos" Width="1.5" PointX="27.75" PointY="45.25" />
+        <EntityTypeShape EntityType="SisProdModel.histptc" Width="1.5" PointX="43.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.histqf" Width="1.5" PointX="43.75" PointY="34.25" />
+        <EntityTypeShape EntityType="SisProdModel.histqg" Width="1.5" PointX="33.75" PointY="45.25" />
+        <EntityTypeShape EntityType="SisProdModel.histttgasom" Width="1.5" PointX="43.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.histvgas" Width="1.5" PointX="44.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.histvpet" Width="1.5" PointX="0.75" PointY="46.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicadoresCierre" Width="1.5" PointX="44.75" PointY="8.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicadoresCierre_Migue_" Width="1.5" PointX="29.75" PointY="46.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicCalculo" Width="1.5" PointX="44.75" PointY="37.25" />
+        <EntityTypeShape EntityType="SisProdModel.IndicCalculoCierre" Width="1.5" PointX="44.75" PointY="40.25" />
+        <EntityTypeShape EntityType="SisProdModel.indicmtto" Width="1.5" PointX="41.75" PointY="46.25" />
+        <EntityTypeShape EntityType="SisProdModel.InsumosRecol" Width="1.5" PointX="5.25" PointY="18.25" />
+        <EntityTypeShape EntityType="SisProdModel.InvBsw" Width="1.5" PointX="43.75" PointY="46.25" />
+        <EntityTypeShape EntityType="SisProdModel.invptc" Width="1.5" PointX="45.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.ParamInfMensual" Width="1.5" PointX="45.75" PointY="13.25" />
+        <EntityTypeShape EntityType="SisProdModel.ParteDiarioCMed" Width="1.5" PointX="28" PointY="6.375" />
+        <EntityTypeShape EntityType="SisProdModel.ParticipContratos" Width="1.5" PointX="5.25" PointY="2.75" />
+        <EntityTypeShape EntityType="SisProdModel.pdatospozos" Width="1.5" PointX="45.75" PointY="16.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanEntGas" Width="1.5" PointX="11.25" PointY="33.5" />
+        <EntityTypeShape EntityType="SisProdModel.PlanIncrementos" Width="1.5" PointX="45.75" PointY="19.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanProdCC" Width="1.5" PointX="19.75" PointY="47.25" />
+        <EntityTypeShape EntityType="SisProdModel.PlanSolvMezcla" Width="1.5" PointX="45.75" PointY="24.25" />
+        <EntityTypeShape EntityType="SisProdModel.PozosA" Width="1.5" PointX="45.75" PointY="29.25" />
+        <EntityTypeShape EntityType="SisProdModel.ProdDia" Width="1.5" PointX="45.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.prodmens" Width="1.5" PointX="46.75" PointY="32.25" />
+        <EntityTypeShape EntityType="SisProdModel.ProdPozosCierre" Width="1.5" PointX="46.75" PointY="8.25" />
+        <EntityTypeShape EntityType="SisProdModel.ProdPozosMes" Width="1.5" PointX="31.75" PointY="48.25" />
+        <EntityTypeShape EntityType="SisProdModel.ProdPozosYacim" Width="1.5" PointX="33.75" PointY="48.25" />
+        <EntityTypeShape EntityType="SisProdModel.RegOperaciones" Width="1.5" PointX="46.75" PointY="2.25" />
+        <EntityTypeShape EntityType="SisProdModel.Resultados" Width="1.5" PointX="35.75" PointY="48.25" />
+        <EntityTypeShape EntityType="SisProdModel.SIU" Width="1.5" PointX="37.75" PointY="48.25" />
+        <EntityTypeShape EntityType="SisProdModel.submayorcald" Width="1.5" PointX="0.75" PointY="49.25" />
+        <EntityTypeShape EntityType="SisProdModel.TabApiDensidad" Width="1.5" PointX="47.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SisProdModel.Tabla1" Width="1.5" PointX="47.75" PointY="13.25" />
+        <EntityTypeShape EntityType="SisProdModel.Tabla2" Width="1.5" PointX="47.75" PointY="15.25" />
+        <EntityTypeShape EntityType="SisProdModel.TanquesSolvente" Width="1.5" PointX="19" PointY="26.25" />
+        <EntityTypeShape EntityType="SisProdModel.TareasPriorizadas" Width="1.5" PointX="47.75" PointY="17.25" />
+        <EntityTypeShape EntityType="SisProdModel.TrasiegoPozos" Width="1.5" PointX="29" PointY="25.375" />
+        <EntityTypeShape EntityType="SisProdModel.TtCalderas" Width="1.5" PointX="47.75" PointY="19.25" />
+        <EntityTypeShape EntityType="SisProdModel.TtCalderasMes" Width="1.5" PointX="47.75" PointY="22.25" />
+        <EntityTypeShape EntityType="SisProdModel.TtEquipos" Width="1.5" PointX="21.75" PointY="49.25" />
+        <EntityTypeShape EntityType="SisProdModel.TtEquiposMes" Width="1.5" PointX="47.75" PointY="25.25" />
+        <EntityTypeShape EntityType="SisProdModel.TtGasometros" Width="1.5" PointX="23.75" PointY="49.25" />
+        <EntityTypeShape EntityType="SisProdModel.TtGasomMes" Width="1.5" PointX="47.75" PointY="28.25" />
+        <EntityTypeShape EntityType="SisProdModel.VGasMes" Width="1.5" PointX="39.75" PointY="49.25" />
+        <EntityTypeShape EntityType="SisProdModel.VPetBuques" Width="1.5" PointX="47.75" PointY="43.25" />
+        <EntityTypeShape EntityType="SisProdModel.VPetInstalac" Width="1.5" PointX="11.25" PointY="15.25" />
+        <EntityTypeShape EntityType="SisProdModel.VPetMes" Width="1.5" PointX="41.75" PointY="49.25" />
+        <EntityTypeShape EntityType="SisProdModel.VPetPailas" Width="1.5" PointX="11.25" PointY="20.625" />
+        <EntityTypeShape EntityType="SisProdModel.VPetPozos" Width="1.5" PointX="11.25" PointY="25.875" />
+        <AssociationConnector Association="SisProdModel.FK_AfectTaller_CodAfectTaller" />
+        <AssociationConnector Association="SisProdModel.FK_AfectTaller_CodLugAfect" />
+        <AssociationConnector Association="SisProdModel.FK_AfectUnidadesGeneradoras_CodAfectGeneracion" />
+        <AssociationConnector Association="SisProdModel.FK_AfectUnidadesGeneradoras_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_AfectAdmin_CodAfectAdmin" />
+        <AssociationConnector Association="SisProdModel.FK_CodAfectPozos_CodAfectAdmin" />
+        <AssociationConnector Association="SisProdModel.FK_PlanAfectAdmin_CodAfectAdmin" />
+        <AssociationConnector Association="SisProdModel.FK_CodAfectCalderas_CodTipoAfectCald" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyAfectEquipos_CodAfectEquipos" />
+        <AssociationConnector Association="SisProdModel.FK_CodAfectPozos_CodGrupoAfect" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyAfect_CodAfectPtoIny" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyAfectPozos_CodAfectPtoInyPozos" />
+        <AssociationConnector Association="SisProdModel.FK_CodContratosCias_CodBloques" />
+        <AssociationConnector Association="SisProdModel.FK_BuquesTransito_CodBuques" />
+        <AssociationConnector Association="SisProdModel.FK_ParteDiarioCalderas_CodCalderas" />
+        <AssociationConnector Association="SisProdModel.FK_FondoPozos_CodCategPozos" />
+        <AssociationConnector Association="SisProdModel.FK_ParteDiarioCMed_CodCentrosMedicion" />
+        <AssociationConnector Association="SisProdModel.FK_CodContratosCias_CodCias" />
+        <AssociationConnector Association="SisProdModel.FK_FondoPozos_CodCiclosProd" />
+        <AssociationConnector Association="SisProdModel.FK_CodContratos_CodOperadores" />
+        <AssociationConnector Association="SisProdModel.FK_PozosCupetCias_CodContratos" />
+        <AssociationConnector Association="SisProdModel.FK_RecupGanancias_CodContratos" />
+        <AssociationConnector Association="SisProdModel.FK_BuquesTransito_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_PlanEntGas_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_PlanVGas_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_PlanVPet_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VentasPetrECO_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VentasPetrPailas_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VentasPetrPozos_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VGasDulce_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VGasGasod_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_VGasPozos_CodDestinos" />
+        <AssociationConnector Association="SisProdModel.FK_CodEquipos_CodTipoEquipos" />
+        <AssociationConnector Association="SisProdModel.FK_ParteDiarioEquipos_CodEquipos" />
+        <AssociationConnector Association="SisProdModel.FK_DatosFlareYacim_CodFlareYacim" />
+        <AssociationConnector Association="SisProdModel.FK_ParteDiarioGasom_CodGasometros" />
+        <AssociationConnector Association="SisProdModel.FK_PlanAfectPozos_CodGrupoAfect" />
+        <AssociationConnector Association="SisProdModel.FK_PlanAfectPozos_CodGrupoAfect1" />
+        <AssociationConnector Association="SisProdModel.FK_CodGruposNoAsociados_CodYacimGas" />
+        <AssociationConnector Association="SisProdModel.FK_CodPozosNoAsociados_CodGruposNoAsociados" />
+        <AssociationConnector Association="SisProdModel.FK_DatosGasNoAsociado_CodGruposNoAsociados" />
+        <AssociationConnector Association="SisProdModel.FK_CodifMezclaSta_CodifSta" />
+        <AssociationConnector Association="SisProdModel.FK_CodifMezclaSta_CodifSta1" />
+        <AssociationConnector Association="SisProdModel.FK_DiarioSTA_CodifSta" />
+        <AssociationConnector Association="SisProdModel.FK_CodInstalaciones_CodTipoInstalacion" />
+        <AssociationConnector Association="SisProdModel.FK_CodProdPlantasGas_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_ConfigTrasiegoGas_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_ConfigTrasiegosInstalac_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_ConfigTrasiegosInstalac_CodInstalaciones1" />
+        <AssociationConnector Association="SisProdModel.FK_DatosUnidadesGeneradoras_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_InsumosRecol_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_OperActuales_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_ParamTHD_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_VentasPetrECO_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_VentasPetrPailas_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_VGasDulce_CodInstalaciones" />
+        <AssociationConnector Association="SisProdModel.FK_FondoPozos_CodOperadores" />
+        <AssociationConnector Association="SisProdModel.FK_PozosCupetCias_CodOperadores" />
+        <AssociationConnector Association="SisProdModel.FK_VPetPailas_CodPailas" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyAfectPozos_CodPozosIny" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyPozos_CodPozosIny" />
+        <AssociationConnector Association="SisProdModel.FK_CodProdPlantasGas_CodProductosGas" />
+        <AssociationConnector Association="SisProdModel.FK_ProdPlantasGas_CodProdPlantasGas" />
+        <AssociationConnector Association="SisProdModel.FK_CodProductos_CodTipoProductos" />
+        <AssociationConnector Association="SisProdModel.FK_InsumosRecol_CodProductos" />
+        <AssociationConnector Association="SisProdModel.FK_DiarioSTA_CodPtoSumSta" />
+        <AssociationConnector Association="SisProdModel.FK_PlanSolventes_CodSrv" />
+        <AssociationConnector Association="SisProdModel.FK_Srv_CodSrv" />
+        <AssociationConnector Association="SisProdModel.FK_TanquesSolvente_CodSrv" />
+        <AssociationConnector Association="SisProdModel.FK_Sta_CodSta" />
+        <AssociationConnector Association="SisProdModel.FK_Tanques_CodTanques" />
+        <AssociationConnector Association="SisProdModel.FK_TanquesDinam_CodTanques" />
+        <AssociationConnector Association="SisProdModel.FK_TanquesSolvente_CodTanquesDiluente" />
+        <AssociationConnector Association="SisProdModel.FK_FondoPozos_CodTipoPozos" />
+        <AssociationConnector Association="SisProdModel.FK_CodContratosCias_CodTiposContrato" />
+        <AssociationConnector Association="SisProdModel.FK_ConfigYacimGas_CodYacimGas" />
+        <AssociationConnector Association="SisProdModel.FK_ConfigTrasiegosAguaI_TiposTrasiego" />
+        <AssociationConnector Association="SisProdModel.FK_TrasiegosAguaI_ConfigTrasiegosAguaI" />
+        <AssociationConnector Association="SisProdModel.FK_TrasiegoPozos_ConfigTrasiegosPozos" />
+        <AssociationConnector Association="SisProdModel.FK_ParticipContratos_CodContratosCias" />
+        <AssociationConnector Association="SisProdModel.FK_FluidosIny_TipoFluidosIny" />
+        <AssociationConnector Association="SisProdModel.FK_InyeccFluidos_FluidosIny" />
+        <AssociationConnector Association="SisProdModel.FK_Gas_Afect_Gas_CodAfect" />
+        <AssociationConnector Association="SisProdModel.FK_InyeccFluidos_Inyectores" />
+        <AssociationConnector Association="SisProdModel.FK_Niveles_TipoNiveles" />
+        <AssociationConnector Association="SisProdModel.FK_Presiones_TipoPresiones" />
+        <AssociationConnector Association="SisProdModel.FK_PtoInyPozos_TiposTrasiego" />
+        <AssociationConnector Association="SisProdModel.UsuariosInstalac" />
+        <AssociationConnector Association="SisProdModel.UsuariosRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Suite.Models.Transporte.OrdenesTrabajo>
+
+@{
+    ViewBag.Title = "Ordenes de Trabajo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("OrdenTrabajo", "Transporte", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="select-box">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Fecha inicio</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().Fechaini, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="browse-category ads-list">
+                <div class="col-xs-10">
+                    <label>Fecha final</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().Fechafin, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Matricula</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().Matricula, new { htmlAttributes = new { @class = "form-control", id = "matricula", name = "matricula" } })
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab2">Módulos</a></li>
+    <li class="active">Ordenes de Trabajo</li>
+</ol>
+@{
+    if (ViewBag.tabla != null)
+    {
+        decimal totalmat = 0;
+        <table class="table">
+            <tr style="font-weight:bold">
+                <td>
+                    <span style="color:black"> Fecha</span>
+                </td>
+                <td>
+                    <span style="color:black">No. Orden</span>
+                </td>
+                <td>
+                    <span style="color:black"> Materiales</span>
+                </td>
+                <td>
+                    <span style="color:black">UM</span>
+                </td>
+                <td>
+                    <span style="color:black">Cantidad</span>
+                </td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fecha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumOrdenTrabajo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Materiales)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Um)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cantidad)
+                        @{totalmat += item.Cantidad; }
+                    </td>
+                </tr>
+            }
+            <tr style="font-weight:bold">
+                <td></td>
+                <td></td>
+                <td> <span style="color:black">Total de materiales:</span></td>
+                <td></td>
+                <td> <span style="color:black">@totalmat</span> </td>
+            </tr>
+
+        </table>
+    }
+}
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#matricula').autocomplete({
+                source: '../Transporte/Searchmatricula'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

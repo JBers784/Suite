@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="76e219f64a2c47e68863897c8bc047d8" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="AlmacenesModel.Ajustes" Width="1.5" PointX="18" PointY="5.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Almacenes" Width="1.5" PointX="3.75" PointY="20.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Clientes" Width="1.5" PointX="0.75" PointY="15.625" />
+        <EntityTypeShape EntityType="AlmacenesModel.Conceptos_Ajustes" Width="1.5" PointX="15.75" PointY="5.75" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_Ajustes" Width="1.5" PointX="20.25" PointY="5.625" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_Prerecepcion" Width="1.5" PointX="3" PointY="2.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_Prerecepcion_Nuevo" Width="1.5" PointX="7.75" PointY="2" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_RecAlm" Width="1.5" PointX="15.75" PointY="12" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_RecAlm_Temporal" Width="1.5" PointX="13.75" PointY="17" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_Recepcion" Width="1.5" PointX="6" PointY="27.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Detalle_Transferencias" Width="1.5" PointX="15.75" PointY="16" />
+        <EntityTypeShape EntityType="AlmacenesModel.DetDevoluciones" Width="1.5" PointX="17.75" PointY="12" />
+        <EntityTypeShape EntityType="AlmacenesModel.DetFacturas" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="AlmacenesModel.DetReclamacion" Width="1.5" PointX="17.75" PointY="15" />
+        <EntityTypeShape EntityType="AlmacenesModel.DetSalAlm" Width="1.5" PointX="15.75" PointY="19" />
+        <EntityTypeShape EntityType="AlmacenesModel.DistDetRecepcion_Ccostos" Width="1.5" PointX="17.75" PointY="18" />
+        <EntityTypeShape EntityType="AlmacenesModel.DistProd_CCosto" Width="1.5" PointX="8.75" PointY="21" />
+        <EntityTypeShape EntityType="AlmacenesModel.EspecificoProductos" Width="1.5" PointX="19.75" PointY="12" />
+        <EntityTypeShape EntityType="AlmacenesModel.Estado_Recepcion" Width="1.5" PointX="10.75" PointY="21" />
+        <EntityTypeShape EntityType="AlmacenesModel.Facturas" Width="1.5" PointX="3" PointY="6.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.FUNCIONES_SUBC" Width="1.5" PointX="13.25" PointY="14.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.GenericoProductos" Width="1.5" PointX="16" PointY="2.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Historico_Precios" Width="1.5" PointX="12.75" PointY="21" />
+        <EntityTypeShape EntityType="AlmacenesModel.LimitesProductos" Width="1.5" PointX="19.75" PointY="15" />
+        <EntityTypeShape EntityType="AlmacenesModel.Maximos_Minimos" Width="1.5" PointX="19.75" PointY="18" />
+        <EntityTypeShape EntityType="AlmacenesModel.Movimiento_Productos" Width="1.5" PointX="6" PointY="7.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Almacenes" Width="1.5" PointX="17.75" PointY="21" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Importe_Inicio" Width="1.5" PointX="19.75" PointY="21" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Medidas" Width="1.5" PointX="20.75" PointY="2" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Productos" Width="1.5" PointX="21.75" PointY="9" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Vence" Width="1.5" PointX="21.75" PointY="14" />
+        <EntityTypeShape EntityType="AlmacenesModel.Operadoras_Almacen" Width="1.5" PointX="6" PointY="12.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Operadores" Width="1.5" PointX="0.75" PointY="11.625" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_Actividades" Width="1.5" PointX="3.75" PointY="27.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_Balancistas" Width="1.5" PointX="3.75" PointY="29.625" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_ClasificacionP" Width="1.5" PointX="3.75" PointY="33.5" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_DemandaPAlmacen" Width="1.5" PointX="14.75" PointY="23" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_DemandaPNoAlmacen" Width="1.5" PointX="21.75" PointY="18" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_Extraplan" Width="1.5" PointX="16.75" PointY="23" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_FechaVencimiento" Width="1.5" PointX="21.75" PointY="22" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_Inversiones" Width="1.5" PointX="22.75" PointY="2" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_PlanCompras" Width="1.5" PointX="9" PointY="29" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_TipoCompras" Width="1.5" PointX="6.75" PointY="37.375" />
+        <EntityTypeShape EntityType="AlmacenesModel.Prerecepcion" Width="1.5" PointX="0.75" PointY="18.875" />
+        <EntityTypeShape EntityType="AlmacenesModel.Productos_Almacen" Width="1.5" PointX="6" PointY="20.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Recepcion" Width="1.5" PointX="3" PointY="11.5" />
+        <EntityTypeShape EntityType="AlmacenesModel.Recepcion_anulada" Width="1.5" PointX="3" PointY="36.5" />
+        <EntityTypeShape EntityType="AlmacenesModel.Reclamacion" Width="1.5" PointX="11" PointY="17.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.RelProdTipos" Width="1.5" PointX="18" PointY="9.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.SalAlm_Factura" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="AlmacenesModel.SeccionProductos" Width="1.5" PointX="13.75" PointY="2.375" />
+        <EntityTypeShape EntityType="AlmacenesModel.SubGenericosProductos" Width="1.5" PointX="18.25" PointY="2.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.Suministradores" Width="1.5" PointX="8.75" PointY="24" />
+        <EntityTypeShape EntityType="AlmacenesModel.Surtidos" Width="1.5" PointX="18.75" PointY="24" />
+        <EntityTypeShape EntityType="AlmacenesModel.sysdiagrams" Width="1.5" PointX="23.75" PointY="8" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipo_factura" Width="1.5" PointX="0.75" PointY="23.875" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipo_Gastos" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipo_pago" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipo_Reclamacion" Width="1.5" PointX="8.75" PointY="17.5" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipos_Movimientos" Width="1.5" PointX="3.75" PointY="17.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Tipos_Productos" Width="1.5" PointX="15.75" PointY="9.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Transportistas" Width="1.5" PointX="23.75" PointY="11" />
+        <EntityTypeShape EntityType="AlmacenesModel.AUTORI" Width="1.5" PointX="13.25" PointY="8.875" />
+        <EntityTypeShape EntityType="AlmacenesModel.CATALOGO" Width="1.5" PointX="8.75" PointY="7.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.FUNCIONES" Width="1.5" PointX="11" PointY="4.5" />
+        <EntityTypeShape EntityType="AlmacenesModel.PERFILES" Width="1.5" PointX="11" PointY="11.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.SUBCONJUNTOS" Width="1.5" PointX="11" PointY="14.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.USUARIOS" Width="1.5" PointX="11" PointY="1.25" />
+        <EntityTypeShape EntityType="AlmacenesModel.Asignaciones" Width="1.5" PointX="10.75" PointY="25" />
+        <EntityTypeShape EntityType="AlmacenesModel.AsignacionesSS" Width="1.5" PointX="23.75" PointY="14" />
+        <EntityTypeShape EntityType="AlmacenesModel.Ciclo_Reapro" Width="1.5" PointX="23.75" PointY="18" />
+        <EntityTypeShape EntityType="AlmacenesModel.ciloted" Width="1.5" PointX="23.75" PointY="22" />
+        <EntityTypeShape EntityType="AlmacenesModel.ciprod_dup" Width="1.5" PointX="20.75" PointY="25" />
+        <EntityTypeShape EntityType="AlmacenesModel.ciproda" Width="1.5" PointX="24.75" PointY="2" />
+        <EntityTypeShape EntityType="AlmacenesModel.ciprodAA" Width="1.5" PointX="24.75" PointY="5" />
+        <EntityTypeShape EntityType="AlmacenesModel.ciprodwk2" Width="1.5" PointX="12.75" PointY="26" />
+        <EntityTypeShape EntityType="AlmacenesModel.cod_alm" Width="1.5" PointX="0.75" PointY="27" />
+        <EntityTypeShape EntityType="AlmacenesModel.cod_emsu" Width="1.5" PointX="25.75" PointY="8" />
+        <EntityTypeShape EntityType="AlmacenesModel.cod_prod" Width="1.5" PointX="25.75" PointY="11" />
+        <EntityTypeShape EntityType="AlmacenesModel.Control_Plan_Compras" Width="1.5" PointX="14.75" PointY="27" />
+        <EntityTypeShape EntityType="AlmacenesModel.cpmaecli" Width="1.5" PointX="25.75" PointY="17" />
+        <EntityTypeShape EntityType="AlmacenesModel.Devoluciones" Width="1.5" PointX="6" PointY="30" />
+        <EntityTypeShape EntityType="AlmacenesModel.Entradas_Almacen" Width="1.5" PointX="16.75" PointY="27" />
+        <EntityTypeShape EntityType="AlmacenesModel.especif" Width="1.5" PointX="25.75" PointY="20" />
+        <EntityTypeShape EntityType="AlmacenesModel.generico" Width="1.5" PointX="25.75" PointY="23" />
+        <EntityTypeShape EntityType="AlmacenesModel.Genericoelemento" Width="1.5" PointX="25.75" PointY="26" />
+        <EntityTypeShape EntityType="AlmacenesModel.Mundo_Intervalo" Width="1.5" PointX="26.75" PointY="2" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_ProdNOAlmacen" Width="1.5" PointX="6" PointY="34.125" />
+        <EntityTypeShape EntityType="AlmacenesModel.PC_Usuarios" Width="1.5" PointX="18.75" PointY="28" />
+        <EntityTypeShape EntityType="AlmacenesModel.precios" Width="1.5" PointX="20.75" PointY="28" />
+        <EntityTypeShape EntityType="AlmacenesModel.PreciosSiscont" Width="1.5" PointX="22.75" PointY="28" />
+        <EntityTypeShape EntityType="AlmacenesModel.procenco" Width="1.5" PointX="27.75" PointY="6" />
+        <EntityTypeShape EntityType="AlmacenesModel.Salidas_Almacen" Width="1.5" PointX="27.75" PointY="9" />
+        <EntityTypeShape EntityType="AlmacenesModel.Salidas_Temp" Width="1.5" PointX="27.75" PointY="13" />
+        <EntityTypeShape EntityType="AlmacenesModel.seccion" Width="1.5" PointX="11.75" PointY="29" />
+        <EntityTypeShape EntityType="AlmacenesModel.sub_gen" Width="1.5" PointX="27.75" PointY="16" />
+        <EntityTypeShape EntityType="AlmacenesModel.Transferencias" Width="1.5" PointX="6" PointY="15.375" />
+        <EntityTypeShape EntityType="AlmacenesModel.transp" Width="1.5" PointX="27.75" PointY="19" />
+        <EntityTypeShape EntityType="AlmacenesModel.uno" Width="1.5" PointX="27.75" PointY="22" />
+        <AssociationConnector Association="AlmacenesModel.FK_Ajustes_Conceptos_Ajustes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Detalle_Ajustes_Ajustes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Detalle_Recepcion_Almacenes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Devoluciones_Almacenes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Operadoras_Almacen_Almacenes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Productos_Almacen_Almacenes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Transferencias_Almacenes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Transferencias_Almacenes1" />
+        <AssociationConnector Association="AlmacenesModel.FK_Facturas_Clientes" />
+        <AssociationConnector Association="AlmacenesModel.FK_Detalle_Prerecepcion_Prerecepcion" />
+        <AssociationConnector Association="AlmacenesModel.FK_DetFacturas_Facturas" />
+        <AssociationConnector Association="AlmacenesModel.FK_Facturas_Operadoras" />
+        <AssociationConnector Association="AlmacenesModel.FK_Facturas_Tipo_Gastos" />
+        <AssociationConnector Association="AlmacenesModel.FK_Facturas_Tipo_pago" />
+        <AssociationConnector Association="AlmacenesModel.FK_SalAlm_Factura_Facturas" />
+        <AssociationConnector Association="AlmacenesModel.FK_FUNCIONESSUBC_SUBCONJUNTOS" />
+        <AssociationConnector Association="AlmacenesModel.FK_GenericoProductos_SeccionProductos1" />
+        <AssociationConnector Association="AlmacenesModel.FK_SubGenericosProductos_GenericoProductos" />
+        <AssociationConnector Association="AlmacenesModel.FK_Movimiento_Productos_Operadoras1" />
+        <AssociationConnector Association="AlmacenesModel.FK_Movimiento_Productos_Tipos_Movimientos" />
+        <AssociationConnector Association="AlmacenesModel.FK_Operadoras_Almacen_Operadoras" />
+        <AssociationConnector Association="AlmacenesModel.FK_Recepcion_Operadoras" />
+        <AssociationConnector Association="AlmacenesModel.FK_Transferencias_Operadores" />
+        <AssociationConnector Association="AlmacenesModel.FK_Productos_Almacen_PC_Actividades" />
+        <AssociationConnector Association="AlmacenesModel.FK_PC_PlanCompras_PC_Balancistas" />
+        <AssociationConnector Association="AlmacenesModel.FK_PC_ProdNOAlmacen_PC_Balancistas" />
+        <AssociationConnector Association="AlmacenesModel.FK_Productos_Almacen_PC_Balancistas" />
+        <AssociationConnector Association="AlmacenesModel.FK_Productos_Almacen_PC_ClasificacionP" />
+        <AssociationConnector Association="AlmacenesModel.FK_PC_PlanCompras_PC_TipoCompras" />
+        <AssociationConnector Association="AlmacenesModel.FK_Recepcion_anulada_Prerecepcion" />
+        <AssociationConnector Association="AlmacenesModel.FK_Recepcion_Prerecepcion" />
+        <AssociationConnector Association="AlmacenesModel.FK_Recepcion_Tipo_factura" />
+        <AssociationConnector Association="AlmacenesModel.FK_Reclamacion_Tipo_Reclamacion" />
+        <AssociationConnector Association="AlmacenesModel.FK_RelProdTipos_Tipos_Productos" />
+        <AssociationConnector Association="AlmacenesModel.FK_AUTORI_CATALOGO" />
+        <AssociationConnector Association="AlmacenesModel.FK_AUTORI_PERFILES" />
+        <AssociationConnector Association="AlmacenesModel.FK_AUTORI_USUARIOS" />
+        <AssociationConnector Association="AlmacenesModel.FK_FUNCIONES_CATALOGO" />
+        <AssociationConnector Association="AlmacenesModel.FK_PERFILES_CATALOGO" />
+        <AssociationConnector Association="AlmacenesModel.FK_SUBCONJUNTOS_CATALOGO" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

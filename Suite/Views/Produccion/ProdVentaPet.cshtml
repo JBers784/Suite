@@ -1,0 +1,165 @@
+﻿@model Suite.Models.Produccion.ProdVentaPet
+
+@{
+    ViewBag.Title = "Ventas de petróleo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ProdVentaPet", "Produccion", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="select-box abs-center">
+        <div class="search-product ads-list">
+            <label>Fecha: <span style="color:red;font-weight:bold">(@ViewBag.fechadefiltro) </span></label>
+            <div class="search">
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-lg">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab3">Módulos</a></li>
+    <li class="active">Ventas de petróleo</li>
+</ol>
+<div class="container ">
+    @*EPEP-Centro*@
+    <div class="panel panel-success col-md-6">
+        <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">UEB de Producción Centro</h3></div>
+        <div class="panel-body">
+            <table class="table table-responsive table-hover">
+                @*Encabezados*@
+                <tr style="font-weight:bold">
+                    <td></td>
+                    <td><span style="color:black">Plan</span></td>
+                    <td><span style="color:black">Real</span></td>
+                    <td><span style="color:black">%Cump.</span></td>
+                    <td><span style="color:black">Dif.</span></td>
+                </tr>
+                @*Dia*@
+                <tr>
+                    <td class="active" style="font-weight:bold;color:black">Día</td>
+                    <td> @Html.ValueFor(model => model.PlanDiaCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealDiaCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcDiaCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvDiaCentroVPet)</td>
+                </tr>
+                @*Mes*@
+                <tr>
+                    <td class="warning" style="font-weight:bold;color:black">Mes</td>
+                    <td> @Html.ValueFor(model => model.PlanMesCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealMesCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcMesCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvMesCentroVPet)</td>
+                </tr>
+                @*Año*@
+                <tr>
+                    <td class="success" style="font-weight:bold;color:black">Año</td>
+                    <td> @Html.ValueFor(model => model.PlanAnoCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealAnoCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcAnoCentroVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvAnoCentroVPet)</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    @*Majagua*@
+    <div class="panel panel-success col-md-6">
+        <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">UEB Majagua</h3></div>
+        <div class="panel-body">
+            <table class="table table-responsive table-hover">
+                @*Encabezados*@
+                <tr style="font-weight:bold">
+                    <td></td>
+                    <td><span style="color:black">Plan</span></td>
+                    <td><span style="color:black">Real</span></td>
+                    <td><span style="color:black">%Cump.</span></td>
+                    <td><span style="color:black">Dif.</span></td>
+                </tr>
+                @*Dia*@
+                <tr>
+                    <td class="active" style="font-weight:bold;color:black">Día</td>
+                    <td> @Html.ValueFor(model => model.PlanDiaMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealDiaMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcDiaMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvDiaMajVPet)</td>
+                </tr>
+                @*Mes*@
+                <tr>
+                    <td class="warning" style="font-weight:bold;color:black">Mes</td>
+                    <td> @Html.ValueFor(model => model.PlanMesMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealMesMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcMesMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvMesMajVPet)</td>
+                </tr>
+                @*Año*@
+                <tr>
+                    <td class="success" style="font-weight:bold;color:black">Año</td>
+                    <td> @Html.ValueFor(model => model.PlanAnoMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealAnoMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcAnoMajVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvAnoMajVPet)</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+
+@*Totales*@
+<div class="container ">
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">Totales EPEP-Centro</h3></div>
+        <div class="panel-body">
+            <table class="table table-responsive table-hover">
+                @*Encabezados*@
+                <tr style="font-weight:bold">
+                    <td></td>
+                    <td><span style="color:black">Plan</span></td>
+                    <td><span style="color:black">Real</span></td>
+                    <td><span style="color:black">%Cump.</span></td>
+                    <td><span style="color:black">Dif.</span></td>
+                </tr>
+                @*Dia*@
+                <tr>
+                    <td class="active" style="font-weight:bold;color:black">Día</td>
+                    <td> @Html.ValueFor(model => model.PlanDiaEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealDiaEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcDiaEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvDiaEmpVPet)</td>
+                </tr>
+                @*Mes*@
+                <tr>
+                    <td class="warning" style="font-weight:bold;color:black">Mes</td>
+                    <td> @Html.ValueFor(model => model.PlanMesEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealMesEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcMesEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvMesEmpVPet)</td>
+                </tr>
+                @*Año*@
+                <tr>
+                    <td class="success" style="font-weight:bold;color:black">Año</td>
+                    <td> @Html.ValueFor(model => model.PlanAnoEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.RealAnoEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.PorcAnoEmpVPet)</td>
+                    <td> @Html.ValueFor(model => model.DesvAnoEmpVPet)</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>    
+    <title>@ViewData["Title"] - Suite de reporte EPEP-Cento</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-select.css">
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Content/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" />
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Suite de reporte EPEP-Cento" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <!-- js -->
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <!-- js -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-select.js"></script>
+    <script>
+        $(document).ready(function () {
+            var mySelect = $('#first-disabled2');
+
+            $('#special').on('click', function () {
+                mySelect.find('option:selected').prop('disabled', true);
+                mySelect.selectpicker('refresh');
+            });
+
+            $('#special2').on('click', function () {
+                mySelect.find('option:disabled').prop('disabled', false);
+                mySelect.selectpicker('refresh');
+            });
+
+            $('#basic2').selectpicker({
+                liveSearch: true,
+                maxOptions: 1
+            });
+        });
+    </script>
+    <script type="text/javascript" src="~/Scripts/jquery.leanModal.min.js"></script>
+    <link href="~/Content/jquery.uls.css" rel="stylesheet" />
+    <link href="~/Content/jquery.uls.grid.css" rel="stylesheet" />
+    <link href="~/Content/jquery.uls.lcd.css" rel="stylesheet" />
+    <!-- Source -->
+    <script src="~/Scripts/jquery.uls.data.js"></script>
+    <script src="~/Scripts/jquery.uls.data.utils.js"></script>
+    <script src="~/Scripts/jquery.uls.lcd.js"></script>
+    <script src="~/Scripts/jquery.uls.languagefilter.js"></script>
+    <script src="~/Scripts/jquery.uls.regionfilter.js"></script>
+    <script src="~/Scripts/jquery.uls.core.js"></script>
+    @*<script>
+            $(document).ready(function () {
+                $('.uls-trigger').uls({
+                    onSelect: function (language) {
+                        var languageName = $.uls.data.getAutonym(language);
+                        $('.uls-trigger').text(languageName);
+                    },
+                    quickList: ['en', 'hi', 'he', 'ml', 'ta', 'fr'] //FIXME
+                });
+            });
+        </script>*@
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                @*<a asp-area="" asp-controller="Home" asp-action="Index"><span>EPEP</span>-Centro</a>*@
+                @Html.ActionLink("EPEP", "Index", "Home", null, new { @style = "color:#f3c500;" })@Html.ActionLink("-Centro", "Index", "Home")
+            </div>
+            @*<div class="header-right">
+                   @Html.ActionLink("Mi cuenta","Index","Usuario",null, new { @class = "account" })
+                </div>*@
+        </div>
+    </div>
+    <div class="main-banner text-center hidden-xs">
+        <div class="container">
+            <h1>Suite<span class="segment-heading"> de Reportes </span> EPEP-Centro</h1>
+            <p>Todos los reportes de nuestras aplicaciones a un clic de distancia</p>
+            @*<a href="post-ad.html">Post Free Ad</a>*@
+        </div>
+    </div>
+    <!-- content-starts-here -->
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+    <!--footer section start-->
+    <footer>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <div class="footer-logo">
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><span>Suite de reportes </span>EPEP-Centro</a>
+                </div>
+                <div class="copyrights">
+                    <p>&copy; 2019 </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <!--footer section end-->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

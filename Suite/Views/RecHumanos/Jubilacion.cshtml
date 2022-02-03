@@ -1,0 +1,149 @@
+﻿@model IEnumerable<ModuloEconomia.JubilacionWeb_Result>
+
+@{
+    ViewBag.Title = "Jubilacion";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Jubilacion", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="search-product ads-list">
+                <label>Nombre</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().Nombre, new { htmlAttributes = new { @class = "form-control", id = "nombre" } })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab6">Módulos</a></li>
+    <li class="active">Datos de jubilación de un Trabajador</li>
+</ol>
+
+@{
+    decimal ITotal = 0;
+    decimal Porciento = 0;
+
+    if (ViewBag.tabla != null)
+    {
+
+        //================ENCABEZADO DE AFUERA=======================
+<table class="table table-bordered">
+    <tr style="font-weight:bold">
+        <th class="active" colspan="4">
+            <span style="color:red "> Nombre y Apellidos:  @Model.First().Nombre </span>
+        </th>
+    </tr>
+    <tr style="font-weight:bold">
+        <th colspan="1">
+            <span style="color:black "> Edad: @Model.First().Edad  </span>
+        </th>
+        <th colspan="1">
+            <span style="color:black "> No.Cobro: @Model.First().NCobro </span>
+        </th>
+        <th colspan="1">
+            <span style="color:black "> C.Ident: @Model.First().CIdentidad  </span>
+        </th>
+        <th colspan="1">
+            <span style="color:black "> F.Rama: @Model.First().FRama.Value.ToShortDateString()  </span>
+        </th>
+    </tr>
+    <tr style="font-weight:bold">
+        <th colspan="1">
+            <span style="color:black "> Porciento: @Model.First().Porciento %   </span>
+            @{Porciento = @Model.First().Porciento.Value;  }
+        </th>
+        <th colspan="1">
+            <span style="color:black "> Años trabajados en la rama: @Model.First().añosTrabajados   </span>
+        </th>
+        <th colspan="1">
+            <span style="color:black "> Faltan por Edad: @Model.First().FaltanxEdad </span>
+        </th>
+        <th colspan="1">
+            <span style="color:black "> Faltan por años de Trabajo: @Model.First().FaltanxAñosW  </span>
+        </th>
+    </tr>
+
+</table>
+
+<table class="table table-bordered ">
+     <tr style="font-weight:bold">
+        <th colspan="1" class="warning">
+            <span style="color:black "> Año  </span>
+        </th>
+        <th colspan="1" class="warning">
+            <span style="color:black "> Tiempo </span>
+        </th>
+        <th colspan="1" class="warning">
+            <span style="color:black "> Importe </span>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tiempo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importe)
+            </td>
+            @{
+                ITotal += item.Importe.Value;
+            }
+        </tr>
+    }
+    <tr style="font-weight:bold">
+        <th class="success" colspan="2" , style=" text-align:right  ">
+            <span style="color:black">Salario Promedio @Decimal.Round(@ITotal / 12, 2) $</span>
+        </th>
+        <th class="success" colspan="2">
+            <span style="color:black">Cuantia de Pensión  @Decimal.Round((@ITotal / 12) * (Porciento / 100), 2) $</span>
+        </th>
+    </tr>
+</table>
+    }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#nombre').autocomplete({
+                            source: '../RecHumanos/SearchNombre'
+                        });
+                    });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+
+
+
+

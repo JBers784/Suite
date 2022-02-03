@@ -1,0 +1,102 @@
+﻿@model Suite.Models.Almacenes.ProductosxCc
+
+@{
+    ViewBag.Title = "Distribución de productos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ProductosxCc", "Almacenes", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box abs-center">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Almacén</label>
+                    @*@{string almacen = @ViewBag.almacen; }*@
+                        @Html.DropDownList("almacId", (IEnumerable<SelectListItem>)ViewBag.listaalmacenes, "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Código del producto</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control", @name = "Codigo" } })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab4">Módulos</a></li>
+    <li class="active">Distribución de productos</li>
+</ol>
+
+
+@{
+   
+    if (ViewBag.tabla != null)
+    {
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-12"><span style="font-weight:bold">Descripción:</span>   @Html.DisplayFor(model => model.Descripcion)</div>
+                <div class="col-md-4"><span style="font-weight:bold">Existencia:</span>   @Html.DisplayFor(model => model.Existencia)</div>
+                <div class="col-md-4"><span style="font-weight:bold">Predespachado:</span>  @Html.DisplayFor(model => model.Predespachado)</div>
+                <div class="col-md-4"><span style="font-weight:bold">Disponible:</span>  @Html.DisplayFor(model => model.Disponible)</div>
+            </div>
+        </div>
+        if (Model.Distribucion.Count > 0)
+        {
+
+        <table class="table">
+            <tr style="font-weight:bold; color:black">
+                <td>
+                    <span style="color:black">Centro de Costo</span>
+                </td>
+                <td>
+                    <span style="color:black">Asignados</span>
+                </td>
+                <th>
+                    <span style="color:black">Predespachados</span>
+                </th>
+
+
+            </tr>
+            @foreach (var item in Model.Distribucion)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ccosto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Asignados)
+                    </td>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.PredespachadoCc)
+                    </th>
+
+
+                </tr>
+            }
+
+        </table>
+        }
+        else
+        { <h4 class="abs-center">Sin distribución en este almacén</h4>}
+        }
+    }
+
+
+
+  

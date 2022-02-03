@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Suite.Models.RecHumanos.Cumpleaños>
+
+@{
+    ViewBag.Title = "Cumpleaños";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Cumpleaños", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="search-product ads-list">
+                <label>Fecha Inicial</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().fechaini, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-product ads-list">
+                <label>Fecha Final</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().fechafin, new { htmlAttributes = new { @class = "form-control" } })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab6">Módulos</a></li>
+    <li class="active">Cumpleaños</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+
+           <table class="table table-striped table-hover ">
+                <tr style="font-weight:bold ">
+                    <th class="warning" colspan="4" style=" text-align:center ">
+                        <span style="color:red "> <b><bdi><em>F   E   L   I   C   I   D   A   D   E   S</em></bdi></b></span>
+                    </th>
+                </tr>
+                <tr style="font-weight:bold ">
+                    <th colspan="1">
+                        <span style="color:black "> Día-Mes</span>
+                    </th>
+                    <th colspan="1">
+                        <span style="color:black "> Edad</span>
+                    </th>
+                    <th colspan="1">
+                        <span style="color:black "> Nombre y Apellidos </span>
+                    </th>
+                    <th colspan="1">
+                        <span style="color:black "> Área </span>
+                    </th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @{ string guion = "-";}
+                        <th>
+                            @Html.DisplayFor(modelItem => item.dia)
+                            @guion
+                            @Html.DisplayFor(modelItem => item.mes)
+                        </th>
+                        @{
+                            int edad = 0;
+                            edad = (DateTime.Today.Year) - (int.Parse(item.ci.Substring(0, 2)) + 1900);
+                            if (edad >= 100) { edad = edad - 100; }
+                        }
+                        <td>
+                            @edad
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombAp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Area)
+                        </td>
+                    </tr>
+
+                }
+
+            </table>
+    }
+  }
+
+            @section Scripts {
+
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+                <script type="text/javascript">
+                                        //$(document).ready(function () {
+                                        //    $('#nombre').autocomplete({
+                                        //        source: '../RecHumanos/SearchNombre'
+                                        //    });
+                                        //});
+                </script>
+                @Scripts.Render("~/bundles/jqueryval")
+
+            }
+

@@ -1,0 +1,158 @@
+﻿@model IEnumerable<ModuloEconomia.InventariosUtilesHerrWeb_Result>
+@{
+
+                ViewBag.Title = "UtilesHerramientasFiltro";
+                Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("UtilesHerramientasFiltro", "Economia", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+
+    <div class="container ">
+        <div class="select-box ">
+            @*Lista Centros de Costos*@
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="nombrecc" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Lista  Nombre Custodio*@
+            <div class="search-product ads-list">
+                    <label>Nombre Custodio</label>
+                    <div class="search">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" name="custodio" id="custodio" class="form-control" value=@ViewBag.custodio>
+                                <span class="input-group-btn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 @*Lista Útil y Herramientas*@
+            <div class="search-product ads-list">
+                    <label>Descripción Útil y Herramienta</label>
+                    <div class="search">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" name="descutil" id="descutil" class="form-control" value=@ViewBag.descutil>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-info btn-lg">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Inventario Útiles y Herramientas</li>
+</ol>
+
+@{
+    string descccosto = "";
+    string desccustodio = "";
+    if (ViewBag.tabla != null)
+    {
+
+        <table class="table table-bordered">
+
+            @foreach (var item in Model)
+            {
+                if (item.OCostDescrip != descccosto)
+                {
+                    descccosto = item.OCostDescrip;
+                    
+                    <tr style="font-weight:bold">
+                        <th colspan="4">
+                          <span style="color:red ">Centro de Costo: @item.OCostCodigo @item.OCostDescrip </span>
+                        </th>
+                    </tr>
+                    foreach (var item2 in Model)
+                    {
+
+                        if (item2.RespUHDescripcion != desccustodio && item2.OCostDescrip == descccosto)
+                        {
+                            desccustodio = item2.RespUHDescripcion;
+                           <tr style="font-weight:bold">
+                              <th colspan="4">
+                                 <span style="color:deepskyblue ">Custodio: @item2.ExistInUHRespCod @item2.RespUHDescripcion </span>
+                              </th>
+                           </tr>
+
+                           <tr style="font-weight:bold">
+                             <th>
+                               <span style="color:black ">Código</span>
+                             </th>
+                             <th>
+                               <span style="color:black">Descripción</span>
+                             </th>
+                             <th>
+                               <span style="color:black">Cantidad</span>
+                             </th>
+                             <th>
+                               <span style="color:black ">Fecha de Alta</span>
+                             </th>
+                           </tr>
+
+                            foreach (var item3 in Model)
+                            {
+                                if (item3.RespUHDescripcion == desccustodio && item3.OCostDescrip == descccosto)
+                                {
+                                  <tr>
+                                    <td>
+                                      @Html.DisplayFor(modelItem => item3.ProduCodigo)
+                                    </td>
+                                    <td>
+                                      @Html.DisplayFor(modelItem => item3.ExistInDescripcion)
+                                    </td>
+                                    <td>
+                                      @Html.DisplayFor(modelItem => item3.ExistInUHCantidad)
+                                    </td>
+                                    <td>
+                                        @item3.UHExistFechaAlta.Value.ToShortDateString()
+                                    </td>
+                                  </tr>
+                                }
+                            }
+                        }
+                     }
+                }
+            }
+            </table >
+        }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    $('#nombrecc').autocomplete({
+        //        source: '../Economia/SearchCCUH'
+        //    });
+        //});
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+

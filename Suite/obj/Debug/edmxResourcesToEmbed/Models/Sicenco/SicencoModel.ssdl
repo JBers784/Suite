@@ -1,0 +1,2314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SicencoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AM_Alcance">
+    <Key>
+      <PropertyRef Name="Alcance_id" />
+    </Key>
+    <Property Name="Alcance_id" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Alcance_desc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AM_CriteriosIndic">
+    <Key>
+      <PropertyRef Name="Crit_id" />
+      <PropertyRef Name="Indic_id" />
+    </Key>
+    <Property Name="Crit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Indic_id" Type="int" Nullable="false" />
+    <Property Name="Crit_desc" Type="varchar" MaxLength="100" />
+    <Property Name="Crit_puntos" Type="int" />
+  </EntityType>
+  <EntityType Name="AM_Evaluaciones">
+    <Key>
+      <PropertyRef Name="Indic_id" />
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="Eval_año" />
+      <PropertyRef Name="Eval_mes" />
+    </Key>
+    <Property Name="Eval_id" Type="int" />
+    <Property Name="Indic_id" Type="int" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Eval_año" Type="int" Nullable="false" />
+    <Property Name="Eval_mes" Type="int" Nullable="false" />
+    <Property Name="Eval_puntos" Type="int" />
+  </EntityType>
+  <EntityType Name="AM_Indicadores">
+    <Key>
+      <PropertyRef Name="Indic_id" />
+    </Key>
+    <Property Name="Indic_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Indic_desc" Type="varchar" MaxLength="100" />
+    <Property Name="Alcance_id" Type="char" MaxLength="2" />
+    <Property Name="Indic_regula" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AM_PresPlanRealSubElto">
+    <Key>
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="subelCodigo" />
+      <PropertyRef Name="PP_año" />
+    </Key>
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="subelCodigo" Type="int" Nullable="false" />
+    <Property Name="PP_año" Type="int" Nullable="false" />
+    <Property Name="PP_enp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_fep" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_map" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_abp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_myp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_jup" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_jlp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_agp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_sep" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_ocp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_nop" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_dip" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_enr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_fer" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_mar" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_abr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_myr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_jur" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_jlr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_agr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_ser" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_ocr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_nor" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PP_dir" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.AM_Productos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AM_Productos">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="5" />
+          <Property Name="Prod_mes" Type="int" />
+          <Property Name="Prod_año" Type="int" />
+          <Property Name="ProdAlm_id" Type="int" />
+          <Property Name="Prod_cantidad" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.AM_Temp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AM_Temp">
+          <Property Name="SubElCodigoM" Type="varchar" MaxLength="6" />
+          <Property Name="SubElDescrip" Type="char" MaxLength="35" />
+          <Property Name="PlanM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="RealM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="PorctM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="DiferM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="ccosto_id" Type="varchar" MaxLength="5" />
+          <Property Name="Año" Type="int" />
+          <Property Name="Mes" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.AM_Usuarios' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AM_Usuarios">
+          <Property Name="u_login" Type="varchar" MaxLength="20" />
+          <Property Name="u_descripc" Type="varchar" MaxLength="100" />
+          <Property Name="u_passw" Type="varchar" MaxLength="100" />
+          <Property Name="u_tipo" Type="char" MaxLength="1" />
+          <Property Name="u_desactivado" Type="bit" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Año' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Año">
+          <Property Name="Año_id" Type="int" />
+          <Property Name="Año" Type="char" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Apertura' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Apertura">
+          <Property Name="Puedo" Type="bit" />
+          <Property Name="AñoInicio" Type="int" />
+          <Property Name="AñoCierre" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="Area_Id" />
+    </Key>
+    <Property Name="Subd_id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Area_Id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Area_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.ccfichid' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ccfichid">
+          <Property Name="ccta" Type="char" MaxLength="3" />
+          <Property Name="ccscta" Type="char" MaxLength="5" />
+          <Property Name="ccsctrl" Type="char" MaxLength="5" />
+          <Property Name="ccanali" Type="char" MaxLength="6" />
+          <Property Name="ccimope" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="ccnucom" Type="char" MaxLength="6" />
+          <Property Name="ccfepost" Type="datetime" />
+          <Property Name="ccmesop" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="ccfecom" Type="char" MaxLength="7" />
+          <Property Name="ccdecom" Type="char" MaxLength="35" />
+          <Property Name="ccsbocp" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.ccmaestd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ccmaestd">
+          <Property Name="ccta" Type="char" MaxLength="3" />
+          <Property Name="ccscta" Type="char" MaxLength="5" />
+          <Property Name="ccsctrl" Type="char" MaxLength="5" />
+          <Property Name="ccanali" Type="char" MaxLength="6" />
+          <Property Name="ccdes" Type="char" MaxLength="35" />
+          <Property Name="ccnat" Type="char" MaxLength="1" />
+          <Property Name="ccsalac" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="ccsalin" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="ccult" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <EntityType Name="CCostos">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+    </Key>
+    <Property Name="Subd_Id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JefeCC_Id" Type="int" />
+    <Property Name="CCosto_Activado" Type="bit" Nullable="false" />
+    <Property Name="CCosto_PlanOp" Type="bit" Nullable="false" />
+    <Property Name="Subelem_id" Type="varchar" MaxLength="5" />
+    <Property Name="ccosto_idN" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cctrasd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cctrasd">
+          <Property Name="SmayCosOCostoCodigo" Type="int" />
+          <Property Name="SmayCosSubCuenta" Type="int" />
+          <Property Name="SmayCosPartidaImporte" Type="money" />
+          <Property Name="SmayCosComprMes" Type="smallint" />
+          <Property Name="SmayCosComprAno" Type="smallint" />
+          <Property Name="SmayCosSubelem" Type="int" />
+          <Property Name="SmayCosPartDebito" Type="smallint" />
+          <Property Name="SmayCosCuenta" Type="smallint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cctrasdi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cctrasdi">
+          <Property Name="cceneac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccfebac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccmarac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccabrac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccmayac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccjunac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccjulac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccagoac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccsepac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccoctac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccnovac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccdicac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="cccta" Type="char" MaxLength="3" />
+          <Property Name="ccscta" Type="char" MaxLength="5" />
+          <Property Name="ccsctrl" Type="char" MaxLength="5" />
+          <Property Name="ccanali" Type="char" MaxLength="6" />
+          <Property Name="ccult" Type="char" MaxLength="1" />
+          <Property Name="ccsalin" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccccsalac" Type="decimal" Precision="14" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cctrasdOld' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cctrasdOld">
+          <Property Name="cceneac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccfebac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccmarac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccabrac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccmayac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccjunac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccjulac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccagoac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccsepac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccoctac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccnovac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccdicac" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="cccta" Type="char" MaxLength="3" />
+          <Property Name="ccscta" Type="char" MaxLength="5" />
+          <Property Name="ccsctrl" Type="char" MaxLength="5" />
+          <Property Name="ccanali" Type="char" MaxLength="6" />
+          <Property Name="ccult" Type="char" MaxLength="1" />
+          <Property Name="ccsalin" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="ccccsalac" Type="decimal" Precision="14" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.ciprod' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ciprod">
+          <Property Name="cod_prod" Type="char" MaxLength="14" />
+          <Property Name="cta_inv" Type="char" MaxLength="3" />
+          <Property Name="scta_inv" Type="char" MaxLength="5" />
+          <Property Name="des_prod" Type="char" MaxLength="40" />
+          <Property Name="um_alm" Type="char" MaxLength="3" />
+          <Property Name="precio" Type="decimal" Precision="13" Scale="6" />
+          <Property Name="prec_mn" Type="decimal" Precision="13" Scale="6" />
+          <Property Name="prec_md" Type="decimal" Precision="13" Scale="6" />
+          <Property Name="cod_aux" Type="char" MaxLength="14" />
+          <Property Name="subel_mn" Type="char" MaxLength="5" />
+          <Property Name="subel_md" Type="char" MaxLength="5" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cisaldod' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cisaldod">
+          <Property Name="fichero" Type="char" MaxLength="12" />
+          <Property Name="cod_prod" Type="char" MaxLength="14" />
+          <Property Name="cod_alm" Type="char" MaxLength="5" />
+          <Property Name="cta_inv" Type="char" MaxLength="3" />
+          <Property Name="scta_inv" Type="char" MaxLength="5" />
+          <Property Name="exis_alm" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="exis_ant" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="imp_almmn" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="imp_antmn" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="imp_almmd" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="imp_antmd" Type="decimal" Precision="11" Scale="2" />
+          <Property Name="f_ultm" Type="smalldatetime" />
+          <Property Name="seccion" Type="char" MaxLength="3" />
+          <Property Name="estante" Type="char" MaxLength="3" />
+          <Property Name="casilla" Type="char" MaxLength="4" />
+          <Property Name="cod_aux" Type="char" MaxLength="14" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cmcencod' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cmcencod">
+          <Property Name="c_costo" Type="char" MaxLength="5" />
+          <Property Name="d_costo" Type="char" MaxLength="25" />
+          <Property Name="t_repa" Type="numeric" Precision="4" Scale="1" />
+          <Property Name="cdepr" Type="char" MaxLength="1" />
+          <Property Name="grupo" Type="char" MaxLength="5" />
+          <Property Name="ce" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cmestadd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cmestadd">
+          <Property Name="c_movi" Type="char" MaxLength="2" />
+          <Property Name="c_inve" Type="char" MaxLength="8" />
+          <Property Name="C_costo" Type="char" MaxLength="5" />
+          <Property Name="c_doc" Type="char" MaxLength="4" />
+          <Property Name="c_dpto" Type="char" MaxLength="4" />
+          <Property Name="f_movi" Type="datetime" />
+          <Property Name="i_tras" Type="char" MaxLength="1" />
+          <Property Name="scta" Type="char" MaxLength="5" />
+          <Property Name="sctr" Type="char" MaxLength="5" />
+          <Property Name="cctag" Type="char" MaxLength="3" />
+          <Property Name="subel" Type="char" MaxLength="5" />
+          <Property Name="c_fact" Type="char" MaxLength="10" />
+          <Property Name="c_prov" Type="char" MaxLength="14" />
+          <Property Name="tipo" Type="char" MaxLength="1" />
+          <Property Name="valor" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="t_repa" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repo" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repa" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="cnmb" Type="char" MaxLength="8" />
+          <Property Name="d_mbas" Type="char" MaxLength="35" />
+          <Property Name="anal" Type="char" MaxLength="2" />
+          <Property Name="ccta1" Type="char" MaxLength="3" />
+          <Property Name="ccta2" Type="char" MaxLength="3" />
+          <Property Name="f_alta" Type="datetime" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cmmaembd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cmmaembd">
+          <Property Name="c_inve" Type="char" MaxLength="8" />
+          <Property Name="anal" Type="char" MaxLength="2" />
+          <Property Name="a_repa" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repo" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="cctag" Type="char" MaxLength="3" />
+          <Property Name="cnmb" Type="char" MaxLength="8" />
+          <Property Name="c_costo" Type="char" MaxLength="5" />
+          <Property Name="c_dpto" Type="char" MaxLength="4" />
+          <Property Name="d_mbas" Type="char" MaxLength="35" />
+          <Property Name="f_alta" Type="datetime" />
+          <Property Name="scta" Type="char" MaxLength="5" />
+          <Property Name="sctr" Type="char" MaxLength="5" />
+          <Property Name="subel" Type="char" MaxLength="5" />
+          <Property Name="valor" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="f_depr" Type="datetime" />
+          <Property Name="tipo" Type="char" MaxLength="1" />
+          <Property Name="ctrepa" Type="char" MaxLength="1" />
+          <Property Name="cubmc" Type="char" MaxLength="1" />
+          <Property Name="ccta1" Type="char" MaxLength="3" />
+          <Property Name="ccta2" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cmrelacd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cmrelacd">
+          <Property Name="c_costo" Type="char" MaxLength="5" />
+          <Property Name="c_dpto" Type="char" MaxLength="4" />
+          <Property Name="d_dpto" Type="char" MaxLength="35" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cnareasd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cnareasd">
+          <Property Name="area" Type="char" MaxLength="3" />
+          <Property Name="descripc" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.cnmaestd' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="cnmaestd">
+          <Property Name="exp" Type="char" MaxLength="5" />
+          <Property Name="area" Type="char" MaxLength="3" />
+          <Property Name="ccosto" Type="char" MaxLength="5" />
+          <Property Name="cta" Type="char" MaxLength="3" />
+          <Property Name="nomapell" Type="char" MaxLength="30" />
+          <Property Name="salbas" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="ttarsal" Type="numeric" Precision="8" Scale="5" />
+          <Property Name="sexo" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <EntityType Name="Cuentas">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+    </Key>
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Cuenta_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Elementos">
+    <Key>
+      <PropertyRef Name="Elemento_Id" />
+    </Key>
+    <Property Name="Elemento_Id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Elemento_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ElemMnDi">
+    <Key>
+      <PropertyRef Name="Elem_idMn" />
+      <PropertyRef Name="Elem_idDi" />
+    </Key>
+    <Property Name="Elem_idMn" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Elem_idDi" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Elem_Desc" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Empresa' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Empresa">
+          <Property Name="Empresa" Type="varchar" MaxLength="70" />
+          <Property Name="codigo" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="Equipos">
+    <Key>
+      <PropertyRef Name="equipo_id" />
+    </Key>
+    <Property Name="equipo_id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="equipo_descrip" Type="char" MaxLength="20" />
+    <Property Name="tarifa" Type="decimal" Precision="7" Scale="5" />
+  </EntityType>
+  <EntityType Name="JefeCC">
+    <Key>
+      <PropertyRef Name="JefeCC_Id" />
+    </Key>
+    <Property Name="JefeCC_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JefeCC_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JefeCC_Firma" Type="image" />
+    <Property Name="JefeCC_Foto" Type="image" />
+    <Property Name="JefeCC_CtaUser" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Meses' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Meses">
+          <Property Name="mes_id" Type="int" />
+          <Property Name="descMes" Type="char" MaxLength="15" />
+          <Property Name="cerrado" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="obreros">
+    <Key>
+      <PropertyRef Name="obrero_id" />
+    </Key>
+    <Property Name="obrero_id" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="obrero_descrip" Type="char" MaxLength="40" />
+    <Property Name="calificacion" Type="char" MaxLength="20" />
+    <Property Name="tarifa" Type="decimal" Precision="7" Scale="5" />
+  </EntityType>
+  <EntityType Name="Ot">
+    <Key>
+      <PropertyRef Name="nuot" />
+    </Key>
+    <Property Name="nuot" Type="int" Nullable="false" />
+    <Property Name="cliente" Type="char" MaxLength="5" />
+    <Property Name="fechaSolic" Type="datetime" />
+    <Property Name="costo_obrero" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="costo_producto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="costo_equipo" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="costo_total" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="fechainicio" Type="datetime" />
+    <Property Name="fechafin" Type="datetime" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="No_Equipo" Type="int" />
+    <Property Name="ccosto" Type="char" MaxLength="5" />
+    <Property Name="clienteN" Type="varchar" MaxLength="6" />
+    <Property Name="ccostoN" Type="int" />
+  </EntityType>
+  <EntityType Name="OT_Clientes">
+    <Key>
+      <PropertyRef Name="cliente_id" />
+    </Key>
+    <Property Name="cliente_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="cliente_desc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OT_Comp731">
+    <Key>
+      <PropertyRef Name="Comp_Num" />
+      <PropertyRef Name="Comp_Fecha" />
+      <PropertyRef Name="Comp_Cta" />
+      <PropertyRef Name="Comp_Scta" />
+      <PropertyRef Name="Comp_Sctrl" />
+    </Key>
+    <Property Name="Comp_Num" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Comp_Desc" Type="varchar" MaxLength="35" />
+    <Property Name="Comp_Fecha" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="Comp_Cta" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Comp_Scta" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Comp_Sctrl" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Comp_DH" Type="char" MaxLength="1" />
+    <Property Name="Comp_Importe" Type="decimal" Precision="13" Scale="2" />
+  </EntityType>
+  <EntityType Name="Ot_Comprobantes">
+    <Key>
+      <PropertyRef Name="Comp_Num" />
+      <PropertyRef Name="Comp_Fecha" />
+      <PropertyRef Name="Comp_Cta" />
+      <PropertyRef Name="Comp_Scta" />
+      <PropertyRef Name="Comp_Sctrl" />
+    </Key>
+    <Property Name="Comp_Num" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Comp_Desc" Type="varchar" MaxLength="35" />
+    <Property Name="Comp_Fecha" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="Comp_Cta" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Comp_Scta" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Comp_Sctrl" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Comp_DH" Type="char" MaxLength="1" />
+    <Property Name="Comp_Importe" Type="decimal" Precision="13" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_CompRtt' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_CompRtt">
+          <Property Name="Comp_Num" Type="varchar" MaxLength="6" />
+          <Property Name="Comp_Desc" Type="varchar" MaxLength="35" />
+          <Property Name="Comp_Fecha" Type="varchar" MaxLength="7" />
+          <Property Name="Comp_Cta" Type="char" MaxLength="3" />
+          <Property Name="Comp_Scta" Type="varchar" MaxLength="5" />
+          <Property Name="Comp_Sctrl" Type="varchar" MaxLength="6" />
+          <Property Name="Comp_Dh" Type="char" MaxLength="1" />
+          <Property Name="Comp_Importe" Type="decimal" Precision="13" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_Control' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_Control">
+          <Property Name="tc_Descripcion" Type="char" MaxLength="15" />
+          <Property Name="tc_consecutivo" Type="bigint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_ControlServicios' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_ControlServicios">
+          <Property Name="tc_descripcion" Type="char" MaxLength="15" />
+          <Property Name="tc_consecutivo" Type="bigint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.OT_Cta731' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OT_Cta731">
+    <Key>
+      <PropertyRef Name="ejecutor_id" />
+      <PropertyRef Name="cliente_id" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="elementoMn" />
+      <PropertyRef Name="elementoMd" />
+    </Key>
+    <Property Name="ejecutor_id" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="cliente_id" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="importeMn" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="importeMd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="elementoMn" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="elementoMd" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_DatosCompXML' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_DatosCompXML">
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+          <Property Name="PartCuenta" Type="int" />
+          <Property Name="PartSubCuenta" Type="int" />
+          <Property Name="PartSubControl" Type="int" />
+          <Property Name="PartAnalisis" Type="int" />
+          <Property Name="PartImporte" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="PartDebito" Type="int" />
+          <Property Name="PartOC" Type="int" />
+          <Property Name="PartFijo" Type="int" />
+          <Property Name="PartCB" Type="int" />
+          <Property Name="CompNumero" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_DatosCompXMLEncabezado' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_DatosCompXMLEncabezado">
+          <Property Name="CompNumero" Type="int" />
+          <Property Name="CompAno" Type="int" />
+          <Property Name="CompMes" Type="int" />
+          <Property Name="CompSubsi" Type="char" MaxLength="2" />
+          <Property Name="CompDescripcion" Type="varchar" MaxLength="35" />
+          <Property Name="Compfecha" Type="datetime" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_EjecutorElemento' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_EjecutorElemento">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="5" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_EjecutorElementoCaptar' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_EjecutorElementoCaptar">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="5" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+        </EntityType>-->
+  <EntityType Name="OT_EquipoFactServ">
+    <Key>
+      <PropertyRef Name="efs_NoFact" />
+      <PropertyRef Name="efs_NoEquipo" />
+    </Key>
+    <Property Name="efs_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="efs_NoFact" Type="int" Nullable="false" />
+    <Property Name="efs_NoEquipo" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_Equipos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_Equipos">
+          <Property Name="nuot" Type="int" />
+          <Property Name="equipo_id" Type="char" MaxLength="3" />
+          <Property Name="tiempo" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="cantidad" Type="int" />
+        </EntityType>-->
+  <EntityType Name="OT_FacturaServicio">
+    <Key>
+      <PropertyRef Name="fs_NoFact" />
+    </Key>
+    <Property Name="fs_NoFact" Type="int" Nullable="false" />
+    <Property Name="fs_Fecha" Type="date" />
+    <Property Name="fs_Proveedor" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_Fecha' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_Fecha">
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Ot_Insumos">
+    <Key>
+      <PropertyRef Name="nuot" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="nuot" Type="int" Nullable="false" />
+    <Property Name="ccosto" Type="char" MaxLength="5" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.OT_MundoPiezasFact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OT_MundoPiezasFact">
+    <Key>
+      <PropertyRef Name="mp_id" />
+    </Key>
+    <Property Name="mp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mp_Descripcion" Type="char" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_Obreros' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_Obreros">
+          <Property Name="nuot" Type="int" />
+          <Property Name="obrero_id" Type="char" MaxLength="5" />
+          <Property Name="tiempo" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>-->
+  <EntityType Name="OT_Pieza">
+    <Key>
+      <PropertyRef Name="nuotf" />
+      <PropertyRef Name="pfs_id" />
+    </Key>
+    <Property Name="nuotf" Type="int" Nullable="false" />
+    <Property Name="pfs_id" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="OT_PiezaFactServ">
+    <Key>
+      <PropertyRef Name="pfs_NoFact" />
+      <PropertyRef Name="mp_id" />
+    </Key>
+    <Property Name="pfs_NoFact" Type="int" Nullable="false" />
+    <Property Name="pfs_Descripcion" Type="char" MaxLength="50" />
+    <Property Name="pfs_Cantidad" Type="int" />
+    <Property Name="pfs_CantDisp" Type="int" />
+    <Property Name="mp_id" Type="int" Nullable="false" />
+    <Property Name="pfs_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OT_PiezaFSAlmacen">
+    <Key>
+      <PropertyRef Name="pfs_id" />
+    </Key>
+    <Property Name="pfs_id" Type="int" Nullable="false" />
+    <Property Name="CantDisp" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_Productos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_Productos">
+          <Property Name="nuot" Type="int" />
+          <Property Name="prodalm_id" Type="int" />
+          <Property Name="cantidad" Type="decimal" Precision="17" Scale="8" />
+          <Property Name="NoVs" Type="int" />
+        </EntityType>-->
+  <EntityType Name="OT_ProdValesSal">
+    <Key>
+      <PropertyRef Name="ProdAlm_Id" />
+      <PropertyRef Name="NoVs" />
+    </Key>
+    <Property Name="ProdAlm_Id" Type="int" Nullable="false" />
+    <Property Name="NoVs" Type="int" Nullable="false" />
+    <Property Name="CantDesp" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="CantDisp" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_ProInsumos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_ProInsumos">
+          <Property Name="nuot" Type="int" />
+          <Property Name="prodalm_id" Type="int" />
+          <Property Name="cantidad" Type="decimal" Precision="17" Scale="8" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_ResumenTrabajos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_ResumenTrabajos">
+          <Property Name="ejecutor_id" Type="varchar" MaxLength="5" />
+          <Property Name="cliente_id" Type="varchar" MaxLength="5" />
+          <Property Name="trabajo" Type="varchar" MaxLength="80" />
+          <Property Name="nuot" Type="int" />
+          <Property Name="importe" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="autoriza" Type="varchar" MaxLength="50" />
+          <Property Name="fecha" Type="datetime" />
+          <Property Name="cliente_idN" Type="int" />
+          <Property Name="ejecutor_idN" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OT_SaldosCta731' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OT_SaldosCta731">
+          <Property Name="Ejecutor_id" Type="char" MaxLength="8" />
+          <Property Name="Cliente_id" Type="char" MaxLength="8" />
+          <Property Name="Importe" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+          <Property Name="Elemento_id" Type="char" MaxLength="5" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_SaldosSiscont' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_SaldosSiscont">
+          <Property Name="ejecutor_id" Type="varchar" MaxLength="8" />
+          <Property Name="cliente_id" Type="varchar" MaxLength="8" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+        </EntityType>-->
+  <EntityType Name="OT_Servicios">
+    <Key>
+      <PropertyRef Name="nuots" />
+    </Key>
+    <Property Name="nuots" Type="int" Nullable="false" />
+    <Property Name="clientes" Type="char" MaxLength="5" />
+    <Property Name="fechas" Type="datetime" />
+    <Property Name="No_Equipo" Type="int" />
+  </EntityType>
+  <EntityType Name="OT_ServiciosP">
+    <Key>
+      <PropertyRef Name="nuotf" />
+    </Key>
+    <Property Name="nuotf" Type="int" Nullable="false" />
+    <Property Name="clientef" Type="char" MaxLength="5" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="No_Equipo" Type="int" />
+  </EntityType>
+  <EntityType Name="OT_Tipo">
+    <Key>
+      <PropertyRef Name="tipo" />
+    </Key>
+    <Property Name="tipo" Type="int" Nullable="false" />
+    <Property Name="Tipo_descrip" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="OT_TrabajoFS">
+    <Key>
+      <PropertyRef Name="nuotf" />
+    </Key>
+    <Property Name="nuotf" Type="int" Nullable="false" />
+    <Property Name="trabajo_id" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Ot_Trabajos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Ot_Trabajos">
+          <Property Name="nuot" Type="int" />
+          <Property Name="Trabajo_id" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.Ot_Usuarios' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ot_Usuarios">
+    <Key>
+      <PropertyRef Name="Ot_userId" />
+    </Key>
+    <Property Name="Ot_userId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ot_userDescrip" Type="char" MaxLength="60" />
+    <Property Name="Ot_userLoguin" Type="char" MaxLength="15" />
+    <Property Name="Ot_userRol" Type="char" MaxLength="1" />
+    <Property Name="Ot_userActiv" Type="char" MaxLength="1" />
+    <Property Name="Ot_userFirma" Type="bit" />
+    <Property Name="Ot_userCargo" Type="char" MaxLength="60" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.OtDerogadas' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OtDerogadas">
+          <Property Name="nuot" Type="int" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <EntityType Name="PlanOperativo">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+      <PropertyRef Name="Ccosto_Id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Ccosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PlanOper_ValorPlan" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PlanOper_ValorReal" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PlanOper_ValorPredesp" Type="decimal" Precision="16" Scale="8" />
+  </EntityType>
+  <EntityType Name="PresPlan_SubEl">
+    <Key>
+      <PropertyRef Name="Ccosto_id" />
+      <PropertyRef Name="año" />
+      <PropertyRef Name="SubElem_idMN" />
+    </Key>
+    <Property Name="Ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="SubElem_idMN" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SubElem_idDi" Type="varchar" MaxLength="5" />
+    <Property Name="EstimadoMN" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="EstimadoDi" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PlanMN" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PlanDi" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="Presupuesto_Producto">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="mProducto_Id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="mProducto_Id" Type="int" Nullable="false" />
+    <Property Name="PresProd_CantPlan" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="PresProd_CantReal" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="PresProd_CantPredesp" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Presupuesto_SubElemento">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+      <PropertyRef Name="CCosto_id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PresSubElem_ValorPlan" Type="decimal" Precision="16" Scale="8" Nullable="false" />
+    <Property Name="PresSubElem_ValorReal" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PresSubElem_ValorPredesp" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="CCosto_idN" Type="int" />
+  </EntityType>
+  <EntityType Name="PresupuestoCcostos">
+    <Key>
+      <PropertyRef Name="año" />
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="subelem_idMN" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="subelem_idMN" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="subelem_idDi" Type="varchar" MaxLength="5" />
+    <Property Name="PlanMn" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PlanDi" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="RealMN" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="RealDi" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PredespMN" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PredespDi" Type="decimal" Precision="16" Scale="8" />
+  </EntityType>
+  <EntityType Name="PresupuestoEmpresa">
+    <Key>
+      <PropertyRef Name="año" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="Subelem_idMN" />
+    </Key>
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="Subelem_idMN" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Subelem_idDi" Type="varchar" MaxLength="5" />
+    <Property Name="PlanMn" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PlanDi" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="RealMn" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="RealDi" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PredespMn" Type="decimal" Precision="16" Scale="8" />
+    <Property Name="PredespDi" Type="decimal" Precision="16" Scale="8" />
+  </EntityType>
+  <EntityType Name="PresupuestoGastos">
+    <Key>
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="subelem_id" />
+      <PropertyRef Name="año" />
+    </Key>
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="subelem_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="año" Type="int" Nullable="false" />
+    <Property Name="enp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="fep" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="map" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="abp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="myp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jup" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jlp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="agp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="sep" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ocp" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="nop" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="dip" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="enr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="fer" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="mar" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="abr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="myr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jur" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jlr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="agr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ser" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ocr" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="nor" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="dir" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="enpo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="fepo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="mapo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="abpo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="mypo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jupo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="jlpo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="agpo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="sepo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ocpo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="nopo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="dipo" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="ccosto_idN" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.Producto_Solicitud' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Producto_Solicitud">
+    <Key>
+      <PropertyRef Name="Numsolic_Id" />
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="Numsolic_Id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="mproducto_Id" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CantDev" Type="decimal" Precision="15" Scale="8" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="prodalm_id" />
+    </Key>
+    <Property Name="prodalm_id" Type="int" Nullable="false" />
+    <Property Name="prod_descrip" Type="char" MaxLength="50" />
+    <Property Name="um" Type="char" MaxLength="3" />
+    <Property Name="pu" Type="decimal" Precision="15" Scale="8" />
+    <Property Name="existencia" Type="decimal" Precision="17" Scale="8" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="insumo" Type="bit" />
+    <Property Name="codprod" Type="char" MaxLength="10" />
+    <Property Name="precioMn" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="precioMd" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="ElementoMn" Type="char" MaxLength="5" />
+    <Property Name="ElementoMd" Type="char" MaxLength="5" />
+    <Property Name="prod_activ" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Resultados' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Resultados">
+          <Property Name="SMayCosOCostoCodigo" Type="int" />
+          <Property Name="SMayCosComprAno" Type="smallint" />
+          <Property Name="SMayCosComprMes" Type="smallint" />
+          <Property Name="SMayCosSubelem" Type="int" />
+          <Property Name="SMayCosPartDebito" Type="smallint" />
+          <Property Name="SMayCosSubcuenta" Type="int" />
+          <Property Name="SMayCosPartidaImporte" Type="money" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+          <Property Name="estado" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_702' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_702">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Ccostos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Ccostos">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.RTT_CCostosGSA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RTT_CCostosGSA">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="5" />
+          <Property Name="produccion" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Cias' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Cias">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_CiasAuxiliar' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_CiasAuxiliar">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="TonTotales" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="TonCias" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="Coeficiente" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="TonEpep" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Extraccion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Extraccion">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Fecha' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Fecha">
+          <Property Name="Año" Type="int" />
+          <Property Name="Mes" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.RTT_FechaGSA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RTT_FechaGSA">
+          <Property Name="año" Type="int" />
+          <Property Name="mes" Type="int" />
+          <Property Name="PorcientoCias" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="PlanProd" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.RTT_GSA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RTT_GSA">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="6" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Negativos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Negativos">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.RTT_PorcientoGSA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="RTT_PorcientoGSA">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="porciento" Type="decimal" Precision="15" Scale="8" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Puente' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Puente">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+          <Property Name="estado" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.Rtt_Total' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Rtt_Total">
+          <Property Name="ccosto_id" Type="varchar" MaxLength="8" />
+          <Property Name="elemento_id" Type="varchar" MaxLength="5" />
+          <Property Name="importe" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="mes" Type="int" />
+          <Property Name="año" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.SCCOBJCOSTO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SCCOBJCOSTO">
+          <Property Name="OCostCodigo" Type="int" />
+          <Property Name="OCostDescrip" Type="varchar" MaxLength="35" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.SCCSUBMAYORCOSTO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SCCSUBMAYORCOSTO">
+    <Key>
+      <PropertyRef Name="indice" />
+    </Key>
+    <Property Name="SmayCosOCostoCodigo" Type="int" />
+    <Property Name="SmayCosSubcuenta" Type="int" />
+    <Property Name="SmayCosPartidaImporte" Type="money" />
+    <Property Name="SmayCosComprMes" Type="smallint" />
+    <Property Name="SmayCosComprAno" Type="smallint" />
+    <Property Name="SmayCosSubelem" Type="int" />
+    <Property Name="SmayCosPartdebito" Type="smallint" />
+    <Property Name="SmayCosCuenta" Type="smallint" />
+    <Property Name="indice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SCGSUBELEMENTO">
+    <Key>
+      <PropertyRef Name="SubelCodigo" />
+    </Key>
+    <Property Name="SubelCodigo" Type="int" Nullable="false" />
+    <Property Name="SubelDescrip" Type="char" MaxLength="35" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.SolicDerogadas' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SolicDerogadas">
+          <Property Name="NumSolic" Type="int" />
+          <Property Name="mes" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+    </Key>
+    <Property Name="numsolic_id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="almacen_id" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="FechaSolic" Type="datetime" Nullable="false" />
+    <Property Name="FechaDesp" Type="datetime" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+    <Property Name="Cliente_Id" Type="varchar" MaxLength="8" />
+    <Property Name="SalAlm_NoVS" Type="int" />
+    <Property Name="NuOt" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="chapa" Type="char" MaxLength="100" />
+    <Property Name="SGM" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccosto_idN" Type="int" />
+  </EntityType>
+  <EntityType Name="Subdirecciones">
+    <Key>
+      <PropertyRef Name="Subd_id" />
+    </Key>
+    <Property Name="Subd_id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Subd_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubElementos">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SubElem_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubElem_Tipo" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TasaDepMB">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="tasa" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.TControl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TControl">
+    <Key>
+      <PropertyRef Name="tc_descripcion" />
+      <PropertyRef Name="tc_consecutivo" />
+    </Key>
+    <Property Name="tc_descripcion" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="tc_consecutivo" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.tpresupuesto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tpresupuesto">
+    <Key>
+      <PropertyRef Name="codcencos" />
+      <PropertyRef Name="codelem" />
+      <PropertyRef Name="valplan" />
+      <PropertyRef Name="valreal" />
+    </Key>
+    <Property Name="codcencos" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codelem" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="valplan" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="valreal" Type="numeric" Precision="12" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trabajos">
+    <Key>
+      <PropertyRef Name="trabajo_id" />
+    </Key>
+    <Property Name="trabajo_id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Trabajo_descrip" Type="char" MaxLength="160" />
+    <Property Name="tarifa" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Trabajo_Actividad" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosEc' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosEc">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosEcAdmin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosEcAdmin">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosInv' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosInv">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosOTCO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosOTCO">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosOTTD' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosOTTD">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.UsuariosTDiesel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UsuariosTDiesel">
+          <Property Name="Login" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.vvSCCOBJCOSTO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vvSCCOBJCOSTO">
+          <Property Name="OCostCodigo" Type="int" />
+          <Property Name="OCostDescrip" Type="varchar" MaxLength="35" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.vvSCCSUBMAYORCOSTO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vvSCCSUBMAYORCOSTO">
+          <Property Name="SMayCosSubCuenta" Type="int" />
+          <Property Name="SMayCosOCostoCodigo" Type="int" />
+          <Property Name="SMayCosComprAno" Type="smallint" />
+          <Property Name="SMayCosComprMes" Type="smallint" />
+          <Property Name="SMayCosPartidaImporte" Type="money" />
+          <Property Name="SMayCosCuenta" Type="smallint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.vvSCGSUBELEMENTO' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vvSCGSUBELEMENTO">
+          <Property Name="SubelCodigo" Type="int" />
+          <Property Name="SubelDescrip" Type="char" MaxLength="35" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.CCActivos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CCActivos">
+    <Key>
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.MbasAcum' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MbasAcum">
+    <Key>
+      <PropertyRef Name="SubElem_Descrip" />
+    </Key>
+    <Property Name="c_costo" Type="char" MaxLength="5" />
+    <Property Name="d_costo" Type="char" MaxLength="25" />
+    <Property Name="c_dpto" Type="char" MaxLength="4" />
+    <Property Name="d_dpto" Type="char" MaxLength="35" />
+    <Property Name="c_inve" Type="char" MaxLength="8" />
+    <Property Name="cnmb" Type="char" MaxLength="8" />
+    <Property Name="d_mbas" Type="char" MaxLength="35" />
+    <Property Name="valor" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="a_repa" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="a_repo" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="f_alta" Type="datetime" />
+    <Property Name="subel" Type="char" MaxLength="5" />
+    <Property Name="SubElem_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.MBHist' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="MBHist">
+          <Property Name="C_costo" Type="char" MaxLength="5" />
+          <Property Name="c_dpto" Type="char" MaxLength="4" />
+          <Property Name="f_alta" Type="datetime" />
+          <Property Name="valor" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="c_inve" Type="char" MaxLength="8" />
+          <Property Name="a_repo" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repa" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="cnmb" Type="char" MaxLength="8" />
+          <Property Name="d_mbas" Type="char" MaxLength="35" />
+          <Property Name="d_dpto" Type="char" MaxLength="35" />
+          <Property Name="d_costo" Type="char" MaxLength="25" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Sicenco.dbo.medios basicos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="medios basicos">
+          <Property Name="c_costo" Type="char" MaxLength="5" />
+          <Property Name="d_costo" Type="char" MaxLength="25" />
+          <Property Name="c_dpto" Type="char" MaxLength="4" />
+          <Property Name="d_dpto" Type="char" MaxLength="35" />
+          <Property Name="c_inve" Type="char" MaxLength="8" />
+          <Property Name="cnmb" Type="char" MaxLength="8" />
+          <Property Name="d_mbas" Type="char" MaxLength="35" />
+          <Property Name="valor" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repa" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="a_repo" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="f_alta" Type="datetime" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.pressiscont' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="pressiscont">
+    <Key>
+      <PropertyRef Name="CCosto_Descrip" />
+      <PropertyRef Name="SubElem_Descrip" />
+    </Key>
+    <Property Name="ccscta" Type="char" MaxLength="5" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccsctrl" Type="char" MaxLength="5" />
+    <Property Name="SubElem_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccdecom" Type="char" MaxLength="35" />
+    <Property Name="ccimope" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="ccmesop" Type="numeric" Precision="2" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.solicitudes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="solicitudes">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+      <PropertyRef Name="almacen_id" />
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="FechaSolic" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="mProducto_Descrip" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="JefeCC_Descrip" />
+    </Key>
+    <Property Name="numsolic_id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="almacen_id" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="FechaSolic" Type="datetime" Nullable="false" />
+    <Property Name="FechaDesp" Type="datetime" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Cliente_Id" Type="varchar" MaxLength="8" />
+    <Property Name="SalAlm_NoVS" Type="int" />
+    <Property Name="NuOt" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="chapa" Type="char" MaxLength="25" />
+    <Property Name="mProducto_Descrip" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Expr1" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="JefeCC_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.ver_Subdir_Ccostos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ver_Subdir_Ccostos">
+    <Key>
+      <PropertyRef Name="Subd_Id" />
+      <PropertyRef Name="Subd_Descrip" />
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="Subd_Id" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Subd_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW1">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW2">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+      <PropertyRef Name="almacen_id" />
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="FechaSolic" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="numsolic_id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="almacen_id" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="FechaSolic" Type="datetime" Nullable="false" />
+    <Property Name="FechaDesp" Type="datetime" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW3' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW3">
+    <Key>
+      <PropertyRef Name="Numsolic_Id" />
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="almacen_id" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="FechaSolic" />
+      <PropertyRef Name="ccosto_id" />
+    </Key>
+    <Property Name="Numsolic_Id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="mproducto_Id" Type="int" Nullable="false" />
+    <Property Name="CantDev" Type="decimal" Precision="15" Scale="8" />
+    <Property Name="Cantidad" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="Expr1" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="almacen_id" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="SalAlm_NoVS" Type="int" />
+    <Property Name="FechaDesp" Type="datetime" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="FechaSolic" Type="datetime" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Cliente_Id" Type="varchar" MaxLength="8" />
+    <Property Name="NuOt" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="chapa" Type="char" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW4">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="CCosto_Descrip" />
+      <PropertyRef Name="JefeCC_Descrip" />
+    </Key>
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JefeCC_Id" Type="int" />
+    <Property Name="JefeCC_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JefeCC_CtaUser" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW5' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW5">
+    <Key>
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="mproducto_Id" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CantDev" Type="decimal" Precision="15" Scale="8" />
+    <Property Name="Expr1" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW6' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW6">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="Cuenta_Id" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CCosto_Id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW7' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW7">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="almacen_id" />
+    </Key>
+    <Property Name="numsolic_id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="mproducto_Id" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="almacen_id" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW8' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW8">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+      <PropertyRef Name="FechaSolic" />
+      <PropertyRef Name="ccosto_id" />
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="Estado" />
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="numsolic_id" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="FechaSolic" Type="datetime" Nullable="false" />
+    <Property Name="ccosto_id" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="mproducto_Id" Type="int" Nullable="false" />
+    <Property Name="Expr1" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Sicenco.dbo.VIEW9' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW9">
+    <Key>
+      <PropertyRef Name="CCosto_Descrip" />
+    </Key>
+    <Property Name="cliente_id" Type="varchar" MaxLength="5" />
+    <Property Name="ejecutor_id" Type="varchar" MaxLength="5" />
+    <Property Name="trabajo" Type="varchar" MaxLength="80" />
+    <Property Name="nuot" Type="int" />
+    <Property Name="importe" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="CCosto_Descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AM_CriteriosIndic_AM_Indicadores">
+    <End Role="AM_Indicadores" Type="Self.AM_Indicadores" Multiplicity="1" />
+    <End Role="AM_CriteriosIndic" Type="Self.AM_CriteriosIndic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AM_Indicadores">
+        <PropertyRef Name="Indic_id" />
+      </Principal>
+      <Dependent Role="AM_CriteriosIndic">
+        <PropertyRef Name="Indic_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AM_Evaluaciones_AM_Indicadores">
+    <End Role="AM_Indicadores" Type="Self.AM_Indicadores" Multiplicity="1" />
+    <End Role="AM_Evaluaciones" Type="Self.AM_Evaluaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AM_Indicadores">
+        <PropertyRef Name="Indic_id" />
+      </Principal>
+      <Dependent Role="AM_Evaluaciones">
+        <PropertyRef Name="Indic_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_AM_Evaluaciones_CCostos' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_AM_Evaluaciones_CCostos" />-->
+  <Association Name="FK_AM_Indicadores_AM_Alcance">
+    <End Role="AM_Alcance" Type="Self.AM_Alcance" Multiplicity="0..1" />
+    <End Role="AM_Indicadores" Type="Self.AM_Indicadores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AM_Alcance">
+        <PropertyRef Name="Alcance_id" />
+      </Principal>
+      <Dependent Role="AM_Indicadores">
+        <PropertyRef Name="Alcance_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_AM_PresPlanSubElto_CCostos' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_AM_PresPlanSubElto_CCostos" />-->
+  <Association Name="FK_AM_PresPlanSubElto_SCGSUBELEMENTO">
+    <End Role="SCGSUBELEMENTO" Type="Self.SCGSUBELEMENTO" Multiplicity="1" />
+    <End Role="AM_PresPlanRealSubElto" Type="Self.AM_PresPlanRealSubElto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SCGSUBELEMENTO">
+        <PropertyRef Name="SubelCodigo" />
+      </Principal>
+      <Dependent Role="AM_PresPlanRealSubElto">
+        <PropertyRef Name="subelCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CCostos_Cuentas">
+    <End Role="Cuentas" Type="Self.Cuentas" Multiplicity="1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuentas">
+        <PropertyRef Name="Cuenta_Id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="Cuenta_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CCostos_JefeCC">
+    <End Role="JefeCC" Type="Self.JefeCC" Multiplicity="0..1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JefeCC">
+        <PropertyRef Name="JefeCC_Id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="JefeCC_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CCostos_Subdirecciones">
+    <End Role="Subdirecciones" Type="Self.Subdirecciones" Multiplicity="1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subdirecciones">
+        <PropertyRef Name="Subd_id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="Subd_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OT_EquipoFactServ_OT_FacturaServicio">
+    <End Role="OT_FacturaServicio" Type="Self.OT_FacturaServicio" Multiplicity="1" />
+    <End Role="OT_EquipoFactServ" Type="Self.OT_EquipoFactServ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OT_FacturaServicio">
+        <PropertyRef Name="fs_NoFact" />
+      </Principal>
+      <Dependent Role="OT_EquipoFactServ">
+        <PropertyRef Name="efs_NoFact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Equipos' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Equipos_Equipos" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Obreros' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Obreros_obreros" />-->
+  <Association Name="FK_Ot_OT_Tipo">
+    <End Role="OT_Tipo" Type="Self.OT_Tipo" Multiplicity="0..1" />
+    <End Role="Ot" Type="Self.Ot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OT_Tipo">
+        <PropertyRef Name="tipo" />
+      </Principal>
+      <Dependent Role="Ot">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OT_Pieza_OT_ServiciosP">
+    <End Role="OT_ServiciosP" Type="Self.OT_ServiciosP" Multiplicity="1" />
+    <End Role="OT_Pieza" Type="Self.OT_Pieza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OT_ServiciosP">
+        <PropertyRef Name="nuotf" />
+      </Principal>
+      <Dependent Role="OT_Pieza">
+        <PropertyRef Name="nuotf" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Productos' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Productos_Ot" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Productos' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Productos_productos" />-->
+  <Association Name="FK_OT_TrabajoFS_OT_ServiciosP">
+    <End Role="OT_ServiciosP" Type="Self.OT_ServiciosP" Multiplicity="1" />
+    <End Role="OT_TrabajoFS" Type="Self.OT_TrabajoFS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="OT_ServiciosP">
+        <PropertyRef Name="nuotf" />
+      </Principal>
+      <Dependent Role="OT_TrabajoFS">
+        <PropertyRef Name="nuotf" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Trabajos' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Trabajos_Ot" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'Sicenco.dbo.Ot_Trabajos' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_Ot_Trabajos_Trabajo" />-->
+  <Association Name="FK_Presupuesto_SubElemento_SubElementos">
+    <End Role="SubElementos" Type="Self.SubElementos" Multiplicity="1" />
+    <End Role="Presupuesto_SubElemento" Type="Self.Presupuesto_SubElemento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubElementos">
+        <PropertyRef Name="SubElem_Id" />
+      </Principal>
+      <Dependent Role="Presupuesto_SubElemento">
+        <PropertyRef Name="SubElem_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Solicitud_Solicitud">
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="1" />
+    <End Role="Producto_Solicitud" Type="Self.Producto_Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud">
+        <PropertyRef Name="numsolic_id" />
+      </Principal>
+      <Dependent Role="Producto_Solicitud">
+        <PropertyRef Name="Numsolic_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AM_Evaluaciones2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ccosto_id" Type="varchar" Mode="In" />
+    <Parameter Name="Año" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="NombreMes" Type="varchar" MaxLength="10" />
+          <Property Name="MaterialesM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="ManoDeObraM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="GastosIndirectosM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="HHM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="TotalM" Type="numeric" Precision="15" Scale="2" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="AM_Evaluaciones4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ccosto_id" Type="varchar" Mode="In" />
+    <Parameter Name="Año" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="SubElCodigoM" Type="varchar" MaxLength="6" />
+          <Property Name="SubElDescrip" Type="char" MaxLength="35" />
+          <Property Name="PlanM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="RealM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="PorctM" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="DiferM" Type="numeric" Precision="15" Scale="2" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="AM_SubElementos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ccosto_id" Type="varchar" Mode="In" />
+    <Parameter Name="Año" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="SubElCodigo" Type="int" />
+          <Property Name="SubelDescrip" Type="char" MaxLength="35" />
+          <Property Name="SubelTodo" Type="varchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Borrar_PedidosInsumos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProdAlm_Id" Type="int" Mode="In" />
+    <Parameter Name="CtaCCosto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_addtosourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="varchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_addtosourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_adduserobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_adduserobject_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchProperty" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_droppropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_dropuserobjectbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_generateansiname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getobjwithprop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getobjwithprop_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_removefromsourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_setpropertybyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_setpropertybyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_vcsenabled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp006" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp007" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_whocheckedout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_whocheckedout_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Esta_CCostoConstr" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ccosto_id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Jubilacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ccosto_id" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="NCobro" Type="decimal" Precision="11" Scale="0" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Año" Type="smallint" />
+          <Property Name="Tiempo" Type="smallint" />
+          <Property Name="Importe" Type="money" />
+          <Property Name="añosTrabajados" Type="smallint" />
+          <Property Name="Porciento" Type="smallint" />
+          <Property Name="FRama" Type="datetime" />
+          <Property Name="Edad" Type="smallint" />
+          <Property Name="CIdentidad" Type="varchar" MaxLength="11" />
+          <Property Name="FaltanxEdad" Type="smallint" />
+          <Property Name="FaltanxAñosW" Type="smallint" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="OT_InventariosMedBasicos_Web_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="OT_InventariosMedBasicos(Web)">
+    <Parameter Name="NoInve" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Report_PrecioProductoSiscont" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="almacen_id" Type="varchar" Mode="In" />
+    <Parameter Name="descrip" Type="varchar" Mode="In" />
+    <Parameter Name="Reporte" Type="char" Mode="In" />
+  </Function>
+  <Function Name="Report_PresGastosSubEl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="gnAño" Type="int" Mode="In" />
+    <Parameter Name="ccosto_id" Type="varchar" Mode="In" />
+    <Parameter Name="subd_id" Type="varchar" Mode="In" />
+    <Parameter Name="tipo" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sql_Ccostos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sql_CcostosDeLaSubd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Subd_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sql_CcostosDelUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JefeCc_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sql_CcostosDelUsuRepo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JefeCc_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sql_CcostosDSubd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sql_CcostosTodos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sql_DatosDelCCosto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ccosto_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sql_DistribucionProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codprod" Type="char" Mode="In" />
+    <Parameter Name="almacen_id" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sql_PresupProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sql_PresupuestoDelCCosto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sql_ProductosBalancDeLCCosto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mProducto_Id" Type="int" Mode="In" />
+    <Parameter Name="Ccosto_Id" Type="varchar" Mode="In" />
+    <Parameter Name="almacen_id" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sql_ProductosDelCCosto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ccosto_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sql_ProductosNormadosDelCcosto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ccosto_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sql_Subdirecciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UsuarioEcon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="loguin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WSBuscar_CCosto_porDescrip" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CCosto_Descrip" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="WSBuscar_CCosto_porId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CCosto_id" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="SicencoModelStoreContainer">
+    <EntitySet Name="AM_Alcance" EntityType="Self.AM_Alcance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AM_CriteriosIndic" EntityType="Self.AM_CriteriosIndic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AM_Evaluaciones" EntityType="Self.AM_Evaluaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AM_Indicadores" EntityType="Self.AM_Indicadores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AM_PresPlanRealSubElto" EntityType="Self.AM_PresPlanRealSubElto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CCostos" EntityType="Self.CCostos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cuentas" EntityType="Self.Cuentas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Elementos" EntityType="Self.Elementos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ElemMnDi" EntityType="Self.ElemMnDi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipos" EntityType="Self.Equipos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JefeCC" EntityType="Self.JefeCC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="obreros" EntityType="Self.obreros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ot" EntityType="Self.Ot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Clientes" EntityType="Self.OT_Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Comp731" EntityType="Self.OT_Comp731" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ot_Comprobantes" EntityType="Self.Ot_Comprobantes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_EquipoFactServ" EntityType="Self.OT_EquipoFactServ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_FacturaServicio" EntityType="Self.OT_FacturaServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ot_Insumos" EntityType="Self.Ot_Insumos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Pieza" EntityType="Self.OT_Pieza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_PiezaFactServ" EntityType="Self.OT_PiezaFactServ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_PiezaFSAlmacen" EntityType="Self.OT_PiezaFSAlmacen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_ProdValesSal" EntityType="Self.OT_ProdValesSal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Servicios" EntityType="Self.OT_Servicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_ServiciosP" EntityType="Self.OT_ServiciosP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Tipo" EntityType="Self.OT_Tipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_TrabajoFS" EntityType="Self.OT_TrabajoFS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanOperativo" EntityType="Self.PlanOperativo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresPlan_SubEl" EntityType="Self.PresPlan_SubEl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Presupuesto_Producto" EntityType="Self.Presupuesto_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Presupuesto_SubElemento" EntityType="Self.Presupuesto_SubElemento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresupuestoCcostos" EntityType="Self.PresupuestoCcostos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresupuestoEmpresa" EntityType="Self.PresupuestoEmpresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresupuestoGastos" EntityType="Self.PresupuestoGastos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productos" EntityType="Self.productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCGSUBELEMENTO" EntityType="Self.SCGSUBELEMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subdirecciones" EntityType="Self.Subdirecciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubElementos" EntityType="Self.SubElementos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TasaDepMB" EntityType="Self.TasaDepMB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trabajos" EntityType="Self.Trabajos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OT_Cta731" EntityType="Self.OT_Cta731" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OT_Cta731].[ejecutor_id] AS [ejecutor_id], 
+    [OT_Cta731].[cliente_id] AS [cliente_id], 
+    [OT_Cta731].[fecha] AS [fecha], 
+    [OT_Cta731].[importeMn] AS [importeMn], 
+    [OT_Cta731].[importeMd] AS [importeMd], 
+    [OT_Cta731].[elementoMn] AS [elementoMn], 
+    [OT_Cta731].[elementoMd] AS [elementoMd]
+    FROM [dbo].[OT_Cta731] AS [OT_Cta731]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OT_MundoPiezasFact" EntityType="Self.OT_MundoPiezasFact" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OT_MundoPiezasFact].[mp_id] AS [mp_id], 
+    [OT_MundoPiezasFact].[mp_Descripcion] AS [mp_Descripcion]
+    FROM [dbo].[OT_MundoPiezasFact] AS [OT_MundoPiezasFact]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ot_Usuarios" EntityType="Self.Ot_Usuarios" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ot_Usuarios].[Ot_userId] AS [Ot_userId], 
+    [Ot_Usuarios].[Ot_userDescrip] AS [Ot_userDescrip], 
+    [Ot_Usuarios].[Ot_userLoguin] AS [Ot_userLoguin], 
+    [Ot_Usuarios].[Ot_userRol] AS [Ot_userRol], 
+    [Ot_Usuarios].[Ot_userActiv] AS [Ot_userActiv], 
+    [Ot_Usuarios].[Ot_userFirma] AS [Ot_userFirma], 
+    [Ot_Usuarios].[Ot_userCargo] AS [Ot_userCargo]
+    FROM [dbo].[Ot_Usuarios] AS [Ot_Usuarios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Producto_Solicitud" EntityType="Self.Producto_Solicitud" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Producto_Solicitud].[Numsolic_Id] AS [Numsolic_Id], 
+    [Producto_Solicitud].[mproducto_Id] AS [mproducto_Id], 
+    [Producto_Solicitud].[Cantidad] AS [Cantidad], 
+    [Producto_Solicitud].[CantDev] AS [CantDev]
+    FROM [dbo].[Producto_Solicitud] AS [Producto_Solicitud]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SCCSUBMAYORCOSTO" EntityType="Self.SCCSUBMAYORCOSTO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SCCSUBMAYORCOSTO].[SmayCosOCostoCodigo] AS [SmayCosOCostoCodigo], 
+    [SCCSUBMAYORCOSTO].[SmayCosSubcuenta] AS [SmayCosSubcuenta], 
+    [SCCSUBMAYORCOSTO].[SmayCosPartidaImporte] AS [SmayCosPartidaImporte], 
+    [SCCSUBMAYORCOSTO].[SmayCosComprMes] AS [SmayCosComprMes], 
+    [SCCSUBMAYORCOSTO].[SmayCosComprAno] AS [SmayCosComprAno], 
+    [SCCSUBMAYORCOSTO].[SmayCosSubelem] AS [SmayCosSubelem], 
+    [SCCSUBMAYORCOSTO].[SmayCosPartdebito] AS [SmayCosPartdebito], 
+    [SCCSUBMAYORCOSTO].[SmayCosCuenta] AS [SmayCosCuenta], 
+    [SCCSUBMAYORCOSTO].[indice] AS [indice]
+    FROM [dbo].[SCCSUBMAYORCOSTO] AS [SCCSUBMAYORCOSTO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TControl" EntityType="Self.TControl" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TControl].[tc_descripcion] AS [tc_descripcion], 
+    [TControl].[tc_consecutivo] AS [tc_consecutivo]
+    FROM [dbo].[TControl] AS [TControl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tpresupuesto" EntityType="Self.tpresupuesto" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tpresupuesto].[codcencos] AS [codcencos], 
+    [tpresupuesto].[codelem] AS [codelem], 
+    [tpresupuesto].[valplan] AS [valplan], 
+    [tpresupuesto].[valreal] AS [valreal]
+    FROM [dbo].[tpresupuesto] AS [tpresupuesto]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CCActivos" EntityType="Self.CCActivos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CCActivos].[CCosto_Id] AS [CCosto_Id], 
+    [CCActivos].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[CCActivos] AS [CCActivos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MbasAcum" EntityType="Self.MbasAcum" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MbasAcum].[c_costo] AS [c_costo], 
+    [MbasAcum].[d_costo] AS [d_costo], 
+    [MbasAcum].[c_dpto] AS [c_dpto], 
+    [MbasAcum].[d_dpto] AS [d_dpto], 
+    [MbasAcum].[c_inve] AS [c_inve], 
+    [MbasAcum].[cnmb] AS [cnmb], 
+    [MbasAcum].[d_mbas] AS [d_mbas], 
+    [MbasAcum].[valor] AS [valor], 
+    [MbasAcum].[a_repa] AS [a_repa], 
+    [MbasAcum].[a_repo] AS [a_repo], 
+    [MbasAcum].[f_alta] AS [f_alta], 
+    [MbasAcum].[subel] AS [subel], 
+    [MbasAcum].[SubElem_Descrip] AS [SubElem_Descrip]
+    FROM [dbo].[MbasAcum] AS [MbasAcum]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pressiscont" EntityType="Self.pressiscont" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [pressiscont].[ccscta] AS [ccscta], 
+    [pressiscont].[CCosto_Descrip] AS [CCosto_Descrip], 
+    [pressiscont].[ccsctrl] AS [ccsctrl], 
+    [pressiscont].[SubElem_Descrip] AS [SubElem_Descrip], 
+    [pressiscont].[ccdecom] AS [ccdecom], 
+    [pressiscont].[ccimope] AS [ccimope], 
+    [pressiscont].[ccmesop] AS [ccmesop]
+    FROM [dbo].[pressiscont] AS [pressiscont]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="solicitudes" EntityType="Self.solicitudes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [solicitudes].[numsolic_id] AS [numsolic_id], 
+    [solicitudes].[almacen_id] AS [almacen_id], 
+    [solicitudes].[ccosto_id] AS [ccosto_id], 
+    [solicitudes].[FechaSolic] AS [FechaSolic], 
+    [solicitudes].[FechaDesp] AS [FechaDesp], 
+    [solicitudes].[Estado] AS [Estado], 
+    [solicitudes].[Cliente_Id] AS [Cliente_Id], 
+    [solicitudes].[SalAlm_NoVS] AS [SalAlm_NoVS], 
+    [solicitudes].[NuOt] AS [NuOt], 
+    [solicitudes].[chapa] AS [chapa], 
+    [solicitudes].[mProducto_Descrip] AS [mProducto_Descrip], 
+    [solicitudes].[Expr1] AS [Expr1], 
+    [solicitudes].[JefeCC_Descrip] AS [JefeCC_Descrip]
+    FROM [dbo].[solicitudes] AS [solicitudes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ver_Subdir_Ccostos" EntityType="Self.ver_Subdir_Ccostos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ver_Subdir_Ccostos].[Subd_Id] AS [Subd_Id], 
+    [ver_Subdir_Ccostos].[Subd_Descrip] AS [Subd_Descrip], 
+    [ver_Subdir_Ccostos].[Cuenta_Id] AS [Cuenta_Id], 
+    [ver_Subdir_Ccostos].[CCosto_Id] AS [CCosto_Id], 
+    [ver_Subdir_Ccostos].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[ver_Subdir_Ccostos] AS [ver_Subdir_Ccostos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW1" EntityType="Self.VIEW1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW1].[Cuenta_Id] AS [Cuenta_Id], 
+    [VIEW1].[CCosto_Id] AS [CCosto_Id], 
+    [VIEW1].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[VIEW1] AS [VIEW1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW2" EntityType="Self.VIEW2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW2].[numsolic_id] AS [numsolic_id], 
+    [VIEW2].[almacen_id] AS [almacen_id], 
+    [VIEW2].[ccosto_id] AS [ccosto_id], 
+    [VIEW2].[FechaSolic] AS [FechaSolic], 
+    [VIEW2].[FechaDesp] AS [FechaDesp], 
+    [VIEW2].[Estado] AS [Estado], 
+    [VIEW2].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[VIEW2] AS [VIEW2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW3" EntityType="Self.VIEW3" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW3].[Numsolic_Id] AS [Numsolic_Id], 
+    [VIEW3].[mproducto_Id] AS [mproducto_Id], 
+    [VIEW3].[CantDev] AS [CantDev], 
+    [VIEW3].[Cantidad] AS [Cantidad], 
+    [VIEW3].[Expr1] AS [Expr1], 
+    [VIEW3].[almacen_id] AS [almacen_id], 
+    [VIEW3].[SalAlm_NoVS] AS [SalAlm_NoVS], 
+    [VIEW3].[FechaDesp] AS [FechaDesp], 
+    [VIEW3].[Estado] AS [Estado], 
+    [VIEW3].[FechaSolic] AS [FechaSolic], 
+    [VIEW3].[ccosto_id] AS [ccosto_id], 
+    [VIEW3].[Cliente_Id] AS [Cliente_Id], 
+    [VIEW3].[NuOt] AS [NuOt], 
+    [VIEW3].[chapa] AS [chapa]
+    FROM [dbo].[VIEW3] AS [VIEW3]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW4" EntityType="Self.VIEW4" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW4].[Cuenta_Id] AS [Cuenta_Id], 
+    [VIEW4].[CCosto_Id] AS [CCosto_Id], 
+    [VIEW4].[CCosto_Descrip] AS [CCosto_Descrip], 
+    [VIEW4].[JefeCC_Id] AS [JefeCC_Id], 
+    [VIEW4].[JefeCC_Descrip] AS [JefeCC_Descrip], 
+    [VIEW4].[JefeCC_CtaUser] AS [JefeCC_CtaUser]
+    FROM [dbo].[VIEW4] AS [VIEW4]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW5" EntityType="Self.VIEW5" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW5].[mproducto_Id] AS [mproducto_Id], 
+    [VIEW5].[Cantidad] AS [Cantidad], 
+    [VIEW5].[CantDev] AS [CantDev], 
+    [VIEW5].[Expr1] AS [Expr1]
+    FROM [dbo].[VIEW5] AS [VIEW5]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW6" EntityType="Self.VIEW6" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW6].[Cuenta_Id] AS [Cuenta_Id], 
+    [VIEW6].[CCosto_Id] AS [CCosto_Id], 
+    [VIEW6].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[VIEW6] AS [VIEW6]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW7" EntityType="Self.VIEW7" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW7].[numsolic_id] AS [numsolic_id], 
+    [VIEW7].[Estado] AS [Estado], 
+    [VIEW7].[mproducto_Id] AS [mproducto_Id], 
+    [VIEW7].[Cantidad] AS [Cantidad], 
+    [VIEW7].[almacen_id] AS [almacen_id]
+    FROM [dbo].[VIEW7] AS [VIEW7]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW8" EntityType="Self.VIEW8" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW8].[numsolic_id] AS [numsolic_id], 
+    [VIEW8].[FechaSolic] AS [FechaSolic], 
+    [VIEW8].[ccosto_id] AS [ccosto_id], 
+    [VIEW8].[mproducto_Id] AS [mproducto_Id], 
+    [VIEW8].[Expr1] AS [Expr1], 
+    [VIEW8].[Estado] AS [Estado], 
+    [VIEW8].[Cantidad] AS [Cantidad]
+    FROM [dbo].[VIEW8] AS [VIEW8]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW9" EntityType="Self.VIEW9" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIEW9].[cliente_id] AS [cliente_id], 
+    [VIEW9].[ejecutor_id] AS [ejecutor_id], 
+    [VIEW9].[trabajo] AS [trabajo], 
+    [VIEW9].[nuot] AS [nuot], 
+    [VIEW9].[importe] AS [importe], 
+    [VIEW9].[fecha] AS [fecha], 
+    [VIEW9].[CCosto_Descrip] AS [CCosto_Descrip]
+    FROM [dbo].[VIEW9] AS [VIEW9]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AM_CriteriosIndic_AM_Indicadores" Association="Self.FK_AM_CriteriosIndic_AM_Indicadores">
+      <End Role="AM_Indicadores" EntitySet="AM_Indicadores" />
+      <End Role="AM_CriteriosIndic" EntitySet="AM_CriteriosIndic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AM_Evaluaciones_AM_Indicadores" Association="Self.FK_AM_Evaluaciones_AM_Indicadores">
+      <End Role="AM_Indicadores" EntitySet="AM_Indicadores" />
+      <End Role="AM_Evaluaciones" EntitySet="AM_Evaluaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AM_Indicadores_AM_Alcance" Association="Self.FK_AM_Indicadores_AM_Alcance">
+      <End Role="AM_Alcance" EntitySet="AM_Alcance" />
+      <End Role="AM_Indicadores" EntitySet="AM_Indicadores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AM_PresPlanSubElto_SCGSUBELEMENTO" Association="Self.FK_AM_PresPlanSubElto_SCGSUBELEMENTO">
+      <End Role="SCGSUBELEMENTO" EntitySet="SCGSUBELEMENTO" />
+      <End Role="AM_PresPlanRealSubElto" EntitySet="AM_PresPlanRealSubElto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CCostos_Cuentas" Association="Self.FK_CCostos_Cuentas">
+      <End Role="Cuentas" EntitySet="Cuentas" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CCostos_JefeCC" Association="Self.FK_CCostos_JefeCC">
+      <End Role="JefeCC" EntitySet="JefeCC" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CCostos_Subdirecciones" Association="Self.FK_CCostos_Subdirecciones">
+      <End Role="Subdirecciones" EntitySet="Subdirecciones" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OT_EquipoFactServ_OT_FacturaServicio" Association="Self.FK_OT_EquipoFactServ_OT_FacturaServicio">
+      <End Role="OT_FacturaServicio" EntitySet="OT_FacturaServicio" />
+      <End Role="OT_EquipoFactServ" EntitySet="OT_EquipoFactServ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ot_OT_Tipo" Association="Self.FK_Ot_OT_Tipo">
+      <End Role="OT_Tipo" EntitySet="OT_Tipo" />
+      <End Role="Ot" EntitySet="Ot" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OT_Pieza_OT_ServiciosP" Association="Self.FK_OT_Pieza_OT_ServiciosP">
+      <End Role="OT_ServiciosP" EntitySet="OT_ServiciosP" />
+      <End Role="OT_Pieza" EntitySet="OT_Pieza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OT_TrabajoFS_OT_ServiciosP" Association="Self.FK_OT_TrabajoFS_OT_ServiciosP">
+      <End Role="OT_ServiciosP" EntitySet="OT_ServiciosP" />
+      <End Role="OT_TrabajoFS" EntitySet="OT_TrabajoFS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Presupuesto_SubElemento_SubElementos" Association="Self.FK_Presupuesto_SubElemento_SubElementos">
+      <End Role="SubElementos" EntitySet="SubElementos" />
+      <End Role="Presupuesto_SubElemento" EntitySet="Presupuesto_SubElemento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Solicitud_Solicitud" Association="Self.FK_Producto_Solicitud_Solicitud">
+      <End Role="Solicitud" EntitySet="Solicitud" />
+      <End Role="Producto_Solicitud" EntitySet="Producto_Solicitud" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

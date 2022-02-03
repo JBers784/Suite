@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Suite.Models.Almacenes.MediosBasicos>
+
+@{
+    ViewBag.Title = "Medios Basicos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("MediosBasicos", "Almacenes", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+   
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab4">Módulos</a></li>
+    <li class="active">Medios Basicos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        <table class="table ">
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black"> Código </span>
+                </th>
+                <th>
+                    <span style="color:black">  Descripción </span>
+                </th>
+                <th>
+                    <span style="color:black">  Um </span>
+                </th>
+                <th>
+                    <span style="color:black">  Existencia </span>
+                </th>
+                <th>
+                    <span style="color:black">  Almacén </span>
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo )
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Um)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Existencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreAlmacen)
+                </td>
+
+            </tr>
+            }
+
+        </table>
+    }
+}
+

@@ -1,0 +1,1692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SitransModelStoreContainer" CdmEntityContainer="SitransEntities">
+    <EntitySetMapping Name="AccidenteTipo">
+      <EntityTypeMapping TypeName="SitransModel.AccidenteTipo">
+        <MappingFragment StoreEntitySet="AccidenteTipo">
+          <ScalarProperty Name="IDAccidTipo" ColumnName="IDAccidTipo" />
+          <ScalarProperty Name="AccidTipo" ColumnName="AccidTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdelantarMttoMotor">
+      <EntityTypeMapping TypeName="SitransModel.AdelantarMttoMotor">
+        <MappingFragment StoreEntitySet="AdelantarMttoMotor">
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="amm_Litros" ColumnName="amm_Litros" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="amm_Fecha" ColumnName="amm_Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionesArrastres">
+      <EntityTypeMapping TypeName="SitransModel.AsignacionesArrastres">
+        <MappingFragment StoreEntitySet="AsignacionesArrastres">
+          <ScalarProperty Name="ac_Id" ColumnName="ac_Id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ac_Fecha" ColumnName="ac_Fecha" />
+          <ScalarProperty Name="ac_Kms" ColumnName="ac_Kms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionesBaterias">
+      <EntityTypeMapping TypeName="SitransModel.AsignacionesBaterias">
+        <MappingFragment StoreEntitySet="AsignacionesBaterias">
+          <ScalarProperty Name="ab_Id" ColumnName="ab_Id" />
+          <ScalarProperty Name="bat_PC" ColumnName="bat_PC" />
+          <ScalarProperty Name="ab_Fecha" ColumnName="ab_Fecha" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionesMotores">
+      <EntityTypeMapping TypeName="SitransModel.AsignacionesMotores">
+        <MappingFragment StoreEntitySet="AsignacionesMotores">
+          <ScalarProperty Name="am_Id" ColumnName="am_Id" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="am_Fecha" ColumnName="am_Fecha" />
+          <ScalarProperty Name="am_Litros" ColumnName="am_Litros" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionesNeumaticos">
+      <EntityTypeMapping TypeName="SitransModel.AsignacionesNeumaticos">
+        <MappingFragment StoreEntitySet="AsignacionesNeumaticos">
+          <ScalarProperty Name="an_Id" ColumnName="an_Id" />
+          <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+          <ScalarProperty Name="an_Fecha" ColumnName="an_Fecha" />
+          <ScalarProperty Name="an_Kms" ColumnName="an_Kms" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AtrasarMttoMotor">
+      <EntityTypeMapping TypeName="SitransModel.AtrasarMttoMotor">
+        <MappingFragment StoreEntitySet="AtrasarMttoMotor">
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="amm_Litros" ColumnName="amm_Litros" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="amm_Fecha" ColumnName="amm_Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ayudantes">
+      <EntityTypeMapping TypeName="SitransModel.Ayudantes">
+        <MappingFragment StoreEntitySet="Ayudantes">
+          <ScalarProperty Name="Ayudante_ID" ColumnName="Ayudante_ID" />
+          <ScalarProperty Name="Ayudante_Nombre" ColumnName="Ayudante_Nombre" />
+          <ScalarProperty Name="Ayudante_CI" ColumnName="Ayudante_CI" />
+          <ScalarProperty Name="Ayudante_Inactivo" ColumnName="Ayudante_Inactivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BajasBaterias">
+      <EntityTypeMapping TypeName="SitransModel.BajasBaterias">
+        <MappingFragment StoreEntitySet="BajasBaterias">
+          <ScalarProperty Name="bat_PC" ColumnName="bat_PC" />
+          <ScalarProperty Name="bbat_FechaBaja" ColumnName="bbat_FechaBaja" />
+          <ScalarProperty Name="bmb_Id" ColumnName="bmb_Id" />
+          <ScalarProperty Name="bbat_Observ" ColumnName="bbat_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BajasEquipos">
+      <EntityTypeMapping TypeName="SitransModel.BajasEquipos">
+        <MappingFragment StoreEntitySet="BajasEquipos">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="beq_FechaBaja" ColumnName="beq_FechaBaja" />
+          <ScalarProperty Name="mcb_Id" ColumnName="mcb_Id" />
+          <ScalarProperty Name="beq_Observ" ColumnName="beq_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BajasMotores">
+      <EntityTypeMapping TypeName="SitransModel.BajasMotores">
+        <MappingFragment StoreEntitySet="BajasMotores">
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="bmotor_FechaBaja" ColumnName="bmotor_FechaBaja" />
+          <ScalarProperty Name="bmotor_MotivoBaja" ColumnName="bmotor_MotivoBaja" />
+          <ScalarProperty Name="bmotor_Observ" ColumnName="bmotor_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BajasNeumaticos">
+      <EntityTypeMapping TypeName="SitransModel.BajasNeumaticos">
+        <MappingFragment StoreEntitySet="BajasNeumaticos">
+          <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+          <ScalarProperty Name="bneum_FechaBaja" ColumnName="bneum_FechaBaja" />
+          <ScalarProperty Name="nmb_Id" ColumnName="nmb_Id" />
+          <ScalarProperty Name="bneum_Observ" ColumnName="bneum_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Baterias">
+      <EntityTypeMapping TypeName="SitransModel.Baterias">
+        <MappingFragment StoreEntitySet="Baterias">
+          <ScalarProperty Name="bat_PC" ColumnName="bat_PC" />
+          <ScalarProperty Name="mbat_Id" ColumnName="mbat_Id" />
+          <ScalarProperty Name="bat_FechaAlta" ColumnName="bat_FechaAlta" />
+          <ScalarProperty Name="bat_TipoAlta" ColumnName="bat_TipoAlta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BatMotivoBaja">
+      <EntityTypeMapping TypeName="SitransModel.BatMotivoBaja">
+        <MappingFragment StoreEntitySet="BatMotivoBaja">
+          <ScalarProperty Name="bmb_Id" ColumnName="bmb_Id" />
+          <ScalarProperty Name="bmb_DescMotivo" ColumnName="bmb_DescMotivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BITACORA">
+      <EntityTypeMapping TypeName="SitransModel.BITACORA">
+        <MappingFragment StoreEntitySet="BITACORA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHAHORA" ColumnName="FECHAHORA" />
+          <ScalarProperty Name="HOST" ColumnName="HOST" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartaTecnEqMttoOT">
+      <EntityTypeMapping TypeName="SitransModel.CartaTecnEqMttoOT">
+        <MappingFragment StoreEntitySet="CartaTecnEqMttoOT">
+          <ScalarProperty Name="TempID" ColumnName="TempID" />
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="Cumplida" ColumnName="Cumplida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosCostos">
+      <EntityTypeMapping TypeName="SitransModel.CentrosCostos">
+        <MappingFragment StoreEntitySet="CentrosCostos">
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="ccosto_codcencos" ColumnName="ccosto_codcencos" />
+          <ScalarProperty Name="ccosto_descrip" ColumnName="ccosto_descrip" />
+          <ScalarProperty Name="ccosto_Inactivo" ColumnName="ccosto_Inactivo" />
+          <ScalarProperty Name="dir_ID" ColumnName="dir_ID" />
+          <ScalarProperty Name="ExportDataExcluir" ColumnName="ExportDataExcluir" />
+          <ScalarProperty Name="xmlContaExcluir" ColumnName="xmlContaExcluir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Choferes">
+      <EntityTypeMapping TypeName="SitransModel.Choferes">
+        <MappingFragment StoreEntitySet="Choferes">
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="c_Nombre" ColumnName="c_Nombre" />
+          <ScalarProperty Name="c_NoLicConduccion" ColumnName="c_NoLicConduccion" />
+          <ScalarProperty Name="c_CI" ColumnName="c_CI" />
+          <ScalarProperty Name="c_FVencNoLic" ColumnName="c_FVencNoLic" />
+          <ScalarProperty Name="c_FUltimoChequeoMed" ColumnName="c_FUltimoChequeoMed" />
+          <ScalarProperty Name="c_FUltimaRecalificacion" ColumnName="c_FUltimaRecalificacion" />
+          <ScalarProperty Name="c_Inactivos" ColumnName="c_Inactivos" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="dir_ID" ColumnName="dir_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cnConfGestorAlm">
+      <EntityTypeMapping TypeName="SitransModel.cnConfGestorAlm">
+        <MappingFragment StoreEntitySet="cnConfGestorAlm">
+          <ScalarProperty Name="cga_ID" ColumnName="cga_ID" />
+          <ScalarProperty Name="cga_Gestor" ColumnName="cga_Gestor" />
+          <ScalarProperty Name="cga_NameInstanciaServDB" ColumnName="cga_NameInstanciaServDB" />
+          <ScalarProperty Name="cga_NameDB" ColumnName="cga_NameDB" />
+          <ScalarProperty Name="cga_TipoDB" ColumnName="cga_TipoDB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsCombMotBT">
+      <EntityTypeMapping TypeName="SitransModel.ConsCombMotBT">
+        <MappingFragment StoreEntitySet="ConsCombMotBT">
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="cm_Fecha" ColumnName="cm_Fecha" />
+          <ScalarProperty Name="cm_FechaDoc" ColumnName="cm_FechaDoc" />
+          <ScalarProperty Name="cm_FechaSistema" ColumnName="cm_FechaSistema" />
+          <ScalarProperty Name="cm_Litros" ColumnName="cm_Litros" />
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="ldesc_ID" ColumnName="ldesc_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsumoCombustibleMotores">
+      <EntityTypeMapping TypeName="SitransModel.ConsumoCombustibleMotores">
+        <MappingFragment StoreEntitySet="ConsumoCombustibleMotores">
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ccosto_Id" ColumnName="ccosto_Id" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="cm_Fecha" ColumnName="cm_Fecha" />
+          <ScalarProperty Name="cm_Litros" ColumnName="cm_Litros" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControlDocEquipos">
+      <EntityTypeMapping TypeName="SitransModel.ControlDocEquipos">
+        <MappingFragment StoreEntitySet="ControlDocEquipos">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="mdoc_id" ColumnName="mdoc_id" />
+          <ScalarProperty Name="cde_FechaExp" ColumnName="cde_FechaExp" />
+          <ScalarProperty Name="cde_FechaVence" ColumnName="cde_FechaVence" />
+          <ScalarProperty Name="eq_NoDoc" ColumnName="eq_NoDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallesCiclosMantenimiento">
+      <EntityTypeMapping TypeName="SitransModel.DetallesCiclosMantenimiento">
+        <MappingFragment StoreEntitySet="DetallesCiclosMantenimiento">
+          <ScalarProperty Name="mciclo_Id" ColumnName="mciclo_Id" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="dcm_NoDeOrden" ColumnName="dcm_NoDeOrden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallesHojaRuta">
+      <EntityTypeMapping TypeName="SitransModel.DetallesHojaRuta">
+        <MappingFragment StoreEntitySet="DetallesHojaRuta">
+          <ScalarProperty Name="dhr_Id" ColumnName="dhr_Id" />
+          <ScalarProperty Name="HR_ID" ColumnName="HR_ID" />
+          <ScalarProperty Name="dhr_Fecha" ColumnName="dhr_Fecha" />
+          <ScalarProperty Name="dhr_FechaLlegada" ColumnName="dhr_FechaLlegada" />
+          <ScalarProperty Name="dhr_HorasViaje" ColumnName="dhr_HorasViaje" />
+          <ScalarProperty Name="mpeq_Id" ColumnName="mpeq_Id" />
+          <ScalarProperty Name="dhr_KmsRecorridos" ColumnName="dhr_KmsRecorridos" />
+          <ScalarProperty Name="dhr_TonTransportadas" ColumnName="dhr_TonTransportadas" />
+          <ScalarProperty Name="dhr_TonDespachadas" ColumnName="dhr_TonDespachadas" />
+          <ScalarProperty Name="dhr_PersonasTransportadas" ColumnName="dhr_PersonasTransportadas" />
+          <ScalarProperty Name="dhr_TiempoImproductivo" ColumnName="dhr_TiempoImproductivo" />
+          <ScalarProperty Name="dhr_TiempoIzaje" ColumnName="dhr_TiempoIzaje" />
+          <ScalarProperty Name="dhr_TonIzadas" ColumnName="dhr_TonIzadas" />
+          <ScalarProperty Name="dhr_HorasEspCarga" ColumnName="dhr_HorasEspCarga" />
+          <ScalarProperty Name="dhr_HorasCarga" ColumnName="dhr_HorasCarga" />
+          <ScalarProperty Name="dhr_HorasEspDescarga" ColumnName="dhr_HorasEspDescarga" />
+          <ScalarProperty Name="dhr_HorasDescarga" ColumnName="dhr_HorasDescarga" />
+          <ScalarProperty Name="LCarga_ID" ColumnName="LCarga_ID" />
+          <ScalarProperty Name="Trayectoria_ID" ColumnName="Trayectoria_ID" />
+          <ScalarProperty Name="dhr_KmsFacturar" ColumnName="dhr_KmsFacturar" />
+          <ScalarProperty Name="prodt_ID" ColumnName="prodt_ID" />
+          <ScalarProperty Name="dhr_Desvio" ColumnName="dhr_Desvio" />
+          <ScalarProperty Name="tbombeo_ID" ColumnName="tbombeo_ID" />
+          <ScalarProperty Name="dhr_Observ" ColumnName="dhr_Observ" />
+          <ScalarProperty Name="NoCartaPorte" ColumnName="NoCartaPorte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOT_ManoObra">
+      <EntityTypeMapping TypeName="SitransModel.DetOT_ManoObra">
+        <MappingFragment StoreEntitySet="DetOT_ManoObra">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="dotmo_Fecha" ColumnName="dotmo_Fecha" />
+          <ScalarProperty Name="mo_Id" ColumnName="mo_Id" />
+          <ScalarProperty Name="dotmo_Horas" ColumnName="dotmo_Horas" />
+          <ScalarProperty Name="dotmo_Min" ColumnName="dotmo_Min" />
+          <ScalarProperty Name="dotmo_Tarifa" ColumnName="dotmo_Tarifa" />
+          <ScalarProperty Name="mBrig_id" ColumnName="mBrig_id" />
+          <ScalarProperty Name="dotmo_Incluye30RC" ColumnName="dotmo_Incluye30RC" />
+          <ScalarProperty Name="dotmo_PctoGI" ColumnName="dotmo_PctoGI" />
+          <ScalarProperty Name="OperacionesRealizadas" ColumnName="OperacionesRealizadas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOT_Materiales">
+      <EntityTypeMapping TypeName="SitransModel.DetOT_Materiales">
+        <MappingFragment StoreEntitySet="DetOT_Materiales">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="ept_Id" ColumnName="ept_Id" />
+          <ScalarProperty Name="dotm_Fecha" ColumnName="dotm_Fecha" />
+          <ScalarProperty Name="dotm_Precio" ColumnName="dotm_Precio" />
+          <ScalarProperty Name="dotm_Cantidad" ColumnName="dotm_Cantidad" />
+          <ScalarProperty Name="dotm_PctoGI" ColumnName="dotm_PctoGI" />
+          <ScalarProperty Name="DSAlm_PrecioCUC" ColumnName="DSAlm_PrecioCUC" />
+          <ScalarProperty Name="DSAlm_ElemCUC" ColumnName="DSAlm_ElemCUC" />
+          <ScalarProperty Name="DSAlm_ElemMN" ColumnName="DSAlm_ElemMN" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="NoVSAlmacen" ColumnName="NoVSAlmacen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOT_RotSistemas">
+      <EntityTypeMapping TypeName="SitransModel.DetOT_RotSistemas">
+        <MappingFragment StoreEntitySet="DetOT_RotSistemas">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="msa_Id" ColumnName="msa_Id" />
+          <ScalarProperty Name="dotrs_Fecha" ColumnName="dotrs_Fecha" />
+          <ScalarProperty Name="dotrs_Cantidad" ColumnName="dotrs_Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOT_TiempoInactivo">
+      <EntityTypeMapping TypeName="SitransModel.DetOT_TiempoInactivo">
+        <MappingFragment StoreEntitySet="DetOT_TiempoInactivo">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="mpar_Id" ColumnName="mpar_Id" />
+          <ScalarProperty Name="dotti_Fecha" ColumnName="dotti_Fecha" />
+          <ScalarProperty Name="dotti_Horas" ColumnName="dotti_Horas" />
+          <ScalarProperty Name="dotti_Min" ColumnName="dotti_Min" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetSalAlm">
+      <EntityTypeMapping TypeName="SitransModel.DetSalAlm">
+        <MappingFragment StoreEntitySet="DetSalAlm">
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+          <ScalarProperty Name="DSAlm_CodProd" ColumnName="DSAlm_CodProd" />
+          <ScalarProperty Name="DSAlm_UM" ColumnName="DSAlm_UM" />
+          <ScalarProperty Name="DSAlm_Precio" ColumnName="DSAlm_Precio" />
+          <ScalarProperty Name="DSAlm_Cantidad" ColumnName="DSAlm_Cantidad" />
+          <ScalarProperty Name="DSAlm_PrecioCUC" ColumnName="DSAlm_PrecioCUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="SitransModel.Direcciones">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="dir_ID" ColumnName="dir_ID" />
+          <ScalarProperty Name="dir_Descrip" ColumnName="dir_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistBonosCombEq">
+      <EntityTypeMapping TypeName="SitransModel.DistBonosCombEq">
+        <MappingFragment StoreEntitySet="DistBonosCombEq">
+          <ScalarProperty Name="DistBonoComb_ID" ColumnName="DistBonoComb_ID" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="noBonoComb" ColumnName="noBonoComb" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="Liquidado" ColumnName="Liquidado" />
+          <ScalarProperty Name="FechaLiquidado" ColumnName="FechaLiquidado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistImporteBonosCC">
+      <EntityTypeMapping TypeName="SitransModel.DistImporteBonosCC">
+        <MappingFragment StoreEntitySet="DistImporteBonosCC">
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistribTarjSolicitudCargue">
+      <EntityTypeMapping TypeName="SitransModel.DistribTarjSolicitudCargue">
+        <MappingFragment StoreEntitySet="DistribTarjSolicitudCargue">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="ImporteCargar" ColumnName="ImporteCargar" />
+          <ScalarProperty Name="PtoDescuento" ColumnName="PtoDescuento" />
+          <ScalarProperty Name="ImportePago" ColumnName="ImportePago" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOTT_ManoObra">
+      <EntityTypeMapping TypeName="SitransModel.DOTT_ManoObra">
+        <MappingFragment StoreEntitySet="DOTT_ManoObra">
+          <ScalarProperty Name="ott_Id" ColumnName="ott_Id" />
+          <ScalarProperty Name="dottmo_Fecha" ColumnName="dottmo_Fecha" />
+          <ScalarProperty Name="mo_Id" ColumnName="mo_Id" />
+          <ScalarProperty Name="dottmo_Horas" ColumnName="dottmo_Horas" />
+          <ScalarProperty Name="dottmo_Min" ColumnName="dottmo_Min" />
+          <ScalarProperty Name="dottmo_Tarifa" ColumnName="dottmo_Tarifa" />
+          <ScalarProperty Name="mBrig_id" ColumnName="mBrig_id" />
+          <ScalarProperty Name="dottmo_Incluye30RC" ColumnName="dottmo_Incluye30RC" />
+          <ScalarProperty Name="dottmo_PctoGI" ColumnName="dottmo_PctoGI" />
+          <ScalarProperty Name="OperacionesRealizadas" ColumnName="OperacionesRealizadas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOTT_Materiales">
+      <EntityTypeMapping TypeName="SitransModel.DOTT_Materiales">
+        <MappingFragment StoreEntitySet="DOTT_Materiales">
+          <ScalarProperty Name="ott_Id" ColumnName="ott_Id" />
+          <ScalarProperty Name="ept_Id" ColumnName="ept_Id" />
+          <ScalarProperty Name="dottm_Fecha" ColumnName="dottm_Fecha" />
+          <ScalarProperty Name="dottm_Precio" ColumnName="dottm_Precio" />
+          <ScalarProperty Name="dottm_PrecioCUC" ColumnName="dottm_PrecioCUC" />
+          <ScalarProperty Name="dottm_ElemCUC" ColumnName="dottm_ElemCUC" />
+          <ScalarProperty Name="dottm_ElemMN" ColumnName="dottm_ElemMN" />
+          <ScalarProperty Name="dottm_Cantidad" ColumnName="dottm_Cantidad" />
+          <ScalarProperty Name="dottm_PctoGI" ColumnName="dottm_PctoGI" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="NoVSAlmacen" ColumnName="NoVSAlmacen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DPA">
+      <EntityTypeMapping TypeName="SitransModel.DPA">
+        <MappingFragment StoreEntitySet="DPA">
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+          <ScalarProperty Name="DescripDPA" ColumnName="DescripDPA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="SitransModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entidades">
+      <EntityTypeMapping TypeName="SitransModel.Entidades">
+        <MappingFragment StoreEntitySet="Entidades">
+          <ScalarProperty Name="ent_Id" ColumnName="ent_Id" />
+          <ScalarProperty Name="ent_Nombre" ColumnName="ent_Nombre" />
+          <ScalarProperty Name="ent_Direccion" ColumnName="ent_Direccion" />
+          <ScalarProperty Name="ent_CtaBancaria" ColumnName="ent_CtaBancaria" />
+          <ScalarProperty Name="ent_Email" ColumnName="ent_Email" />
+          <ScalarProperty Name="ent_Telefono" ColumnName="ent_Telefono" />
+          <ScalarProperty Name="NoActivo" ColumnName="NoActivo" />
+          <ScalarProperty Name="Interno" ColumnName="Interno" />
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+          <ScalarProperty Name="CodREUP" ColumnName="CodREUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntSalParqueoEmpresa">
+      <EntityTypeMapping TypeName="SitransModel.EntSalParqueoEmpresa">
+        <MappingFragment StoreEntitySet="EntSalParqueoEmpresa">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="p_FechaHora" ColumnName="p_FechaHora" />
+          <ScalarProperty Name="p_EntradaSalida" ColumnName="p_EntradaSalida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipos">
+      <EntityTypeMapping TypeName="SitransModel.Equipos">
+        <MappingFragment StoreEntitySet="Equipos">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="meq_Id" ColumnName="meq_Id" />
+          <ScalarProperty Name="mpeq_Id" ColumnName="mpeq_Id" />
+          <ScalarProperty Name="eq_AñoFabricacion" ColumnName="eq_AñoFabricacion" />
+          <ScalarProperty Name="eq_FechaAlta" ColumnName="eq_FechaAlta" />
+          <ScalarProperty Name="eq_InventarioMINBAS" ColumnName="eq_InventarioMINBAS" />
+          <ScalarProperty Name="eq_EstadoTecnico" ColumnName="eq_EstadoTecnico" />
+          <ScalarProperty Name="ccosto_Id" ColumnName="ccosto_Id" />
+          <ScalarProperty Name="eq_Observ" ColumnName="eq_Observ" />
+          <ScalarProperty Name="eq_matricula" ColumnName="eq_matricula" />
+          <ScalarProperty Name="eq_Color" ColumnName="eq_Color" />
+          <ScalarProperty Name="eq_CapAceiteCaja" ColumnName="eq_CapAceiteCaja" />
+          <ScalarProperty Name="eq_CapAceiteIndustrial" ColumnName="eq_CapAceiteIndustrial" />
+          <ScalarProperty Name="eq_CapAceiteDiferencial" ColumnName="eq_CapAceiteDiferencial" />
+          <ScalarProperty Name="eq_CapAceiteDiferencial2" ColumnName="eq_CapAceiteDiferencial2" />
+          <ScalarProperty Name="eq_IdAcCajaAlta" ColumnName="eq_IdAcCajaAlta" />
+          <ScalarProperty Name="eq_IdAcIndAlta" ColumnName="eq_IdAcIndAlta" />
+          <ScalarProperty Name="eq_IdAcDif1Alta" ColumnName="eq_IdAcDif1Alta" />
+          <ScalarProperty Name="eq_IdAcDif2Alta" ColumnName="eq_IdAcDif2Alta" />
+          <ScalarProperty Name="eq_Kms" ColumnName="eq_Kms" />
+          <ScalarProperty Name="eq_Propiedad" ColumnName="eq_Propiedad" />
+          <ScalarProperty Name="eq_Baja" ColumnName="eq_Baja" />
+          <ScalarProperty Name="eq_CapTanqueComb" ColumnName="eq_CapTanqueComb" />
+          <ScalarProperty Name="salop_Id" ColumnName="salop_Id" />
+          <ScalarProperty Name="eq_VIN" ColumnName="eq_VIN" />
+          <ScalarProperty Name="p_ID" ColumnName="p_ID" />
+          <ScalarProperty Name="ImagenVeh" ColumnName="ImagenVeh" />
+          <ScalarProperty Name="eq_GPS" ColumnName="eq_GPS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquiposAccidentes">
+      <EntityTypeMapping TypeName="SitransModel.EquiposAccidentes">
+        <MappingFragment StoreEntitySet="EquiposAccidentes">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="IDAccidTipo" ColumnName="IDAccidTipo" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="FechaHoraAccidente" ColumnName="FechaHoraAccidente" />
+          <ScalarProperty Name="LugarAccidente" ColumnName="LugarAccidente" />
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+          <ScalarProperty Name="NoDenuncia" ColumnName="NoDenuncia" />
+          <ScalarProperty Name="PNR" ColumnName="PNR" />
+          <ScalarProperty Name="DescHecho" ColumnName="DescHecho" />
+          <ScalarProperty Name="DescDaños" ColumnName="DescDaños" />
+          <ScalarProperty Name="CantLesionados" ColumnName="CantLesionados" />
+          <ScalarProperty Name="CantFallecidos" ColumnName="CantFallecidos" />
+          <ScalarProperty Name="ValorDaños" ColumnName="ValorDaños" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquiposServicios">
+      <EntityTypeMapping TypeName="SitransModel.EquiposServicios">
+        <MappingFragment StoreEntitySet="EquiposServicios">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ServiciosID" ColumnName="ServiciosID" />
+          <ScalarProperty Name="TarifaKmsVacio" ColumnName="TarifaKmsVacio" />
+          <ScalarProperty Name="TarifaHrsMora" ColumnName="TarifaHrsMora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HojaRuta">
+      <EntityTypeMapping TypeName="SitransModel.HojaRuta">
+        <MappingFragment StoreEntitySet="HojaRuta">
+          <ScalarProperty Name="HR_ID" ColumnName="HR_ID" />
+          <ScalarProperty Name="Trafico_ID" ColumnName="Trafico_ID" />
+          <ScalarProperty Name="hr_NoHR" ColumnName="hr_NoHR" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="mthr_id" ColumnName="mthr_id" />
+          <ScalarProperty Name="hr_NumOpArrastre" ColumnName="hr_NumOpArrastre" />
+          <ScalarProperty Name="hr_NumOpArrastre2" ColumnName="hr_NumOpArrastre2" />
+          <ScalarProperty Name="hr_Observ" ColumnName="hr_Observ" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="hr_Estado" ColumnName="hr_Estado" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="hr_KmsGPS" ColumnName="hr_KmsGPS" />
+          <ScalarProperty Name="Ayudante_ID" ColumnName="Ayudante_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorasTrabEqPesadosTecnologicos">
+      <EntityTypeMapping TypeName="SitransModel.HorasTrabEqPesadosTecnologicos">
+        <MappingFragment StoreEntitySet="HorasTrabEqPesadosTecnologicos">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ht_Año" ColumnName="ht_Año" />
+          <ScalarProperty Name="ht_Mes" ColumnName="ht_Mes" />
+          <ScalarProperty Name="ht_Horas" ColumnName="ht_Horas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvFinalCombEqMes">
+      <EntityTypeMapping TypeName="SitransModel.InvFinalCombEqMes">
+        <MappingFragment StoreEntitySet="InvFinalCombEqMes">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="invComb_Año" ColumnName="invComb_Año" />
+          <ScalarProperty Name="invComb_Mes" ColumnName="invComb_Mes" />
+          <ScalarProperty Name="invComb_Cantidad" ColumnName="invComb_Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaNegraEquipos">
+      <EntityTypeMapping TypeName="SitransModel.ListaNegraEquipos">
+        <MappingFragment StoreEntitySet="ListaNegraEquipos">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ln_Causa" ColumnName="ln_Causa" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="ln_Fecha" ColumnName="ln_Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LugarCarga">
+      <EntityTypeMapping TypeName="SitransModel.LugarCarga">
+        <MappingFragment StoreEntitySet="LugarCarga">
+          <ScalarProperty Name="LCarga_ID" ColumnName="LCarga_ID" />
+          <ScalarProperty Name="LCarga_Nombre" ColumnName="LCarga_Nombre" />
+          <ScalarProperty Name="ent_Id" ColumnName="ent_Id" />
+          <ScalarProperty Name="LCarga_Inactivo" ColumnName="LCarga_Inactivo" />
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LugarDescarga">
+      <EntityTypeMapping TypeName="SitransModel.LugarDescarga">
+        <MappingFragment StoreEntitySet="LugarDescarga">
+          <ScalarProperty Name="ldesc_ID" ColumnName="ldesc_ID" />
+          <ScalarProperty Name="ldesc_Nombre" ColumnName="ldesc_Nombre" />
+          <ScalarProperty Name="ent_Id" ColumnName="ent_Id" />
+          <ScalarProperty Name="ldesc_Inactivo" ColumnName="ldesc_Inactivo" />
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LugarMttoFuera">
+      <EntityTypeMapping TypeName="SitransModel.LugarMttoFuera">
+        <MappingFragment StoreEntitySet="LugarMttoFuera">
+          <ScalarProperty Name="lmf_ID" ColumnName="lmf_ID" />
+          <ScalarProperty Name="lmf_Nombre" ColumnName="lmf_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mantenimientos">
+      <EntityTypeMapping TypeName="SitransModel.Mantenimientos">
+        <MappingFragment StoreEntitySet="Mantenimientos">
+          <ScalarProperty Name="mant_id" ColumnName="mant_id" />
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="mant_Fecha" ColumnName="mant_Fecha" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="mant_LitrosParciales" ColumnName="mant_LitrosParciales" />
+          <ScalarProperty Name="mant_Litros" ColumnName="mant_Litros" />
+          <ScalarProperty Name="mant_Tipo" ColumnName="mant_Tipo" />
+          <ScalarProperty Name="mant_NoOT" ColumnName="mant_NoOT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuOpciones">
+      <EntityTypeMapping TypeName="SitransModel.MenuOpciones">
+        <MappingFragment StoreEntitySet="MenuOpciones">
+          <ScalarProperty Name="mnu_Nombre" ColumnName="mnu_Nombre" />
+          <ScalarProperty Name="mnu_Descripcion" ColumnName="mnu_Descripcion" />
+          <ScalarProperty Name="mnu_Tipo" ColumnName="mnu_Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuOpcionesUsuario">
+      <EntityTypeMapping TypeName="SitransModel.MenuOpcionesUsuario">
+        <MappingFragment StoreEntitySet="MenuOpcionesUsuario">
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="mnu_Nombre" ColumnName="mnu_Nombre" />
+          <ScalarProperty Name="RW" ColumnName="RW" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motores">
+      <EntityTypeMapping TypeName="SitransModel.Motores">
+        <MappingFragment StoreEntitySet="Motores">
+          <ScalarProperty Name="mmotor_id" ColumnName="mmotor_id" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="motor_FechaAlta" ColumnName="motor_FechaAlta" />
+          <ScalarProperty Name="motor_Litros" ColumnName="motor_Litros" />
+          <ScalarProperty Name="motor_LitrosAlta" ColumnName="motor_LitrosAlta" />
+          <ScalarProperty Name="motor_LitrosParciales" ColumnName="motor_LitrosParciales" />
+          <ScalarProperty Name="motor_TipoAlta" ColumnName="motor_TipoAlta" />
+          <ScalarProperty Name="dcm_NoDeOrden" ColumnName="dcm_NoDeOrden" />
+          <ScalarProperty Name="motor_Tipo" ColumnName="motor_Tipo" />
+          <ScalarProperty Name="motor_Norma" ColumnName="motor_Norma" />
+          <ScalarProperty Name="motor_NormaHoras" ColumnName="motor_NormaHoras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotoresComb">
+      <EntityTypeMapping TypeName="SitransModel.MotoresComb">
+        <MappingFragment StoreEntitySet="MotoresComb">
+          <ScalarProperty Name="mComb_Id" ColumnName="mComb_Id" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="motorComb_PlanLitros" ColumnName="motorComb_PlanLitros" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotoresNormasConsumo">
+      <EntityTypeMapping TypeName="SitransModel.MotoresNormasConsumo">
+        <MappingFragment StoreEntitySet="MotoresNormasConsumo">
+          <ScalarProperty Name="am_Fecha" ColumnName="am_Fecha" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="motor_NormaKms" ColumnName="motor_NormaKms" />
+          <ScalarProperty Name="motor_NormaHoras" ColumnName="motor_NormaHoras" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovTarjCombCaja">
+      <EntityTypeMapping TypeName="SitransModel.MovTarjCombCaja">
+        <MappingFragment StoreEntitySet="MovTarjCombCaja">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TipoMov" ColumnName="TipoMov" />
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mtto_Fuera">
+      <EntityTypeMapping TypeName="SitransModel.Mtto_Fuera">
+        <MappingFragment StoreEntitySet="Mtto_Fuera">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="mttof_Fecha" ColumnName="mttof_Fecha" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="mttof_Factura" ColumnName="mttof_Factura" />
+          <ScalarProperty Name="lmf_ID" ColumnName="lmf_ID" />
+          <ScalarProperty Name="ImporteMLC" ColumnName="ImporteMLC" />
+          <ScalarProperty Name="ImporteMN" ColumnName="ImporteMN" />
+          <ScalarProperty Name="Observ" ColumnName="Observ" />
+          <ScalarProperty Name="mttof_FechaEntTaller" ColumnName="mttof_FechaEntTaller" />
+          <ScalarProperty Name="mttof_FechaSalTaller" ColumnName="mttof_FechaSalTaller" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MttoFuera_DetMO">
+      <EntityTypeMapping TypeName="SitransModel.MttoFuera_DetMO">
+        <MappingFragment StoreEntitySet="MttoFuera_DetMO">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="mo_Fecha" ColumnName="mo_Fecha" />
+          <ScalarProperty Name="mo_Importe" ColumnName="mo_Importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MttoFuera_Materiales">
+      <EntityTypeMapping TypeName="SitransModel.MttoFuera_Materiales">
+        <MappingFragment StoreEntitySet="MttoFuera_Materiales">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="mfmat_Fecha" ColumnName="mfmat_Fecha" />
+          <ScalarProperty Name="ept_Id" ColumnName="ept_Id" />
+          <ScalarProperty Name="mfmat_PrecioMN" ColumnName="mfmat_PrecioMN" />
+          <ScalarProperty Name="mfmat_PrecioMLC" ColumnName="mfmat_PrecioMLC" />
+          <ScalarProperty Name="mfmat_Cantidad" ColumnName="mfmat_Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MttoFuera_RotSistemas">
+      <EntityTypeMapping TypeName="SitransModel.MttoFuera_RotSistemas">
+        <MappingFragment StoreEntitySet="MttoFuera_RotSistemas">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="msa_Id" ColumnName="msa_Id" />
+          <ScalarProperty Name="mfrot_Fecha" ColumnName="mfrot_Fecha" />
+          <ScalarProperty Name="mfrot_Cantidad" ColumnName="mfrot_Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MttoFuera_TI">
+      <EntityTypeMapping TypeName="SitransModel.MttoFuera_TI">
+        <MappingFragment StoreEntitySet="MttoFuera_TI">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="mpar_Id" ColumnName="mpar_Id" />
+          <ScalarProperty Name="mfti_Fecha" ColumnName="mfti_Fecha" />
+          <ScalarProperty Name="mfti_Horas" ColumnName="mfti_Horas" />
+          <ScalarProperty Name="mfti_Min" ColumnName="mfti_Min" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MttoFuera_TRep">
+      <EntityTypeMapping TypeName="SitransModel.MttoFuera_TRep">
+        <MappingFragment StoreEntitySet="MttoFuera_TRep">
+          <ScalarProperty Name="MFID" ColumnName="MFID" />
+          <ScalarProperty Name="mftr_Fecha" ColumnName="mftr_Fecha" />
+          <ScalarProperty Name="mftr_Horas" ColumnName="mftr_Horas" />
+          <ScalarProperty Name="mftr_Min" ColumnName="mftr_Min" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Aceites">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Aceites">
+        <MappingFragment StoreEntitySet="mundo_Aceites">
+          <ScalarProperty Name="mac_Id" ColumnName="mac_Id" />
+          <ScalarProperty Name="mac_Desc" ColumnName="mac_Desc" />
+          <ScalarProperty Name="mac_Tipo" ColumnName="mac_Tipo" />
+          <ScalarProperty Name="mac_Precio" ColumnName="mac_Precio" />
+          <ScalarProperty Name="mac_Excluido" ColumnName="mac_Excluido" />
+          <ScalarProperty Name="codprodalm" ColumnName="codprodalm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Arrastres">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Arrastres">
+        <MappingFragment StoreEntitySet="mundo_Arrastres">
+          <ScalarProperty Name="marr_Id" ColumnName="marr_Id" />
+          <ScalarProperty Name="tarr_TipoArrastre" ColumnName="tarr_TipoArrastre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Baterias">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Baterias">
+        <MappingFragment StoreEntitySet="mundo_Baterias">
+          <ScalarProperty Name="mbat_Id" ColumnName="mbat_Id" />
+          <ScalarProperty Name="mmbat_Id" ColumnName="mmbat_Id" />
+          <ScalarProperty Name="mbat_Voltaje" ColumnName="mbat_Voltaje" />
+          <ScalarProperty Name="mbat_Amperaje" ColumnName="mbat_Amperaje" />
+          <ScalarProperty Name="mbat_Norma" ColumnName="mbat_Norma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Brigadas">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Brigadas">
+        <MappingFragment StoreEntitySet="mundo_Brigadas">
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="mBrig_id" ColumnName="mBrig_id" />
+          <ScalarProperty Name="mBrig_Desc" ColumnName="mBrig_Desc" />
+          <ScalarProperty Name="BrigExcluida" ColumnName="BrigExcluida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Cabinas">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Cabinas">
+        <MappingFragment StoreEntitySet="mundo_Cabinas">
+          <ScalarProperty Name="mcab_Id" ColumnName="mcab_Id" />
+          <ScalarProperty Name="mcab_Descrip" ColumnName="mcab_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Carrocerias">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Carrocerias">
+        <MappingFragment StoreEntitySet="mundo_Carrocerias">
+          <ScalarProperty Name="mcar_Id" ColumnName="mcar_Id" />
+          <ScalarProperty Name="mcar_Descrip" ColumnName="mcar_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_CategoriasEquipos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_CategoriasEquipos">
+        <MappingFragment StoreEntitySet="mundo_CategoriasEquipos">
+          <ScalarProperty Name="mce_Id" ColumnName="mce_Id" />
+          <ScalarProperty Name="mce_Desc" ColumnName="mce_Desc" />
+          <ScalarProperty Name="Clasificacion" ColumnName="Clasificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_CausasBajas">
+      <EntityTypeMapping TypeName="SitransModel.mundo_CausasBajas">
+        <MappingFragment StoreEntitySet="mundo_CausasBajas">
+          <ScalarProperty Name="mcb_Id" ColumnName="mcb_Id" />
+          <ScalarProperty Name="mcb_Desc" ColumnName="mcb_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_CiclosMantenimiento">
+      <EntityTypeMapping TypeName="SitransModel.mundo_CiclosMantenimiento">
+        <MappingFragment StoreEntitySet="mundo_CiclosMantenimiento">
+          <ScalarProperty Name="mciclo_Id" ColumnName="mciclo_Id" />
+          <ScalarProperty Name="mciclo_Desc" ColumnName="mciclo_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Combustibles">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Combustibles">
+        <MappingFragment StoreEntitySet="mundo_Combustibles">
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="mcomb_Desc" ColumnName="mcomb_Desc" />
+          <ScalarProperty Name="mcomb_Portador" ColumnName="mcomb_Portador" />
+          <ScalarProperty Name="mcomb_Precio" ColumnName="mcomb_Precio" />
+          <ScalarProperty Name="mcomb_PrecioTE" ColumnName="mcomb_PrecioTE" />
+          <ScalarProperty Name="mcomb_Elemento" ColumnName="mcomb_Elemento" />
+          <ScalarProperty Name="mcomb_Analisis" ColumnName="mcomb_Analisis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Documentos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Documentos">
+        <MappingFragment StoreEntitySet="mundo_Documentos">
+          <ScalarProperty Name="mdoc_id" ColumnName="mdoc_id" />
+          <ScalarProperty Name="mdoc_Desc" ColumnName="mdoc_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Equipos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Equipos">
+        <MappingFragment StoreEntitySet="mundo_Equipos">
+          <ScalarProperty Name="meq_Id" ColumnName="meq_Id" />
+          <ScalarProperty Name="mce_Id" ColumnName="mce_Id" />
+          <ScalarProperty Name="mmeq_Id" ColumnName="mmeq_Id" />
+          <ScalarProperty Name="meq_Desc" ColumnName="meq_Desc" />
+          <ScalarProperty Name="meq_Modelo" ColumnName="meq_Modelo" />
+          <ScalarProperty Name="meq_Capacidad" ColumnName="meq_Capacidad" />
+          <ScalarProperty Name="meq_Tara" ColumnName="meq_Tara" />
+          <ScalarProperty Name="meq_Impuesto" ColumnName="meq_Impuesto" />
+          <ScalarProperty Name="meq_MinBat" ColumnName="meq_MinBat" />
+          <ScalarProperty Name="meq_MinNeum" ColumnName="meq_MinNeum" />
+          <ScalarProperty Name="meq_MaxBat" ColumnName="meq_MaxBat" />
+          <ScalarProperty Name="meq_MaxNeum" ColumnName="meq_MaxNeum" />
+          <ScalarProperty Name="meq_MinMotor" ColumnName="meq_MinMotor" />
+          <ScalarProperty Name="meq_MaxMotor" ColumnName="meq_MaxMotor" />
+          <ScalarProperty Name="meq_NoPlazas" ColumnName="meq_NoPlazas" />
+          <ScalarProperty Name="meq_NoEjes" ColumnName="meq_NoEjes" />
+          <ScalarProperty Name="meq_NoPuertas" ColumnName="meq_NoPuertas" />
+          <ScalarProperty Name="mcar_Id" ColumnName="mcar_Id" />
+          <ScalarProperty Name="mcab_Id" ColumnName="mcab_Id" />
+          <ScalarProperty Name="mt_Id" ColumnName="mt_Id" />
+          <ScalarProperty Name="mtrans_Id" ColumnName="mtrans_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Indicadores">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Indicadores">
+        <MappingFragment StoreEntitySet="mundo_Indicadores">
+          <ScalarProperty Name="i_Id" ColumnName="i_Id" />
+          <ScalarProperty Name="i_Descrip" ColumnName="i_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Mantenimientos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Mantenimientos">
+        <MappingFragment StoreEntitySet="mundo_Mantenimientos">
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="mmant_Desc" ColumnName="mmant_Desc" />
+          <ScalarProperty Name="mmant_AbDes" ColumnName="mmant_AbDes" />
+          <ScalarProperty Name="mmant_Clasif" ColumnName="mmant_Clasif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_MarcasBateria">
+      <EntityTypeMapping TypeName="SitransModel.mundo_MarcasBateria">
+        <MappingFragment StoreEntitySet="mundo_MarcasBateria">
+          <ScalarProperty Name="mmbat_Id" ColumnName="mmbat_Id" />
+          <ScalarProperty Name="mp_Id" ColumnName="mp_Id" />
+          <ScalarProperty Name="mmbat_Marca" ColumnName="mmbat_Marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_MarcasEquipos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_MarcasEquipos">
+        <MappingFragment StoreEntitySet="mundo_MarcasEquipos">
+          <ScalarProperty Name="mmeq_Id" ColumnName="mmeq_Id" />
+          <ScalarProperty Name="mp_Id" ColumnName="mp_Id" />
+          <ScalarProperty Name="mmeq_Marca" ColumnName="mmeq_Marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_MarcasMotores">
+      <EntityTypeMapping TypeName="SitransModel.mundo_MarcasMotores">
+        <MappingFragment StoreEntitySet="mundo_MarcasMotores">
+          <ScalarProperty Name="mmmotor_Id" ColumnName="mmmotor_Id" />
+          <ScalarProperty Name="mp_Id" ColumnName="mp_Id" />
+          <ScalarProperty Name="mmmotor_Marca" ColumnName="mmmotor_Marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_MarcasNeumaticos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_MarcasNeumaticos">
+        <MappingFragment StoreEntitySet="mundo_MarcasNeumaticos">
+          <ScalarProperty Name="mmneum_Id" ColumnName="mmneum_Id" />
+          <ScalarProperty Name="mp_Id" ColumnName="mp_Id" />
+          <ScalarProperty Name="mmneum_Marca" ColumnName="mmneum_Marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_motores">
+      <EntityTypeMapping TypeName="SitransModel.mundo_motores">
+        <MappingFragment StoreEntitySet="mundo_motores">
+          <ScalarProperty Name="mmotor_Id" ColumnName="mmotor_Id" />
+          <ScalarProperty Name="mciclo_Id" ColumnName="mciclo_Id" />
+          <ScalarProperty Name="mmmotor_Id" ColumnName="mmmotor_Id" />
+          <ScalarProperty Name="mmotor_Modelo" ColumnName="mmotor_Modelo" />
+          <ScalarProperty Name="mmotor_NormaConsumo" ColumnName="mmotor_NormaConsumo" />
+          <ScalarProperty Name="mmotor_IdAcMotor" ColumnName="mmotor_IdAcMotor" />
+          <ScalarProperty Name="mmotor_CapAceiteMotor" ColumnName="mmotor_CapAceiteMotor" />
+          <ScalarProperty Name="mmotor_IndRellenoAceite" ColumnName="mmotor_IndRellenoAceite" />
+          <ScalarProperty Name="mmotor_RayaRoja" ColumnName="mmotor_RayaRoja" />
+          <ScalarProperty Name="mmotor_IdAcComb" ColumnName="mmotor_IdAcComb" />
+          <ScalarProperty Name="mmotor_AsigAcComb" ColumnName="mmotor_AsigAcComb" />
+          <ScalarProperty Name="mmotor_Cilindrada" ColumnName="mmotor_Cilindrada" />
+          <ScalarProperty Name="mmotor_Potencia" ColumnName="mmotor_Potencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_neumaticos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_neumaticos">
+        <MappingFragment StoreEntitySet="mundo_neumaticos">
+          <ScalarProperty Name="mneum_Id" ColumnName="mneum_Id" />
+          <ScalarProperty Name="mmneum_Id" ColumnName="mmneum_Id" />
+          <ScalarProperty Name="mneum_Medida" ColumnName="mneum_Medida" />
+          <ScalarProperty Name="mneum_Modelo" ColumnName="mneum_Modelo" />
+          <ScalarProperty Name="mneum_Constitucion" ColumnName="mneum_Constitucion" />
+          <ScalarProperty Name="mneum_Norma" ColumnName="mneum_Norma" />
+          <ScalarProperty Name="mneum_Diseño" ColumnName="mneum_Diseño" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Obreros">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Obreros">
+        <MappingFragment StoreEntitySet="mundo_Obreros">
+          <ScalarProperty Name="mo_Id" ColumnName="mo_Id" />
+          <ScalarProperty Name="mBrig_id" ColumnName="mBrig_id" />
+          <ScalarProperty Name="mo_NoCobro" ColumnName="mo_NoCobro" />
+          <ScalarProperty Name="mo_Nombre" ColumnName="mo_Nombre" />
+          <ScalarProperty Name="mo_Cargo" ColumnName="mo_Cargo" />
+          <ScalarProperty Name="mo_TarifaHoraria" ColumnName="mo_TarifaHoraria" />
+          <ScalarProperty Name="mo_TarifaPlantilla" ColumnName="mo_TarifaPlantilla" />
+          <ScalarProperty Name="mo_HorasPlanDia" ColumnName="mo_HorasPlanDia" />
+          <ScalarProperty Name="mo_30RC" ColumnName="mo_30RC" />
+          <ScalarProperty Name="mo_Excluido" ColumnName="mo_Excluido" />
+          <ScalarProperty Name="FirmaDigital" ColumnName="FirmaDigital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Paises">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Paises">
+        <MappingFragment StoreEntitySet="mundo_Paises">
+          <ScalarProperty Name="mp_Id" ColumnName="mp_Id" />
+          <ScalarProperty Name="mp_Pais" ColumnName="mp_Pais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Paralizaciones">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Paralizaciones">
+        <MappingFragment StoreEntitySet="mundo_Paralizaciones">
+          <ScalarProperty Name="mpar_Id" ColumnName="mpar_Id" />
+          <ScalarProperty Name="mpar_Desc" ColumnName="mpar_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_ParqueoAutorizo">
+      <EntityTypeMapping TypeName="SitransModel.mundo_ParqueoAutorizo">
+        <MappingFragment StoreEntitySet="mundo_ParqueoAutorizo">
+          <ScalarProperty Name="p_ID" ColumnName="p_ID" />
+          <ScalarProperty Name="p_Nombre" ColumnName="p_Nombre" />
+          <ScalarProperty Name="Cod_DPA" ColumnName="Cod_DPA" />
+          <ScalarProperty Name="p_Direccion" ColumnName="p_Direccion" />
+          <ScalarProperty Name="p_Observaciones" ColumnName="p_Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_PropositosEquipos">
+      <EntityTypeMapping TypeName="SitransModel.mundo_PropositosEquipos">
+        <MappingFragment StoreEntitySet="mundo_PropositosEquipos">
+          <ScalarProperty Name="mpeq_Id" ColumnName="mpeq_Id" />
+          <ScalarProperty Name="mpeq_Desc" ColumnName="mpeq_Desc" />
+          <ScalarProperty Name="mpg_Id" ColumnName="mpg_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_PropositosGenerales">
+      <EntityTypeMapping TypeName="SitransModel.mundo_PropositosGenerales">
+        <MappingFragment StoreEntitySet="mundo_PropositosGenerales">
+          <ScalarProperty Name="mpg_Id" ColumnName="mpg_Id" />
+          <ScalarProperty Name="mpg_Desc" ColumnName="mpg_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_RotSistemas">
+      <EntityTypeMapping TypeName="SitransModel.mundo_RotSistemas">
+        <MappingFragment StoreEntitySet="mundo_RotSistemas">
+          <ScalarProperty Name="mrs_Id" ColumnName="mrs_Id" />
+          <ScalarProperty Name="msa_Id" ColumnName="msa_Id" />
+          <ScalarProperty Name="mrs_Desc" ColumnName="mrs_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_ServAutoLOT">
+      <EntityTypeMapping TypeName="SitransModel.mundo_ServAutoLOT">
+        <MappingFragment StoreEntitySet="mundo_ServAutoLOT">
+          <ScalarProperty Name="salop_Id" ColumnName="salop_Id" />
+          <ScalarProperty Name="salop_Desc" ColumnName="salop_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Servicios">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Servicios">
+        <MappingFragment StoreEntitySet="mundo_Servicios">
+          <ScalarProperty Name="ServiciosID" ColumnName="ServiciosID" />
+          <ScalarProperty Name="ServiciosDesc" ColumnName="ServiciosDesc" />
+          <ScalarProperty Name="ServUM" ColumnName="ServUM" />
+          <ScalarProperty Name="TarifaMNClientes" ColumnName="TarifaMNClientes" />
+          <ScalarProperty Name="TarifaMLCClientes" ColumnName="TarifaMLCClientes" />
+          <ScalarProperty Name="TarifaMNCCostos" ColumnName="TarifaMNCCostos" />
+          <ScalarProperty Name="TarifaMLCCCostos" ColumnName="TarifaMLCCCostos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_SistemasAuto">
+      <EntityTypeMapping TypeName="SitransModel.mundo_SistemasAuto">
+        <MappingFragment StoreEntitySet="mundo_SistemasAuto">
+          <ScalarProperty Name="msa_Id" ColumnName="msa_Id" />
+          <ScalarProperty Name="msa_Desc" ColumnName="msa_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Talleres">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Talleres">
+        <MappingFragment StoreEntitySet="mundo_Talleres">
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="mtaller_Desc" ColumnName="mtaller_Desc" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="JTaller" ColumnName="JTaller" />
+          <ScalarProperty Name="JTallerFirma" ColumnName="JTallerFirma" />
+          <ScalarProperty Name="OTRevisa" ColumnName="OTRevisa" />
+          <ScalarProperty Name="OTRevisaFirma" ColumnName="OTRevisaFirma" />
+          <ScalarProperty Name="OTAprueba" ColumnName="OTAprueba" />
+          <ScalarProperty Name="OTApruebaFirma" ColumnName="OTApruebaFirma" />
+          <ScalarProperty Name="mtaller_Inactivo" ColumnName="mtaller_Inactivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_TipoBombeo">
+      <EntityTypeMapping TypeName="SitransModel.mundo_TipoBombeo">
+        <MappingFragment StoreEntitySet="mundo_TipoBombeo">
+          <ScalarProperty Name="tbombeo_ID" ColumnName="tbombeo_ID" />
+          <ScalarProperty Name="tbombeo_Desc" ColumnName="tbombeo_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_TipoHR">
+      <EntityTypeMapping TypeName="SitransModel.mundo_TipoHR">
+        <MappingFragment StoreEntitySet="mundo_TipoHR">
+          <ScalarProperty Name="mthr_id" ColumnName="mthr_id" />
+          <ScalarProperty Name="mthr_TipoHojaRuta" ColumnName="mthr_TipoHojaRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Traccion">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Traccion">
+        <MappingFragment StoreEntitySet="mundo_Traccion">
+          <ScalarProperty Name="mt_Id" ColumnName="mt_Id" />
+          <ScalarProperty Name="mt_Descrip" ColumnName="mt_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Trafico">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Trafico">
+        <MappingFragment StoreEntitySet="mundo_Trafico">
+          <ScalarProperty Name="Trafico_ID" ColumnName="Trafico_ID" />
+          <ScalarProperty Name="Trafico_Desc" ColumnName="Trafico_Desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mundo_Transmision">
+      <EntityTypeMapping TypeName="SitransModel.mundo_Transmision">
+        <MappingFragment StoreEntitySet="mundo_Transmision">
+          <ScalarProperty Name="mtrans_Id" ColumnName="mtrans_Id" />
+          <ScalarProperty Name="mtrans_Descrip" ColumnName="mtrans_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Neumaticos">
+      <EntityTypeMapping TypeName="SitransModel.Neumaticos">
+        <MappingFragment StoreEntitySet="Neumaticos">
+          <ScalarProperty Name="mneum_Id" ColumnName="mneum_Id" />
+          <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+          <ScalarProperty Name="neum_FechaAlta" ColumnName="neum_FechaAlta" />
+          <ScalarProperty Name="neum_Kms" ColumnName="neum_Kms" />
+          <ScalarProperty Name="neum_TipoAlta" ColumnName="neum_TipoAlta" />
+          <ScalarProperty Name="neum_KmsAlta" ColumnName="neum_KmsAlta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeumMotivoBaja">
+      <EntityTypeMapping TypeName="SitransModel.NeumMotivoBaja">
+        <MappingFragment StoreEntitySet="NeumMotivoBaja">
+          <ScalarProperty Name="nmb_Id" ColumnName="nmb_Id" />
+          <ScalarProperty Name="nmb_DescMotivo" ColumnName="nmb_DescMotivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeumRepEq">
+      <EntityTypeMapping TypeName="SitransModel.NeumRepEq">
+        <MappingFragment StoreEntitySet="NeumRepEq">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesARealizar">
+      <EntityTypeMapping TypeName="SitransModel.OperacionesARealizar">
+        <MappingFragment StoreEntitySet="OperacionesARealizar">
+          <ScalarProperty Name="IDOper" ColumnName="IDOper" />
+          <ScalarProperty Name="OperDesc" ColumnName="OperDesc" />
+          <ScalarProperty Name="HorasOperEqPesados" ColumnName="HorasOperEqPesados" />
+          <ScalarProperty Name="MinOperEqPesados" ColumnName="MinOperEqPesados" />
+          <ScalarProperty Name="HorasOperEqLigeros" ColumnName="HorasOperEqLigeros" />
+          <ScalarProperty Name="MinOperEqLigeros" ColumnName="MinOperEqLigeros" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenesTrabajo">
+      <EntityTypeMapping TypeName="SitransModel.OrdenesTrabajo">
+        <MappingFragment StoreEntitySet="OrdenesTrabajo">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="ot_NoOT" ColumnName="ot_NoOT" />
+          <ScalarProperty Name="ot_Año" ColumnName="ot_Año" />
+          <ScalarProperty Name="ot_Mes" ColumnName="ot_Mes" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="ot_FechaEntrada" ColumnName="ot_FechaEntrada" />
+          <ScalarProperty Name="ot_FechaSalida" ColumnName="ot_FechaSalida" />
+          <ScalarProperty Name="ot_NombreOperador" ColumnName="ot_NombreOperador" />
+          <ScalarProperty Name="ot_Observaciones" ColumnName="ot_Observaciones" />
+          <ScalarProperty Name="ot_Estado" ColumnName="ot_Estado" />
+          <ScalarProperty Name="ot_FechaTerminacion" ColumnName="ot_FechaTerminacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OT_Terceros">
+      <EntityTypeMapping TypeName="SitransModel.OT_Terceros">
+        <MappingFragment StoreEntitySet="OT_Terceros">
+          <ScalarProperty Name="ott_Id" ColumnName="ott_Id" />
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="ott_NoOT" ColumnName="ott_NoOT" />
+          <ScalarProperty Name="ott_Año" ColumnName="ott_Año" />
+          <ScalarProperty Name="ott_Mes" ColumnName="ott_Mes" />
+          <ScalarProperty Name="ent_Id" ColumnName="ent_Id" />
+          <ScalarProperty Name="ott_Matricula" ColumnName="ott_Matricula" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="ott_FechaEntrada" ColumnName="ott_FechaEntrada" />
+          <ScalarProperty Name="ott_FechaSalida" ColumnName="ott_FechaSalida" />
+          <ScalarProperty Name="ott_NombreOperador" ColumnName="ott_NombreOperador" />
+          <ScalarProperty Name="ott_Observaciones" ColumnName="ott_Observaciones" />
+          <ScalarProperty Name="ott_Estado" ColumnName="ott_Estado" />
+          <ScalarProperty Name="ott_FechaTermina" ColumnName="ott_FechaTermina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTServiciosPrestados">
+      <EntityTypeMapping TypeName="SitransModel.OTServiciosPrestados">
+        <MappingFragment StoreEntitySet="OTServiciosPrestados">
+          <ScalarProperty Name="OTID" ColumnName="OTID" />
+          <ScalarProperty Name="NoOT" ColumnName="NoOT" />
+          <ScalarProperty Name="FechaOT" ColumnName="FechaOT" />
+          <ScalarProperty Name="FechaSistema" ColumnName="FechaSistema" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="CCostoIDEjec" ColumnName="CCostoIDEjec" />
+          <ScalarProperty Name="CCostoIDCliente" ColumnName="CCostoIDCliente" />
+          <ScalarProperty Name="ent_Id" ColumnName="ent_Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Observ" ColumnName="Observ" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NoHR" ColumnName="NoHR" />
+          <ScalarProperty Name="NoCartaPorte" ColumnName="NoCartaPorte" />
+          <ScalarProperty Name="eq_NumOperacionalArrastre1" ColumnName="eq_NumOperacionalArrastre1" />
+          <ScalarProperty Name="eq_NumOperacionalArrastre2" ColumnName="eq_NumOperacionalArrastre2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTServPrestDet">
+      <EntityTypeMapping TypeName="SitransModel.OTServPrestDet">
+        <MappingFragment StoreEntitySet="OTServPrestDet">
+          <ScalarProperty Name="OTID" ColumnName="OTID" />
+          <ScalarProperty Name="ServiciosID" ColumnName="ServiciosID" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="Tarifa" ColumnName="Tarifa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametrosFijosApps">
+      <EntityTypeMapping TypeName="SitransModel.ParametrosFijosApps">
+        <MappingFragment StoreEntitySet="ParametrosFijosApps">
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="ParamDesc" ColumnName="ParamDesc" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="ModificaUser" ColumnName="ModificaUser" />
+          <ScalarProperty Name="TipoDato" ColumnName="TipoDato" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanesMesIndicEq">
+      <EntityTypeMapping TypeName="SitransModel.PlanesMesIndicEq">
+        <MappingFragment StoreEntitySet="PlanesMesIndicEq">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="i_Id" ColumnName="i_Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductoTransportado">
+      <EntityTypeMapping TypeName="SitransModel.ProductoTransportado">
+        <MappingFragment StoreEntitySet="ProductoTransportado">
+          <ScalarProperty Name="prodt_ID" ColumnName="prodt_ID" />
+          <ScalarProperty Name="prodt_Descripcion" ColumnName="prodt_Descripcion" />
+          <ScalarProperty Name="tp_ID" ColumnName="tp_ID" />
+          <ScalarProperty Name="prodt_Factor" ColumnName="prodt_Factor" />
+          <ScalarProperty Name="prodt_UM" ColumnName="prodt_UM" />
+          <ScalarProperty Name="tpd_ID" ColumnName="tpd_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecaudaOmnibus">
+      <EntityTypeMapping TypeName="SitransModel.RecaudaOmnibus">
+        <MappingFragment StoreEntitySet="RecaudaOmnibus">
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="FechaSistema" ColumnName="FechaSistema" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroParqueos">
+      <EntityTypeMapping TypeName="SitransModel.RegistroParqueos">
+        <MappingFragment StoreEntitySet="RegistroParqueos">
+          <ScalarProperty Name="RegParq_NoDoc" ColumnName="RegParq_NoDoc" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="RegParq_Tipo" ColumnName="RegParq_Tipo" />
+          <ScalarProperty Name="RegParq_EmitidoPor" ColumnName="RegParq_EmitidoPor" />
+          <ScalarProperty Name="RegParq__FechaExp" ColumnName="RegParq__FechaExp" />
+          <ScalarProperty Name="RegParq__FechaVence" ColumnName="RegParq__FechaVence" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="RegParq__DirPartChofer" ColumnName="RegParq__DirPartChofer" />
+          <ScalarProperty Name="RegParq__CargoChofer" ColumnName="RegParq__CargoChofer" />
+          <ScalarProperty Name="p_ID" ColumnName="p_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumenHREquipos">
+      <EntityTypeMapping TypeName="SitransModel.ResumenHREquipos">
+        <MappingFragment StoreEntitySet="ResumenHREquipos">
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="mthr_id" ColumnName="mthr_id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="rhre_Vv" ColumnName="rhre_Vv" />
+          <ScalarProperty Name="rhre_Vc" ColumnName="rhre_Vc" />
+          <ScalarProperty Name="rhre_KmRv" ColumnName="rhre_KmRv" />
+          <ScalarProperty Name="rhre_KmRc" ColumnName="rhre_KmRc" />
+          <ScalarProperty Name="rhre_KmR" ColumnName="rhre_KmR" />
+          <ScalarProperty Name="rhre_TnT" ColumnName="rhre_TnT" />
+          <ScalarProperty Name="rhre_VsPas" ColumnName="rhre_VsPas" />
+          <ScalarProperty Name="rhre_VPas" ColumnName="rhre_VPas" />
+          <ScalarProperty Name="rhre_KmRsPas" ColumnName="rhre_KmRsPas" />
+          <ScalarProperty Name="rhre_KmRPas" ColumnName="rhre_KmRPas" />
+          <ScalarProperty Name="rhre_PasT" ColumnName="rhre_PasT" />
+          <ScalarProperty Name="rhre_TnIz" ColumnName="rhre_TnIz" />
+          <ScalarProperty Name="rhre_TIz" ColumnName="rhre_TIz" />
+          <ScalarProperty Name="rhre_TMov" ColumnName="rhre_TMov" />
+          <ScalarProperty Name="rhre_TTotal" ColumnName="rhre_TTotal" />
+          <ScalarProperty Name="rhre_TPlan" ColumnName="rhre_TPlan" />
+          <ScalarProperty Name="rhre_TPerd" ColumnName="rhre_TPerd" />
+          <ScalarProperty Name="rhre_TTaller" ColumnName="rhre_TTaller" />
+          <ScalarProperty Name="rhre_Dias" ColumnName="rhre_Dias" />
+          <ScalarProperty Name="rhre_TraficoTn" ColumnName="rhre_TraficoTn" />
+          <ScalarProperty Name="rhre_TraficoM3" ColumnName="rhre_TraficoM3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptCombHabKmsVehAdm">
+      <EntityTypeMapping TypeName="SitransModel.rptCombHabKmsVehAdm">
+        <MappingFragment StoreEntitySet="rptCombHabKmsVehAdm">
+          <ScalarProperty Name="NoRPT" ColumnName="NoRPT" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="c_Id" ColumnName="c_Id" />
+          <ScalarProperty Name="hr_Estado" ColumnName="hr_Estado" />
+          <ScalarProperty Name="KmsRecTotal" ColumnName="KmsRecTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salidas_Almacenes">
+      <EntityTypeMapping TypeName="SitransModel.Salidas_Almacenes">
+        <MappingFragment StoreEntitySet="Salidas_Almacenes">
+          <ScalarProperty Name="SalAlm_Id" ColumnName="SalAlm_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+          <ScalarProperty Name="SalAlm_AlmacenId" ColumnName="SalAlm_AlmacenId" />
+          <ScalarProperty Name="SalAlm_Fecha" ColumnName="SalAlm_Fecha" />
+          <ScalarProperty Name="SalAlm_NoOT" ColumnName="SalAlm_NoOT" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmayorBonosPeaje">
+      <EntityTypeMapping TypeName="SitransModel.SubmayorBonosPeaje">
+        <MappingFragment StoreEntitySet="SubmayorBonosPeaje">
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ste_Fecha" ColumnName="ste_Fecha" />
+          <ScalarProperty Name="ImporteEntrega" ColumnName="ImporteEntrega" />
+          <ScalarProperty Name="ImporteLiq" ColumnName="ImporteLiq" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="Observ" ColumnName="Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmayorCombPagCargar">
+      <EntityTypeMapping TypeName="SitransModel.SubmayorCombPagCargar">
+        <MappingFragment StoreEntitySet="SubmayorCombPagCargar">
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="scpc_Fecha" ColumnName="scpc_Fecha" />
+          <ScalarProperty Name="scpc_Entradas" ColumnName="scpc_Entradas" />
+          <ScalarProperty Name="scpc_Salidas" ColumnName="scpc_Salidas" />
+          <ScalarProperty Name="scpc_SaldoLts" ColumnName="scpc_SaldoLts" />
+          <ScalarProperty Name="scpc_Debe" ColumnName="scpc_Debe" />
+          <ScalarProperty Name="scpc_Haber" ColumnName="scpc_Haber" />
+          <ScalarProperty Name="scpc_Saldo_" ColumnName="scpc_Saldo$" />
+          <ScalarProperty Name="scpc_NoComprobante" ColumnName="scpc_NoComprobante" />
+          <ScalarProperty Name="scpc_Login" ColumnName="scpc_Login" />
+          <ScalarProperty Name="scpc_Observ" ColumnName="scpc_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmayorPeaje">
+      <EntityTypeMapping TypeName="SitransModel.SubmayorPeaje">
+        <MappingFragment StoreEntitySet="SubmayorPeaje">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="ste_Fecha" ColumnName="ste_Fecha" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="ste_Debe" ColumnName="ste_Debe" />
+          <ScalarProperty Name="ste_Haber" ColumnName="ste_Haber" />
+          <ScalarProperty Name="ste_Saldo_" ColumnName="ste_Saldo$" />
+          <ScalarProperty Name="ste_NoTerminal" ColumnName="ste_NoTerminal" />
+          <ScalarProperty Name="ste_NoComprobante" ColumnName="ste_NoComprobante" />
+          <ScalarProperty Name="ste_Login" ColumnName="ste_Login" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ste_Observ" ColumnName="ste_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubmayorTarjetasExternas">
+      <EntityTypeMapping TypeName="SitransModel.SubmayorTarjetasExternas">
+        <MappingFragment StoreEntitySet="SubmayorTarjetasExternas">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="ste_Fecha" ColumnName="ste_Fecha" />
+          <ScalarProperty Name="ste_FechaDoc" ColumnName="ste_FechaDoc" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="ste_Entradas" ColumnName="ste_Entradas" />
+          <ScalarProperty Name="ste_Salidas" ColumnName="ste_Salidas" />
+          <ScalarProperty Name="ste_SaldoLts" ColumnName="ste_SaldoLts" />
+          <ScalarProperty Name="ste_Debe" ColumnName="ste_Debe" />
+          <ScalarProperty Name="ste_Haber" ColumnName="ste_Haber" />
+          <ScalarProperty Name="ste_Saldo_" ColumnName="ste_Saldo$" />
+          <ScalarProperty Name="ste_NoTerminal" ColumnName="ste_NoTerminal" />
+          <ScalarProperty Name="ste_NoComprobante" ColumnName="ste_NoComprobante" />
+          <ScalarProperty Name="ste_Login" ColumnName="ste_Login" />
+          <ScalarProperty Name="ste_Observ" ColumnName="ste_Observ" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ste_TipoConsumo" ColumnName="ste_TipoConsumo" />
+          <ScalarProperty Name="ldesc_ID" ColumnName="ldesc_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SitransModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TarifaKmsTransp">
+      <EntityTypeMapping TypeName="SitransModel.TarifaKmsTransp">
+        <MappingFragment StoreEntitySet="TarifaKmsTransp">
+          <ScalarProperty Name="Kms" ColumnName="Kms" />
+          <ScalarProperty Name="Tarifa" ColumnName="Tarifa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TarjetasExternas">
+      <EntityTypeMapping TypeName="SitransModel.TarjetasExternas">
+        <MappingFragment StoreEntitySet="TarjetasExternas">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="mcomb_Id" ColumnName="mcomb_Id" />
+          <ScalarProperty Name="te_Cuota" ColumnName="te_Cuota" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="te_Responsable" ColumnName="te_Responsable" />
+          <ScalarProperty Name="te_Estado" ColumnName="te_Estado" />
+          <ScalarProperty Name="te_FechaCaduca" ColumnName="te_FechaCaduca" />
+          <ScalarProperty Name="te_TipoMoneda" ColumnName="te_TipoMoneda" />
+          <ScalarProperty Name="te_Observ" ColumnName="te_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TarjetasPeaje">
+      <EntityTypeMapping TypeName="SitransModel.TarjetasPeaje">
+        <MappingFragment StoreEntitySet="TarjetasPeaje">
+          <ScalarProperty Name="te_No" ColumnName="te_No" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="te_Responsable" ColumnName="te_Responsable" />
+          <ScalarProperty Name="te_NoActivo" ColumnName="te_NoActivo" />
+          <ScalarProperty Name="te_FechaCaduca" ColumnName="te_FechaCaduca" />
+          <ScalarProperty Name="te_Pin" ColumnName="te_Pin" />
+          <ScalarProperty Name="te_Observ" ColumnName="te_Observ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempariosMtto">
+      <EntityTypeMapping TypeName="SitransModel.TempariosMtto">
+        <MappingFragment StoreEntitySet="TempariosMtto">
+          <ScalarProperty Name="TempID" ColumnName="TempID" />
+          <ScalarProperty Name="Comb" ColumnName="Comb" />
+          <ScalarProperty Name="msa_Id" ColumnName="msa_Id" />
+          <ScalarProperty Name="mmant_Id" ColumnName="mmant_Id" />
+          <ScalarProperty Name="IDOper" ColumnName="IDOper" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposProdDensidad">
+      <EntityTypeMapping TypeName="SitransModel.TiposProdDensidad">
+        <MappingFragment StoreEntitySet="TiposProdDensidad">
+          <ScalarProperty Name="tpd_ID" ColumnName="tpd_ID" />
+          <ScalarProperty Name="tpd_Nombre" ColumnName="tpd_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposProductos">
+      <EntityTypeMapping TypeName="SitransModel.TiposProductos">
+        <MappingFragment StoreEntitySet="TiposProductos">
+          <ScalarProperty Name="tp_ID" ColumnName="tp_ID" />
+          <ScalarProperty Name="tp_Nombre" ColumnName="tp_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trayectoria">
+      <EntityTypeMapping TypeName="SitransModel.Trayectoria">
+        <MappingFragment StoreEntitySet="Trayectoria">
+          <ScalarProperty Name="Trayectoria_ID" ColumnName="Trayectoria_ID" />
+          <ScalarProperty Name="ldesc_ID" ColumnName="ldesc_ID" />
+          <ScalarProperty Name="Trayectoria_Nombre" ColumnName="Trayectoria_Nombre" />
+          <ScalarProperty Name="Trayectoria_Descrip" ColumnName="Trayectoria_Descrip" />
+          <ScalarProperty Name="Trayectoria_Kms" ColumnName="Trayectoria_Kms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SitransModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Inactivo" ColumnName="Inactivo" />
+          <ScalarProperty Name="FechaCaduca" ColumnName="FechaCaduca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosTalleres">
+      <EntityTypeMapping TypeName="SitransModel.UsuariosTalleres">
+        <MappingFragment StoreEntitySet="UsuariosTalleres">
+          <ScalarProperty Name="mtaller_id" ColumnName="mtaller_id" />
+          <ScalarProperty Name="UT_Status" ColumnName="UT_Status" />
+          <ScalarProperty Name="UT_LoginUsuario" ColumnName="UT_LoginUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuariosTrafico">
+      <EntityTypeMapping TypeName="SitransModel.UsuariosTrafico">
+        <MappingFragment StoreEntitySet="UsuariosTrafico">
+          <ScalarProperty Name="Trafico_ID" ColumnName="Trafico_ID" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOT_TiempoReparacion">
+      <EntityTypeMapping TypeName="SitransModel.DetOT_TiempoReparacion">
+        <MappingFragment StoreEntitySet="DetOT_TiempoReparacion">
+          <ScalarProperty Name="ot_Id" ColumnName="ot_Id" />
+          <ScalarProperty Name="dottr_Fecha" ColumnName="dottr_Fecha" />
+          <ScalarProperty Name="dottr_Horas" ColumnName="dottr_Horas" />
+          <ScalarProperty Name="dottr_Min" ColumnName="dottr_Min" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExistProd_Taller">
+      <EntityTypeMapping TypeName="SitransModel.ExistProd_Taller">
+        <MappingFragment StoreEntitySet="ExistProd_Taller">
+          <ScalarProperty Name="ept_Id" ColumnName="ept_Id" />
+          <ScalarProperty Name="ept_CodProd" ColumnName="ept_CodProd" />
+          <ScalarProperty Name="ept_Desc" ColumnName="ept_Desc" />
+          <ScalarProperty Name="ept_UM" ColumnName="ept_UM" />
+          <ScalarProperty Name="ept_Precio" ColumnName="ept_Precio" />
+          <ScalarProperty Name="ept_PrecioCUC" ColumnName="ept_PrecioCUC" />
+          <ScalarProperty Name="ept_Existencia" ColumnName="ept_Existencia" />
+          <ScalarProperty Name="ept_PiezasAccMat" ColumnName="ept_PiezasAccMat" />
+          <ScalarProperty Name="ept_ElemCUC" ColumnName="ept_ElemCUC" />
+          <ScalarProperty Name="ept_ElemMN" ColumnName="ept_ElemMN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KmsArrastres">
+      <EntityTypeMapping TypeName="SitransModel.KmsArrastres">
+        <MappingFragment StoreEntitySet="KmsArrastres">
+          <ScalarProperty Name="ka_Id" ColumnName="ka_Id" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="ka_Kms" ColumnName="ka_Kms" />
+          <ScalarProperty Name="ka_Fecha" ColumnName="ka_Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KmsNeumaticos">
+      <EntityTypeMapping TypeName="SitransModel.KmsNeumaticos">
+        <MappingFragment StoreEntitySet="KmsNeumaticos">
+          <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+          <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+          <ScalarProperty Name="kn_Fecha" ColumnName="kn_Fecha" />
+          <ScalarProperty Name="kn_Kms" ColumnName="kn_Kms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registro">
+      <EntityTypeMapping TypeName="SitransModel.Registro">
+        <MappingFragment StoreEntitySet="Registro">
+          <ScalarProperty Name="NombreEntidad" ColumnName="NombreEntidad" />
+          <ScalarProperty Name="Organismo" ColumnName="Organismo" />
+          <ScalarProperty Name="HostSMTP" ColumnName="HostSMTP" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Registro1" ColumnName="Registro" />
+          <ScalarProperty Name="Logotipo" ColumnName="Logotipo" />
+          <ScalarProperty Name="FechaRegInicial" ColumnName="FechaRegInicial" />
+          <ScalarProperty Name="Entidad_CodREUP" ColumnName="Entidad_CodREUP" />
+          <ScalarProperty Name="Entidad_Direccion" ColumnName="Entidad_Direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Arrastres" TypeName="SitransModel.Arrastres" StoreEntitySet="Arrastres">
+      <EndProperty Name="Equipos">
+        <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+      </EndProperty>
+      <EndProperty Name="mundo_Arrastres">
+        <ScalarProperty Name="marr_Id" ColumnName="marr_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AsociaTHR_PropEq" TypeName="SitransModel.AsociaTHR_PropEq" StoreEntitySet="AsociaTHR-PropEq">
+      <EndProperty Name="mundo_PropositosEquipos">
+        <ScalarProperty Name="mpeq_Id" ColumnName="mpeq_Id" />
+      </EndProperty>
+      <EndProperty Name="mundo_TipoHR">
+        <ScalarProperty Name="mthr_id" ColumnName="mthr_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BatEq" TypeName="SitransModel.BatEq" StoreEntitySet="BatEq">
+      <EndProperty Name="Baterias">
+        <ScalarProperty Name="bat_PC" ColumnName="bat_PC" />
+      </EndProperty>
+      <EndProperty Name="Equipos">
+        <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MotorEq" TypeName="SitransModel.MotorEq" StoreEntitySet="MotorEq">
+      <EndProperty Name="Equipos">
+        <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+      </EndProperty>
+      <EndProperty Name="Motores">
+        <ScalarProperty Name="motor_NumSerie" ColumnName="motor_NumSerie" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="NeumEq" TypeName="SitransModel.NeumEq" StoreEntitySet="NeumEq">
+      <EndProperty Name="Equipos">
+        <ScalarProperty Name="eq_NumOperacional" ColumnName="eq_NumOperacional" />
+      </EndProperty>
+      <EndProperty Name="Neumaticos">
+        <ScalarProperty Name="neum_PC" ColumnName="neum_PC" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosCCostos" TypeName="SitransModel.UsuariosCCostos" StoreEntitySet="UsuariosCCostos">
+      <EndProperty Name="CentrosCostos">
+        <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+      </EndProperty>
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Login" ColumnName="Login" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuariosIndPlanes" TypeName="SitransModel.UsuariosIndPlanes" StoreEntitySet="UsuariosIndPlanes">
+      <EndProperty Name="mundo_Indicadores">
+        <ScalarProperty Name="i_Id" ColumnName="i_Id" />
+      </EndProperty>
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Login" ColumnName="Login" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="ft_CCostos" FunctionName="SitransModel.Store.ft_CCostos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SitransModel.ft_CCostos_Result">
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="ccosto_codcencos" ColumnName="ccosto_codcencos" />
+          <ScalarProperty Name="ccosto_descrip" ColumnName="ccosto_descrip" />
+          <ScalarProperty Name="ccosto_Inactivo" ColumnName="ccosto_Inactivo" />
+          <ScalarProperty Name="dir_Descrip" ColumnName="dir_Descrip" />
+          <ScalarProperty Name="dir_ID" ColumnName="dir_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

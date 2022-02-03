@@ -1,0 +1,170 @@
+﻿@model IEnumerable<Suite.Models.RecHumanos.SubMayorVacaciones>
+
+@{
+    ViewBag.Title = "SubMayorVacaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Tirillas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("SubMayorVacaciones", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            @*<div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>*@
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="ccostos" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Submayor de Vacaciones</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        <div class="container">
+            <div class="row">
+
+
+                <table class="table">
+                    @{
+                        decimal? total = 0;
+                        <tr >
+                            <td><strong><span style="color:black">Expediente</span></strong></td>
+                            <td><strong><span style="color:black">Nombre y Apellidos</span></strong></td>
+                            <td><strong><span style="color:black">Tiempo</span></strong></td>
+                            <td><strong><span style="color:black">Importe</span></strong></td>
+
+                        </tr>
+                        foreach (var item in Model)
+                        {
+
+
+                            total = total + item.Importe;
+
+
+
+                        <tr>
+                            <td>@item.NumCobro</td>
+                            <td>@item.Nombre</td>
+                            @{
+                                string colorrojo = "";
+                                if (decimal.Round(item.Tiempo ?? 0, 2) > 18)
+                                { colorrojo = "orange"; }
+                                if ( decimal.Round(item.Tiempo?? 0,2) > 21)
+                                { colorrojo = "red"; }
+                            }                            
+                            <td style="color:@colorrojo ">@item.Tiempo</td>
+                            <td>@item.Importe</td>
+
+
+                        </tr>
+
+                        }
+                        <tr>
+                            <td colspan="3" style="text-align:right"><strong><span style="color:black">Total General:</span></strong></td>
+                            <td><span style="color:black">@total.ToString()</span></td>
+                        </tr>
+
+                    }
+                </table>
+            </div>
+        </div>
+
+    }
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../Economia/SearchCC'
+            });
+        });
+    </script>
+}
+
+
+@*<h2>SubMayorVacaciones</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumCobro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tiempo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importe)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumCobro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tiempo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importe)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+    </table>*@

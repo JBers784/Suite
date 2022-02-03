@@ -1,0 +1,643 @@
+﻿@model Suite.Models.Produccion.ProdPetroleo
+
+@{
+    /**/
+
+    ViewBag.Title = "Producción de Petróleo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ProdPetroleo", "Produccion", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="select-box abs-center">
+        <div class="search-product ads-list">
+            <label>Fecha: <span style="color:red;font-weight:bold">(@ViewBag.fechadefiltro) </span></label>
+            <div class="search">
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-lg">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+}
+    <ol class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+        <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab3">Módulos</a></li>
+        <li class="active">Producción de Petróleo</li>
+    </ol>
+    <div class="container ">
+        @*EPEP-Centro*@
+        <div class="panel panel-success col-md-6">
+            <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">UEB de Producción Centro</h3></div>
+            <div class="panel-body">
+                <table class="table table-responsive table-hover" >
+                    @*Encabezados*@
+                    <tr style="font-weight:bold">
+                        <td colspan="2"></td>
+
+                        <td><span style="color:black">Plan</span></td>
+                        <td><span style="color:black">Real</span></td>
+                        <td><span style="color:black">%Cump.</span></td>
+                        <td><span style="color:black">Dif.</span></td>
+                    </tr>
+                    @*Dia*@
+                    <tr>
+                        <td class="active" rowspan="3" width="3%">D<br /><br />I<br /><br />A</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanDiaCentroT)</td>
+                        <td> @Html.ValueFor(model => model.RealDiaCentroT)</td>
+                        <td>
+                            @{
+                                decimal cumpDiaT = 0;
+                                if (Model.PlanDiaCentroT > 0)
+                                {
+                                    cumpDiaT = decimal.Divide(Model.RealDiaCentroT.Value, Model.PlanDiaCentroT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpDiaT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difDiaT = Model.RealDiaCentroT.Value - Model.PlanDiaCentroT.Value; }
+                            @Decimal.Round(difDiaT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                        <td>@Html.ValueFor(model => model.PlanDiaCentroN)</td>
+                        <td>@Html.ValueFor(model => model.RealDiaCentroN)</td>
+                        <td>
+                            @{
+                                decimal cumpDiaN = 0;
+                                if (Model.PlanDiaCentroN > 0)
+                                {
+                                    cumpDiaN = decimal.Divide(Model.RealDiaCentroN.Value, Model.PlanDiaCentroN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpDiaN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difDiaN = Model.RealDiaCentroN.Value - Model.PlanDiaCentroN.Value; }
+                            @Decimal.Round(difDiaN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+
+                        <td><span style="color:black"><span style="color:black">Total Dia</span></td>
+                        <td><span style="color:black">@Html.ValueFor(model => model.PlanDiaCentroTot)</span></td>
+                        <td><span style="color:black">@Html.ValueFor(model => model.RealDiaCentroTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpDiaTot = 0;
+                                if (Model.PlanDiaCentroTot > 0)
+                                {
+                                    cumpDiaTot = decimal.Divide(Model.RealDiaCentroTot.Value, Model.PlanDiaCentroTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpDiaTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difDiaTot = Model.RealDiaCentroTot.Value - Model.PlanDiaCentroTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difDiaTot, 3)</span>
+                        </td>
+                    </tr>
+                    @*Mes*@
+                    <tr>
+                        <td class="warning" rowspan="3" width="3%">M<br /><br />E<br /><br />S</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanMesCentroT)</td>
+                        <td> @Html.ValueFor(model => model.RealMesCentroT)</td>
+                        <td>
+                            @{
+                                decimal cumpMesT = 0;
+                                if (Model.PlanMesCentroT > 0)
+                                {
+                                    cumpMesT = decimal.Divide(Model.RealMesCentroT.Value, Model.PlanMesCentroT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpMesT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difMesT = Model.RealMesCentroT.Value - Model.PlanMesCentroT.Value; }
+                            @Decimal.Round(difMesT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</td>
+                        <td> @Html.ValueFor(model => model.PlanMesCentroN)</td>
+                        <td> @Html.ValueFor(model => model.RealMesCentroN)</td>
+                        <td>
+                            @{
+                                decimal cumpMesN = 0;
+                                if (Model.PlanMesCentroN > 0)
+                                {
+                                    cumpMesN = decimal.Divide(Model.RealMesCentroN.Value, Model.PlanMesCentroN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpMesN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difMesN = Model.RealMesCentroN.Value - Model.PlanMesCentroN.Value; }
+                            @Decimal.Round(difMesN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+
+                        <td><span style="color:black">Total Mes</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.PlanMesCentroTot)</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.RealMesCentroTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpMesTot = 0;
+                                if (Model.PlanMesCentroTot > 0)
+                                {
+                                    cumpMesTot = decimal.Divide(Model.RealMesCentroTot.Value, Model.PlanMesCentroTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpMesTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difMesTot = Model.RealMesCentroTot.Value - Model.PlanMesCentroTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difMesTot, 3)</span>
+                        </td>
+                    </tr>
+                    @*Año*@
+                    <tr>
+                        <td class="success" rowspan="3" width="3%">A<br /><br />Ñ<br /><br />O</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanAnoCentroT)</td>
+                        <td> @Html.ValueFor(model => model.RealAnoCentroT)</td>
+                        <td>
+                            @{
+                                decimal cumpAnnoT = 0;
+                                if (Model.PlanAnoCentroT > 0)
+                                {
+                                    cumpAnnoT = decimal.Divide(Model.RealAnoCentroT.Value, Model.PlanAnoCentroT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpAnnoT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difAnnoT = Model.RealAnoCentroT.Value - Model.PlanAnoCentroT.Value; }
+                            @Decimal.Round(difAnnoT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanAnoCentroN)</td>
+                        <td> @Html.ValueFor(model => model.RealAnoCentroN)</td>
+                        <td>
+                            @{
+                                decimal cumpAnnoN = 0;
+                                if (Model.PlanAnoCentroN > 0)
+                                {
+                                    cumpAnnoN = decimal.Divide(Model.RealAnoCentroN.Value, Model.PlanAnoCentroN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpAnnoN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difAnnoN = Model.RealAnoCentroN.Value - Model.PlanAnoCentroN.Value; }
+                            @Decimal.Round(difAnnoN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+                        <td><span style="color:black">Total Año</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.PlanAnoCentroTot)</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.RealAnoCentroTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpAnnoTot = 0;
+                                if (Model.PlanAnoCentroTot > 0)
+                                {
+                                    cumpAnnoTot = decimal.Divide(Model.RealAnoCentroTot.Value, Model.PlanAnoCentroTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpAnnoTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difAnnoTot = Model.RealAnoCentroTot.Value - Model.PlanAnoCentroTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difAnnoTot, 3)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        @*Majagua*@
+        <div class="panel panel-success col-md-6">
+            <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">UEB de Majagua</h3></div>
+            <div class="panel-body">
+                <table class="table table-responsive table-hover">
+                    @*Encabezados*@
+                    <tr style="font-weight:bold">
+                        <td colspan="2"></td>
+
+                        <td><span style="color:black">Plan</span></td>
+                        <td><span style="color:black">Real</span></td>
+                        <td><span style="color:black">%Cump.</span></td>
+                        <td><span style="color:black">Dif.</span></td>
+                    </tr>
+                    @*Dia*@
+                    <tr>
+                        <td class="active" rowspan="3" width="3%">D<br /><br />I<br /><br />A</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanDiaMajT)</td>
+                        <td> @Html.ValueFor(model => model.RealDiaMajT)</td>
+                        <td>
+                            @{
+                                decimal cumpDiaMajT = 0;
+                                if (Model.PlanDiaMajT > 0)
+                                {
+                                    cumpDiaMajT = decimal.Divide(Model.RealDiaMajT.Value, Model.PlanDiaMajT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpDiaMajT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difDiaMajT = Model.RealDiaMajT.Value - Model.PlanDiaMajT.Value; }
+                            @Decimal.Round(difDiaMajT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                        <td>@Html.ValueFor(model => model.PlanDiaMajN)</td>
+                        <td>@Html.ValueFor(model => model.RealDiaMajN)</td>
+                        <td>
+                            @{
+                                decimal cumpDiaMajN = 0;
+                                if (Model.PlanDiaMajN > 0)
+                                {
+                                    cumpDiaMajN = decimal.Divide(Model.RealDiaMajN.Value, Model.PlanDiaMajN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpDiaMajN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difDiaMajN = Model.RealDiaMajN.Value - Model.PlanDiaMajN.Value; }
+                            @Decimal.Round(difDiaMajN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+
+                        <td><span style="color:black"><span style="color:black">Total Dia</span></td>
+                        <td><span style="color:black">@Html.ValueFor(model => model.PlanDiaMajTot)</span></td>
+                        <td><span style="color:black">@Html.ValueFor(model => model.RealDiaMajTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpDiaMajTot = 0;
+                                if (Model.PlanDiaMajTot > 0)
+                                {
+                                    cumpDiaMajTot = decimal.Divide(Model.RealDiaMajTot.Value, Model.PlanDiaMajTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpDiaMajTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difDiaMajTot = Model.RealDiaMajTot.Value - Model.PlanDiaMajTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difDiaMajTot, 3)</span>
+                        </td>
+                    </tr>
+                    @*Mes*@
+                    <tr>
+                        <td class="warning" rowspan="3" width="3%">M<br /><br />E<br /><br />S</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanMesMajT)</td>
+                        <td> @Html.ValueFor(model => model.RealMesMajT)</td>
+                        <td>
+                            @{
+                                decimal cumpMesMajT = 0;
+                                if (Model.PlanMesMajT > 0)
+                                {
+                                    cumpMesMajT = decimal.Divide(Model.RealMesMajT.Value, Model.PlanMesMajT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpMesMajT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difMesMajT = Model.RealMesMajT.Value - Model.PlanMesMajT.Value; }
+                            @Decimal.Round(difMesMajT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</td>
+                        <td> @Html.ValueFor(model => model.PlanMesMajN)</td>
+                        <td> @Html.ValueFor(model => model.RealMesMajN)</td>
+                        <td>
+                            @{
+                                decimal cumpMesMajN = 0;
+                                if (Model.PlanMesMajN > 0)
+                                {
+                                    cumpMesMajN = decimal.Divide(Model.RealMesMajN.Value, Model.PlanMesMajN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpMesMajN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difMesMajN = Model.RealMesMajN.Value - Model.PlanMesMajN.Value; }
+                            @Decimal.Round(difMesMajN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+
+                        <td><span style="color:black">Total Mes</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.PlanMesMajTot)</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.RealMesMajTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpMesMajTot = 0;
+                                if (Model.PlanMesMajTot > 0)
+                                {
+                                    cumpMesMajTot = decimal.Divide(Model.RealMesMajTot.Value, Model.PlanMesMajTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpMesMajTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difMesMajTot = Model.RealMesMajTot.Value - Model.PlanMesMajTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difMesMajTot, 3)</span>
+                        </td>
+                    </tr>
+                    @*Año*@
+                    <tr>
+                        <td class="success" rowspan="3" width="3%">A<br /><br />Ñ<br /><br />O</td>
+                        <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanAnoMajT)</td>
+                        <td> @Html.ValueFor(model => model.RealAnoMajT)</td>
+                        <td>
+                            @{
+                                decimal cumpAnnoMajT = 0;
+                                if (Model.PlanAnoMajT > 0)
+                                {
+                                    cumpAnnoMajT = decimal.Divide(Model.RealAnoMajT.Value, Model.PlanAnoMajT.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpAnnoMajT, 2)
+                        </td>
+                        <td>
+                            @{ decimal difAnnoMajT = Model.RealAnoMajT.Value - Model.PlanAnoMajT.Value; }
+                            @Decimal.Round(difAnnoMajT, 3)
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                        <td> @Html.ValueFor(model => model.PlanAnoMajN)</td>
+                        <td> @Html.ValueFor(model => model.RealAnoMajN)</td>
+                        <td>
+                            @{
+                                decimal cumpAnnoMajN = 0;
+                                if (Model.PlanAnoMajN > 0)
+                                {
+                                    cumpAnnoMajN = decimal.Divide(Model.RealAnoMajN.Value, Model.PlanAnoMajN.Value) * 100;
+                                }
+                            }
+                            @Decimal.Round(cumpAnnoMajN, 2)
+                        </td>
+                        <td>
+                            @{ decimal difAnnoMajN = Model.RealAnoMajN.Value - Model.PlanAnoMajN.Value; }
+                            @Decimal.Round(difAnnoMajN, 3)
+                        </td>
+                    </tr>
+                    <tr style="font-weight:bold">
+                        <td><span style="color:black">Total Año</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.PlanAnoMajTot)</span></td>
+                        <td><span style="color:black"> @Html.ValueFor(model => model.RealAnoMajTot)</span></td>
+                        <td>
+                            @{
+                                decimal cumpAnnoMajTot = 0;
+                                if (Model.PlanAnoMajTot > 0)
+                                {
+                                    cumpAnnoMajTot = decimal.Divide(Model.RealAnoMajTot.Value, Model.PlanAnoMajTot.Value) * 100;
+                                }
+                            }
+                            <span style="color:black">  @Decimal.Round(cumpAnnoMajTot, 2)</span>
+                        </td>
+                        <td>
+                            @{ decimal difAnnoMajTot = Model.RealAnoMajTot.Value - Model.PlanAnoMajTot.Value; }
+                            <span style="color:black"> @Decimal.Round(difAnnoMajTot, 3)</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<br />
+
+@*Totales*@
+<div class="container ">
+
+    <div class="panel panel-success ">
+        <div class="panel-heading text-center">
+            <h3 class="text-uppercase" style="font-weight:bold">Totales EPEP-Centro</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-responsive table-hover" >
+                @*Encabezados*@
+                <tr style="font-weight:bold">
+                    <td colspan="2"></td>
+
+                    <td><span style="color:black">Plan</span></td>
+                    <td><span style="color:black">Real</span></td>
+                    <td><span style="color:black">%Cump.</span></td>
+                    <td><span style="color:black">Dif.</span></td>
+                </tr>
+                @*Dia*@
+                <tr>
+                    <td class="active" rowspan="3" width="3%">D<br /><br />I<br /><br />A</td>
+                    <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                    <td> @Html.ValueFor(model => model.PlanDiaEmpT)</td>
+                    <td> @Html.ValueFor(model => model.RealDiaEmpT)</td>
+                    <td>
+                        @{
+                            decimal cumpDiaEmpT = 0;
+                            if (Model.PlanDiaEmpT > 0)
+                            {
+                                cumpDiaEmpT = decimal.Divide(Model.RealDiaEmpT.Value, Model.PlanDiaEmpT.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpDiaEmpT, 2)
+                    </td>
+                    <td>
+                        @{ decimal difDiaEmpT = Model.RealDiaEmpT.Value - Model.PlanDiaEmpT.Value; }
+                        @Decimal.Round(difDiaEmpT, 3)
+                    </td>
+                </tr>
+                <tr>
+
+                    <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                    <td>@Html.ValueFor(model => model.PlanDiaEmpN)</td>
+                    <td>@Html.ValueFor(model => model.RealDiaEmpN)</td>
+                    <td>
+                        @{
+                            decimal cumpDiaEmpN = 0;
+                            if (Model.PlanDiaEmpN > 0)
+                            {
+                                cumpDiaEmpN = decimal.Divide(Model.RealDiaEmpN.Value, Model.PlanDiaEmpN.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpDiaEmpN, 2)
+                    </td>
+                    <td>
+                        @{ decimal difDiaEmpN = Model.RealDiaEmpN.Value - Model.PlanDiaEmpN.Value; }
+                        @Decimal.Round(difDiaEmpN, 3)
+                    </td>
+                </tr>
+                <tr style="font-weight:bold">
+
+                    <td><span style="color:black"><span style="color:black">Total Dia</span></td>
+                    <td><span style="color:black">@Html.ValueFor(model => model.PlanDiaEmpTot)</span></td>
+                    <td><span style="color:black">@Html.ValueFor(model => model.RealDiaEmpTot)</span></td>
+                    <td>
+                        @{
+                            decimal cumpDiaEmpTot = 0;
+                            if (Model.PlanDiaEmpTot > 0)
+                            {
+                                cumpDiaEmpTot = decimal.Divide(Model.RealDiaEmpTot.Value, Model.PlanDiaEmpTot.Value) * 100;
+                            }
+                        }
+                        <span style="color:black">  @Decimal.Round(cumpDiaEmpTot, 2)</span>
+                    </td>
+                    <td>
+                        @{ decimal difDiaEmpTot = Model.RealDiaEmpTot.Value - Model.PlanDiaEmpTot.Value; }
+                        <span style="color:black"> @Decimal.Round(difDiaEmpTot, 3)</span>
+                    </td>
+                </tr>
+                @*Mes*@
+                <tr>
+                    <td class="warning" rowspan="3" width="3%">M<br /><br />E<br /><br />S</td>
+                    <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                    <td> @Html.ValueFor(model => model.PlanMesEmpT)</td>
+                    <td> @Html.ValueFor(model => model.RealMesEmpT)</td>
+                    <td>
+                        @{
+                            decimal cumpMesEmpT = 0;
+                            if (Model.PlanMesEmpT > 0)
+                            {
+                                cumpMesEmpT = decimal.Divide(Model.RealMesEmpT.Value, Model.PlanMesEmpT.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpMesEmpT, 2)
+                    </td>
+                    <td>
+                        @{ decimal difMesEmpT = Model.RealMesEmpT.Value - Model.PlanMesEmpT.Value; }
+                        @Decimal.Round(difMesEmpT, 3)
+                    </td>
+                </tr>
+                <tr>
+
+                    <td style="font-weight:bold"><span style="color:black">Nuevos</td>
+                    <td> @Html.ValueFor(model => model.PlanMesEmpN)</td>
+                    <td> @Html.ValueFor(model => model.RealMesEmpN)</td>
+                    <td>
+                        @{
+                            decimal cumpMesEmpN = 0;
+                            if (Model.PlanMesEmpN > 0)
+                            {
+                                cumpMesEmpN = decimal.Divide(Model.RealMesEmpN.Value, Model.PlanMesEmpN.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpMesEmpN, 2)
+                    </td>
+                    <td>
+                        @{ decimal difMesEmpN = Model.RealMesEmpN.Value - Model.PlanMesEmpN.Value; }
+                        @Decimal.Round(difMesEmpN, 3)
+                    </td>
+                </tr>
+                <tr style="font-weight:bold">
+
+                    <td><span style="color:black">Total Mes</span></td>
+                    <td><span style="color:black"> @Html.ValueFor(model => model.PlanMesEmpTot)</span></td>
+                    <td><span style="color:black"> @Html.ValueFor(model => model.RealMesEmpTot)</span></td>
+                    <td>
+                        @{
+                            decimal cumpMesEmpTot = 0;
+                            if (Model.PlanMesEmpTot > 0)
+                            {
+                                cumpMesEmpTot = decimal.Divide(Model.RealMesEmpTot.Value, Model.PlanMesEmpTot.Value) * 100;
+                            }
+                        }
+                        <span style="color:black">  @Decimal.Round(cumpMesEmpTot, 2)</span>
+                    </td>
+                    <td>
+                        @{ decimal difMesEmpTot = Model.RealMesEmpTot.Value - Model.PlanMesEmpTot.Value; }
+                        <span style="color:black"> @Decimal.Round(difMesEmpTot, 3)</span>
+                    </td>
+                </tr>
+                @*Año*@
+                <tr>
+                    <td class="success" rowspan="3" width="3%">A<br /><br />Ñ<br /><br />O</td>
+                    <td style="font-weight:bold"><span style="color:black">Transferidos</span></td>
+                    <td> @Html.ValueFor(model => model.PlanAnoEmpT)</td>
+                    <td> @Html.ValueFor(model => model.RealAnoEmpT)</td>
+                    <td>
+                        @{
+                            decimal cumpAnnoEmpT = 0;
+                            if (Model.PlanAnoEmpT > 0)
+                            {
+                                cumpAnnoEmpT = decimal.Divide(Model.RealAnoEmpT.Value, Model.PlanAnoEmpT.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpAnnoEmpT, 2)
+                    </td>
+                    <td>
+                        @{ decimal difAnnoEmpT = Model.RealAnoEmpT.Value - Model.PlanAnoEmpT.Value; }
+                        @Decimal.Round(difAnnoEmpT, 3)
+                    </td>
+                </tr>
+                <tr>
+
+                    <td style="font-weight:bold"><span style="color:black">Nuevos</span></td>
+                    <td> @Html.ValueFor(model => model.PlanAnoEmpN)</td>
+                    <td> @Html.ValueFor(model => model.RealAnoEmpN)</td>
+                    <td>
+                        @{
+                            decimal cumpAnnoEmpN = 0;
+                            if (Model.PlanAnoEmpN > 0)
+                            {
+                                cumpAnnoEmpN = decimal.Divide(Model.RealAnoEmpN.Value, Model.PlanAnoEmpN.Value) * 100;
+                            }
+                        }
+                        @Decimal.Round(cumpAnnoEmpN, 2)
+                    </td>
+                    <td>
+                        @{ decimal difAnnoEmpN = Model.RealAnoEmpN.Value - Model.PlanAnoEmpN.Value; }
+                        @Decimal.Round(difAnnoEmpN, 3)
+                    </td>
+                </tr>
+                <tr style="font-weight:bold">
+                    <td><span style="color:black">Total Año</span></td>
+                    <td><span style="color:black"> @Html.ValueFor(model => model.PlanAnoEmpTot)</span></td>
+                    <td><span style="color:black"> @Html.ValueFor(model => model.RealAnoEmpTot)</span></td>
+                    <td>
+                        @{
+                            decimal cumpAnnoEmpTot = 0;
+                            if (Model.PlanAnoEmpTot > 0)
+                            {
+                                cumpAnnoEmpTot = decimal.Divide(Model.RealAnoEmpTot.Value, Model.PlanAnoEmpTot.Value) * 100;
+                            }
+                        }
+                        <span style="color:black">  @Decimal.Round(cumpAnnoEmpTot, 2)</span>
+                    </td>
+                    <td>
+                        @{ decimal difAnnoEmpTot = Model.RealAnoEmpTot.Value - Model.PlanAnoEmpTot.Value; }
+                        <span style="color:black"> @Decimal.Round(difAnnoEmpTot, 3)</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

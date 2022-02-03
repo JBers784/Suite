@@ -1,0 +1,354 @@
+﻿@model IEnumerable<Suite.Models.Economia.Tirillas>
+
+
+@{
+    ViewBag.Title = "Tirillas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Tirillas", "Economia", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            @*<div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Tarjeta</label>
+                    @Html.DropDownList("tarjeta", (IEnumerable<SelectListItem>)ViewBag.tarjeta, new { @class = "form-control" })
+                </div>
+            </div>*@
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="ccostos" class="form-control" value= @ViewBag.ccostos>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Tirillas por centros de costos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        <div class="container">
+            <div class="row">
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Tarjetas</div>
+                    <div class="panel-body">
+                        <table class="table-condensed">
+                            @{
+
+                                foreach (var item in Model)
+                                {
+                                    if (item.FormaCobro.ToUpper() == "T")
+                                    {
+
+                                    <tr>
+                                        <td colspan=" 2"><strong>Recibo de pago:</strong></td>
+                                        <td colspan=" 4">@item.RecibPago</td>
+
+                                        <td colspan=" 2"><strong>Reporte:</strong></td>
+                                        <td>@item.Reporte</td>
+
+                                        <td colspan=" 2"><strong>Corte:</strong></td>
+                                        <td>@item.Corte</td>
+
+                                        <td><strong>Mes:</strong></td>
+                                        <td>@item.Mes</td>
+
+                                        <td colspan=" 2"><strong>Año:</strong></td>
+                                        <td>@item.Anno</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong>Centro de pago:   </strong></td>
+
+                                        <td colspan="15">@item.CentroPago</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong>Expediente:   </strong></td>
+                                        <td colspan="15"><span style="color:blue">@item.NumCobro  &nbsp;&nbsp;&nbsp;  @item.NombreCompleto</span></td>
+
+                                    </tr>
+
+                                        string vaca = "none";
+                                        if (!item.RecibPago.ToLower().Contains("vaca"))
+                                        {
+                                            vaca = "";
+                                        }
+                                        else
+                                        {
+                                            vaca = "none";
+                                        }
+
+
+                                    <tr>
+                                        <td colspan="3"><strong>Acum. Vacaciones:   </strong></td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td colspan="3"><strong>A Disfrutar:   </strong></td>
+                                        }
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Dias</strong></td>
+                                        <td><strong>Importe</strong></td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td></td>
+                                            <td><strong>Días</strong></td>
+                                            <td><strong>Importe</strong></td>
+                                        }
+                                        else
+                                        {
+
+                                            <td><strong>H.Trab</strong></td>
+                                            <td><strong>Tarifa</strong></td>
+                                        }
+
+
+                                        <td style="display:@vaca"><strong>Sal.Esc</strong></td>
+                                        <td style="display:@vaca"><strong>C.Pagos</strong></td>
+                                        <td style="display:@vaca"><strong>P.Adic</strong></td>
+                                        <td><strong>Dev.Bruto</strong></td>
+                                        <td><strong>%Cont</strong></td>
+                                        <td><strong>CESS</strong></td>
+                                        <td><strong>%Imp</strong></td>
+                                        <td><strong>Impuesto</strong></td>
+                                        <td><strong>Retenc</strong></td>
+                                        @if (item.Anno < 2021)
+                                        {
+                                            <td><strong>Desc.P.Div</strong></td>
+                                        }
+
+                                        <td><strong>Ajuste</strong></td>
+                                        <td><strong>Dev.Neto</strong></td>
+                                        <td><strong>Cuenta Cob</strong></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>@item.VacDias</td>
+                                        <td>@item.VacImporte</td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td></td>
+                                            <td> @item.Horastrabajadas</td>
+                                            <td> @item.DevBruto</td>
+                                        }
+                                        else
+                                        {
+
+                                            <td>@item.Horastrabajadas</td>
+                                            <td>@item.Tarifa</td>
+                                        }
+
+                                        <td style="display:@vaca">@item.SalEsc</td>
+                                        <td style="display:@vaca">@item.Cpagos</td>
+                                        <td style="display:@vaca">@(item.Padic)</td>
+                                        <td>@item.DevBruto</td>
+                                        <td>@item.PorcCont</td>
+                                        <td>@item.Cess</td>
+                                        <td>@item.PorcImp</td>
+                                        <td>@item.Impuesto</td>
+                                        <td>@item.Retenc</td>
+                                        @if (item.Anno < 2021)
+                                        {
+                                            <td>@item.DescPdiv</td>
+                                        }
+                                            <td>@item.Ajuste</td>
+                                            <td>@item.DevNeto</td>
+                                            <td>@item.CuentaCob</td>
+                                        </tr>
+                                    <tr><td colspan="17"><br><hr /></td></tr>
+                                    }
+                                }
+                            }
+                        </table>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">Caja</div>
+                    <div class="panel-body">
+                        <table class="table-condensed">
+                            @{
+
+                                foreach (var item in Model)
+                                {
+
+                                    if (item.FormaCobro.ToUpper() != "T")
+                                    {
+                                    <tr>
+                                        <td colspan=" 2"><strong>Recibo de pago:</strong></td>
+                                        <td colspan=" 4">@item.RecibPago</td>
+
+                                        <td colspan=" 2"><strong>Reporte:</strong></td>
+                                        <td>@item.Reporte</td>
+
+                                        <td colspan=" 2"><strong>Corte:</strong></td>
+                                        <td>@item.Corte</td>
+
+                                        <td><strong>Mes:</strong></td>
+                                        <td>@item.Mes</td>
+
+                                        <td colspan=" 2"><strong>Año:</strong></td>
+                                        <td>@item.Anno</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong>Centro de pago:   </strong></td>
+
+                                        <td colspan="15">@item.CentroPago</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong>Expediente:   </strong></td>
+                                        <td colspan="15"><span style="color:blue">@item.NumCobro  &nbsp;&nbsp;&nbsp;  @item.NombreCompleto</span></td>
+
+                                    </tr>
+
+                                        string vaca = "none";
+                                        if (!item.RecibPago.ToLower().Contains("vaca"))
+                                        {
+                                            vaca = "";
+                                        }
+                                        else
+                                        {
+                                            vaca = "none";
+                                        }
+
+
+                                    <tr>
+                                        <td colspan="3"><strong>Acum. Vacaciones:   </strong></td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td colspan="3"><strong>A Disfrutar:   </strong></td>
+                                        }
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Dias</strong></td>
+                                        <td><strong>Importe</strong></td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td></td>
+                                            <td><strong>Días</strong></td>
+                                            <td><strong>Importe</strong></td>
+                                        }
+                                        else
+                                        {
+
+                                            <td><strong>H.Trab</strong></td>
+                                            <td><strong>Tarifa</strong></td>
+                                        }
+
+
+                                        <td style="display:@vaca"><strong>Sal.Bas</strong></td>
+                                        <td style="display:@vaca"><strong>C.Pagos</strong></td>
+                                        <td style="display:@vaca"><strong>P.Adic</strong></td>
+                                        <td><strong>Dev.Bruto</strong></td>
+                                        <td><strong>%Cont</strong></td>
+                                        <td><strong>CESS</strong></td>
+                                        <td><strong>%Imp</strong></td>
+                                        <td><strong>Impuesto</strong></td>
+                                        <td><strong>Retenc</strong></td>
+                                        @if (item.Anno < 2021)
+                                        {
+                                            <td><strong>Desc.P.Div</strong></td>
+                                        }
+                                            <td><strong>Ajuste</strong></td>
+                                            <td><strong>Dev.Neto</strong></td>
+                                            <td><strong>Cuenta Cob</strong></td>
+
+                                        </tr>
+                                    <tr>
+                                        <td>@item.VacDias</td>
+                                        <td>@item.VacImporte</td>
+                                        @if (vaca == "none")
+                                        {
+                                            <td></td>
+                                            <td> @item.Horastrabajadas</td>
+                                            <td> @item.DevBruto</td>
+                                        }
+                                        else
+                                        {
+
+                                            <td>@item.Horastrabajadas</td>
+                                            <td>@item.Tarifa</td>
+                                        }
+
+                                        <td style="display:@vaca">@item.SalEsc</td>
+                                        <td style="display:@vaca">@item.Cpagos</td>
+                                        <td style="display:@vaca">@item.Padic</td>
+                                        <td>@item.DevBruto</td>
+                                        <td>@item.PorcCont</td>
+                                        <td>@item.Cess</td>
+                                        <td>@item.PorcImp</td>
+                                        <td>@item.Impuesto</td>
+                                        <td>@item.Retenc</td>
+                                        @if (item.Anno < 2021)
+                                        {
+                                            <td>@item.DescPdiv</td>
+                                        }
+                                            <td>@item.Ajuste</td>
+                                            <td>@item.DevNeto</td>
+                                            <td>@item.CuentaCob</td>
+                                        </tr>
+                                    <tr><td colspan="17"><br><hr /></td></tr>
+                                        }
+
+                                    }
+                                }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../Economia/SearchCC'
+            });
+        });
+    </script>
+}

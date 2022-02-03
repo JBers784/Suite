@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Suite.Models.Transporte.HojaRuta>
+
+@{
+    ViewBag.Title = "Hoja de Ruta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("HojaRuta", "Transporte", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="select-box">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Fecha inicio</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().fechaini, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+            <div class="browse-category ads-list">
+                <div class="col-xs-10">
+                    <label>Fecha final</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().fechafin, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Matricula</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().matricula, new { htmlAttributes = new { @class = "form-control", id= "matricula", name = "matricula" } })
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab2">Módulos</a></li>
+    <li class="active">Hojas de Rutas</li>
+</ol>
+@{
+    decimal kmdisp = 0;
+
+    if (ViewBag.kmsdisponibles != null)
+    {
+        kmdisp = ViewBag.kmsdisponibles;
+        if (kmdisp <= 0)
+        {
+            <div class="col-md-6 alert alert-danger">Kms disponibles:<span class="badge">@kmdisp</span></div>
+            <div class="col-md-6 alert alert-danger"> Tipo de mantenimiento:<span class="badge"> @ViewBag.TipoMant</span> </div>
+        }
+        else
+        {
+            <div class="col-md-6">Kms disponibles:<span class="badge">@kmdisp</span></div>
+            <div class="col-md-6"> Tipo de mantenimiento:<span class="badge"> @ViewBag.TipoMant</span> </div>
+        }
+
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    <span style="color:black"> No.Hoja ruta/ No. RPT</span>
+                </th>
+                <th>
+                    <span style="color:black"> Km </span>
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.noHojaRuta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.km)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+}
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#matricula').autocomplete({
+                source: '../Transporte/Searchmatricula'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

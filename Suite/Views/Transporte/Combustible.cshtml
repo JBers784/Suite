@@ -1,0 +1,181 @@
+﻿@model IEnumerable<Suite.Models.Transporte.Combustible>
+
+@{
+    ViewBag.Title = "Combustible";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Combustible", "Transporte", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="select-box">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Fecha inicio</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().fechadocini, new { htmlAttributes = new { @class = "form-control" } })
+                    @*@Html.ValidationMessageFor(model => model.FirstOrDefault().fechadocini, "", new { @class = "text-danger" })*@
+                    @*<input id="fechaini" name="fechaini" value="@DateTime.Parse("01/"+DateTime.Now.Month+"/"+DateTime.Now.Year)" class="form-control datepicker" />*@
+                </div>
+            </div>
+            <div class="browse-category ads-list">
+                <div class="col-xs-10">
+                    <label>Fecha final</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().fechadocfin, new { htmlAttributes = new { @class = "form-control" } })
+                    @*<input id="fechafin" name="fechafin" class="form-control datepicker" value="@DateTime.Today" />*@
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Matricula o Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().matricula, new { htmlAttributes = new { @class = "form-control", id = "ccostos", name = "ccostos" } })
+                            @*<input type="text" class="form-control input-lg" id="datomatriculaOccosto" name="datomatriculaOccosto" placeholder="Buscar" />*@
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab2">Módulos</a></li>
+    <li class="active">Combustible</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        decimal totallitros = 0;
+<table class="table ">
+    <tr style="font-weight:bold">
+        <th>
+            <span style="color:black"> Fecha Doc </span>
+        </th>
+        <th>
+            <span style="color:black">Matricula</span>
+        </th>
+        <th>
+            <span style="color:black"> No. Tarjeta</span>
+        </th>
+        <th>
+            <span style="color:black">Centro de Costo</span>
+        </th>
+        <th>
+            <span style="color:black">Litros</span>
+        </th>
+        <th>
+            <span style="color:black"> Servicentro</span>
+        </th>
+
+    </tr>
+    @{
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fechadoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matricula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.notargeta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ccostoid) - @Html.DisplayFor(modelItem => item.ccostodesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.litros)
+                    @{totallitros += item.litros; }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.servicentro)
+                </td>
+
+            </tr>
+        }
+    }
+    <tr style="font-weight:bold">
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+        <th>
+            <span style="color:black">Total de litros serviciados:</span>
+        </th>
+        <th>
+            <span style="color:black"> @totallitros</span>
+        </th>
+        <th>
+        </th>
+    </tr>
+    @{
+        string numtarjeta = "";
+        foreach (var item in Model)
+        {
+            if (item.notargeta != numtarjeta)
+            {
+                numtarjeta = item.notargeta;
+                <tr style="font-weight:bold">
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+                        <span style="color:black">Saldo final en la tarjeta <span class="badge">@item.notargeta</span> hasta la fecha:</span>
+                    </th>
+                    <th>
+                        <span style="color:black">@item.saldoFinalTarjetaLtros Ltros</span>
+                    </th>
+                    <th>
+                        <span style="color:black">@item.saldoFinalTarjetaDinero $</span>
+                    </th>
+                </tr>
+            }
+
+        }
+    }
+
+</table>
+
+    }
+}
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../Transporte/SearchCC'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

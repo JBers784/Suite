@@ -1,0 +1,11 @@
+#Ignore classes generated from the entity Framework
+ModuloAlmacenes
+ModuloComunicaciones
+ModuloEconomia
+ModuloProduccion
+ModuloRecHumanos
+ModuloTransporte
+
+#Ignore dependencies packages
+packages
+

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Suite.Models.Transporte.Documentos>
+
+@{
+    ViewBag.Title = "Documentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("Documentos", "Transporte", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="select-box">
+            <div class="search-product ads-list">
+                <label>Matricula</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().equipo, new { htmlAttributes = new { @class = "form-control", id = "matricula", name = "matricula" } })
+                           
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab2">Módulos</a></li>
+    <li class="active">Documentos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+
+        <div class="col-md-4 ">C.Costo:<span class="badge"> @Model.First().ccosto</span></div>
+        <div class="col-md-4 ">Equipo Modelo:<span class="badge">@Model.First().equipomodelo</span> </div>
+        <div class="col-md-4 ">Año Fabricación:<span class="badge">@Model.First().annoFabricacion</span> </div>
+
+
+
+
+
+        <table class="table ">
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black">Documento</span>
+                </th>
+                <th>
+                    <span style="color:black">Fecha Expedido</span>
+                </th>
+                <th>
+                    <span style="color:black">Fecha Vencimiento</span>
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.doc)
+                    </td>
+                    <td>
+                        @{string fecha = item.expedida.ToShortDateString();}
+                        @fecha
+                    </td>
+                    <td>
+                        @{
+                            fecha = item.vence.ToShortDateString();
+                            if (item.vence < DateTime.Now)
+                            {
+                                <span style="color:red ">@fecha</span>
+                            }
+                            else
+                            {
+                                @fecha
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+
+    }
+}
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#matricula').autocomplete({
+                source: '../Transporte/Searchmatricula'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

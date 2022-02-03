@@ -1,0 +1,156 @@
+﻿@model IEnumerable<ModuloEconomia.TarjetaSalarioWeb_Result>
+@{
+    ViewBag.Title = "TarjSalario";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("TarjSalario", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="search-product ads-list">
+                <label>Nombre</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().Nombre, new { htmlAttributes = new { @class = "form-control", id = "nombre" } })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab6">Módulos</a></li>
+    <li class="active">Tarjeta de Salario de un Trabajador</li>
+</ol>
+
+@{
+    short? año = 0;
+    decimal DTotal = 0;
+    decimal STotal = 0;
+    if (ViewBag.tabla != null)
+    {
+
+        //================ENCABEZADO DE AFUERA=======================
+        <table class="table table-bordered">
+           @* <div class="panel-heading text-center"><h3 class="text-uppercase" style="font-weight:bold">UEB de Producción Centro</h3></div>*@
+            <tr style="font-weight:bold">
+                @*<td class="active" style="font-weight:bold;color:black">Día</td>*@
+                <th class="active" colspan="4">
+                    <span style="color:red "> Nombre y Apellidos:  @Model.First().Nombre </span>
+                </th>
+            </tr>
+            <tr style="font-weight:bold">
+                <th colspan="1">
+                    <span style="color:black "> Edad: @Model.First().Edad  </span>
+                </th>
+                <th colspan="1">
+                    <span style="color:black "> No.Interno: @Model.First().NCobro </span>
+                </th>
+                <th colspan="1">
+                    <span style="color:black "> No.Exp.Lab: @Model.First().CI </span>
+                </th>
+                <th colspan="1">
+                    <span style="color:black "> Fecha Alta: @Model.First().FechaAlta.Value.ToShortDateString() </span>
+                </th>
+            </tr>
+         </table>
+
+            <table class="table table-bordered ">
+                @foreach (var item in Model)
+                {
+                    if (item.Año != año)
+                    {
+                        año = item.Año;
+
+                        //================ENCABEZADO ADENTRO del GRUPO=======================
+                        <tr style="font-weight:bold ">
+                            <th class="warning" colspan="3" style=" text-align:center ">
+                                <span style="color:blue"> Año:  @item.Año </span>
+                            </th>
+                        </tr>
+                        <tr style="font-weight:bold">
+                            <th colspan="1">
+                                <span style="color:black "> Mes  </span>
+                            </th>
+                            <th colspan="1">
+                                <span style="color:black "> Días Trabajados </span>
+                            </th>
+                            <th colspan="1">
+                                <span style="color:black "> Salario Devengado </span>
+                            </th>
+                        </tr>
+
+                        foreach (var item2 in Model)
+                        {
+                            if (item2.Año == año)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item2.NombreMes)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item2.Tiempo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item2.Importe)
+                                    </td>
+                                    @{
+                                        DTotal += item2.Tiempo.Value;
+                                        STotal += item2.Importe.Value;
+                                    }
+                                </tr>
+                            }
+                        }
+                        <tr style="font-weight:bold">
+                            <th class="success" colspan="1" , style=" text-align:right  ">
+                                <span style="color:black">Total</span>
+                            </th>
+                            <th class="success" colspan="1">
+                                <span style="color:black">  @Decimal.Round(@DTotal, 2)</span>
+                            </th>
+                            <th class="success" colspan="1">
+                                <span style="color:black">  @Decimal.Round(@STotal, 2)</span>
+                            </th>
+                        </tr>
+                        DTotal = 0;
+                        STotal = 0;
+                    }
+                }
+            </table>
+            }
+            }
+
+
+            @section Scripts {
+
+                <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+                <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#nombre').autocomplete({
+                            source: '../RecHumanos/SearchNombre'
+                        });
+                    });
+                </script>
+                @Scripts.Render("~/bundles/jqueryval")
+
+            }
+
+
+
+

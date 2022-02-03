@@ -1,0 +1,159 @@
+﻿@model IEnumerable<ModuloEconomia.InventariosMedBasicosWeb_Result>
+
+@{
+    ViewBag.Title = "MediosBasicosFiltro";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("MediosBasicosFiltro", "Economia", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+
+    <div class="container ">
+        <div class="select-box ">
+            @*Lista Centros de Costos*@
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="nombrecc" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Lista Código Medio Básico*@
+            <div class="search-product ads-list">
+                <label>Código Medio Básico</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="codMbas" id="codMbas" class="form-control" value=@ViewBag.codMbas>
+                            <span class="input-group-btn">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Lista Útil y Herramientas*@
+            <div class="search-product ads-list">
+                <label>Descripción Medio Básico</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="descMB" id="descMB" class="form-control" value=@ViewBag.descMB>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Inventario Medios Básicos</li>
+</ol>
+
+@{
+    string descccosto = "";
+    string descMedBas = "";
+    if (ViewBag.tabla != null)
+    {
+
+        <table class="table table-bordered">
+
+            @foreach (var item in Model)
+            {
+                if (item.Desc_Centro_Costo != descccosto)
+                {
+                    descccosto = item.Desc_Centro_Costo;
+
+                    <tr style="font-weight:bold">
+                        <th colspan="4">
+                            <span style="color:red ">Centro de Costo: @item.Codigo_CC @item.Desc_Centro_Costo </span>
+                        </th>
+                    </tr>
+                    foreach (var item2 in Model)
+                    {
+
+                        if (item2.Desc_Medio_Básico != descMedBas && item2.Desc_Centro_Costo == descccosto)
+                        {
+                            descMedBas = item2.Desc_Medio_Básico;
+                            <tr style="font-weight:bold">
+                                <th colspan="4">
+                                    <span style="color:deepskyblue ">Medio Básico: @item2.Desc_Medio_Básico </span>
+                                </th>
+                            </tr>
+
+                            <tr style="font-weight:bold">
+                                <th>
+                                    <span style="color:black ">No.Inventario</span>
+                                </th>
+                                <th>
+                                    <span style="color:black ">Valor</span>
+                                </th>
+                                <th>
+                                    <span style="color:black">Fecha Alta</span>
+                                </th>
+                                <th>
+                                    <span style="color:black">Fecha Baja</span>
+                                </th>
+                            </tr>
+
+                            foreach (var item3 in Model)
+                            {
+                                if (item3.Desc_Medio_Básico == descMedBas && item3.Desc_Centro_Costo  == descccosto)
+                                {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item3.No_Invent)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item3.Valor)
+                                </td>
+                                <td>
+                                    @item3.Fecha_Alta.Value.ToShortDateString()
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item3.Fecha_Baja)
+                                </td>
+                            </tr>
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </table>
+    }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    $('#nombrecc').autocomplete({
+        //        source: '../Economia/SearchCCUH'
+        //    });
+        //});
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+
+

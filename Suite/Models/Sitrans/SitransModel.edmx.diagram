@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea31068bc2f141c49c92cf4e3a8d76c6" Name="Diagram1" ZoomLevel="21">
+        <EntityTypeShape EntityType="SitransModel.AccidenteTipo" Width="1.5" PointX="19.5" PointY="68" />
+        <EntityTypeShape EntityType="SitransModel.AdelantarMttoMotor" Width="1.5" PointX="24" PointY="91.5" />
+        <EntityTypeShape EntityType="SitransModel.AsignacionesArrastres" Width="1.5" PointX="12.75" PointY="179.5" />
+        <EntityTypeShape EntityType="SitransModel.AsignacionesBaterias" Width="1.5" PointX="12.75" PointY="78.75" />
+        <EntityTypeShape EntityType="SitransModel.AsignacionesMotores" Width="1.5" PointX="18.75" PointY="90.625" />
+        <EntityTypeShape EntityType="SitransModel.AsignacionesNeumaticos" Width="1.5" PointX="15" PointY="138.125" />
+        <EntityTypeShape EntityType="SitransModel.AtrasarMttoMotor" Width="1.5" PointX="27" PointY="94.5" />
+        <EntityTypeShape EntityType="SitransModel.Ayudantes" Width="1.5" PointX="16.5" PointY="95.875" />
+        <EntityTypeShape EntityType="SitransModel.BajasBaterias" Width="1.5" PointX="10.5" PointY="100.125" />
+        <EntityTypeShape EntityType="SitransModel.BajasEquipos" Width="1.5" PointX="12.75" PointY="70.75" />
+        <EntityTypeShape EntityType="SitransModel.BajasMotores" Width="1.5" PointX="24" PointY="104.625" />
+        <EntityTypeShape EntityType="SitransModel.BajasNeumaticos" Width="1.5" PointX="15" PointY="199.5" />
+        <EntityTypeShape EntityType="SitransModel.Baterias" Width="1.5" PointX="8.25" PointY="100" />
+        <EntityTypeShape EntityType="SitransModel.BatMotivoBaja" Width="1.5" PointX="8.25" PointY="106.5" />
+        <EntityTypeShape EntityType="SitransModel.BITACORA" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SitransModel.CartaTecnEqMttoOT" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SitransModel.CentrosCostos" Width="1.5" PointX="8.25" PointY="69" />
+        <EntityTypeShape EntityType="SitransModel.Choferes" Width="1.5" PointX="16.5" PointY="61.5" />
+        <EntityTypeShape EntityType="SitransModel.cnConfGestorAlm" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SitransModel.ConsCombMotBT" Width="1.5" PointX="12.75" PointY="73.625" />
+        <EntityTypeShape EntityType="SitransModel.ConsumoCombustibleMotores" Width="1.5" PointX="21.75" PointY="88.25" />
+        <EntityTypeShape EntityType="SitransModel.ControlDocEquipos" Width="1.5" PointX="15.75" PointY="74.625" />
+        <EntityTypeShape EntityType="SitransModel.DetallesCiclosMantenimiento" Width="1.5" PointX="24.75" PointY="77.875" />
+        <EntityTypeShape EntityType="SitransModel.DetallesHojaRuta" Width="1.5" PointX="21.75" PointY="64" />
+        <EntityTypeShape EntityType="SitransModel.DetOT_ManoObra" Width="1.5" PointX="21" PointY="99.75" />
+        <EntityTypeShape EntityType="SitransModel.DetOT_Materiales" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SitransModel.DetOT_RotSistemas" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="SitransModel.DetOT_TiempoInactivo" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="SitransModel.DetSalAlm" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SitransModel.Direcciones" Width="1.5" PointX="6" PointY="71" />
+        <EntityTypeShape EntityType="SitransModel.DistBonosCombEq" Width="1.5" PointX="12.75" PointY="81.875" />
+        <EntityTypeShape EntityType="SitransModel.DistImporteBonosCC" Width="1.5" PointX="10.5" PointY="54" />
+        <EntityTypeShape EntityType="SitransModel.DistribTarjSolicitudCargue" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SitransModel.DOTT_ManoObra" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SitransModel.DOTT_Materiales" Width="1.5" PointX="9.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SitransModel.DPA" Width="1.5" PointX="6" PointY="96.75" />
+        <EntityTypeShape EntityType="SitransModel.Entidades" Width="1.5" PointX="8.25" PointY="60.375" />
+        <EntityTypeShape EntityType="SitransModel.EntSalParqueoEmpresa" Width="1.5" PointX="12.75" PointY="182.25" />
+        <EntityTypeShape EntityType="SitransModel.Equipos" Width="1.5" PointX="10.5" PointY="76.5" />
+        <EntityTypeShape EntityType="SitransModel.EquiposAccidentes" Width="1.5" PointX="21.75" PointY="71.625" />
+        <EntityTypeShape EntityType="SitransModel.EquiposServicios" Width="1.5" PointX="15.75" PointY="71.75" />
+        <EntityTypeShape EntityType="SitransModel.HojaRuta" Width="1.5" PointX="18.75" PointY="70.375" />
+        <EntityTypeShape EntityType="SitransModel.HorasTrabEqPesadosTecnologicos" Width="1.5" PointX="12.75" PointY="193.5" />
+        <EntityTypeShape EntityType="SitransModel.InvFinalCombEqMes" Width="1.5" PointX="12.75" PointY="190.75" />
+        <EntityTypeShape EntityType="SitransModel.ListaNegraEquipos" Width="1.5" PointX="18.75" PointY="93.75" />
+        <EntityTypeShape EntityType="SitransModel.LugarCarga" Width="1.5" PointX="10.5" PointY="57.25" />
+        <EntityTypeShape EntityType="SitransModel.LugarDescarga" Width="1.5" PointX="10.5" PointY="61" />
+        <EntityTypeShape EntityType="SitransModel.LugarMttoFuera" Width="1.5" PointX="13.5" PointY="102" />
+        <EntityTypeShape EntityType="SitransModel.Mantenimientos" Width="1.5" PointX="18.75" PointY="86" />
+        <EntityTypeShape EntityType="SitransModel.MenuOpciones" Width="1.5" PointX="16.5" PointY="111.875" />
+        <EntityTypeShape EntityType="SitransModel.MenuOpcionesUsuario" Width="1.5" PointX="18.75" PointY="108.75" />
+        <EntityTypeShape EntityType="SitransModel.Motores" Width="1.5" PointX="21.75" PointY="92.875" />
+        <EntityTypeShape EntityType="SitransModel.MotoresComb" Width="1.5" PointX="24" PointY="94.5" />
+        <EntityTypeShape EntityType="SitransModel.MotoresNormasConsumo" Width="1.5" PointX="24" PointY="98.75" />
+        <EntityTypeShape EntityType="SitransModel.MovTarjCombCaja" Width="1.5" PointX="27" PointY="88.625" />
+        <EntityTypeShape EntityType="SitransModel.Mtto_Fuera" Width="1.5" PointX="15.75" PointY="90.875" />
+        <EntityTypeShape EntityType="SitransModel.MttoFuera_DetMO" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SitransModel.MttoFuera_Materiales" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SitransModel.MttoFuera_RotSistemas" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SitransModel.MttoFuera_TI" Width="1.5" PointX="11.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SitransModel.MttoFuera_TRep" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Aceites" Width="1.5" PointX="6" PointY="106.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Arrastres" Width="1.5" PointX="12.75" PointY="119.125" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Baterias" Width="1.5" PointX="5.25" PointY="88.25" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Brigadas" Width="1.5" PointX="18.75" PointY="102.125" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Cabinas" Width="1.5" PointX="6" PointY="83.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Carrocerias" Width="1.5" PointX="6" PointY="85.875" />
+        <EntityTypeShape EntityType="SitransModel.mundo_CategoriasEquipos" Width="1.5" PointX="6" PointY="93.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_CausasBajas" Width="1.5" PointX="10.5" PointY="71" />
+        <EntityTypeShape EntityType="SitransModel.mundo_CiclosMantenimiento" Width="1.5" PointX="6" PointY="100" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Combustibles" Width="1.5" PointX="10.5" PointY="65.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Documentos" Width="1.5" PointX="13.5" PointY="64" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Equipos" Width="1.5" PointX="8.25" PointY="80.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Indicadores" Width="1.5" PointX="16.5" PointY="103.875" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Mantenimientos" Width="1.5" PointX="16.5" PointY="54" />
+        <EntityTypeShape EntityType="SitransModel.mundo_MarcasBateria" Width="1.5" PointX="3" PointY="88.375" />
+        <EntityTypeShape EntityType="SitransModel.mundo_MarcasEquipos" Width="1.5" PointX="3" PointY="82.75" />
+        <EntityTypeShape EntityType="SitransModel.mundo_MarcasMotores" Width="1.5" PointX="3" PointY="85.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_MarcasNeumaticos" Width="1.5" PointX="3" PointY="79.75" />
+        <EntityTypeShape EntityType="SitransModel.mundo_motores" Width="1.5" PointX="8.25" PointY="88.375" />
+        <EntityTypeShape EntityType="SitransModel.mundo_neumaticos" Width="1.5" PointX="5.25" PointY="79.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Obreros" Width="1.5" PointX="21" PointY="103.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Paises" Width="1.5" PointX="0.75" PointY="83.875" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Paralizaciones" Width="1.5" PointX="5.75" PointY="1.25" />
+        <EntityTypeShape EntityType="SitransModel.mundo_ParqueoAutorizo" Width="1.5" PointX="8.25" PointY="96.375" />
+        <EntityTypeShape EntityType="SitransModel.mundo_PropositosEquipos" Width="1.5" PointX="8.25" PointY="103.125" />
+        <EntityTypeShape EntityType="SitransModel.mundo_PropositosGenerales" Width="1.5" PointX="6" PointY="103.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_RotSistemas" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="SitransModel.mundo_ServAutoLOT" Width="1.5" PointX="8.25" PointY="77.75" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Servicios" Width="1.5" PointX="13.5" PointY="66.375" />
+        <EntityTypeShape EntityType="SitransModel.mundo_SistemasAuto" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Talleres" Width="1.5" PointX="16.5" PointY="98.625" />
+        <EntityTypeShape EntityType="SitransModel.mundo_TipoBombeo" Width="1.5" PointX="19.5" PointY="65.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_TipoHR" Width="1.5" PointX="16.5" PointY="66.75" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Traccion" Width="1.5" PointX="6" PointY="91.25" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Trafico" Width="1.5" PointX="16.5" PointY="58.5" />
+        <EntityTypeShape EntityType="SitransModel.mundo_Transmision" Width="1.5" PointX="6" PointY="76.25" />
+        <EntityTypeShape EntityType="SitransModel.Neumaticos" Width="1.5" PointX="12.75" PointY="199" />
+        <EntityTypeShape EntityType="SitransModel.NeumMotivoBaja" Width="1.5" PointX="12.75" PointY="203.75" />
+        <EntityTypeShape EntityType="SitransModel.NeumRepEq" Width="1.5" PointX="15" PointY="202.625" />
+        <EntityTypeShape EntityType="SitransModel.OperacionesARealizar" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SitransModel.OrdenesTrabajo" Width="1.5" PointX="18.75" PointY="76.5" />
+        <EntityTypeShape EntityType="SitransModel.OT_Terceros" Width="1.5" PointX="24.75" PointY="72.125" />
+        <EntityTypeShape EntityType="SitransModel.OTServiciosPrestados" Width="1.5" PointX="21.75" PointY="81" />
+        <EntityTypeShape EntityType="SitransModel.OTServPrestDet" Width="1.5" PointX="27" PointY="82.625" />
+        <EntityTypeShape EntityType="SitransModel.ParametrosFijosApps" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SitransModel.PlanesMesIndicEq" Width="1.5" PointX="18.75" PointY="82.375" />
+        <EntityTypeShape EntityType="SitransModel.ProductoTransportado" Width="1.5" PointX="19.5" PointY="49.375" />
+        <EntityTypeShape EntityType="SitransModel.RecaudaOmnibus" Width="1.5" PointX="15.75" PointY="82.625" />
+        <EntityTypeShape EntityType="SitransModel.RegistroParqueos" Width="1.5" PointX="15.75" PointY="78" />
+        <EntityTypeShape EntityType="SitransModel.ResumenHREquipos" Width="1.5" PointX="12.75" PointY="86.5" />
+        <EntityTypeShape EntityType="SitransModel.rptCombHabKmsVehAdm" Width="1.5" PointX="12.75" PointY="94.5" />
+        <EntityTypeShape EntityType="SitransModel.Salidas_Almacenes" Width="1.5" PointX="10.5" PointY="50.75" />
+        <EntityTypeShape EntityType="SitransModel.SubmayorBonosPeaje" Width="1.5" PointX="21.75" PointY="77.375" />
+        <EntityTypeShape EntityType="SitransModel.SubmayorCombPagCargar" Width="1.5" PointX="12.75" PointY="58.875" />
+        <EntityTypeShape EntityType="SitransModel.SubmayorPeaje" Width="1.5" PointX="15.75" PointY="85.875" />
+        <EntityTypeShape EntityType="SitransModel.SubmayorTarjetasExternas" Width="1.5" PointX="30" PointY="81.125" />
+        <EntityTypeShape EntityType="SitransModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SitransModel.TarifaKmsTransp" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SitransModel.TarjetasExternas" Width="1.5" PointX="24.75" PointY="81.75" />
+        <EntityTypeShape EntityType="SitransModel.TarjetasPeaje" Width="1.5" PointX="13.5" PointY="98.375" />
+        <EntityTypeShape EntityType="SitransModel.TempariosMtto" Width="1.5" PointX="18.75" PointY="29.25" />
+        <EntityTypeShape EntityType="SitransModel.TiposProdDensidad" Width="1.5" PointX="17.25" PointY="48.75" />
+        <EntityTypeShape EntityType="SitransModel.TiposProductos" Width="1.5" PointX="17.25" PointY="51.125" />
+        <EntityTypeShape EntityType="SitransModel.Trayectoria" Width="1.5" PointX="19.5" PointY="61.875" />
+        <EntityTypeShape EntityType="SitransModel.Usuarios" Width="1.5" PointX="16.5" PointY="107.125" />
+        <EntityTypeShape EntityType="SitransModel.UsuariosTalleres" Width="1.5" PointX="18.75" PointY="105.75" />
+        <EntityTypeShape EntityType="SitransModel.UsuariosTrafico" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SitransModel.DetOT_TiempoReparacion" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SitransModel.ExistProd_Taller" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SitransModel.KmsArrastres" Width="1.5" PointX="12.75" PointY="196.25" />
+        <EntityTypeShape EntityType="SitransModel.KmsNeumaticos" Width="1.5" PointX="15" PointY="141.25" />
+        <EntityTypeShape EntityType="SitransModel.Registro" Width="1.5" PointX="12.75" PointY="12.75" />
+        <AssociationConnector Association="SitransModel.FK_EquiposAccidentes_AccidenteTipo" />
+        <AssociationConnector Association="SitransModel.FK_AdelantarMttoMotor_Motores" />
+        <AssociationConnector Association="SitransModel.FK_AdelantarMttoMotor_Usuarios" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesCuñas_Equipos1" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesBaterias_Baterias" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesBaterias_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesMotores_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesMotores_Motores" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesNeumaticos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_AsignacionesNeumaticos_Neumaticos" />
+        <AssociationConnector Association="SitransModel.FK_AtrasarMttoMotor_Motores" />
+        <AssociationConnector Association="SitransModel.FK_AtrasarMttoMotor_Usuarios" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_Ayudantes" />
+        <AssociationConnector Association="SitransModel.FK_BajasBaterias_Baterias" />
+        <AssociationConnector Association="SitransModel.FK_BajasBaterias_BatMotivoBaja" />
+        <AssociationConnector Association="SitransModel.FK_BajasEquipos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_BajasEquipos_mundo_CausasBajas" />
+        <AssociationConnector Association="SitransModel.FK_BajasMotores_Motores" />
+        <AssociationConnector Association="SitransModel.FK_BajasNeumaticos_Neumaticos" />
+        <AssociationConnector Association="SitransModel.FK_BajasNeumaticos_NeumMotivoBaja" />
+        <AssociationConnector Association="SitransModel.FK_CentrosCostos_Direcciones" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_ConsumoCombustibleMotores_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_DistBonosCombEq_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_DistImporteBonosCC_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_Equipos_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_LiqPeajeEqCCostos_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Talleres_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_OrdenesTrabajo_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_OTServiciosPrestados_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_OTServiciosPrestados_CentrosCostos1" />
+        <AssociationConnector Association="SitransModel.FK_Salidas_Almacenes_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorPeaje_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorTarjetasExternas_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_TarjetasExternas_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.FK_TarjetasPeaje_CentrosCostos" />
+        <AssociationConnector Association="SitransModel.Choferes_fk" />
+        <AssociationConnector Association="SitransModel.FK_DistBonosCombEq_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_EquiposAccidentes_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_RecaudaOmnibus_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_RegistroParqueos_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_rptCombHabKmsVehAdm_Choferes" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_LugarDescarga" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_Motores" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_ConsCombMotBT_TarjetasExternas" />
+        <AssociationConnector Association="SitransModel.FK_ConsumoCombustibleMotores_Equipos1" />
+        <AssociationConnector Association="SitransModel.FK_ConsumoCombustibleMotores_Motores" />
+        <AssociationConnector Association="SitransModel.FK_ConsumoCombustibleMotores_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_ControlDocEquipos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_ControlDocEquipos_mundo_Documentos" />
+        <AssociationConnector Association="SitransModel.FK_DetallesCiclosMantenimiento_mundo_CiclosMantenimiento" />
+        <AssociationConnector Association="SitransModel.FK_DetallesCiclosMantenimiento_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_DetallesHojaRuta_LugarCarga" />
+        <AssociationConnector Association="SitransModel.FK_DetallesHojaRuta_mundo_PropositosEquipos" />
+        <AssociationConnector Association="SitransModel.FK_DetallesHojaRuta_mundo_TipoBombeo" />
+        <AssociationConnector Association="SitransModel.FK_DetallesHojaRuta_ProductoTransportado" />
+        <AssociationConnector Association="SitransModel.FK_DetallesHojaRuta_Trayectoria" />
+        <AssociationConnector Association="SitransModel.FK_DetOT_ManoObra_mundo_Brigadas" />
+        <AssociationConnector Association="SitransModel.FK_DetOT_RotSistemas_mundo_SistemasAuto" />
+        <AssociationConnector Association="SitransModel.DetOT_TiempoInactivo_fk2" />
+        <AssociationConnector Association="SitransModel.FK_DistBonosCombEq_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_DistBonosCombEq_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_EquiposAccidentes_DPA" />
+        <AssociationConnector Association="SitransModel.FK_mundo_ParqueoAutorizo_DPA1" />
+        <AssociationConnector Association="SitransModel.FK_LugarCarga_Entidades" />
+        <AssociationConnector Association="SitransModel.FK_LugarDescarga_Entidades" />
+        <AssociationConnector Association="SitransModel.FK_OT_Terceros_Entidades" />
+        <AssociationConnector Association="SitransModel.FK_OTServiciosPrestados_Entidades" />
+        <AssociationConnector Association="SitransModel.FK_EntSalParqueoEmpresa_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_Equipos_mundo_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_Equipos_mundo_ParqueoAutorizo" />
+        <AssociationConnector Association="SitransModel.FK_Equipos_mundo_PropositosEquipos" />
+        <AssociationConnector Association="SitransModel.FK_Equipos_mundo_ServAutoLOT" />
+        <AssociationConnector Association="SitransModel.FK_EquiposAccidentes_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_EquiposServicios_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_Equipos1" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_Equipos2" />
+        <AssociationConnector Association="SitransModel.FK_HorasTrabEqPesadosTecnologicos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_InvFinalCombEqMes_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_KmsArrastres_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_LiqPeajeEqCCostos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_ListaNegraEquipos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_Mantenimientos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_Mtto_Fuera_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_OrdenesTrabajo_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_OTServiciosPrestados_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_PlanesMesIndicEq_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_RecaudaOmnibus_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_RegistroParqueos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_ResumenHREquipos_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_rptCombHabKmsVehAdm_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorPeaje_Equipos" />
+        <AssociationConnector Association="SitransModel.FK_TarjetasExternas_Equipos" />
+        <AssociationConnector Association="SitransModel.KmsNeumaticos_fk2" />
+        <AssociationConnector Association="SitransModel.OTServiciosPrestados_fk" />
+        <AssociationConnector Association="SitransModel.OTServiciosPrestados_fk2" />
+        <AssociationConnector Association="SitransModel.FK_EquiposServicios_mundo_Servicios" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_mundo_TipoHR" />
+        <AssociationConnector Association="SitransModel.FK_HojaRuta_mundo_Trafico" />
+        <AssociationConnector Association="SitransModel.FK_ListaNegraEquipos_Usuarios" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorTarjetasExternas_LugarDescarga" />
+        <AssociationConnector Association="SitransModel.FK_Mtto_Fuera_LugarMttoFuera" />
+        <AssociationConnector Association="SitransModel.FK_Mantenimientos_Motores" />
+        <AssociationConnector Association="SitransModel.FK_Mantenimientos_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_MenuOpcionesUsuario_MenuOpciones" />
+        <AssociationConnector Association="SitransModel.FK_MenuOpcionesUsuario_Usuarios" />
+        <AssociationConnector Association="SitransModel.FK_Motores_mundo_motores" />
+        <AssociationConnector Association="SitransModel.FK_MotoresComb_Motores" />
+        <AssociationConnector Association="SitransModel.FK_MotoresNormasConsumo_Motores" />
+        <AssociationConnector Association="SitransModel.FK_MotoresComb_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_MovTarjCombCaja_TarjetasExternas" />
+        <AssociationConnector Association="SitransModel.FK_Mtto_Fuera_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_mundo_motores_mundo_Aceites" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Baterias_mundo_MarcasBateria" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Brigadas_mundo_Talleres" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Obreros_mundo_Brigadas" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_Cabinas" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_Carrocerias" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_CategoriasEquipos" />
+        <AssociationConnector Association="SitransModel.FK_mundo_motores_mundo_CiclosMantenimiento" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorCombPagCargar_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorCombPagCargar_mundo_Combustibles1" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorTarjetasExternas_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.FK_TarjetasExternas_mundo_Combustibles" />
+        <AssociationConnector Association="SitransModel.PlanesMesIndicEq_fk" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_MarcasEquipos" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_Traccion" />
+        <AssociationConnector Association="SitransModel.FK_mundo_Equipos_mundo_Transmision" />
+        <AssociationConnector Association="SitransModel.FK_PlanesMesIndicEq_mundo_Indicadores" />
+        <AssociationConnector Association="SitransModel.FK_CartasTecnologicas_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_OrdenesTrabajo_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_OT_Terceros_mundo_Mantenimientos" />
+        <AssociationConnector Association="SitransModel.FK_mundo_MarcasBateria_mundo_Paises" />
+        <AssociationConnector Association="SitransModel.FK_mundo_MarcasEquipos_mundo_Paises" />
+        <AssociationConnector Association="SitransModel.FK_mundo_MarcasMotores_mundo_Paises" />
+        <AssociationConnector Association="SitransModel.FK_mundo_motores_mundo_MarcasMotores" />
+        <AssociationConnector Association="SitransModel.FK_mundo_MarcasNeumaticos_mundo_Paises" />
+        <AssociationConnector Association="SitransModel.FK_mundo_neumaticos_mundo_MarcasNeumaticos" />
+        <AssociationConnector Association="SitransModel.FK_RegistroParqueos_mundo_ParqueoAutorizo" />
+        <AssociationConnector Association="SitransModel.FK_mundo_PropositosEquipos_mundo_PropositosGenerales" />
+        <AssociationConnector Association="SitransModel.FK_mundo_RotSistemas_mundo_SistemasAuto" />
+        <AssociationConnector Association="SitransModel.FK_OTServPrestDet_mundo_Servicios" />
+        <AssociationConnector Association="SitransModel.FK_CartasTecnologicas_mundo_SistemasAuto" />
+        <AssociationConnector Association="SitransModel.FK_OrdenesTrabajo_mundo_Talleres" />
+        <AssociationConnector Association="SitransModel.FK_OT_Terceros_mundo_Talleres" />
+        <AssociationConnector Association="SitransModel.FK_UsuariosTalleres_mundo_Talleres" />
+        <AssociationConnector Association="SitransModel.FK_ResumenHREquipos_mundo_TipoHR" />
+        <AssociationConnector Association="SitransModel.FK_NeumRepEq_Neumaticos" />
+        <AssociationConnector Association="SitransModel.KmsNeumaticos_fk" />
+        <AssociationConnector Association="SitransModel.FK_OTServPrestDet_OTServiciosPrestados" />
+        <AssociationConnector Association="SitransModel.FK_ProductoTransportado_TiposProdDensidad" />
+        <AssociationConnector Association="SitransModel.FK_ProductoTransportado_TiposProductos" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorPeaje_TarjetasPeaje" />
+        <AssociationConnector Association="SitransModel.FK_SubmayorTarjetasExternas_TarjetasExternas" />
+        <AssociationConnector Association="SitransModel.Arrastres" />
+        <AssociationConnector Association="SitransModel.AsociaTHR_PropEq" />
+        <AssociationConnector Association="SitransModel.BatEq" />
+        <AssociationConnector Association="SitransModel.MotorEq" />
+        <AssociationConnector Association="SitransModel.NeumEq" />
+        <AssociationConnector Association="SitransModel.UsuariosCCostos" />
+        <AssociationConnector Association="SitransModel.UsuariosIndPlanes" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

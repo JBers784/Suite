@@ -1,0 +1,170 @@
+﻿@model IEnumerable<ModuloComunicaciones.Web_FacturaTelFijo_Result>
+@{
+    ViewBag.Title = "Servicios Comunicaciones (Tel. Fijos)";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("FacturaTelefonoFijo", "FacturasEtecsa", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Centro de Costo o Num. Teléfono</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="ccostos" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab1">Módulos</a></li>
+    <li class="active">Servicios Comunicaciones (Tel. Fijos)</li>
+</ol>
+
+@{
+    string numtelf = "";
+    decimal MTotal = 0;
+    decimal SubTotal = 0;
+    if (ViewBag.tabla != null)
+    {
+        //-------------------------------------------
+        <div><span style="color:black; font-weight:bold">Factura: </span> @Model.First().noft</div>
+        <table class="table table-bordered">
+
+            @foreach (var item in Model)
+            {
+                if (item.telf != numtelf)
+                {
+                    numtelf = item.telf;
+                    <tr style="font-weight:bold">
+                        <th colspan="3">
+                            <span style="color:black "># Teléfono: @item.telf</span>
+                        </th>
+                        <th colspan="3">
+                            <span style="color:black">Ubicación: @item.ubicacion</span>
+                        </th>
+
+                    </tr>
+                    <tr style="font-weight:bold">
+
+                        <th>
+                            <span style="color:black ">Día</span>
+                        </th>
+                        <th>
+                            <span style="color:black">Hora</span>
+                        </th>
+                        <th>
+                            <span style="color:black">Destino</span>
+                        </th>
+                        <th>
+                            <span style="color:black ">Teléfono</span>
+                        </th>
+                        <th>
+                            <span style="color:black">Duración(min:seg)</span>
+                        </th>
+                        <th style=" text-align:left ">
+                            <span style="color:red ">Importe</span>
+                        </th>
+                    </tr>
+
+                    foreach (var item2 in Model)
+                    {
+                        if (item2.telf == numtelf)
+                        {
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.dia)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.hora)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.dest)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.slla)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.mins):@Html.DisplayFor(modelItem => item2.segs)
+                                </td>
+                                <td style="color:red">
+                                    @Html.DisplayFor(modelItem => item2.impt)
+                                </td>
+                                @{
+                                    MTotal += item2.impt.Value;
+                                    SubTotal += item2.impt.Value;
+                                }
+                            </tr>
+                        }
+                    }
+                    <tr style="font-weight:bold">
+                        <th colspan="5" , style=" text-align:right  ">
+                            <span style="color:black">SubTotal del número @item.telf</span>
+                        </th>
+                        <th>
+                            <span style="color:black">  @Decimal.Round(@SubTotal, 2)</span>
+                        </th>
+                    </tr>
+                    SubTotal = 0;
+                }
+            }
+            <tr style="font-weight:bold">
+                <th colspan="5" , style=" text-align:right  ">
+                    <span style="color:black">Total</span>
+                </th>
+                <th>
+                    <span style="color:black">  @Decimal.Round(@MTotal, 2)</span>
+                </th>
+            </tr>
+
+        </table>
+        //------------------------------------------------------------
+    }
+}
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../FacturasEtecsa/Search'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+

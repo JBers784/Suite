@@ -1,0 +1,236 @@
+﻿
+@{
+    ViewBag.Title = "Módulos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Categories -->
+<!--Vertical Tab-->
+<link rel="stylesheet" type="text/css" href="~/Content/easy-responsive-tabs.css" />
+<script src="~/Scripts/easyResponsiveTabs.js"></script>
+<div class="categories-section main-grid-border">
+    <div class="container">
+        <h2 class="head">Categorías Principales</h2>
+        <div class="category-list">
+            <div id="parentVerticalTab">
+                <ul class="resp-tabs-list hor_1">
+                    <li>Comunicaciones</li>
+                    <li>Transporte</li>
+                    <li>Producción</li>
+                    <li>Almacenes</li>
+                    <li>Economía</li>
+                    <li>Capital Humano</li>
+                    @*<li>Informática</li>*@
+                    @*<li>Energía</li>*@
+                    @*<a href="all-classifieds.html">All Ads</a>*@
+                </ul>
+                <div class="resp-tabs-container hor_1">
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/Comunicaciones.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Comunicaciones</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("FacturaTrunking", "FacturasEtecsa")">Servicio Comunicaciones(Trunking)</a></li>
+                                <li> <a href="@Url.Action("FacturaTelefonoFijo", "FacturasEtecsa")">Servicio Comunicaciones(Teléfonos)</a></li>
+                                <li> <a href="@Url.Action("FacturaTelefonoCelular", "FacturasEtecsa")">Servicio Comunicaciones(Celulares)</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/Transporte.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Transporte</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("Combustible", "Transporte")">Combustible</a></li>
+                                <li> <a href="@Url.Action("HojaRuta", "Transporte")">Hojas de Rutas</a></li>
+                                <li> <a href="@Url.Action("OrdenTrabajo", "Transporte")">Ordenes de Trabajo (Materiales)</a></li>
+                                <li> <a href="@Url.Action("Documentos", "Transporte")">Documentación del Equipo</a></li>
+                                <li> <a href="@Url.Action("NeumaticosBat", "Transporte")">Neumáticos y Baterías</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/Produccion.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Producción</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("ProdPetroleo", "Produccion")">Producción de Petróleo</a></li>
+                                <li> <a href="@Url.Action("ProdGas", "Produccion")">Entrega de Gas</a></li>
+                                <li> <a href="@Url.Action("ProdPetroEquiv", "Produccion")">Petróleo Equivalente</a></li>
+                                <li> <a href="@Url.Action("ProdVentaPet", "Produccion")">Venta de Petróleo</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/Almacenes.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Almacenes</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("Productos", "Almacenes")">Productos por almacenes</a></li>
+                                <li> <a href="@Url.Action("ProductosxCc", "Almacenes")">Distribución de Productos</a></li>
+                                <li> <a href="@Url.Action("MediosBasicos", "Almacenes")">Existencia de Medios Básicos</a></li>
+                                <li> <a href="@Url.Action("UtilesHerramientas", "Almacenes")">Existencia de Útiles y Herramientas</a></li>
+                                <li> <a href="@Url.Action("ReservadosxCC", "Almacenes")">Productos reservados para un C.Costo</a></li>
+                                <li> <a href="@Url.Action("UHxCC", "Almacenes")">Salidas de Útiles y herramientas de un C.Costo</a></li>
+                                <li> <a href="@Url.Action("MBasxCC", "Almacenes")">Salidas de Medios Básicos de un C.Costo</a></li>
+                                <li> <a href="@Url.Action("MPIxCC", "Almacenes")">Salidas de Medios Protecc. Indiv. de un C.Costo</a></li>
+                                <li> <a href="@Url.Action("ExIxCC", "Almacenes")">Salidas de Equipos x Instalar de un C.Costo</a></li>
+                                <li> <a href="@Url.Action("MRotacxCC", "Almacenes")">Salidas de Medios de Rotación de un C.Costo</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/Economia.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Economía</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("PresGastoxCc", "Economia")">Presupuesto de Gastos Mensual  </a></li>
+                                <li> <a href="@Url.Action("Subelementos", "Economia")">Presupuesto Real por Subelementos </a></li>
+                                <li> <a href="@Url.Action("CustodiosUHxCC", "Economia")">Custodios de Útiles y Herramientas del C.Costo </a></li>
+                                <li> <a href="@Url.Action("MedBasicosxCC", "Economia")">Inventario de M.Básicos del C.Costo </a></li>
+                                <li> <a href="@Url.Action("UtilesHerramientasFiltro", "Economia")">Inventario Útiles y Herramientas </a></li>
+                                <li> <a href="@Url.Action("MediosBasicosFiltro", "Economia")">Inventario Medios Básicos </a></li>
+                                <li> <a href="@Url.Action("Tirillas", "Economia")">Tirillas</a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="category">
+                            <div class="category-img">
+                                <img src="~/images/rh.png" title="image" alt="" />
+                            </div>
+                            <div class="category-info">
+                                <h4>Capital Humano</h4>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="sub-categories">
+                            <ul>
+                                <li> <a href="@Url.Action("DatosPersonales", "RecHumanos")">Datos Personales de un Trabajador  </a></li>
+                                <li> <a href="@Url.Action("PrepRecibida", "RecHumanos")">Preparacion Recibida  </a></li>
+                                <li> <a href="@Url.Action("P4Area", "RecHumanos")">P4 de un ÁREA  </a></li>
+                                <li> <a href="@Url.Action("TarjSalario", "RecHumanos")">Tarjeta de Salario de un Trabajador  </a></li>
+                                <li> <a href="@Url.Action("Jubilacion", "RecHumanos")">Datos de jubilación de un Trabajador  </a></li>
+                                <li> <a href="@Url.Action("Cumpleaños", "RecHumanos")">Cumpleaños  </a></li>
+                                <li> <a href="@Url.Action("SubMayorVacaciones", "RecHumanos")">Submayor de Vacaciones  </a></li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    @*<div>
+                      <div class="category">
+                       <div class="category-img">
+                         <img src="~/images/Informatica.jpg" title="image" alt="" />
+                       </div>
+                       <div class="category-info">
+                           <h4>Informática</h4>
+                       </div>
+                       <div class="clearfix"></div>
+                      </div>
+                    </div>*@
+
+                    @*<div>
+            <div class="category">
+                <div class="category-img">
+                    <img src="~/images/close.png" title="image" alt="" />
+                </div>
+                <div class="category-info">
+                    <h4>Energía</h4>
+                    <span>1,05,168 Ads</span>
+                    <a href="all-classifieds.html">View all Ads</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="sub-categories">
+             <ul>
+                <li><a href="Almaceness.html">Sofa & Dining</a></li>
+                <li><a href="Almaceness.html">Beds & Wardrobes</a></li>
+                <li><a href="Almaceness.html">Home Decor & Garden</a></li>
+                <li><a href="Almaceness.html">Other Household Items</a></li>
+                <div class="clearfix"></div>
+             </ul>
+            </div>
+        </div>*@
+
+
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+           /* closed: 'accordion',*/ // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function (event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+<!-- //Categories -->

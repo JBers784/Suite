@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SicencoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="Area_Id" />
+    </Key>
+    <Property Name="Subd_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Area_Id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Area_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CCostos">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+      <PropertyRef Name="CCosto_Id" />
+    </Key>
+    <Property Name="Subd_Id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cuenta_Id" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CCosto_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CCosto_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JefeCC_Id" Type="Int32" />
+    <Property Name="CCosto_Activado" Type="Boolean" Nullable="false" />
+    <Property Name="CCosto_PlanOp" Type="Boolean" Nullable="false" />
+    <Property Name="Subelem_id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ccosto_idN" Type="Int32" />
+    <NavigationProperty Name="Cuentas" Relationship="Self.FK_CCostos_Cuentas" FromRole="CCostos" ToRole="Cuentas" />
+    <NavigationProperty Name="JefeCC" Relationship="Self.FK_CCostos_JefeCC" FromRole="CCostos" ToRole="JefeCC" />
+    <NavigationProperty Name="Subdirecciones" Relationship="Self.FK_CCostos_Subdirecciones" FromRole="CCostos" ToRole="Subdirecciones" />
+  </EntityType>
+  <EntityType Name="Cuentas">
+    <Key>
+      <PropertyRef Name="Cuenta_Id" />
+    </Key>
+    <Property Name="Cuenta_Id" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Cuenta_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CCostos" Relationship="Self.FK_CCostos_Cuentas" FromRole="Cuentas" ToRole="CCostos" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Int32" />
+    <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Elementos">
+    <Key>
+      <PropertyRef Name="Elemento_Id" />
+    </Key>
+    <Property Name="Elemento_Id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Elemento_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipos">
+    <Key>
+      <PropertyRef Name="equipo_id" />
+    </Key>
+    <Property Name="equipo_id" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="equipo_descrip" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="tarifa" Type="Decimal" Precision="7" Scale="5" />
+  </EntityType>
+  <EntityType Name="JefeCC">
+    <Key>
+      <PropertyRef Name="JefeCC_Id" />
+    </Key>
+    <Property Name="JefeCC_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JefeCC_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JefeCC_Firma" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="JefeCC_Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="JefeCC_CtaUser" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CCostos" Relationship="Self.FK_CCostos_JefeCC" FromRole="JefeCC" ToRole="CCostos" />
+  </EntityType>
+  <EntityType Name="obreros">
+    <Key>
+      <PropertyRef Name="obrero_id" />
+    </Key>
+    <Property Name="obrero_id" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="obrero_descrip" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="calificacion" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="tarifa" Type="Decimal" Precision="7" Scale="5" />
+  </EntityType>
+  <EntityType Name="Ot">
+    <Key>
+      <PropertyRef Name="nuot" />
+    </Key>
+    <Property Name="nuot" Type="Int32" Nullable="false" />
+    <Property Name="cliente" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="fechaSolic" Type="DateTime" Precision="3" />
+    <Property Name="costo_obrero" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="costo_producto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="costo_equipo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="costo_total" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="fechainicio" Type="DateTime" Precision="3" />
+    <Property Name="fechafin" Type="DateTime" Precision="3" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="No_Equipo" Type="Int32" />
+    <Property Name="ccosto" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="clienteN" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ccostoN" Type="Int32" />
+    <NavigationProperty Name="OT_Tipo" Relationship="Self.FK_Ot_OT_Tipo" FromRole="Ot" ToRole="OT_Tipo" />
+  </EntityType>
+  <EntityType Name="Ot_Insumos">
+    <Key>
+      <PropertyRef Name="nuot" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="nuot" Type="Int32" Nullable="false" />
+    <Property Name="ccosto" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="OT_Tipo">
+    <Key>
+      <PropertyRef Name="tipo" />
+    </Key>
+    <Property Name="tipo" Type="Int32" Nullable="false" />
+    <Property Name="Tipo_descrip" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ot" Relationship="Self.FK_Ot_OT_Tipo" FromRole="OT_Tipo" ToRole="Ot" />
+  </EntityType>
+  <EntityType Name="Presupuesto_Producto">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="mProducto_Id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CCosto_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mProducto_Id" Type="Int32" Nullable="false" />
+    <Property Name="PresProd_CantPlan" Type="Decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="PresProd_CantReal" Type="Decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="PresProd_CantPredesp" Type="Decimal" Precision="15" Scale="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Presupuesto_SubElemento">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+      <PropertyRef Name="CCosto_id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CCosto_id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PresSubElem_ValorPlan" Type="Decimal" Precision="16" Scale="8" Nullable="false" />
+    <Property Name="PresSubElem_ValorReal" Type="Decimal" Precision="16" Scale="8" />
+    <Property Name="PresSubElem_ValorPredesp" Type="Decimal" Precision="16" Scale="8" />
+    <Property Name="CCosto_idN" Type="Int32" />
+    <NavigationProperty Name="SubElementos" Relationship="Self.FK_Presupuesto_SubElemento_SubElementos" FromRole="Presupuesto_SubElemento" ToRole="SubElementos" />
+  </EntityType>
+  <EntityType Name="PresupuestoGastos">
+    <Key>
+      <PropertyRef Name="CCosto_Id" />
+      <PropertyRef Name="subelem_id" />
+      <PropertyRef Name="año" />
+    </Key>
+    <Property Name="CCosto_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="subelem_id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="año" Type="Int32" Nullable="false" />
+    <Property Name="enp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="fep" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="map" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="abp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="myp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jup" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jlp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="agp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="sep" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ocp" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="nop" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="dip" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="enr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="fer" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="mar" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="abr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="myr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jur" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jlr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="agr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ser" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ocr" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="nor" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="dir" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="enpo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="fepo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="mapo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="abpo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="mypo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jupo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="jlpo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="agpo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="sepo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ocpo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="nopo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="dipo" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ccosto_idN" Type="Int32" />
+  </EntityType>
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="prodalm_id" />
+    </Key>
+    <Property Name="prodalm_id" Type="Int32" Nullable="false" />
+    <Property Name="prod_descrip" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="um" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="pu" Type="Decimal" Precision="15" Scale="8" />
+    <Property Name="existencia" Type="Decimal" Precision="17" Scale="8" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="insumo" Type="Boolean" />
+    <Property Name="codprod" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="precioMn" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="precioMd" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="ElementoMn" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ElementoMd" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="prod_activ" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="numsolic_id" />
+    </Key>
+    <Property Name="numsolic_id" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="almacen_id" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ccosto_id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaSolic" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaDesp" Type="DateTime" Precision="3" />
+    <Property Name="Estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Cliente_Id" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="SalAlm_NoVS" Type="Int32" />
+    <Property Name="NuOt" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="chapa" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="SGM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ccosto_idN" Type="Int32" />
+    <NavigationProperty Name="Producto_Solicitud" Relationship="Self.FK_Producto_Solicitud_Solicitud" FromRole="Solicitud" ToRole="Producto_Solicitud" />
+  </EntityType>
+  <EntityType Name="Subdirecciones">
+    <Key>
+      <PropertyRef Name="Subd_id" />
+    </Key>
+    <Property Name="Subd_id" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Subd_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CCostos" Relationship="Self.FK_CCostos_Subdirecciones" FromRole="Subdirecciones" ToRole="CCostos" />
+  </EntityType>
+  <EntityType Name="SubElementos">
+    <Key>
+      <PropertyRef Name="SubElem_Id" />
+    </Key>
+    <Property Name="SubElem_Id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SubElem_Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SubElem_Tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Presupuesto_SubElemento" Relationship="Self.FK_Presupuesto_SubElemento_SubElementos" FromRole="SubElementos" ToRole="Presupuesto_SubElemento" />
+  </EntityType>
+  <EntityType Name="Trabajos">
+    <Key>
+      <PropertyRef Name="trabajo_id" />
+    </Key>
+    <Property Name="trabajo_id" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Trabajo_descrip" Type="String" MaxLength="160" FixedLength="true" Unicode="false" />
+    <Property Name="tarifa" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Trabajo_Actividad" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Producto_Solicitud">
+    <Key>
+      <PropertyRef Name="Numsolic_Id" />
+      <PropertyRef Name="mproducto_Id" />
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="Numsolic_Id" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="mproducto_Id" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="CantDev" Type="Decimal" Precision="15" Scale="8" />
+    <NavigationProperty Name="Solicitud" Relationship="Self.FK_Producto_Solicitud_Solicitud" FromRole="Producto_Solicitud" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="TControl">
+    <Key>
+      <PropertyRef Name="tc_descripcion" />
+      <PropertyRef Name="tc_consecutivo" />
+    </Key>
+    <Property Name="tc_descripcion" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tc_consecutivo" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tpresupuesto">
+    <Key>
+      <PropertyRef Name="codcencos" />
+      <PropertyRef Name="codelem" />
+      <PropertyRef Name="valplan" />
+      <PropertyRef Name="valreal" />
+    </Key>
+    <Property Name="codcencos" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codelem" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="valplan" Type="Decimal" Precision="12" Scale="3" Nullable="false" />
+    <Property Name="valreal" Type="Decimal" Precision="12" Scale="3" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CCostos_Cuentas">
+    <End Role="Cuentas" Type="Self.Cuentas" Multiplicity="1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuentas">
+        <PropertyRef Name="Cuenta_Id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="Cuenta_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CCostos_JefeCC">
+    <End Role="JefeCC" Type="Self.JefeCC" Multiplicity="0..1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JefeCC">
+        <PropertyRef Name="JefeCC_Id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="JefeCC_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CCostos_Subdirecciones">
+    <End Role="Subdirecciones" Type="Self.Subdirecciones" Multiplicity="1" />
+    <End Role="CCostos" Type="Self.CCostos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subdirecciones">
+        <PropertyRef Name="Subd_id" />
+      </Principal>
+      <Dependent Role="CCostos">
+        <PropertyRef Name="Subd_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ot_OT_Tipo">
+    <End Role="OT_Tipo" Type="Self.OT_Tipo" Multiplicity="0..1" />
+    <End Role="Ot" Type="Self.Ot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OT_Tipo">
+        <PropertyRef Name="tipo" />
+      </Principal>
+      <Dependent Role="Ot">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Presupuesto_SubElemento_SubElementos">
+    <End Role="SubElementos" Type="Self.SubElementos" Multiplicity="1" />
+    <End Role="Presupuesto_SubElemento" Type="Self.Presupuesto_SubElemento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubElementos">
+        <PropertyRef Name="SubElem_Id" />
+      </Principal>
+      <Dependent Role="Presupuesto_SubElemento">
+        <PropertyRef Name="SubElem_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Solicitud_Solicitud">
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="1" />
+    <End Role="Producto_Solicitud" Type="Self.Producto_Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud">
+        <PropertyRef Name="numsolic_id" />
+      </Principal>
+      <Dependent Role="Producto_Solicitud">
+        <PropertyRef Name="Numsolic_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SicencoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Areas" EntityType="Self.Areas" />
+    <EntitySet Name="CCostos" EntityType="Self.CCostos" />
+    <EntitySet Name="Cuentas" EntityType="Self.Cuentas" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" />
+    <EntitySet Name="Elementos" EntityType="Self.Elementos" />
+    <EntitySet Name="Equipos" EntityType="Self.Equipos" />
+    <EntitySet Name="JefeCC" EntityType="Self.JefeCC" />
+    <EntitySet Name="obreros" EntityType="Self.obreros" />
+    <EntitySet Name="Ot" EntityType="Self.Ot" />
+    <EntitySet Name="Ot_Insumos" EntityType="Self.Ot_Insumos" />
+    <EntitySet Name="OT_Tipo" EntityType="Self.OT_Tipo" />
+    <EntitySet Name="Presupuesto_Producto" EntityType="Self.Presupuesto_Producto" />
+    <EntitySet Name="Presupuesto_SubElemento" EntityType="Self.Presupuesto_SubElemento" />
+    <EntitySet Name="PresupuestoGastos" EntityType="Self.PresupuestoGastos" />
+    <EntitySet Name="productos" EntityType="Self.productos" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" />
+    <EntitySet Name="Subdirecciones" EntityType="Self.Subdirecciones" />
+    <EntitySet Name="SubElementos" EntityType="Self.SubElementos" />
+    <EntitySet Name="Trabajos" EntityType="Self.Trabajos" />
+    <EntitySet Name="Producto_Solicitud" EntityType="Self.Producto_Solicitud" />
+    <EntitySet Name="TControl" EntityType="Self.TControl" />
+    <EntitySet Name="tpresupuesto" EntityType="Self.tpresupuesto" />
+    <AssociationSet Name="FK_CCostos_Cuentas" Association="Self.FK_CCostos_Cuentas">
+      <End Role="Cuentas" EntitySet="Cuentas" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CCostos_JefeCC" Association="Self.FK_CCostos_JefeCC">
+      <End Role="JefeCC" EntitySet="JefeCC" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CCostos_Subdirecciones" Association="Self.FK_CCostos_Subdirecciones">
+      <End Role="Subdirecciones" EntitySet="Subdirecciones" />
+      <End Role="CCostos" EntitySet="CCostos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ot_OT_Tipo" Association="Self.FK_Ot_OT_Tipo">
+      <End Role="OT_Tipo" EntitySet="OT_Tipo" />
+      <End Role="Ot" EntitySet="Ot" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Presupuesto_SubElemento_SubElementos" Association="Self.FK_Presupuesto_SubElemento_SubElementos">
+      <End Role="SubElementos" EntitySet="SubElementos" />
+      <End Role="Presupuesto_SubElemento" EntitySet="Presupuesto_SubElemento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Solicitud_Solicitud" Association="Self.FK_Producto_Solicitud_Solicitud">
+      <End Role="Solicitud" EntitySet="Solicitud" />
+      <End Role="Producto_Solicitud" EntitySet="Producto_Solicitud" />
+    </AssociationSet>
+    <FunctionImport Name="Borrar_PedidosInsumos">
+      <Parameter Name="ProdAlm_Id" Mode="In" Type="Int32" />
+      <Parameter Name="CtaCCosto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_addtosourcecontrol">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_addtosourcecontrol_u">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_adduserobject" />
+    <FunctionImport Name="dt_adduserobject_vcs">
+      <Parameter Name="vchProperty" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror_u">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_droppropertiesbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_dropuserobjectbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_generateansiname">
+      <Parameter Name="name" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop_u" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid" ReturnType="Collection(SicencoModel.dt_getpropertiesbyid_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_u" ReturnType="Collection(SicencoModel.dt_getpropertiesbyid_u_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_removefromsourcecontrol" />
+    <FunctionImport Name="dt_setpropertybyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_setpropertybyid_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_vcsenabled" />
+    <FunctionImport Name="dt_verstamp006" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_verstamp007" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_whocheckedout">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_whocheckedout_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Esta_CCostoConstr" ReturnType="Collection(SicencoModel.Esta_CCostoConstr_Result)">
+      <Parameter Name="Ccosto_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OT_InventariosMedBasicos_Web_" ReturnType="Collection(SicencoModel.OT_InventariosMedBasicos_Web__Result)">
+      <Parameter Name="NoInve" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Report_PrecioProductoSiscont" ReturnType="Collection(SicencoModel.Report_PrecioProductoSiscont_Result)">
+      <Parameter Name="almacen_id" Mode="In" Type="String" />
+      <Parameter Name="descrip" Mode="In" Type="String" />
+      <Parameter Name="Reporte" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Report_PresGastosSubEl" ReturnType="Collection(SicencoModel.Report_PresGastosSubEl_Result)">
+      <Parameter Name="gnAño" Mode="In" Type="Int32" />
+      <Parameter Name="ccosto_id" Mode="In" Type="String" />
+      <Parameter Name="subd_id" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SicencoModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SicencoModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_Ccostos" ReturnType="Collection(SicencoModel.sql_Ccostos_Result)" />
+    <FunctionImport Name="sql_CcostosDeLaSubd" ReturnType="Collection(SicencoModel.sql_CcostosDeLaSubd_Result)">
+      <Parameter Name="Subd_Id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_CcostosDelUsuario" ReturnType="Collection(SicencoModel.sql_CcostosDelUsuario_Result)">
+      <Parameter Name="JefeCc_Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sql_CcostosDelUsuRepo" ReturnType="Collection(SicencoModel.sql_CcostosDelUsuRepo_Result)">
+      <Parameter Name="JefeCc_Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sql_CcostosDSubd" ReturnType="Collection(SicencoModel.sql_CcostosDSubd_Result)" />
+    <FunctionImport Name="sql_CcostosTodos" ReturnType="Collection(SicencoModel.sql_CcostosTodos_Result)" />
+    <FunctionImport Name="sql_DatosDelCCosto" ReturnType="Collection(SicencoModel.sql_DatosDelCCosto_Result)">
+      <Parameter Name="Ccosto_Id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_DistribucionProductos">
+      <Parameter Name="codprod" Mode="In" Type="String" />
+      <Parameter Name="almacen_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_PresupProductos" ReturnType="Collection(SicencoModel.sql_PresupProductos_Result)" />
+    <FunctionImport Name="sql_PresupuestoDelCCosto" ReturnType="Collection(SicencoModel.sql_PresupuestoDelCCosto_Result)" />
+    <FunctionImport Name="sql_ProductosBalancDeLCCosto">
+      <Parameter Name="mProducto_Id" Mode="In" Type="Int32" />
+      <Parameter Name="Ccosto_Id" Mode="In" Type="String" />
+      <Parameter Name="almacen_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_ProductosDelCCosto">
+      <Parameter Name="Ccosto_Id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_ProductosNormadosDelCcosto">
+      <Parameter Name="Ccosto_Id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sql_Subdirecciones" ReturnType="Collection(SicencoModel.sql_Subdirecciones_Result)" />
+    <FunctionImport Name="WSBuscar_CCosto_porDescrip" ReturnType="Collection(SicencoModel.WSBuscar_CCosto_porDescrip_Result)">
+      <Parameter Name="CCosto_Descrip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="WSBuscar_CCosto_porId" ReturnType="Collection(SicencoModel.WSBuscar_CCosto_porId_Result)">
+      <Parameter Name="CCosto_id" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="dt_getpropertiesbyid_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="value" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="dt_getpropertiesbyid_u_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="uvalue" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="Esta_CCostoConstr_Result">
+    <Property Type="String" Name="Subd_Id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Cuenta_Id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto_Descrip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="JefeCC_Id" Nullable="true" />
+    <Property Type="Boolean" Name="CCosto_Activado" Nullable="false" />
+    <Property Type="Boolean" Name="CCosto_PlanOp" Nullable="false" />
+    <Property Type="String" Name="Subelem_id" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="ccosto_idN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="OT_InventariosMedBasicos_Web__Result">
+    <Property Type="Int32" Name="Código_CC" Nullable="false" />
+    <Property Type="String" Name="Desc_Centro_Costo" Nullable="true" MaxLength="35" />
+    <Property Type="Int32" Name="No_Invent" Nullable="false" />
+    <Property Type="String" Name="Desc_Medio_Básico" Nullable="true" MaxLength="35" />
+  </ComplexType>
+  <ComplexType Name="Report_PrecioProductoSiscont_Result">
+    <Property Type="String" Name="cod_prod" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="des_prod" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="um_alm" Nullable="true" MaxLength="3" />
+    <Property Type="Decimal" Name="prec_mn" Nullable="true" Precision="13" Scale="6" />
+    <Property Type="Decimal" Name="prec_md" Nullable="true" Precision="13" Scale="6" />
+    <Property Type="Decimal" Name="precio" Nullable="true" Precision="13" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="Report_PresGastosSubEl_Result">
+    <Property Type="String" Name="Cuenta_Id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto_Descrip" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SubElem_idMN" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="SubElem_idDi" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Elem_Desc" Nullable="false" MaxLength="80" />
+    <Property Type="Decimal" Name="EstimadoMN" Nullable="true" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="EstimadoDi" Nullable="true" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="PlanMN" Nullable="true" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="PlanDi" Nullable="true" Precision="15" Scale="2" />
+    <Property Type="String" Name="Indice" Nullable="true" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sql_Ccostos_Result">
+    <Property Type="String" Name="Ccosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Ccosto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Subd" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Cuenta" Nullable="false" MaxLength="3" />
+    <Property Type="Int32" Name="Jefe" Nullable="true" />
+    <Property Type="Boolean" Name="Activado" Nullable="false" />
+    <Property Type="Boolean" Name="PlanOperaitvo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sql_CcostosDeLaSubd_Result">
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Subd_Id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="ctaccosto" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="todo" Nullable="false" MaxLength="64" />
+  </ComplexType>
+  <ComplexType Name="sql_CcostosDelUsuario_Result">
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Todo" Nullable="false" MaxLength="61" />
+  </ComplexType>
+  <ComplexType Name="sql_CcostosDelUsuRepo_Result">
+    <Property Type="String" Name="ctaccosto" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="CCosto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TODO" Nullable="false" MaxLength="61" />
+  </ComplexType>
+  <ComplexType Name="sql_CcostosDSubd_Result">
+    <Property Type="String" Name="Subd_Id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sql_CcostosTodos_Result">
+    <Property Type="String" Name="ctaccosto" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="CCosto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="todo" Nullable="true" MaxLength="62" />
+  </ComplexType>
+  <ComplexType Name="sql_DatosDelCCosto_Result">
+    <Property Type="String" Name="SubElem_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Elemento" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="PPlan" Nullable="false" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PReal" Nullable="true" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PPredesp" Nullable="true" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PDisponible" Nullable="true" Precision="18" Scale="8" />
+    <Property Type="String" Name="Ccosto_id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Ccosto_Descrip" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sql_PresupProductos_Result">
+    <Property Type="String" Name="SubElem_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Ccosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="Int32" Name="Producto" Nullable="false" />
+    <Property Type="Decimal" Name="PresProdCPlan" Nullable="false" Precision="15" Scale="8" />
+    <Property Type="Decimal" Name="PresProdCReal" Nullable="false" Precision="15" Scale="8" />
+    <Property Type="Decimal" Name="PresProdCPred" Nullable="false" Precision="15" Scale="8" />
+  </ComplexType>
+  <ComplexType Name="sql_PresupuestoDelCCosto_Result">
+    <Property Type="String" Name="SubElem_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Elemento" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ccosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="Decimal" Name="PPlan" Nullable="false" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PReal" Nullable="true" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PPredesp" Nullable="true" Precision="16" Scale="8" />
+    <Property Type="Decimal" Name="PDisponible" Nullable="true" Precision="18" Scale="8" />
+  </ComplexType>
+  <ComplexType Name="sql_Subdirecciones_Result">
+    <Property Type="String" Name="Subd_id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Subdireccion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="WSBuscar_CCosto_porDescrip_Result">
+    <Property Type="String" Name="Subd_Id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Cuenta_Id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto_Descrip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="JefeCC_Id" Nullable="true" />
+    <Property Type="Boolean" Name="CCosto_Activado" Nullable="false" />
+    <Property Type="Boolean" Name="CCosto_PlanOp" Nullable="false" />
+    <Property Type="String" Name="Subelem_id" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="ccosto_idN" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WSBuscar_CCosto_porId_Result">
+    <Property Type="String" Name="Subd_Id" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Cuenta_Id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CCosto_Id" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CCosto_Descrip" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="JefeCC_Id" Nullable="true" />
+    <Property Type="Boolean" Name="CCosto_Activado" Nullable="false" />
+    <Property Type="Boolean" Name="CCosto_PlanOp" Nullable="false" />
+    <Property Type="String" Name="Subelem_id" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="ccosto_idN" Nullable="true" />
+  </ComplexType>
+</Schema>

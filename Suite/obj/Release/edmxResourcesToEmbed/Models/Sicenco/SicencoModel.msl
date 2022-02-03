@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SicencoModelStoreContainer" CdmEntityContainer="SicencoEntities">
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="SicencoModel.Areas">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="Subd_id" ColumnName="Subd_id" />
+          <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+          <ScalarProperty Name="Area_Descrip" ColumnName="Area_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CCostos">
+      <EntityTypeMapping TypeName="SicencoModel.CCostos">
+        <MappingFragment StoreEntitySet="CCostos">
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto_Descrip" ColumnName="CCosto_Descrip" />
+          <ScalarProperty Name="JefeCC_Id" ColumnName="JefeCC_Id" />
+          <ScalarProperty Name="CCosto_Activado" ColumnName="CCosto_Activado" />
+          <ScalarProperty Name="CCosto_PlanOp" ColumnName="CCosto_PlanOp" />
+          <ScalarProperty Name="Subelem_id" ColumnName="Subelem_id" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuentas">
+      <EntityTypeMapping TypeName="SicencoModel.Cuentas">
+        <MappingFragment StoreEntitySet="Cuentas">
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="Cuenta_Descrip" ColumnName="Cuenta_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="SicencoModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elementos">
+      <EntityTypeMapping TypeName="SicencoModel.Elementos">
+        <MappingFragment StoreEntitySet="Elementos">
+          <ScalarProperty Name="Elemento_Id" ColumnName="Elemento_Id" />
+          <ScalarProperty Name="Elemento_Descrip" ColumnName="Elemento_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipos">
+      <EntityTypeMapping TypeName="SicencoModel.Equipos">
+        <MappingFragment StoreEntitySet="Equipos">
+          <ScalarProperty Name="equipo_id" ColumnName="equipo_id" />
+          <ScalarProperty Name="equipo_descrip" ColumnName="equipo_descrip" />
+          <ScalarProperty Name="tarifa" ColumnName="tarifa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JefeCC">
+      <EntityTypeMapping TypeName="SicencoModel.JefeCC">
+        <MappingFragment StoreEntitySet="JefeCC">
+          <ScalarProperty Name="JefeCC_Id" ColumnName="JefeCC_Id" />
+          <ScalarProperty Name="JefeCC_Descrip" ColumnName="JefeCC_Descrip" />
+          <ScalarProperty Name="JefeCC_Firma" ColumnName="JefeCC_Firma" />
+          <ScalarProperty Name="JefeCC_Foto" ColumnName="JefeCC_Foto" />
+          <ScalarProperty Name="JefeCC_CtaUser" ColumnName="JefeCC_CtaUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="obreros">
+      <EntityTypeMapping TypeName="SicencoModel.obreros">
+        <MappingFragment StoreEntitySet="obreros">
+          <ScalarProperty Name="obrero_id" ColumnName="obrero_id" />
+          <ScalarProperty Name="obrero_descrip" ColumnName="obrero_descrip" />
+          <ScalarProperty Name="calificacion" ColumnName="calificacion" />
+          <ScalarProperty Name="tarifa" ColumnName="tarifa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ot">
+      <EntityTypeMapping TypeName="SicencoModel.Ot">
+        <MappingFragment StoreEntitySet="Ot">
+          <ScalarProperty Name="nuot" ColumnName="nuot" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="fechaSolic" ColumnName="fechaSolic" />
+          <ScalarProperty Name="costo_obrero" ColumnName="costo_obrero" />
+          <ScalarProperty Name="costo_producto" ColumnName="costo_producto" />
+          <ScalarProperty Name="costo_equipo" ColumnName="costo_equipo" />
+          <ScalarProperty Name="costo_total" ColumnName="costo_total" />
+          <ScalarProperty Name="fechainicio" ColumnName="fechainicio" />
+          <ScalarProperty Name="fechafin" ColumnName="fechafin" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="No_Equipo" ColumnName="No_Equipo" />
+          <ScalarProperty Name="ccosto" ColumnName="ccosto" />
+          <ScalarProperty Name="clienteN" ColumnName="clienteN" />
+          <ScalarProperty Name="ccostoN" ColumnName="ccostoN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ot_Insumos">
+      <EntityTypeMapping TypeName="SicencoModel.Ot_Insumos">
+        <MappingFragment StoreEntitySet="Ot_Insumos">
+          <ScalarProperty Name="nuot" ColumnName="nuot" />
+          <ScalarProperty Name="ccosto" ColumnName="ccosto" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OT_Tipo">
+      <EntityTypeMapping TypeName="SicencoModel.OT_Tipo">
+        <MappingFragment StoreEntitySet="OT_Tipo">
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="Tipo_descrip" ColumnName="Tipo_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Presupuesto_Producto">
+      <EntityTypeMapping TypeName="SicencoModel.Presupuesto_Producto">
+        <MappingFragment StoreEntitySet="Presupuesto_Producto">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="mProducto_Id" ColumnName="mProducto_Id" />
+          <ScalarProperty Name="PresProd_CantPlan" ColumnName="PresProd_CantPlan" />
+          <ScalarProperty Name="PresProd_CantReal" ColumnName="PresProd_CantReal" />
+          <ScalarProperty Name="PresProd_CantPredesp" ColumnName="PresProd_CantPredesp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Presupuesto_SubElemento">
+      <EntityTypeMapping TypeName="SicencoModel.Presupuesto_SubElemento">
+        <MappingFragment StoreEntitySet="Presupuesto_SubElemento">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="CCosto_id" ColumnName="CCosto_id" />
+          <ScalarProperty Name="PresSubElem_ValorPlan" ColumnName="PresSubElem_ValorPlan" />
+          <ScalarProperty Name="PresSubElem_ValorReal" ColumnName="PresSubElem_ValorReal" />
+          <ScalarProperty Name="PresSubElem_ValorPredesp" ColumnName="PresSubElem_ValorPredesp" />
+          <ScalarProperty Name="CCosto_idN" ColumnName="CCosto_idN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PresupuestoGastos">
+      <EntityTypeMapping TypeName="SicencoModel.PresupuestoGastos">
+        <MappingFragment StoreEntitySet="PresupuestoGastos">
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="subelem_id" ColumnName="subelem_id" />
+          <ScalarProperty Name="año" ColumnName="año" />
+          <ScalarProperty Name="enp" ColumnName="enp" />
+          <ScalarProperty Name="fep" ColumnName="fep" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="abp" ColumnName="abp" />
+          <ScalarProperty Name="myp" ColumnName="myp" />
+          <ScalarProperty Name="jup" ColumnName="jup" />
+          <ScalarProperty Name="jlp" ColumnName="jlp" />
+          <ScalarProperty Name="agp" ColumnName="agp" />
+          <ScalarProperty Name="sep" ColumnName="sep" />
+          <ScalarProperty Name="ocp" ColumnName="ocp" />
+          <ScalarProperty Name="nop" ColumnName="nop" />
+          <ScalarProperty Name="dip" ColumnName="dip" />
+          <ScalarProperty Name="enr" ColumnName="enr" />
+          <ScalarProperty Name="fer" ColumnName="fer" />
+          <ScalarProperty Name="mar" ColumnName="mar" />
+          <ScalarProperty Name="abr" ColumnName="abr" />
+          <ScalarProperty Name="myr" ColumnName="myr" />
+          <ScalarProperty Name="jur" ColumnName="jur" />
+          <ScalarProperty Name="jlr" ColumnName="jlr" />
+          <ScalarProperty Name="agr" ColumnName="agr" />
+          <ScalarProperty Name="ser" ColumnName="ser" />
+          <ScalarProperty Name="ocr" ColumnName="ocr" />
+          <ScalarProperty Name="nor" ColumnName="nor" />
+          <ScalarProperty Name="dir" ColumnName="dir" />
+          <ScalarProperty Name="enpo" ColumnName="enpo" />
+          <ScalarProperty Name="fepo" ColumnName="fepo" />
+          <ScalarProperty Name="mapo" ColumnName="mapo" />
+          <ScalarProperty Name="abpo" ColumnName="abpo" />
+          <ScalarProperty Name="mypo" ColumnName="mypo" />
+          <ScalarProperty Name="jupo" ColumnName="jupo" />
+          <ScalarProperty Name="jlpo" ColumnName="jlpo" />
+          <ScalarProperty Name="agpo" ColumnName="agpo" />
+          <ScalarProperty Name="sepo" ColumnName="sepo" />
+          <ScalarProperty Name="ocpo" ColumnName="ocpo" />
+          <ScalarProperty Name="nopo" ColumnName="nopo" />
+          <ScalarProperty Name="dipo" ColumnName="dipo" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productos">
+      <EntityTypeMapping TypeName="SicencoModel.productos">
+        <MappingFragment StoreEntitySet="productos">
+          <ScalarProperty Name="prodalm_id" ColumnName="prodalm_id" />
+          <ScalarProperty Name="prod_descrip" ColumnName="prod_descrip" />
+          <ScalarProperty Name="um" ColumnName="um" />
+          <ScalarProperty Name="pu" ColumnName="pu" />
+          <ScalarProperty Name="existencia" ColumnName="existencia" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="insumo" ColumnName="insumo" />
+          <ScalarProperty Name="codprod" ColumnName="codprod" />
+          <ScalarProperty Name="precioMn" ColumnName="precioMn" />
+          <ScalarProperty Name="precioMd" ColumnName="precioMd" />
+          <ScalarProperty Name="ElementoMn" ColumnName="ElementoMn" />
+          <ScalarProperty Name="ElementoMd" ColumnName="ElementoMd" />
+          <ScalarProperty Name="prod_activ" ColumnName="prod_activ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud">
+      <EntityTypeMapping TypeName="SicencoModel.Solicitud">
+        <MappingFragment StoreEntitySet="Solicitud">
+          <ScalarProperty Name="numsolic_id" ColumnName="numsolic_id" />
+          <ScalarProperty Name="almacen_id" ColumnName="almacen_id" />
+          <ScalarProperty Name="ccosto_id" ColumnName="ccosto_id" />
+          <ScalarProperty Name="FechaSolic" ColumnName="FechaSolic" />
+          <ScalarProperty Name="FechaDesp" ColumnName="FechaDesp" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cliente_Id" ColumnName="Cliente_Id" />
+          <ScalarProperty Name="SalAlm_NoVS" ColumnName="SalAlm_NoVS" />
+          <ScalarProperty Name="NuOt" ColumnName="NuOt" />
+          <ScalarProperty Name="chapa" ColumnName="chapa" />
+          <ScalarProperty Name="SGM" ColumnName="SGM" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subdirecciones">
+      <EntityTypeMapping TypeName="SicencoModel.Subdirecciones">
+        <MappingFragment StoreEntitySet="Subdirecciones">
+          <ScalarProperty Name="Subd_id" ColumnName="Subd_id" />
+          <ScalarProperty Name="Subd_Descrip" ColumnName="Subd_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubElementos">
+      <EntityTypeMapping TypeName="SicencoModel.SubElementos">
+        <MappingFragment StoreEntitySet="SubElementos">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="SubElem_Descrip" ColumnName="SubElem_Descrip" />
+          <ScalarProperty Name="SubElem_Tipo" ColumnName="SubElem_Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trabajos">
+      <EntityTypeMapping TypeName="SicencoModel.Trabajos">
+        <MappingFragment StoreEntitySet="Trabajos">
+          <ScalarProperty Name="trabajo_id" ColumnName="trabajo_id" />
+          <ScalarProperty Name="Trabajo_descrip" ColumnName="Trabajo_descrip" />
+          <ScalarProperty Name="tarifa" ColumnName="tarifa" />
+          <ScalarProperty Name="Trabajo_Actividad" ColumnName="Trabajo_Actividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto_Solicitud">
+      <EntityTypeMapping TypeName="SicencoModel.Producto_Solicitud">
+        <MappingFragment StoreEntitySet="Producto_Solicitud">
+          <ScalarProperty Name="Numsolic_Id" ColumnName="Numsolic_Id" />
+          <ScalarProperty Name="mproducto_Id" ColumnName="mproducto_Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="CantDev" ColumnName="CantDev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TControl">
+      <EntityTypeMapping TypeName="SicencoModel.TControl">
+        <MappingFragment StoreEntitySet="TControl">
+          <ScalarProperty Name="tc_descripcion" ColumnName="tc_descripcion" />
+          <ScalarProperty Name="tc_consecutivo" ColumnName="tc_consecutivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tpresupuesto">
+      <EntityTypeMapping TypeName="SicencoModel.tpresupuesto">
+        <MappingFragment StoreEntitySet="tpresupuesto">
+          <ScalarProperty Name="codcencos" ColumnName="codcencos" />
+          <ScalarProperty Name="codelem" ColumnName="codelem" />
+          <ScalarProperty Name="valplan" ColumnName="valplan" />
+          <ScalarProperty Name="valreal" ColumnName="valreal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Borrar_PedidosInsumos" FunctionName="SicencoModel.Store.Borrar_PedidosInsumos" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol" FunctionName="SicencoModel.Store.dt_addtosourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol_u" FunctionName="SicencoModel.Store.dt_addtosourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject" FunctionName="SicencoModel.Store.dt_adduserobject" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject_vcs" FunctionName="SicencoModel.Store.dt_adduserobject_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject" FunctionName="SicencoModel.Store.dt_checkinobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject_u" FunctionName="SicencoModel.Store.dt_checkinobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject" FunctionName="SicencoModel.Store.dt_checkoutobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject_u" FunctionName="SicencoModel.Store.dt_checkoutobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror" FunctionName="SicencoModel.Store.dt_displayoaerror" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror_u" FunctionName="SicencoModel.Store.dt_displayoaerror_u" />
+    <FunctionImportMapping FunctionImportName="dt_droppropertiesbyid" FunctionName="SicencoModel.Store.dt_droppropertiesbyid" />
+    <FunctionImportMapping FunctionImportName="dt_dropuserobjectbyid" FunctionName="SicencoModel.Store.dt_dropuserobjectbyid" />
+    <FunctionImportMapping FunctionImportName="dt_generateansiname" FunctionName="SicencoModel.Store.dt_generateansiname" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop" FunctionName="SicencoModel.Store.dt_getobjwithprop" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop_u" FunctionName="SicencoModel.Store.dt_getobjwithprop_u" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid" FunctionName="SicencoModel.Store.dt_getpropertiesbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.dt_getpropertiesbyid_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_u" FunctionName="SicencoModel.Store.dt_getpropertiesbyid_u">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.dt_getpropertiesbyid_u_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs" FunctionName="SicencoModel.Store.dt_getpropertiesbyid_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs_u" FunctionName="SicencoModel.Store.dt_getpropertiesbyid_vcs_u" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol" FunctionName="SicencoModel.Store.dt_isundersourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol_u" FunctionName="SicencoModel.Store.dt_isundersourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_removefromsourcecontrol" FunctionName="SicencoModel.Store.dt_removefromsourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid" FunctionName="SicencoModel.Store.dt_setpropertybyid" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid_u" FunctionName="SicencoModel.Store.dt_setpropertybyid_u" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams" FunctionName="SicencoModel.Store.dt_validateloginparams" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams_u" FunctionName="SicencoModel.Store.dt_validateloginparams_u" />
+    <FunctionImportMapping FunctionImportName="dt_vcsenabled" FunctionName="SicencoModel.Store.dt_vcsenabled" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp006" FunctionName="SicencoModel.Store.dt_verstamp006" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp007" FunctionName="SicencoModel.Store.dt_verstamp007" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout" FunctionName="SicencoModel.Store.dt_whocheckedout" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout_u" FunctionName="SicencoModel.Store.dt_whocheckedout_u" />
+    <FunctionImportMapping FunctionImportName="Esta_CCostoConstr" FunctionName="SicencoModel.Store.Esta_CCostoConstr">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.Esta_CCostoConstr_Result">
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto_Descrip" ColumnName="CCosto_Descrip" />
+          <ScalarProperty Name="JefeCC_Id" ColumnName="JefeCC_Id" />
+          <ScalarProperty Name="CCosto_Activado" ColumnName="CCosto_Activado" />
+          <ScalarProperty Name="CCosto_PlanOp" ColumnName="CCosto_PlanOp" />
+          <ScalarProperty Name="Subelem_id" ColumnName="Subelem_id" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OT_InventariosMedBasicos_Web_" FunctionName="SicencoModel.Store.OT_InventariosMedBasicos_Web_">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.OT_InventariosMedBasicos_Web__Result">
+          <ScalarProperty Name="Código_CC" ColumnName="Código_CC" />
+          <ScalarProperty Name="Desc_Centro_Costo" ColumnName="Desc_Centro_Costo" />
+          <ScalarProperty Name="No_Invent" ColumnName="No_Invent" />
+          <ScalarProperty Name="Desc_Medio_Básico" ColumnName="Desc_Medio_Básico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Report_PrecioProductoSiscont" FunctionName="SicencoModel.Store.Report_PrecioProductoSiscont">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.Report_PrecioProductoSiscont_Result">
+          <ScalarProperty Name="cod_prod" ColumnName="cod_prod" />
+          <ScalarProperty Name="des_prod" ColumnName="des_prod" />
+          <ScalarProperty Name="um_alm" ColumnName="um_alm" />
+          <ScalarProperty Name="prec_mn" ColumnName="prec_mn" />
+          <ScalarProperty Name="prec_md" ColumnName="prec_md" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Report_PresGastosSubEl" FunctionName="SicencoModel.Store.Report_PresGastosSubEl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.Report_PresGastosSubEl_Result">
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto_Descrip" ColumnName="CCosto_Descrip" />
+          <ScalarProperty Name="SubElem_idMN" ColumnName="SubElem_idMN" />
+          <ScalarProperty Name="SubElem_idDi" ColumnName="SubElem_idDi" />
+          <ScalarProperty Name="Elem_Desc" ColumnName="Elem_Desc" />
+          <ScalarProperty Name="EstimadoMN" ColumnName="EstimadoMN" />
+          <ScalarProperty Name="EstimadoDi" ColumnName="EstimadoDi" />
+          <ScalarProperty Name="PlanMN" ColumnName="PlanMN" />
+          <ScalarProperty Name="PlanDi" ColumnName="PlanDi" />
+          <ScalarProperty Name="Indice" ColumnName="Indice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SicencoModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SicencoModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SicencoModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SicencoModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SicencoModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SicencoModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sql_Ccostos" FunctionName="SicencoModel.Store.sql_Ccostos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_Ccostos_Result">
+          <ScalarProperty Name="Ccosto_Id" ColumnName="Ccosto_Id" />
+          <ScalarProperty Name="Ccosto" ColumnName="Ccosto" />
+          <ScalarProperty Name="Subd" ColumnName="Subd" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Jefe" ColumnName="Jefe" />
+          <ScalarProperty Name="Activado" ColumnName="Activado" />
+          <ScalarProperty Name="PlanOperaitvo" ColumnName="PlanOperaitvo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_CcostosDeLaSubd" FunctionName="SicencoModel.Store.sql_CcostosDeLaSubd">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_CcostosDeLaSubd_Result">
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="ctaccosto" ColumnName="ctaccosto" />
+          <ScalarProperty Name="todo" ColumnName="todo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_CcostosDelUsuario" FunctionName="SicencoModel.Store.sql_CcostosDelUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_CcostosDelUsuario_Result">
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+          <ScalarProperty Name="Todo" ColumnName="Todo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_CcostosDelUsuRepo" FunctionName="SicencoModel.Store.sql_CcostosDelUsuRepo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_CcostosDelUsuRepo_Result">
+          <ScalarProperty Name="ctaccosto" ColumnName="ctaccosto" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+          <ScalarProperty Name="TODO" ColumnName="TODO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_CcostosDSubd" FunctionName="SicencoModel.Store.sql_CcostosDSubd">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_CcostosDSubd_Result">
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_CcostosTodos" FunctionName="SicencoModel.Store.sql_CcostosTodos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_CcostosTodos_Result">
+          <ScalarProperty Name="ctaccosto" ColumnName="ctaccosto" />
+          <ScalarProperty Name="CCosto" ColumnName="CCosto" />
+          <ScalarProperty Name="todo" ColumnName="todo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_DatosDelCCosto" FunctionName="SicencoModel.Store.sql_DatosDelCCosto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_DatosDelCCosto_Result">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="Elemento" ColumnName="Elemento" />
+          <ScalarProperty Name="PPlan" ColumnName="PPlan" />
+          <ScalarProperty Name="PReal" ColumnName="PReal" />
+          <ScalarProperty Name="PPredesp" ColumnName="PPredesp" />
+          <ScalarProperty Name="PDisponible" ColumnName="PDisponible" />
+          <ScalarProperty Name="Ccosto_id" ColumnName="Ccosto_id" />
+          <ScalarProperty Name="Ccosto_Descrip" ColumnName="Ccosto_Descrip" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_DistribucionProductos" FunctionName="SicencoModel.Store.sql_DistribucionProductos" />
+    <FunctionImportMapping FunctionImportName="sql_PresupProductos" FunctionName="SicencoModel.Store.sql_PresupProductos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_PresupProductos_Result">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="Ccosto_Id" ColumnName="Ccosto_Id" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="PresProdCPlan" ColumnName="PresProdCPlan" />
+          <ScalarProperty Name="PresProdCReal" ColumnName="PresProdCReal" />
+          <ScalarProperty Name="PresProdCPred" ColumnName="PresProdCPred" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_PresupuestoDelCCosto" FunctionName="SicencoModel.Store.sql_PresupuestoDelCCosto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_PresupuestoDelCCosto_Result">
+          <ScalarProperty Name="SubElem_Id" ColumnName="SubElem_Id" />
+          <ScalarProperty Name="Elemento" ColumnName="Elemento" />
+          <ScalarProperty Name="Ccosto_Id" ColumnName="Ccosto_Id" />
+          <ScalarProperty Name="PPlan" ColumnName="PPlan" />
+          <ScalarProperty Name="PReal" ColumnName="PReal" />
+          <ScalarProperty Name="PPredesp" ColumnName="PPredesp" />
+          <ScalarProperty Name="PDisponible" ColumnName="PDisponible" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_ProductosBalancDeLCCosto" FunctionName="SicencoModel.Store.sql_ProductosBalancDeLCCosto" />
+    <FunctionImportMapping FunctionImportName="sql_ProductosDelCCosto" FunctionName="SicencoModel.Store.sql_ProductosDelCCosto" />
+    <FunctionImportMapping FunctionImportName="sql_ProductosNormadosDelCcosto" FunctionName="SicencoModel.Store.sql_ProductosNormadosDelCcosto" />
+    <FunctionImportMapping FunctionImportName="sql_Subdirecciones" FunctionName="SicencoModel.Store.sql_Subdirecciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.sql_Subdirecciones_Result">
+          <ScalarProperty Name="Subd_id" ColumnName="Subd_id" />
+          <ScalarProperty Name="Subdireccion" ColumnName="Subdireccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WSBuscar_CCosto_porDescrip" FunctionName="SicencoModel.Store.WSBuscar_CCosto_porDescrip">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.WSBuscar_CCosto_porDescrip_Result">
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto_Descrip" ColumnName="CCosto_Descrip" />
+          <ScalarProperty Name="JefeCC_Id" ColumnName="JefeCC_Id" />
+          <ScalarProperty Name="CCosto_Activado" ColumnName="CCosto_Activado" />
+          <ScalarProperty Name="CCosto_PlanOp" ColumnName="CCosto_PlanOp" />
+          <ScalarProperty Name="Subelem_id" ColumnName="Subelem_id" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WSBuscar_CCosto_porId" FunctionName="SicencoModel.Store.WSBuscar_CCosto_porId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SicencoModel.WSBuscar_CCosto_porId_Result">
+          <ScalarProperty Name="Subd_Id" ColumnName="Subd_Id" />
+          <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+          <ScalarProperty Name="CCosto_Id" ColumnName="CCosto_Id" />
+          <ScalarProperty Name="CCosto_Descrip" ColumnName="CCosto_Descrip" />
+          <ScalarProperty Name="JefeCC_Id" ColumnName="JefeCC_Id" />
+          <ScalarProperty Name="CCosto_Activado" ColumnName="CCosto_Activado" />
+          <ScalarProperty Name="CCosto_PlanOp" ColumnName="CCosto_PlanOp" />
+          <ScalarProperty Name="Subelem_id" ColumnName="Subelem_id" />
+          <ScalarProperty Name="ccosto_idN" ColumnName="ccosto_idN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

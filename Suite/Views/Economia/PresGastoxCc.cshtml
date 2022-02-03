@@ -1,0 +1,255 @@
+﻿@model IEnumerable<ModuloEconomia.Report_PGSisconTereWeb_Result>
+
+@{
+    ViewBag.Title = "Presupuesto de gastos mensual por centros de costos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("PresGastoxCc", "Economia", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                           <input type="text" name="ccostos" id="ccostos" class="form-control"  value=@ViewBag.ccostos>                             
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab5">Módulos</a></li>
+    <li class="active">Presupuesto de gastos mensual por centros de costos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        <table class="table table-bordered">
+            <tr style="font-weight:bold; text-align:center">
+                <th></th>
+                <th colspan="4" style="text-align:center">
+                    <span style="color:black">Mes</span>
+                </th>
+                <th colspan="4" style="text-align:center">
+                    <span style="color:black">Acumulado</span>
+                </th>
+
+            </tr>
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black">Elementos de Gastos</span>
+                </th>
+                @*mes*@
+                <th>
+                    <span style="color:black"> Plan</span>
+                </th>
+                <th>
+                    <span style="color:black"> Real</span>
+                </th>
+                <th>
+                    <span style="color:black"> %</span>
+                </th>
+                <th>
+                    <span style="color:black"> Desviacion</span>
+                </th>
+                @*Acumulado*@
+                <th>
+                    <span style="color:black"> Plan</span>
+                </th>
+                <th>
+                    <span style="color:black"> Real</span>
+                </th>
+                <th>
+                    <span style="color:black"> %</span>
+                </th>
+                <th>
+                    <span style="color:black"> Desviacion</span>
+                </th>
+
+            </tr>
+
+            @{
+                decimal MplanTotal = 0;
+                decimal MrealTotal = 0;
+                decimal AplanTotal = 0;
+                decimal ArealTotal = 0;
+
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="panel panel-default">
+                        @Html.DisplayFor(modelItem => item.subelem_id) - @Html.DisplayFor(modelItem => item.SubElem_Descrip)
+                    </td>
+                    @*mes*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MPlan)
+                        @{MplanTotal += item.MPlan.Value;}
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MReal)
+                        @{MrealTotal += item.MReal.Value;}
+                    </td>
+                    @{
+                        decimal porcientom = 0;
+                        if (item.MPlan > 0)
+                        {
+                            porcientom = ((item.MReal * 100) / item.MPlan).Value;
+                        }
+
+                        string colorverde = "";
+                        if (porcientom > 100) { colorverde = "green"; }
+                    }
+                    <td style="color:@colorverde ">
+
+                        @Decimal.Round(porcientom, 2)
+
+                    </td>
+                    @{ decimal desviacionM = (item.MReal - item.MPlan).Value;
+                        string colorrojo = "";
+                        if (desviacionM < 0) { colorrojo = "red"; }
+                    }
+                    <td style="color:@colorrojo ">
+
+                        @Decimal.Round(desviacionM, 2)
+                    </td>
+                    @*acumulado*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.APlan)
+                        @{AplanTotal += item.APlan.Value;}
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AReal)
+                        @{ArealTotal += item.AReal.Value;}
+                    </td>
+                    @{
+                        decimal porcientoa = 0;
+                        if (item.APlan > 0)
+                        {
+                            porcientoa = ((item.AReal * 100) / item.APlan).Value;
+                        }
+                        colorverde = "";
+                        if (porcientoa > 100) { colorverde = "green"; }
+                    }
+                    <td style="color:@colorverde ">
+
+                        @Decimal.Round(porcientoa, 2)
+                    </td>
+                    @{ decimal desviacionA = (item.AReal - item.APlan).Value;
+                        colorrojo = "";
+                        if (desviacionA < 0) { colorrojo = "red"; }
+                    }
+                    <td style="color:@colorrojo ">
+                        @Decimal.Round(desviacionA, 2)
+                    </td>
+                </tr>
+            }
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black">Total de Gastos</span>
+                </th>
+                @*mes*@
+                <th>
+                    <span style="color:black"> @Decimal.Round(@MplanTotal, 2)</span>
+                </th>
+                <th>
+                    <span style="color:black"> @Decimal.Round(@MrealTotal, 2)</span>
+                </th>
+                @{
+                    decimal mporcientoTot = 0;
+                    if (MplanTotal > 0)
+                    {
+                        mporcientoTot = ((@MrealTotal * 100) / MplanTotal);
+                    }
+
+                    string colorverdetotal = "black";
+                    if (mporcientoTot > 100) { colorverdetotal = "green"; }
+                }
+                <th>
+                    <span style="color:@colorverdetotal"> @Decimal.Round(@mporcientoTot, 2)</span>
+                </th>
+                @{
+                    decimal mdesviacionTot = 0;
+                    mdesviacionTot = (MrealTotal - MplanTotal);
+                    string colorrojototal = "black";
+                    if (mdesviacionTot < 0) { colorrojototal = "red"; }
+                }
+                <th>
+                    <span style="color:@colorrojototal"> @Decimal.Round(mdesviacionTot, 2)</span>
+                </th>
+                @*Acumulado*@
+                <th>
+                    <span style="color:black"> @Decimal.Round(AplanTotal, 2)</span>
+                </th>
+                <th>
+                    <span style="color:black"> @Decimal.Round(ArealTotal, 2)</span>
+                </th>
+                @{
+                    decimal aporcientoTot = 0;
+                    if (AplanTotal > 0)
+                    {
+                        aporcientoTot = ((@ArealTotal * 100) / AplanTotal);
+                    }
+
+                    colorverdetotal = "black";
+                    if (aporcientoTot > 100) { colorverdetotal = "green"; }
+                }
+                <th>
+                    <span style="color:@colorverdetotal">@Decimal.Round(aporcientoTot, 2)</span>
+                </th>
+                @{
+                    decimal adesviacionTot = 0;
+                    adesviacionTot = (ArealTotal - AplanTotal);
+                    colorrojototal = "black";
+                    if (adesviacionTot < 0) { colorrojototal = "red"; }
+                }
+                <th>
+                    <span style="color:@colorrojototal"> @Decimal.Round(adesviacionTot, 2)</span>
+                </th>
+
+            </tr>
+        </table>
+    }
+}
+
+
+@section Scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ccostos').autocomplete({
+                source: '../Economia/SearchCC'
+            });
+        });
+    </script>
+}

@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Suite.Models.RecHumanos.PrepRecibida>
+@{
+    ViewBag.Title = "PrepRecibida";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("PrepRecibida", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="search-product ads-list">
+                <label>Nombre</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().Nombre , new { htmlAttributes = new { @class = "form-control", id = "nombre" } })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab6">Módulos</a></li>
+    <li class="active">Preparacion Recibida por Cargos</li>
+</ol>
+
+@{
+    string cidentidad = "";
+    if (ViewBag.tabla != null)
+    {
+
+        <div><span style="color:black; font-weight:bold">Cargo: </span> @Model.First().cargo  </div>
+        <table class="table table-bordered">
+
+            @foreach (var item in Model)
+            {
+
+                if (item.Ci != cidentidad)
+                {
+                    cidentidad = item.Ci;
+                    <tr style="font-weight:bold">
+                        <th colspan="1">
+                            <span style="color:red "> Nombre y Apellidos:  @item.Nombre   </span>
+                        </th>
+                        <th colspan="1">
+                            <span style="color:red "> C.Identidad: @item.Ci    </span>
+                        </th>
+                        <th colspan="1">
+                            <span style="color:red "> N.Cobro: @item.numCobro   </span>
+                        </th>
+                        <th colspan="3">
+                            <span style="color:red "> Area: @item.area   </span>
+                        </th>
+                    </tr>
+                    <tr style="font-weight:bold">
+                        <th>
+                            <span style="color:black"> Acción </span>
+                        </th>
+                        <th>
+                            <span style="color:black"> Fecha Inicio </span>
+                        </th>
+                        <th>
+                            <span style="color:black"> Fecha Fin </span>
+                        </th>
+                        <th>
+                            <span style="color:black"> Evaluación </span>
+                        </th>
+                        <th>
+                            <span style="color:black"> Institución </span>
+                        </th>
+                        <th>
+                            <span style="color:black"> Observaciones </span>
+                        </th>
+                    </tr>
+                    foreach (var item2 in Model)
+                    {
+                        if (item2.Ci == cidentidad)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.Accion)
+                                </td>
+                                <td>
+                                    @item2.FechaIni.ToShortDateString()
+                                </td>
+                                <td>
+                                    @item2.FechaFin.ToShortDateString()
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.Evaluacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.Institucion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item2.Observacion)
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                }
+            }
+
+        </table>
+    }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nombre').autocomplete({
+                source: '../RecHumanos/SearchNombre'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+

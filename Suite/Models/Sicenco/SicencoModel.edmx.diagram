@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c5b0f22c298c4f6f9002a676e95131ca" Name="Diagram1" ZoomLevel="34">
+        <EntityTypeShape EntityType="SicencoModel.AM_Alcance" Width="1.5" PointX="5.75" PointY="2.875" />
+        <EntityTypeShape EntityType="SicencoModel.AM_CriteriosIndic" Width="1.5" PointX="10.25" PointY="4.25" />
+        <EntityTypeShape EntityType="SicencoModel.AM_Evaluaciones" Width="1.5" PointX="10.25" PointY="1.125" />
+        <EntityTypeShape EntityType="SicencoModel.AM_Indicadores" Width="1.5" PointX="8" PointY="2.5" />
+        <EntityTypeShape EntityType="SicencoModel.AM_PresPlanRealSubElto" Width="1.5" PointX="12" PointY="12.125" />
+        <EntityTypeShape EntityType="SicencoModel.Areas" Width="1.5" PointX="5.75" PointY="12.75" />
+        <EntityTypeShape EntityType="SicencoModel.CCostos" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="SicencoModel.Cuentas" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="SicencoModel.dtproperties" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SicencoModel.Elementos" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SicencoModel.ElemMnDi" Width="1.5" PointX="14.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SicencoModel.Equipos" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SicencoModel.JefeCC" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="SicencoModel.obreros" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SicencoModel.Ot" Width="1.5" PointX="15" PointY="1" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Clientes" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Comp731" Width="1.5" PointX="4.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SicencoModel.Ot_Comprobantes" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_EquipoFactServ" Width="1.5" PointX="15" PointY="5.875" />
+        <EntityTypeShape EntityType="SicencoModel.OT_FacturaServicio" Width="1.5" PointX="12.75" PointY="5.875" />
+        <EntityTypeShape EntityType="SicencoModel.Ot_Insumos" Width="1.5" PointX="16.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Pieza" Width="1.5" PointX="5" PointY="8.375" />
+        <EntityTypeShape EntityType="SicencoModel.OT_PiezaFactServ" Width="1.5" PointX="16.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_PiezaFSAlmacen" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_ProdValesSal" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Servicios" Width="1.5" PointX="17.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_ServiciosP" Width="1.5" PointX="2.75" PointY="7" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Tipo" Width="1.5" PointX="12.75" PointY="2.125" />
+        <EntityTypeShape EntityType="SicencoModel.OT_TrabajoFS" Width="1.5" PointX="5" PointY="6" />
+        <EntityTypeShape EntityType="SicencoModel.PlanOperativo" Width="1.5" PointX="8.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SicencoModel.PresPlan_SubEl" Width="1.5" PointX="14.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SicencoModel.Presupuesto_Producto" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SicencoModel.Presupuesto_SubElemento" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="SicencoModel.PresupuestoCcostos" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="SicencoModel.PresupuestoEmpresa" Width="1.5" PointX="18.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SicencoModel.PresupuestoGastos" Width="1.5" PointX="18.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SicencoModel.productos" Width="1.5" PointX="19.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SicencoModel.SCGSUBELEMENTO" Width="1.5" PointX="9.75" PointY="14.5" />
+        <EntityTypeShape EntityType="SicencoModel.Solicitud" Width="1.5" PointX="7.75" PointY="8" />
+        <EntityTypeShape EntityType="SicencoModel.Subdirecciones" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="SicencoModel.SubElementos" Width="1.5" PointX="0.75" PointY="12.25" />
+        <EntityTypeShape EntityType="SicencoModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SicencoModel.TasaDepMB" Width="1.5" PointX="4.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SicencoModel.Trabajos" Width="1.5" PointX="10.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_Cta731" Width="1.5" PointX="20.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SicencoModel.OT_MundoPiezasFact" Width="1.5" PointX="6.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SicencoModel.Ot_Usuarios" Width="1.5" PointX="20.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SicencoModel.Producto_Solicitud" Width="1.5" PointX="10" PointY="8.75" />
+        <EntityTypeShape EntityType="SicencoModel.SCCSUBMAYORCOSTO" Width="1.5" PointX="20.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SicencoModel.TControl" Width="1.5" PointX="16.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SicencoModel.tpresupuesto" Width="1.5" PointX="20.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SicencoModel.CCActivos" Width="1.5" PointX="18.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SicencoModel.MbasAcum" Width="1.5" PointX="20.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SicencoModel.pressiscont" Width="1.5" PointX="21.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SicencoModel.solicitudes" Width="1.5" PointX="12.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SicencoModel.ver_Subdir_Ccostos" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW1" Width="1.5" PointX="2.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW2" Width="1.5" PointX="22.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW3" Width="1.5" PointX="22.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW4" Width="1.5" PointX="8.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW5" Width="1.5" PointX="22.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW6" Width="1.5" PointX="22.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW7" Width="1.5" PointX="22.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW8" Width="1.5" PointX="22.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SicencoModel.VIEW9" Width="1.5" PointX="23.75" PointY="0.75" />
+        <AssociationConnector Association="SicencoModel.FK_AM_Indicadores_AM_Alcance" />
+        <AssociationConnector Association="SicencoModel.FK_AM_CriteriosIndic_AM_Indicadores" />
+        <AssociationConnector Association="SicencoModel.FK_AM_Evaluaciones_AM_Indicadores" />
+        <AssociationConnector Association="SicencoModel.FK_AM_PresPlanSubElto_SCGSUBELEMENTO" />
+        <AssociationConnector Association="SicencoModel.FK_CCostos_Cuentas" />
+        <AssociationConnector Association="SicencoModel.FK_CCostos_JefeCC" />
+        <AssociationConnector Association="SicencoModel.FK_CCostos_Subdirecciones" />
+        <AssociationConnector Association="SicencoModel.FK_Ot_OT_Tipo" />
+        <AssociationConnector Association="SicencoModel.FK_OT_EquipoFactServ_OT_FacturaServicio" />
+        <AssociationConnector Association="SicencoModel.FK_OT_Pieza_OT_ServiciosP" />
+        <AssociationConnector Association="SicencoModel.FK_OT_TrabajoFS_OT_ServiciosP" />
+        <AssociationConnector Association="SicencoModel.FK_Presupuesto_SubElemento_SubElementos" />
+        <AssociationConnector Association="SicencoModel.FK_Producto_Solicitud_Solicitud" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

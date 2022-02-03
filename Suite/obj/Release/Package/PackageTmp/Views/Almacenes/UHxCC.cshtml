@@ -1,0 +1,147 @@
+﻿@model IEnumerable<Suite.Models.Almacenes.UHxCC>
+@{
+    ViewBag.Title = "UHxCC";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("UHxCC", "Almacenes", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Año</label>
+                    @Html.DropDownList("anno", (IEnumerable<SelectListItem>)ViewBag.anno, new { @class = "form-control" })
+                </div>
+            </div>
+            @*<div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Mes</label>
+                    @Html.DropDownList("mes", (IEnumerable<SelectListItem>)ViewBag.mes, null, new { @class = "form-control" })
+                </div>
+            </div>*@
+            <div class="search-product ads-list">
+                <label>Centro de Costo</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            <input type="text" name="ccostos" id="ccostos" class="form-control" value=@ViewBag.ccostos>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab4">Módulos</a></li>
+    <li class="active">Salidas de Útiles y herramientas de un C.Costo</li>
+</ol>
+
+@{
+    string nombAlmac = "";
+    if (ViewBag.tabla != null)
+    {
+        <table class="table ">
+            @foreach (var item in Model)
+            {
+                if (item.NombreAlmacen != nombAlmac)
+                {
+                    nombAlmac = item.NombreAlmacen;
+                    <tr style="font-weight:bold">
+                        <th colspan="2">
+                            <span style="color:black "> Almacén: @item.NombreAlmacen  </span>
+                        </th>
+                    </tr>
+                    <tr style="font-weight:bold">
+                        <th>
+                            <span style="color:black"> Código </span>
+                        </th>
+                        <th>
+                            <span style="color:black">  Descripción </span>
+                        </th>
+                        <th>
+                            <span style="color:black">  Vale Salida </span>
+                        </th>
+                        <th>
+                            <span style="color:black">  Fecha </span>
+                        </th>
+                        <th>
+                            <span style="color:red">  Cantidad </span>
+                        </th>
+                        <th>
+                            <span style="color:black">  Precio </span>
+                        </th>
+                        <th>
+                            <span style="color:black">  Importe </span>
+                        </th>
+                    </tr>
+
+                    foreach (var item2 in Model)
+                    {
+                        if (item2.NombreAlmacen == nombAlmac)
+                        {
+
+                            <tr>
+                               <th>
+                                  @Html.DisplayFor(modelItem => item2.Codigo)
+                               </th>
+                               <td>
+                                  @Html.DisplayFor(modelItem => item2.Descripcion)
+                               </td>
+                               <td style="text-align:right">
+                                  @Html.DisplayFor(modelItem => item2.NoVsal)
+                               </td>
+                               <td>
+                                   @item2.FechaVsal.ToShortDateString()
+                               </td>
+                               <td style=" color:red ; text-align:right">
+                                  @Html.DisplayFor(modelItem => item2.cantidad)
+                               </td>
+                               <td style="text-align:right">
+                                  @Html.DisplayFor(modelItem => item2.precio)
+                               </td>
+                               <td style="text-align:right">
+                                  @Html.DisplayFor(modelItem => item2.importe)
+                               </td>
+                            </tr>
+                        }
+                    }
+                }
+            }
+
+        </table>
+    }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#ccostos').autocomplete({
+                            source: '../Almacenes/SearchCC'
+                        });
+                    });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+
+

@@ -1,0 +1,209 @@
+﻿@model IEnumerable<Suite.Models.Transporte.NeumaticosBaterias>
+
+@{
+    /**/
+
+    ViewBag.Title = "Neumáticos y Baterías ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("NeumaticosBat", "Transporte", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="select-box">
+            <div class="search-product ads-list">
+                <label>Matricula</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstOrDefault().matricula, new { htmlAttributes = new { @class = "form-control", id = "matricula", name = "matricula" } })
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab2">Módulos</a></li>
+    <li class="active">Neumáticos y Baterías</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        //Neumáticos
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Neumáticos</h2></div>
+    <div class="panel-body">
+        <table class="table">
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black">País</span>
+                </th>
+                <th>
+                    <span style="color:black">Marca</span>
+                </th>
+                <th>
+                    <span style="color:black">Modelo/Medida</span>
+                </th>
+                <th>
+                    <span style="color:black">No Neumático</span>
+                </th>
+                <th>
+                    <span style="color:black">Fecha Asignación</span>
+                </th>
+                <th>
+                    <span style="color:black">Kms Norma</span>
+                </th>
+                <th>
+                    <span style="color:black">Kms Acum</span>
+                </th>
+                <th>
+                    <span style="color:black">Desv (Kms)</span>
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (string.IsNullOrEmpty(item.bFecha))
+                {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Npais)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nMarca)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nModelo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nNoNeumatico)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nFechaAsignacion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nKmsNorma)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nKmsAcum)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nDesvKms)
+                        </td>
+
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    </div>
+        //Baterias
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2>Baterías</h2></div>
+        <div class="panel-body">
+            <table class="table ">
+                <tr style="font-weight:bold">
+                    <th>
+                        <span style="color:black">País</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Marca</span>
+                    </th>
+                    <th>
+                        <span style="color:black">No Bat</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Vol</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Amp</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Fecha</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Norma(meses)</span>
+                    </th>
+                    <th>
+                        <span style="color:black">Desv del Tiempo(meses)</span>
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    if (string.IsNullOrEmpty(item.nFechaAsignacion))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bPais)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bMarca)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bNoBat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bVol)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bAmp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bFecha)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bNorma)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bTiempo)
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+        }
+    }
+
+
+    @section Scripts {
+
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#matricula').autocomplete({
+                    source: '../Transporte/Searchmatricula'
+                });
+            });
+        </script>
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+
+
+

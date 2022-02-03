@@ -1,0 +1,212 @@
+﻿@model IEnumerable<Suite.Models.RecHumanos.DatosPersonales>
+@{
+    ViewBag.Title = "DatosPersonales";
+    Layout = "~/Views/Shared/_Layoutshort.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+@using (Html.BeginForm("DatosPersonales", "RecHumanos", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box ">
+                <div class="search-product ads-list">
+                    <label>Nombre</label>
+                    <div class="search">
+                        <div id="custom-search-input">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.FirstOrDefault().NombAp, new { htmlAttributes = new { @class = "form-control", id = "nombre" } })
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-info btn-lg">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab6">Módulos</a></li>
+    <li class="active">Datos Personales de un Trabajador</li>
+</ol>
+
+@{
+     if (ViewBag.tabla != null)
+    {
+<table class="table ">
+    @foreach (var item in Model)
+    {
+        <tr style="font-weight:bold">
+            <th colspan="7">
+                <span style="color:black "> Nombre y Apellidos:  @item.NombAp </span>
+            </th>
+        </tr>
+        <tr style="font-weight:bold">
+            <th colspan="1">
+                <span style="color:black "> C.Identidad  </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> N.Cobro </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> Sexo </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> Raza </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> Nivel Escolar </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> Estado Civil </span>
+            </th>
+            <th colspan="1">
+                <span style="color:black "> Edad </span>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.Ci)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.numCobro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.raza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NivEscol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCivil)
+            </td>
+            @{ 
+                int edad = 0;
+                edad = (DateTime.Today.Year) - (int.Parse(item.Ci.Substring(0, 2)) + 1900);
+                if (edad >= 100) { edad = edad - 100; }
+             }
+            <td>
+                @edad
+            </td>
+        </tr>
+
+        <tr style="font-weight:bold">
+            @*<th>
+                    <span style="color:black"> C.Identidad </span>
+                </th>*@
+            @*<th>
+                    <span style="color:black"> Sexo </span>
+                </th>*@
+            <th>
+                <span style="color:black"> Dirección </span>
+            </th>
+            @*<th>
+                    <span style="color:black"> Niv.Escolar </span>
+                </th>*@
+            @*<th>
+                    <span style="color:black"> Raza </span>
+                </th>*@
+            @*<th>
+                    <span style="color:black"> Estado Civil </span>
+                </th>*@
+            @*<th>
+                    <span style="color:black"> No.Cobro </span>
+                </th>*@
+            <th>
+                <span style="color:black"> F.Rama </span>
+            </th>
+            <th>
+                <span style="color:black"> F.Empresa </span>
+            </th>
+            <th>
+                <span style="color:black"> Área </span>
+            </th>
+            <th>
+                <span style="color:black"> Cargo </span>
+            </th>
+            <th>
+                <span style="color:black"> Cat.Ocupacional </span>
+            </th>
+            <th>
+                <span style="color:black"> Salario </span>
+            </th>
+        </tr>
+        <tr>
+            @*<th>
+                    @Html.DisplayFor(modelItem => item.Ci)
+                </th>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.NivEscol)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.raza)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.EstadoCivil)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.numCobro)
+                </td>*@
+            <td>
+                @item.FechaRama.ToShortDateString()
+            </td>
+            <td>
+                @item.FechaEmp.ToShortDateString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoriaOc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salario)
+            </td>
+
+        </tr>
+
+    }
+
+</table>
+    }
+}
+
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#nombre').autocomplete({
+                            source: '../RecHumanos/SearchNombre'
+                        });
+                    });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
+
+
+
+

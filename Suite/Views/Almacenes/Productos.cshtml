@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Suite.Models.Almacenes.Productos>
+
+@{
+    ViewBag.Title = "Productos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/themes/base/jquery-ui.css"
+      rel="stylesheet"
+      type="text/css" />
+
+@using (Html.BeginForm("Productos", "Almacenes", FormMethod.Post, new { @class = "form-group total-ads main-grid-border" }))
+{
+    <div class="container ">
+        <div class="select-box">
+            <div class="select-city-for-local-ads ads-list ">
+                <div class="col-xs-10">
+                    <label>Descripción</label>
+                    @Html.EditorFor(model => model.FirstOrDefault().Descripcion, new { htmlAttributes = new { @class = "form-control", id="descripcion", name= "descripcion" } })
+                </div>
+            </div>
+            <div class="search-product ads-list">
+                <label>Almacén</label>
+                <div class="search">
+                    <div id="custom-search-input">
+                        <div class="input-group">
+                            @Html.DropDownList("Almacenes", (IEnumerable<SelectListItem>)ViewBag.listaalmacenes, "--Todos--", new { @class = "form-control" })
+
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-info btn-lg">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+}
+<ol class="breadcrumb" style="margin-bottom: 5px;">
+    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+    <li><a href="@Url.Action("Modulos", "Home")#parentVerticalTab4">Módulos</a></li>
+    <li class="active">Productos</li>
+</ol>
+
+@{
+    if (ViewBag.tabla != null)
+    {
+        <table class="table ">
+            <tr style="font-weight:bold">
+                <th>
+                    <span style="color:black"> Código </span>
+                </th>
+                <th>
+                    <span style="color:black">  Descripción </span>
+                </th>
+                <th>
+                    <span style="color:black">  Um </span>
+                </th>
+                <th>
+                    <span style="color:black">  Existencia </span>
+                </th>
+                <th>
+                    <span style="color:black">  Almacén </span>
+                </th>
+                <th>
+                    <span style="color:black">  Estatus </span>
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @{
+                            string codigo = Html.DisplayFor(modelItem => item.Codigo).ToString();
+                            string almacen = @Html.DisplayFor(modelItem => item.NombreAlmacen).ToString().Replace(" ", "");
+                        }
+                        @Html.ActionLink(codigo, "ProductosxCc", "Almacenes", new { codigoProducto = codigo, nomAlmacen = almacen }, null)
+                        @*<a href="@Url.Action("ProductosxCc", "Almacenes", new { codigoProducto = codigo})">
+                                codigo
+                            </a>*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <th>
+                        @Html.DisplayFor(modelItem => item.Um)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Existencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreAlmacen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estatus)
+                    </td>
+
+
+                </tr>
+            }
+
+        </table>
+    }
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#descripcion').autocomplete({
+                source: '../Almacenes/SearchDescProd'
+            });
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
